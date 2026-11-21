@@ -1,0 +1,1090 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/psychrometrics",
+  "unit": "psychrometrics.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "psychrometrics-rs",
+  "exports": [
+    {
+      "name": "PsyRhoAirFnPbTdbW",
+      "file": "psychrometrics.c",
+      "line": 44,
+      "params": [
+        {
+          "name": "pb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dw",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhoAirFnPbTdbW(double pb, double tdb, double dw)"
+    },
+    {
+      "name": "PsyRhoAirFnPbTdbW_fast",
+      "file": "psychrometrics.c",
+      "line": 49,
+      "params": [
+        {
+          "name": "pb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dw",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhoAirFnPbTdbW_fast(double pb, double tdb, double dw)"
+    },
+    {
+      "name": "PsyHfgAirFnWTdb",
+      "file": "psychrometrics.c",
+      "line": 54,
+      "params": [
+        {
+          "name": "w",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "T",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyHfgAirFnWTdb(double w, double T)"
+    },
+    {
+      "name": "PsyHgAirFnWTdb",
+      "file": "psychrometrics.c",
+      "line": 59,
+      "params": [
+        {
+          "name": "w",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "T",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyHgAirFnWTdb(double w, double T)"
+    },
+    {
+      "name": "PsyHFnTdbW",
+      "file": "psychrometrics.c",
+      "line": 64,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyHFnTdbW(double TDB, double dW)"
+    },
+    {
+      "name": "PsyHFnTdbW_fast",
+      "file": "psychrometrics.c",
+      "line": 69,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyHFnTdbW_fast(double TDB, double dW)"
+    },
+    {
+      "name": "PsyCpAirFnW",
+      "file": "psychrometrics.c",
+      "line": 74,
+      "params": [
+        {
+          "name": "dw",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyCpAirFnW(double dw)"
+    },
+    {
+      "name": "PsyCpAirFnW_fast",
+      "file": "psychrometrics.c",
+      "line": 79,
+      "params": [
+        {
+          "name": "dw",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyCpAirFnW_fast(double dw)"
+    },
+    {
+      "name": "PsyTdbFnHW",
+      "file": "psychrometrics.c",
+      "line": 84,
+      "params": [
+        {
+          "name": "H",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTdbFnHW(double H, double dW)"
+    },
+    {
+      "name": "PsyRhovFnTdbRhLBnd0C",
+      "file": "psychrometrics.c",
+      "line": 89,
+      "params": [
+        {
+          "name": "Tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhovFnTdbRhLBnd0C(double Tdb, double RH)"
+    },
+    {
+      "name": "PsyRhovFnTdbWPb",
+      "file": "psychrometrics.c",
+      "line": 94,
+      "params": [
+        {
+          "name": "Tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhovFnTdbWPb(double Tdb, double dW, double PB)"
+    },
+    {
+      "name": "PsyRhovFnTdbWPb_fast",
+      "file": "psychrometrics.c",
+      "line": 99,
+      "params": [
+        {
+          "name": "Tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhovFnTdbWPb_fast(double Tdb, double dW, double PB)"
+    },
+    {
+      "name": "PsyRhFnTdbRhovLBnd0C",
+      "file": "psychrometrics.c",
+      "line": 104,
+      "params": [
+        {
+          "name": "Tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Rhovapor",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhFnTdbRhovLBnd0C(double Tdb, double Rhovapor)"
+    },
+    {
+      "name": "PsyTwbFnTdbWPb",
+      "file": "psychrometrics.c",
+      "line": 109,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Patm",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTwbFnTdbWPb(double TDB, double dW, double Patm)"
+    },
+    {
+      "name": "PsyTwbFnTdbWPb_raw",
+      "file": "psychrometrics.c",
+      "line": 114,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Patm",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTwbFnTdbWPb_raw(double TDB, double dW, double Patm)"
+    },
+    {
+      "name": "PsyVFnTdbWPb",
+      "file": "psychrometrics.c",
+      "line": 119,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyVFnTdbWPb(double TDB, double dW, double PB)"
+    },
+    {
+      "name": "PsyWFnTdbH",
+      "file": "psychrometrics.c",
+      "line": 124,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "H",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyWFnTdbH(double TDB, double H)"
+    },
+    {
+      "name": "PsyPsatFnTemp",
+      "file": "psychrometrics.c",
+      "line": 129,
+      "params": [
+        {
+          "name": "T",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyPsatFnTemp(double T)"
+    },
+    {
+      "name": "PsyPsatFnTemp_raw",
+      "file": "psychrometrics.c",
+      "line": 134,
+      "params": [
+        {
+          "name": "T",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyPsatFnTemp_raw(double T)"
+    },
+    {
+      "name": "PsyTsatFnHPb",
+      "file": "psychrometrics.c",
+      "line": 139,
+      "params": [
+        {
+          "name": "H",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTsatFnHPb(double H, double PB)"
+    },
+    {
+      "name": "PsyTsatFnHPb_raw",
+      "file": "psychrometrics.c",
+      "line": 144,
+      "params": [
+        {
+          "name": "H",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTsatFnHPb_raw(double H, double PB)"
+    },
+    {
+      "name": "PsyRhovFnTdbRh",
+      "file": "psychrometrics.c",
+      "line": 149,
+      "params": [
+        {
+          "name": "Tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhovFnTdbRh(double Tdb, double RH)"
+    },
+    {
+      "name": "PsyRhFnTdbRhov",
+      "file": "psychrometrics.c",
+      "line": 154,
+      "params": [
+        {
+          "name": "Tdb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Rhovapor",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhFnTdbRhov(double Tdb, double Rhovapor)"
+    },
+    {
+      "name": "PsyRhFnTdbWPb",
+      "file": "psychrometrics.c",
+      "line": 159,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "dW",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyRhFnTdbWPb(double TDB, double dW, double PB)"
+    },
+    {
+      "name": "PsyWFnTdpPb",
+      "file": "psychrometrics.c",
+      "line": 164,
+      "params": [
+        {
+          "name": "TDP",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyWFnTdpPb(double TDP, double PB)"
+    },
+    {
+      "name": "PsyWFnTdbRhPb",
+      "file": "psychrometrics.c",
+      "line": 169,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyWFnTdbRhPb(double TDB, double RH, double PB)"
+    },
+    {
+      "name": "PsyWFnTdbTwbPb",
+      "file": "psychrometrics.c",
+      "line": 174,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "TWBin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyWFnTdbTwbPb(double TDB, double TWBin, double PB)"
+    },
+    {
+      "name": "PsyHFnTdbRhPb",
+      "file": "psychrometrics.c",
+      "line": 179,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyHFnTdbRhPb(double TDB, double RH, double PB)"
+    },
+    {
+      "name": "PsyTsatFnPb",
+      "file": "psychrometrics.c",
+      "line": 184,
+      "params": [
+        {
+          "name": "Press",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTsatFnPb(double Press)"
+    },
+    {
+      "name": "PsyTsatFnPb_raw",
+      "file": "psychrometrics.c",
+      "line": 189,
+      "params": [
+        {
+          "name": "Press",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTsatFnPb_raw(double Press)"
+    },
+    {
+      "name": "PsyTdpFnWPb",
+      "file": "psychrometrics.c",
+      "line": 194,
+      "params": [
+        {
+          "name": "W",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTdpFnWPb(double W, double PB)"
+    },
+    {
+      "name": "PsyTdpFnTdbTwbPb",
+      "file": "psychrometrics.c",
+      "line": 199,
+      "params": [
+        {
+          "name": "TDB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "TWB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "PB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyTdpFnTdbTwbPb(double TDB, double TWB, double PB)"
+    },
+    {
+      "name": "CPCW",
+      "file": "psychrometrics.c",
+      "line": 204,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CPCW(double Temperature)"
+    },
+    {
+      "name": "CPHW",
+      "file": "psychrometrics.c",
+      "line": 209,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CPHW(double Temperature)"
+    },
+    {
+      "name": "RhoH2O",
+      "file": "psychrometrics.c",
+      "line": 214,
+      "params": [
+        {
+          "name": "TB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double RhoH2O(double TB)"
+    },
+    {
+      "name": "PsyDeltaHSenFnTdb2Tdb1W",
+      "file": "psychrometrics.c",
+      "line": 219,
+      "params": [
+        {
+          "name": "TDB2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "TDB1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "W",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyDeltaHSenFnTdb2Tdb1W(double TDB2, double TDB1, double W)"
+    },
+    {
+      "name": "PsyDeltaHSenFnTdb2W2Tdb1W1",
+      "file": "psychrometrics.c",
+      "line": 224,
+      "params": [
+        {
+          "name": "TDB2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "W2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "TDB1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "W1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double PsyDeltaHSenFnTdb2W2Tdb1W1(double TDB2, double W2, double TDB1, double W1)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
