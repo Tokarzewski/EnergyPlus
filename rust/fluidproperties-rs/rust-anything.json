@@ -1,0 +1,243 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/fluidproperties",
+  "unit": "fluidproperties.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "fluidproperties-rs",
+  "exports": [
+    {
+      "name": "WaterSpecificHeat",
+      "file": "fluidproperties.c",
+      "line": 17,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double WaterSpecificHeat(double Temperature)"
+    },
+    {
+      "name": "WaterSpecificHeat_raw",
+      "file": "fluidproperties.c",
+      "line": 22,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double WaterSpecificHeat_raw(double Temperature)"
+    },
+    {
+      "name": "WaterDensity",
+      "file": "fluidproperties.c",
+      "line": 27,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double WaterDensity(double Temperature)"
+    },
+    {
+      "name": "WaterConductivity",
+      "file": "fluidproperties.c",
+      "line": 32,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double WaterConductivity(double Temperature)"
+    },
+    {
+      "name": "WaterViscosity",
+      "file": "fluidproperties.c",
+      "line": 37,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double WaterViscosity(double Temperature)"
+    },
+    {
+      "name": "SteamSatPressure",
+      "file": "fluidproperties.c",
+      "line": 42,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SteamSatPressure(double Temperature)"
+    },
+    {
+      "name": "SteamSatTemperature",
+      "file": "fluidproperties.c",
+      "line": 47,
+      "params": [
+        {
+          "name": "Pressure",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SteamSatTemperature(double Pressure)"
+    },
+    {
+      "name": "SteamSatEnthalpy",
+      "file": "fluidproperties.c",
+      "line": 52,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Quality",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SteamSatEnthalpy(double Temperature, double Quality)"
+    },
+    {
+      "name": "SteamSatDensity",
+      "file": "fluidproperties.c",
+      "line": 57,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Quality",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SteamSatDensity(double Temperature, double Quality)"
+    },
+    {
+      "name": "SteamSatSpecificHeat",
+      "file": "fluidproperties.c",
+      "line": 62,
+      "params": [
+        {
+          "name": "Temperature",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Quality",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SteamSatSpecificHeat(double Temperature, double Quality)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
