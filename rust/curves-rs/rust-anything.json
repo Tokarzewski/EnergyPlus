@@ -1,0 +1,2182 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/curves",
+  "unit": "curves.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "curves-rs",
+  "exports": [
+    {
+      "name": "CurveLinear",
+      "file": "curves.c",
+      "line": 27,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveLinear(double c0, double c1, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveQuadratic",
+      "file": "curves.c",
+      "line": 32,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveQuadratic(double c0, double c1, double c2, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveCubic",
+      "file": "curves.c",
+      "line": 37,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveCubic(double c0, double c1, double c2, double c3, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveQuartic",
+      "file": "curves.c",
+      "line": 42,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveQuartic(double c0, double c1, double c2, double c3, double c4, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveExponent",
+      "file": "curves.c",
+      "line": 47,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveExponent(double c0, double c1, double c2, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveExponentialSkewNormal",
+      "file": "curves.c",
+      "line": 52,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveExponentialSkewNormal(double c0, double c1, double c2, double c3, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveSigmoid",
+      "file": "curves.c",
+      "line": 57,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveSigmoid(double c0, double c1, double c2, double c3, double c4, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveRectangularHyperbola1",
+      "file": "curves.c",
+      "line": 62,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveRectangularHyperbola1(double c0, double c1, double c2, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveRectangularHyperbola2",
+      "file": "curves.c",
+      "line": 67,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveRectangularHyperbola2(double c0, double c1, double c2, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveExponentialDecay",
+      "file": "curves.c",
+      "line": 72,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveExponentialDecay(double c0, double c1, double c2, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveDoubleExponentialDecay",
+      "file": "curves.c",
+      "line": 77,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveDoubleExponentialDecay(double c0, double c1, double c2, double c3, double c4, double x1min, double x1max, double outmin, double outmax, double V1)"
+    },
+    {
+      "name": "CurveBiQuadratic",
+      "file": "curves.c",
+      "line": 82,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveBiQuadratic(double c0, double c1, double c2, double c3, double c4, double c5, double x1min, double x1max, double x2min, double x2max, double outmin, double outmax, double V1, double V2)"
+    },
+    {
+      "name": "CurveQuadraticLinear",
+      "file": "curves.c",
+      "line": 87,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveQuadraticLinear(double c0, double c1, double c2, double c3, double c4, double c5, double x1min, double x1max, double x2min, double x2max, double outmin, double outmax, double V1, double V2)"
+    },
+    {
+      "name": "CurveCubicLinear",
+      "file": "curves.c",
+      "line": 92,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveCubicLinear(double c0, double c1, double c2, double c3, double c4, double c5, double x1min, double x1max, double x2min, double x2max, double outmin, double outmax, double V1, double V2)"
+    },
+    {
+      "name": "CurveBiCubic",
+      "file": "curves.c",
+      "line": 97,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c6",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c7",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c8",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c9",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveBiCubic(double c0, double c1, double c2, double c3, double c4, double c5, double c6, double c7, double c8, double c9, double x1min, double x1max, double x2min, double x2max, double outmin, double outmax, double V1, double V2)"
+    },
+    {
+      "name": "CurveFanPressureRise",
+      "file": "curves.c",
+      "line": 102,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveFanPressureRise(double c0, double c1, double c2, double c3, double x1min, double x1max, double x2min, double x2max, double outmin, double outmax, double V1, double V2)"
+    },
+    {
+      "name": "CurveChillerPartLoadWithLift",
+      "file": "curves.c",
+      "line": 107,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c6",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c7",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c8",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c9",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c10",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c11",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveChillerPartLoadWithLift(double c0, double c1, double c2, double c3, double c4, double c5, double c6, double c7, double c8, double c9, double c10, double c11, double x1min, double x1max, double x2min, double x2max, double x3min, double x3max, double outmin, double outmax, double V1, double V2, double V3)"
+    },
+    {
+      "name": "CurveTriQuadratic",
+      "file": "curves.c",
+      "line": 112,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c6",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c7",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c8",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c9",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c10",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c11",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c12",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c13",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c14",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c15",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c16",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c17",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c18",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c19",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c20",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c21",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c22",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c23",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c24",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c25",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c26",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveTriQuadratic(double c0, double c1, double c2, double c3, double c4, double c5, double c6, double c7, double c8, double c9, double c10, double c11, double c12, double c13, double c14, double c15, double c16, double c17, double c18, double c19, double c20, double c21, double c22, double c23, double c24, double c25, double c26, double x1min, double x1max, double x2min, double x2max, double x3min, double x3max, double outmin, double outmax, double V1, double V2, double V3)"
+    },
+    {
+      "name": "CurveQuadLinear",
+      "file": "curves.c",
+      "line": 117,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x4min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x4max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveQuadLinear(double c0, double c1, double c2, double c3, double c4, double x1min, double x1max, double x2min, double x2max, double x3min, double x3max, double x4min, double x4max, double outmin, double outmax, double V1, double V2, double V3, double V4)"
+    },
+    {
+      "name": "CurveQuintLinear",
+      "file": "curves.c",
+      "line": 122,
+      "params": [
+        {
+          "name": "c0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x4min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x4max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x5min",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x5max",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outmax",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "V5",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CurveQuintLinear(double c0, double c1, double c2, double c3, double c4, double c5, double x1min, double x1max, double x2min, double x2max, double x3min, double x3max, double x4min, double x4max, double x5min, double x5max, double outmin, double outmax, double V1, double V2, double V3, double V4, double V5)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
