@@ -1,0 +1,411 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/heatindex",
+  "unit": "heatindex.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "heatindex-rs",
+  "exports": [
+    {
+      "name": "pvstar",
+      "file": "heatindex.c",
+      "line": 22,
+      "params": [
+        {
+          "name": "T",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double pvstar(double T)"
+    },
+    {
+      "name": "Le",
+      "file": "heatindex.c",
+      "line": 27,
+      "params": [
+        {
+          "name": "T",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Le(double T)"
+    },
+    {
+      "name": "Qv",
+      "file": "heatindex.c",
+      "line": 32,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Pa",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Qv(double Ta, double Pa)"
+    },
+    {
+      "name": "Zs",
+      "file": "heatindex.c",
+      "line": 37,
+      "params": [
+        {
+          "name": "Rs",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Zs(double Rs)"
+    },
+    {
+      "name": "Ra",
+      "file": "heatindex.c",
+      "line": 42,
+      "params": [
+        {
+          "name": "Ts",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Ra(double Ts, double Ta)"
+    },
+    {
+      "name": "Ra_bar",
+      "file": "heatindex.c",
+      "line": 47,
+      "params": [
+        {
+          "name": "Tf",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Ra_bar(double Tf, double Ta)"
+    },
+    {
+      "name": "Ra_un",
+      "file": "heatindex.c",
+      "line": 52,
+      "params": [
+        {
+          "name": "Ts",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Ra_un(double Ts, double Ta)"
+    },
+    {
+      "name": "find_eqvar_phi",
+      "file": "heatindex.c",
+      "line": 57,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double find_eqvar_phi(double Ta, double RH)"
+    },
+    {
+      "name": "find_eqvar_Rf",
+      "file": "heatindex.c",
+      "line": 62,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double find_eqvar_Rf(double Ta, double RH)"
+    },
+    {
+      "name": "find_eqvar_rs",
+      "file": "heatindex.c",
+      "line": 67,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double find_eqvar_rs(double Ta, double RH)"
+    },
+    {
+      "name": "find_eqvar_dTcdt",
+      "file": "heatindex.c",
+      "line": 72,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double find_eqvar_dTcdt(double Ta, double RH)"
+    },
+    {
+      "name": "find_eqvar_value",
+      "file": "heatindex.c",
+      "line": 77,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double find_eqvar_value(double Ta, double RH)"
+    },
+    {
+      "name": "find_eqvar_name",
+      "file": "heatindex.c",
+      "line": 82,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "int",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "int",
+      "prototype": "int find_eqvar_name(double Ta, double RH)"
+    },
+    {
+      "name": "find_T",
+      "file": "heatindex.c",
+      "line": 87,
+      "params": [
+        {
+          "name": "eqvar_name",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "eqvar",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double find_T(int eqvar_name, double eqvar)"
+    },
+    {
+      "name": "heatindex",
+      "file": "heatindex.c",
+      "line": 92,
+      "params": [
+        {
+          "name": "Ta",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "RH",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double heatindex(double Ta, double RH)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
