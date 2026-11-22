@@ -34,6 +34,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 22 | Weather sun position and sky helpers | `solarpos-rs` | `WeatherManager.cc` (`CalcSkyEmissivity`, `ASHRAETauModel`, `CalculateDailySolarCoeffs`, `CalculateSunDirectionCosines`, `DetermineSunUpDown`, `WaterMainsTempFromCorrelation`, `DayltgLuminousEfficacy`) | done | 10812/10812 | uses `psychrometrics-rs` and `weather-rs`; size waived (ADR-007); speed a tie (sky emissivity 0.5x: the C++ caches saturation pressure) |
 | 23 | Window glazing optics and solvers | `glazing-rs` | `WindowManager.cc` (`TransAndReflAtPhi`, `W5LsqFit`, `DiffuseAverage`, `ViewFac`, `InvertMatrix`, `LUdecomposition`, `LUsolution`, `Interpolate`) | done | 8305/8305 | uses `leaf-rs`; size waived (ADR-007); not yet: the window heat balance (`SolveForWindowTemperatures`, gas and shade flow) |
 | 24 | TARCOG gas properties and solver | `tarcoggas-rs` | `TARCOGGasses90.cc` (`GASSES90`, `GassesLow`), `TARCOGCommon.cc` (`EquationsSolver`, `ludcmp`, `lubksb`) | done | 4685/4685 | size waived (ADR-007); not yet: the TARCOG layer heat balance (`TARCOGMain.cc`), deflection and output |
+| 25 | Window gap gas routines | `wingas-rs` | `WindowManager.cc` (`WindowGasConductance`, `WindowGasPropertiesAtTemp`, `NusseltNumber`) | done | 4481/4481 | built-in gas table; size waived (ADR-007) |
 
 ## Next (plain-number leaf code, ADR-005)
 
