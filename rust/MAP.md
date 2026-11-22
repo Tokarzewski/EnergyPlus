@@ -22,12 +22,14 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 10 | Thermal comfort helpers | `comfort-rs` | `ThermalComfort.cc` | done | 531/531 | PPD, relative air velocity, two saturation pressure fits |
 | 11 | Equivalent-layer window helpers | `window-eql-rs` | `WindowEquivalentLayer.cc` | done | 2334/2334 | `FRA` uses `BCP` and `BVISC` for the quadratic terms, kept as in the C++ |
 | 12 | Root finder | `solveroot-rs` | `General.cc` (`SolveRoot`, `SolveRoot2`) | done | 3441/3441 | all six `RootAlgo` methods; size waived (ADR-007); units 6 and later can call `solve_root` |
+| 13 | Leaf helpers from eleven modules | `leaf-rs` | `WindowManager`, `WaterThermalTanks`, `TARCOGCommon`, `OutputReportTabular`, `IceThermalStorage`, `PlantUtilities`, `PhotovoltaicThermalCollectors`, `TranspiredCollector`, `UtilityRoutines`, `SwimmingPool`, `MicroCHPElectricGenerator` | done | 7386/7386 | 26 functions; `overallUfactorFromFilmsAndCond` left out (its class needs constructor arguments) |
 
 ## Next (plain-number leaf code, ADR-005)
 
-Units 8 to 11 were generated with the shared plain-number oracle tools in `rust/oracles/`
+Units 8 to 11 and 13 were generated with the shared plain-number oracle tools in `rust/oracles/`
 (`gen_plain.py`, `plain_inputs.py`, `build_plain_shim.sh`): a unit folder holds `gen.args`,
-`real_inputs.py` and a one-line `build_shim.sh`.
+`real_inputs.py` and a one-line `build_shim.sh`; `gen.args` may list several headers and
+namespaces, comma-separated. The headers' plain-number functions are now nearly all ported.
 
 - Ground heat exchanger response factors.
 - Units that read simulation state through a shim-built `EnergyPlusData`.

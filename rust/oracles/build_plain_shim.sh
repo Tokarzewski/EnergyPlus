@@ -30,6 +30,9 @@ for d in nlohmann ObjexxFCL/src SQLite re2 btwxt/include btwxt/vendor/courierr/i
          CLI milo valijson; do
     incs+=(-isystem "$ep/third_party/$d")
 done
+for d in "$ep"/third_party/Windows-CalcEngine/src/*/include; do
+    incs+=(-isystem "$d")
+done
 libs=(libenergypluslib.a libembedded_epjson_source.a libsqlite.a libbcvtb.a libepfmiimport.a
       libepexpat.a libminiziplib.a libDElight.a ../third_party/kiva/libkiva.a
       libairflownetworklib.a libobjexx.a libre2.a libWindows-CalcEngine.a ssc.a shared.a)
