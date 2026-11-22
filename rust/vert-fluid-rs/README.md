@@ -39,6 +39,9 @@ g-function about 80 times faster than the C++.
 
 `short_series` and `ShortInputs` give the whole short-time-step curve to `vert-gfunc-rs`.
 
+`hx_resistance` takes the specific heat as a value, for `glhe-sim-rs`, whose time steps read it
+through the glycol's cache.
+
 ## Accepted gate exceptions (2026-11-22)
 
 - **Size:** `rust-anything gate` fails only its size check: about 450 lines in `src/port.rs`

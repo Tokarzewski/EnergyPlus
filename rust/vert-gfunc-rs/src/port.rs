@@ -67,7 +67,7 @@ impl Field {
 
 /// Port of `GLHEBase::interpGFunc` (`Base.cc:548`): linear, and extrapolated past both ends.
 /// `x` is sorted, has no NaN and at least two values.
-fn interp(x: &[f64], y: &[f64], x_val: f64) -> f64 {
+pub fn interp(x: &[f64], y: &[f64], x_val: f64) -> f64 {
     // std::upper_bound. For a NaN x_val it finds 0 where the C++ finds the end; the result is NaN
     // either way.
     let upper = x.partition_point(|&e| e <= x_val);

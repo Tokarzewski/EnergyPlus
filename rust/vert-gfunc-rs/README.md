@@ -32,6 +32,8 @@ domain (ADR-009): 1 or 2 boreholes each way, at most 20000 short and 60 long ste
 combined LNTTS vector of at least two values with no NaN (`interpGFunc`'s `std::upper_bound`
 needs a sorted range and reads both ends). Outside it, results are NaN or 0.
 
+`interp` (`interpGFunc`) is public for `glhe-sim-rs`.
+
 ## Accepted gate exceptions (2026-11-22)
 
 - **Size:** `rust-anything gate` fails only its size check: about 320 lines in `src/port.rs`

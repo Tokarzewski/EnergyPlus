@@ -58,8 +58,8 @@ impl Pipe {
     }
 
     /// `calcPipeConvectionResistance` (`Vertical.cc:1386`).
-    fn convection(&self, mass_flow: f64, num_bh: i32, t: f64) -> f64 {
-        let cp = WaterSpecificHeat(t);
+    /// `cp` is the water's specific heat at `t`, as the glycol's (cached) `getSpecificHeat` gives it.
+    fn convection(&self, mass_flow: f64, num_bh: i32, t: f64, cp: f64) -> f64 {
         let k = WaterConductivity(t);
         let mu = WaterViscosity(t);
         let re = 4.0 * (mass_flow / f64::from(num_bh)) / (mu * PI * self.inner_dia);
@@ -83,9 +83,9 @@ impl Pipe {
     }
 
     /// `calcPipeResistance` (`Vertical.cc:1454`).
-    fn resistance(&self, mass_flow: f64, num_bh: i32, t: f64) -> f64 {
+    fn resistance(&self, mass_flow: f64, num_bh: i32, t: f64, cp: f64) -> f64 {
         VertPipeConductionResistance(self.out_dia, self.inner_dia, self.k)
-            + self.convection(mass_flow, num_bh, t)
+            + self.convection(mass_flow, num_bh, t, cp)
     }
 }
 
@@ -95,6 +95,7 @@ struct Bore {
     mass_flow: f64,
     num_bh: i32,
     t: f64,
+    cp: f64,
     bh_length: f64,
     bh_radius: f64,
     grout_k: f64,
@@ -115,6 +116,7 @@ impl Bore {
             mass_flow,
             num_bh,
             t,
+            cp: WaterSpecificHeat(t),
             bh_length,
             bh_radius,
             grout_k,
@@ -126,7 +128,8 @@ impl Bore {
     }
 
     fn pipe_resistance(&self) -> f64 {
-        self.pipe.resistance(self.mass_flow, self.num_bh, self.t)
+        self.pipe
+            .resistance(self.mass_flow, self.num_bh, self.t, self.cp)
     }
 
     fn beta(&self) -> f64 {
@@ -162,7 +165,7 @@ impl Bore {
         if self.mass_flow <= 0.0 {
             return 0.0;
         }
-        let cp = WaterSpecificHeat(self.t);
+        let cp = self.cp;
         self.average()
             + 1.0 / (3.0 * self.total_internal()) * sq(self.bh_length / (self.mass_flow * cp))
     }
@@ -269,7 +272,7 @@ fn short_run(inp: &ShortInputs, steps: i32) -> Vec<(f64, f64)> {
     let r_grout = b.bh_radius;
 
     let bh_res = b.average();
-    let conv_res = b.pipe.convection(b.mass_flow, b.num_bh, b.t);
+    let conv_res = b.pipe.convection(b.mass_flow, b.num_bh, b.t, b.cp);
     let eq_tube_grout = bh_res - conv_res / 2.0;
     let eq_conv = bh_res - eq_tube_grout;
     let t0 = b.t;
@@ -387,7 +390,12 @@ pub fn VFConvectionResistance(
     if numBH < 1 {
         return f64::NAN;
     }
-    Pipe::new(outDia, thickness, 0.0).convection(massFlow, numBH, inletTemp)
+    Pipe::new(outDia, thickness, 0.0).convection(
+        massFlow,
+        numBH,
+        inletTemp,
+        WaterSpecificHeat(inletTemp),
+    )
 }
 
 pub fn VFPipeResistance(
@@ -401,7 +409,12 @@ pub fn VFPipeResistance(
     if numBH < 1 {
         return f64::NAN;
     }
-    Pipe::new(outDia, thickness, kPipe).resistance(massFlow, numBH, inletTemp)
+    Pipe::new(outDia, thickness, kPipe).resistance(
+        massFlow,
+        numBH,
+        inletTemp,
+        WaterSpecificHeat(inletTemp),
+    )
 }
 
 pub fn VFBoreholeResistance(
@@ -436,6 +449,24 @@ pub fn VFBoreholeResistance(
         2 => b.average() - b.pipe_resistance() / 2.0,
         _ => b.effective(),
     }
+}
+
+/// `calcHXResistance` with the water's specific heat at `inlet_temp` given: inside a simulation
+/// the glycol's `getSpecificHeat` cache supplies it, and every call in one time step reads the same
+/// temperature. `bh` is `[bhLength, bhDiameter, uTubeDist, groutK]`, `pipe` is `[outDia, thickness, k]`.
+pub fn hx_resistance(
+    bh: [f64; 4],
+    soil_k: f64,
+    pipe: [f64; 3],
+    mass_flow: f64,
+    num_bh: i32,
+    inlet_temp: f64,
+    cp: f64,
+) -> f64 {
+    let pipe = Pipe::new(pipe[0], pipe[1], pipe[2]);
+    let mut b = Bore::new(pipe, mass_flow, num_bh, inlet_temp, bh, soil_k);
+    b.cp = cp;
+    b.effective()
 }
 
 pub fn VFShortSteps(bhLength: f64, soilK: f64, soilRhoCp: f64) -> i32 {
