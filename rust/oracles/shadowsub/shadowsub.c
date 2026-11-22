@@ -1,0 +1,12 @@
+// The shadowsub unit as rust-anything sees it: the function forwards to the real EnergyPlus
+// SolarShading SHADOW through libep_shadowsub_shim (shim/ep_shadowsub_shim.cc), which sets
+// up the receiving surface, its shadowing surfaces, its window or door and the sun (see the shim).
+#include "shadowsub.h"
+
+double ep_ShadowSub(int which, int algo, int nvr, double rx1, double ry1, double rz1, double rx2, double ry2, double rz2, double rx3, double ry3, double rz3, double rx4, double ry4, double rz4, int ncast, int nv1, double c1x1, double c1y1, double c1z1, double c1x2, double c1y2, double c1z2, double c1x3, double c1y3, double c1z3, double c1x4, double c1y4, double c1z4, double q1, double t1, int nv2, double c2x1, double c2y1, double c2z1, double c2x2, double c2y2, double c2z2, double c2x3, double c2y3, double c2z3, double c2x4, double c2y4, double c2z4, double q2, double t2, int nvw, double wx1, double wy1, double wx2, double wy2, double wx3, double wy3, double wx4, double wy4, double rev, double warea, double wgross, double ox, double oy, double oz, double lxx, double lxy, double lxz, double lyx, double lyy, double lyz, double lzx, double lzy, double lzz, double sx, double sy, double sz, double area);
+
+double ShadowSub(int which, int algo, int nvr, double rx1, double ry1, double rz1, double rx2, double ry2, double rz2, double rx3, double ry3, double rz3, double rx4, double ry4, double rz4, int ncast, int nv1, double c1x1, double c1y1, double c1z1, double c1x2, double c1y2, double c1z2, double c1x3, double c1y3, double c1z3, double c1x4, double c1y4, double c1z4, double q1, double t1, int nv2, double c2x1, double c2y1, double c2z1, double c2x2, double c2y2, double c2z2, double c2x3, double c2y3, double c2z3, double c2x4, double c2y4, double c2z4, double q2, double t2, int nvw, double wx1, double wy1, double wx2, double wy2, double wx3, double wy3, double wx4, double wy4, double rev, double warea, double wgross, double ox, double oy, double oz, double lxx, double lxy, double lxz, double lyx, double lyy, double lyz, double lzx, double lzy, double lzz, double sx, double sy, double sz, double area)
+{
+    return ep_ShadowSub(which, algo, nvr, rx1, ry1, rz1, rx2, ry2, rz2, rx3, ry3, rz3, rx4, ry4, rz4, ncast, nv1, c1x1, c1y1, c1z1, c1x2, c1y2, c1z2, c1x3, c1y3, c1z3, c1x4, c1y4, c1z4, q1, t1, nv2, c2x1, c2y1, c2z1, c2x2, c2y2, c2z2, c2x3, c2y3, c2z3, c2x4, c2y4, c2z4, q2, t2, nvw, wx1, wy1, wx2, wy2, wx3, wy3, wx4, wy4, rev, warea, wgross, ox, oy, oz, lxx, lxy, lxz, lyx, lyy, lyz, lzx, lzy, lzz, sx, sy, sz, area);
+}
+
