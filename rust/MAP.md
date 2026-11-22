@@ -30,6 +30,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 18 | Ground temperature models | `groundtemp-rs` | `GroundTemperatureModeling/` (Kusuda-Achenbach, Xing, four site tables) | done | 2252/2252 | `remainder` from libm (exact); size waived (ADR-007); not yet: the finite difference model and the input factories |
 | 19 | Surface geometry helpers | `vectors-rs` | `Vectors.cc`, `Geometry/Plane.cc`, `Geometry/Vector3D.hh` | done | 9525/9525 | polygons of 3 to 5 vertices; size waived (ADR-007); not yet: `CalcPolyhedronVolume` |
 | 20 | Interior radiation exchange | `intrad-rs` | `HeatBalanceIntRadExchange.cc` (view factors, `FixViewFactors`, `CalcScriptF`, `CalcMatrixInverse`, `CalcFMRT`, `CalcFp`) | done | 3331/3331 | box zones of up to 7 surfaces; size waived (ADR-007); not yet: `InitInteriorRadExchange` and `CalcInteriorRadExchange` (enclosure state) |
+| 21 | Perez sky model and line clipper | `perezsky-rs` | `SolarShading.cc` (`AnisoSkyViewFactors`, `CLIPLINE`) | done | 6618/6618 | size waived (ADR-007); not yet: the polygon shadow engine and the rest of `SolarShading.cc` |
 
 ## Next (plain-number leaf code, ADR-005)
 
