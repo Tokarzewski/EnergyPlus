@@ -47,7 +47,12 @@ Status: accepted (2026-11-22)
 Context: Stable Rust has no `erf` or `erfc`. Porting glibc's is LGPL code; calling glibc's needs
 `unsafe`.
 Decision: Use the `libm` crate (MIT, 0.2.16). Cases where it rounds differently from glibc are
-listed in `known-diffs.jsonl` (curves: 1 case; slinky: 23 cases).
+listed in `known-diffs.jsonl` (curves: 1 case; slinky: 23 cases; vert: 21 cases).
+Follow-up (2026-11-22): std's `f64::erf` and `f64::erfc` exist behind the unstable `float_erf`
+feature (rejected by stable 1.100). On Linux they call glibc's `erfc`, so they match the C++ bit
+for bit without `unsafe`. The owner chose to keep `libm` and the known diffs until the feature is
+stable, then bump the Rust version, switch `libm::erf`/`libm::erfc` to the std methods, and delete
+the known diffs that no longer differ (gate flags them).
 
 ## ADR-007: The size check may be waived when its limit comes from the forwarder
 Status: accepted (2026-11-21)
