@@ -37,6 +37,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 25 | Window gap gas routines | `wingas-rs` | `WindowManager.cc` (`WindowGasConductance`, `WindowGasPropertiesAtTemp`, `NusseltNumber`) | done | 4481/4481 | built-in gas table; size waived (ADR-007) |
 | 26 | Venetian blind optics | `blindoptics-rs` | `WindowManager.cc` (`BlindOpticsDiffuse`, `BlindOpticsBeam`), `Material.cc` (`MaterialBlind::BeamBeamTrans`) | done | 7108/7108 | uses `glazing-rs`; size waived (ADR-007); not yet: `CalcWindowBlindProperties` (the slat and profile angle tables) |
 | 27 | Screen and simple glazing optics | `matoptics-rs` | `Material.cc` (`CalcScreenTransmittance`, `GetRelativePhiTheta`, `NormalizePhiTheta`, `GetPhiThetaIndices`, `GetProfIndices`, `GetSlatIndicesInterpFac`, `MaterialGlass::SetupSimpleWindowGlazingSystem`) | done | 11750/11750 | size waived (ADR-007); not yet: the material input routines (`GetMaterialData`) |
+| 28 | Shadow polygon overlap | `polyclip-rs` | `SolarShading.cc` (`HTRANS1`, `HTRANS0`, `CLIPPOLY`, `DeterminePolygonOverlap` with Sutherland-Hodgman) | done | 13585/13585 | size waived (ADR-007); not yet: `CLIPRECT` (SlaterBarsky), `INCLOS`/`INTCPT`/`ORDER` (the older clipper), the shadow projection |
 
 ## Next (plain-number leaf code, ADR-005)
 
