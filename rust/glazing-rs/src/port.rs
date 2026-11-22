@@ -18,9 +18,9 @@
 
 use leaf_rs::port::{InterpolateBetweenFourValues as four, InterpolateBetweenTwoValues as two};
 
-const NUM_PHIS: usize = 10;
+pub const NUM_PHIS: usize = 10;
 const MAX_POLY_COEF: usize = 6;
-const MAX_ARRAY_SIZE: usize = 10; // `2 * maxGlassLayers`
+pub const MAX_ARRAY_SIZE: usize = 10; // `2 * maxGlassLayers`
 const DEG_TO_RAD: f64 = std::f64::consts::PI / 180.0;
 /// `Window::cosPhis`, as the header spells them.
 #[expect(
@@ -357,7 +357,7 @@ fn lsq_fit(ivars: &[f64; NUM_PHIS], dvars: &[f64; NUM_PHIS]) -> [f64; MAX_POLY_C
 }
 
 /// `DiffuseAverage` (`WindowManager.cc:5512`).
-fn diffuse_average(props: &[f64; NUM_PHIS]) -> f64 {
+pub fn diffuse_average(props: &[f64; NUM_PHIS]) -> f64 {
     const D_PHI_R: f64 = 10.0 * DEG_TO_RAD;
     let mut avg = 0.0;
     for i in 0..NUM_PHIS - 1 {
@@ -385,7 +385,7 @@ pub fn GlassFit(which: i32, tf0: f64, rf0: f64, rb0: f64) -> f64 {
 }
 
 /// `ViewFac` (`WindowManager.cc:8084`): view factors between the six sections of a slat gap.
-fn view_fac(s: f64, h: f64, phib: f64, phis: f64) -> [[f64; 6]; 6] {
+pub fn view_fac(s: f64, h: f64, phib: f64, phis: f64) -> [[f64; 6]; 6] {
     let h2 = h * h;
     let ht = 2.0 * h;
     let mut co = phis.cos();
@@ -449,7 +449,7 @@ pub fn SlatViewFac(i: i32, j: i32, s: f64, h: f64, phib: f64, phis: f64) -> f64 
     }
 }
 
-type Matrix = [[f64; MAX_ARRAY_SIZE]; MAX_ARRAY_SIZE];
+pub type Matrix = [[f64; MAX_ARRAY_SIZE]; MAX_ARRAY_SIZE];
 
 /// `LUdecomposition` (`WindowManager.cc:4236`) in place; `None` for a singular matrix (the C++'s
 /// fatal error).
@@ -541,7 +541,7 @@ fn lu_solution(
 }
 
 /// `InvertMatrix` (`WindowManager.cc:8181`).
-fn invert_matrix(a: &mut Matrix, n: usize) -> Option<Matrix> {
+pub fn invert_matrix(a: &mut Matrix, n: usize) -> Option<Matrix> {
     let indx = lu_decomposition(a, n)?;
     let mut y = [[0.0; MAX_ARRAY_SIZE]; MAX_ARRAY_SIZE];
     for j in 0..n {
