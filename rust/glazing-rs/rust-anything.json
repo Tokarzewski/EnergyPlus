@@ -1,0 +1,334 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/glazing",
+  "unit": "glazing.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "glazing-rs",
+  "exports": [
+    {
+      "name": "GlassPhi",
+      "file": "glazing.c",
+      "line": 12,
+      "params": [
+        {
+          "name": "which",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "cs",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "tf0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "rf0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "rb0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "simple",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "shgc",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "u",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double GlassPhi(int which, double cs, double tf0, double rf0, double rb0, int simple, double shgc, double u)"
+    },
+    {
+      "name": "GlassFit",
+      "file": "glazing.c",
+      "line": 17,
+      "params": [
+        {
+          "name": "which",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "tf0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "rf0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "rb0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double GlassFit(int which, double tf0, double rf0, double rb0)"
+    },
+    {
+      "name": "SlatViewFac",
+      "file": "glazing.c",
+      "line": 22,
+      "params": [
+        {
+          "name": "i",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "j",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "s",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "h",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "phib",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "phis",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SlatViewFac(int i, int j, double s, double h, double phib, double phis)"
+    },
+    {
+      "name": "MatInverse",
+      "file": "glazing.c",
+      "line": 27,
+      "params": [
+        {
+          "name": "which",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "n",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "d",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "k",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "o",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "p",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double MatInverse(int which, int n, double d, double k, double o, double p)"
+    },
+    {
+      "name": "Interp",
+      "file": "glazing.c",
+      "line": 32,
+      "params": [
+        {
+          "name": "xin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "npts",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "x0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "x4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "y0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "y1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "y2",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "y3",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "y4",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Interp(double xin, int npts, double x0, double x1, double x2, double x3, double x4, double y0, double y1, double y2, double y3, double y4)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
