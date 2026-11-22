@@ -21,6 +21,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 9 | Weather helpers | `weather-rs` | `WeatherManager.cc` | done | 1658/1658 | `GetSTM` folds longitudes past 180 by subtracting 180, kept as in the C++ |
 | 10 | Thermal comfort helpers | `comfort-rs` | `ThermalComfort.cc` | done | 531/531 | PPD, relative air velocity, two saturation pressure fits |
 | 11 | Equivalent-layer window helpers | `window-eql-rs` | `WindowEquivalentLayer.cc` | done | 2334/2334 | `FRA` uses `BCP` and `BVISC` for the quadratic terms, kept as in the C++ |
+| 12 | Root finder | `solveroot-rs` | `General.cc` (`SolveRoot`, `SolveRoot2`) | done | 3441/3441 | all six `RootAlgo` methods; size waived (ADR-007); units 6 and later can call `solve_root` |
 
 ## Next (plain-number leaf code, ADR-005)
 
@@ -28,7 +29,6 @@ Units 8 to 11 were generated with the shared plain-number oracle tools in `rust/
 (`gen_plain.py`, `plain_inputs.py`, `build_plain_shim.sh`): a unit folder holds `gen.args`,
 `real_inputs.py` and a one-line `build_shim.sh`.
 
-- The rest of `General::SolveRoot` (the other solver methods).
 - Ground heat exchanger response factors.
 - Units that read simulation state through a shim-built `EnergyPlusData`.
 

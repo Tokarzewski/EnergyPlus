@@ -1,0 +1,348 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/solveroot",
+  "unit": "solveroot.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "solveroot-rs",
+  "exports": [
+    {
+      "name": "SolveRootX",
+      "file": "solveroot.c",
+      "line": 13,
+      "params": [
+        {
+          "name": "algo",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "numOfIter",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "Eps",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "MaxIte",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "func",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "a",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "b",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SolveRootX(int algo, int numOfIter, double Eps, int MaxIte, int func, double a, double b, double c, double X_0, double X_1)"
+    },
+    {
+      "name": "SolveRootFlag",
+      "file": "solveroot.c",
+      "line": 18,
+      "params": [
+        {
+          "name": "algo",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "numOfIter",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "Eps",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "MaxIte",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "func",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "a",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "b",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "int",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "int",
+      "prototype": "int SolveRootFlag(int algo, int numOfIter, double Eps, int MaxIte, int func, double a, double b, double c, double X_0, double X_1)"
+    },
+    {
+      "name": "SolveRoot2Algo",
+      "file": "solveroot.c",
+      "line": 23,
+      "params": [
+        {
+          "name": "start",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "calls",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "Eps",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "maxIters",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "func",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "a",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "b",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "int",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "int",
+      "prototype": "int SolveRoot2Algo(int start, int calls, double Eps, int maxIters, int func, double a, double b, double c, double X_0, double X_1)"
+    },
+    {
+      "name": "SolveRoot2X",
+      "file": "solveroot.c",
+      "line": 28,
+      "params": [
+        {
+          "name": "start",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "calls",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "Eps",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "maxIters",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "func",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "a",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "b",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "c",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "X_1",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SolveRoot2X(int start, int calls, double Eps, int maxIters, int func, double a, double b, double c, double X_0, double X_1)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

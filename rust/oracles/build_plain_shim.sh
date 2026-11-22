@@ -12,9 +12,14 @@ b="$ep/build"
 p="$b/Products"
 [ -f "$p/libenergypluslib.a" ] || { echo "no $p/libenergypluslib.a: build EnergyPlus first" >&2; exit 1; }
 
-mapfile -t args < "$here/gen.args"
-unit="${args[0]}"
-python3 -I "$here/../gen_plain.py" "$here" "${args[@]}" >/dev/null
+# A unit without gen.args has a hand-written shim/ep_<folder name>_shim.cc.
+if [ -f "$here/gen.args" ]; then
+    mapfile -t args < "$here/gen.args"
+    unit="${args[0]}"
+    python3 -I "$here/../gen_plain.py" "$here" "${args[@]}" >/dev/null
+else
+    unit="$(basename "$here")"
+fi
 
 # The flags ninja uses for the EnergyPlus sources, minus -fvisibility=hidden so the
 # shim's own entry points are exported.
