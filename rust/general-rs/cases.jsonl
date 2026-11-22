@@ -1,0 +1,1986 @@
+{"fn": "OrdinalDay", "args": [1, -100, 2], "ok": -100}
+{"fn": "OrdinalDay", "args": [2147483647, 7, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, -2147483648, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -2147483648, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -1, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, -100, 255], "ok": -69}
+{"fn": "OrdinalDay", "args": [7, 255, -1], "ok": 435}
+{"fn": "OrdinalDay", "args": [7, -100, -2147483648], "ok": -2147483567}
+{"fn": "OrdinalDay", "args": [2147483647, 1, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 255, 2147483647], "ok": 286}
+{"fn": "OrdinalDay", "args": [100, 2147483647, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 42, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 7, 42], "ok": 38}
+{"fn": "OrdinalDay", "args": [2, 42, -2147483648], "ok": 73}
+{"fn": "OrdinalDay", "args": [1, 1, -100], "ok": 1}
+{"fn": "OrdinalDay", "args": [7, 42, 255], "ok": 478}
+{"fn": "OrdinalDay", "args": [-2147483648, 2147483647, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2147483647, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 1, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -2147483648, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 7, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 1, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 100, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 9223372036854775807, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 2147483647, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 2, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 1, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, 0, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, 42, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 2147483647, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -100, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 0, 7], "ok": 188}
+{"fn": "OrdinalDay", "args": [-2147483648, -100, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, -100, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 2, 9223372036854775807], "ok": 2}
+{"fn": "OrdinalDay", "args": [-1, 255, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 9223372036854775807, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 2, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 9223372036854775807, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 2147483647, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 255, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 2147483647, 2], "ok": 2147483647}
+{"fn": "OrdinalDay", "args": [255, 7, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, -1, 9223372036854775807], "ok": 179}
+{"fn": "OrdinalDay", "args": [-2147483648, 0, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, -1, -1], "ok": 30}
+{"fn": "OrdinalDay", "args": [2, 9223372036854775807, -2147483648], "ok": 30}
+{"fn": "OrdinalDay", "args": [2147483647, 2147483647, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 7, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 42, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 1, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 0, 2147483647], "ok": -2147483468}
+{"fn": "OrdinalDay", "args": [-1, 7, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 0, 9223372036854775807], "ok": 31}
+{"fn": "OrdinalDay", "args": [-100, 9223372036854775807, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, -2147483648, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 42, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 7, 42], "ok": 7}
+{"fn": "OrdinalDay", "args": [100, 2, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, -1, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, -1, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 255, 0], "ok": 286}
+{"fn": "OrdinalDay", "args": [-2147483648, 0, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, -100, 1], "ok": -69}
+{"fn": "OrdinalDay", "args": [-1, 42, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 1, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 0, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 1, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, -2147483648, 7], "ok": -2147483617}
+{"fn": "OrdinalDay", "args": [2147483647, 42, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, 7, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 7, 9223372036854775807], "ok": 38}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 7, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 9223372036854775807, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 1, 2147483647], "ok": -2147483467}
+{"fn": "OrdinalDay", "args": [-100, 1, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 9223372036854775807, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, -2147483648, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 2147483647, 7], "ok": -2147483618}
+{"fn": "OrdinalDay", "args": [-2147483648, 9223372036854775807, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 9223372036854775807, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, -100, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, -1, 9223372036854775807], "ok": -1}
+{"fn": "OrdinalDay", "args": [100, 255, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 0, 0], "ok": 31}
+{"fn": "OrdinalDay", "args": [-100, 0, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 7, 2147483647], "ok": 38}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2147483647, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, 9223372036854775807, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 7, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2147483647, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 2147483647, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 0, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 9223372036854775807, -100], "ok": 80}
+{"fn": "OrdinalDay", "args": [1, 9223372036854775807, 42], "ok": -1}
+{"fn": "OrdinalDay", "args": [100, -1, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 1, -1], "ok": 181}
+{"fn": "OrdinalDay", "args": [0, 9223372036854775807, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 100, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, -2147483648, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 42, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -2147483648, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 0, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 255, 7], "ok": 286}
+{"fn": "OrdinalDay", "args": [2147483647, 2147483647, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -1, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 9223372036854775807, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 2, 2], "ok": 33}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 2147483647, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 100, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 7, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 42, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 0, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -100, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 100, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 2, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 100, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, 255, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 255, -1], "ok": 286}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 255, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 2147483647, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 2147483647, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 0, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 2147483647, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, -1, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -2147483648, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 0, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -100, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -100, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, -2147483648, 1], "ok": -2147483648}
+{"fn": "OrdinalDay", "args": [2147483647, 0, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, -2147483648, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 0, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 7, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 42, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 9223372036854775807, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 0, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 100, 9223372036854775807], "ok": 131}
+{"fn": "OrdinalDay", "args": [100, 2147483647, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, -100, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 9223372036854775807, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 0, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, 0, 2147483647], "ok": 31}
+{"fn": "OrdinalDay", "args": [42, -1, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, -2147483648, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 1, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -100, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, -100, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 2, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 2, -1], "ok": 2}
+{"fn": "OrdinalDay", "args": [7, 255, 255], "ok": 691}
+{"fn": "OrdinalDay", "args": [100, 100, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, -100, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 2, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 255, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, -1, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, 255, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, 2, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 7, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 255, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 42, 2147483647], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 2, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, -1, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -2147483648, 42], "ok": 0}
+{"fn": "OrdinalDay", "args": [100, 9223372036854775807, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 255, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, -100, -1], "ok": 80}
+{"fn": "OrdinalDay", "args": [0, 100, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, -1, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 2, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, 0, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 7, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -2147483648, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, -1, 255], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, 2147483647, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 0, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, 0, 7], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, -2147483648, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, -1, -100], "ok": -1}
+{"fn": "OrdinalDay", "args": [2, 255, 100], "ok": 286}
+{"fn": "OrdinalDay", "args": [7, 0, 255], "ok": 436}
+{"fn": "OrdinalDay", "args": [42, 0, -100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483648, 2, 9223372036854775807], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, 100, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [9223372036854775807, 7, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 0, -1], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 255, 2147483647], "ok": -2147483213}
+{"fn": "OrdinalDay", "args": [255, 9223372036854775807, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [-100, 0, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [42, -2147483648, -2147483648], "ok": 0}
+{"fn": "OrdinalDay", "args": [255, 42, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483647, -2147483648, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [2, -2147483648, -2147483648], "ok": -2147483617}
+{"fn": "OrdinalDay", "args": [0, 42, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 0, 100], "ok": 0}
+{"fn": "OrdinalDay", "args": [-7, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [-1, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [0, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [2147483648, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [-2147483649, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [9007199254740993, -100, 2], "ok": -100}
+{"fn": "OrdinalDay", "args": [9223372036854775807, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [-9223372036854775808, -100, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, -7, 2], "ok": -7}
+{"fn": "OrdinalDay", "args": [1, -1, 2], "ok": -1}
+{"fn": "OrdinalDay", "args": [1, 0, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, 2147483648, 2], "ok": -2147483648}
+{"fn": "OrdinalDay", "args": [1, -2147483649, 2], "ok": 2147483647}
+{"fn": "OrdinalDay", "args": [1, 9007199254740993, 2], "ok": 1}
+{"fn": "OrdinalDay", "args": [1, 9223372036854775807, 2], "ok": -1}
+{"fn": "OrdinalDay", "args": [1, -9223372036854775808, 2], "ok": 0}
+{"fn": "OrdinalDay", "args": [1, -100, -7], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, -1], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, 0], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, 2147483648], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, -2147483649], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, 9007199254740993], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, 9223372036854775807], "ok": -100}
+{"fn": "OrdinalDay", "args": [1, -100, -9223372036854775808], "ok": -100}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 255, 0, 100, 42, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, -1, 1, -100, 2147483647, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 0, 2, -100, 42, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 255, -2147483648, 2, 1, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, 42, 100, 255, -2147483648, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 0, 9223372036854775807, 9223372036854775807, -1, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 0, 100, 255, 7, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 255, 0, 2, 1, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 2147483647, 255, 7, 9223372036854775807, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, -1, -100, 255, 0, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 100, 2147483647, 7, 1, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 2, 2, 255, 2, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 100, -100, 9223372036854775807, 42, 255], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 1, 9223372036854775807, -1, 0, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -2147483648, -1, 7, 0, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, -1, 2147483647, 2, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 1, 2147483647, 100, 255, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 7, 42, 255, -100, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -2147483648, 1, 255, 7, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 0, 2, 100, 1, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 2147483647, -2147483648, 100, 0, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 100, 0, 7, 42, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -1, 1, 7, -2147483648, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -100, 2147483647, -1, 100, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -100, 9223372036854775807, 2, -1, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -1, -1, 2147483647, 9223372036854775807, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 255, -100, -2147483648, 2, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 100, 2, 7, 42, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 2, -100, 7, -2147483648, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, 7, 2, -100, -100, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 100, 1, 9223372036854775807, 1, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, -1, 1, 7, 0, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 255, 1, 2147483647, 2, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 42, 0, 100, 1, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, -2147483648, -100, 2147483647, 42], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 42, -1, 2147483647, 7, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 255, -2147483648, 2, -2147483648, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 42, 2147483647, 42, 7, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 0, -2147483648, -2147483648, 2, 100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 100, 2, -2147483648, -100, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 9223372036854775807, 9223372036854775807, 2147483647, -2147483648, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 255, 42, 42, -100, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 2, 7, 0, -100, -100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -2147483648, 100, -100, -100, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 2, 2, -100, 7, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483647, 7, 42, 7, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, -100, 2147483647, 2, -2147483648, 42], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 0, -1, -100, -2147483648, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 7, 7, 0, 2147483647, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 1, 7, 255, 42, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -1, 9223372036854775807, 1, -100, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 100, 255, -1, 1, 42], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 255, 7, 100, 7, 255], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 1, 2, 9223372036854775807, 255, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 2, -100, 2, 100, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 9223372036854775807, -100, 0, 2, 255], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 7, 0, 42, 9223372036854775807, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 2, 0, 2147483647, 100, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483647, -1, 7, -1, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 2147483647, 42, 100, 2, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 9223372036854775807, 7, 100, 0, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, -100, -2147483648, 42, -100, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, -2147483648, 0, 0, -2147483648, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 2147483647, 255, 2, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 1, 100, 0, 0, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 42, 1, 255, 100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 100, 2, 255, 0, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 7, 7, -2147483648, 100, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 9223372036854775807, 42, 2147483647, 1, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483647, 7, 2147483647, -1, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 100, -1, -100, 1, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 2, 9223372036854775807, 42, 255, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 7, 2, -2147483648, 100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 42, 1, -2147483648, 42, 7], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, -2147483648, 7, 100, 42, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, -2147483648, 255, 42, 2147483647, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 100, 9223372036854775807, 1, 42, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 9223372036854775807, -100, 7, -100, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 0, 0, -100, 255, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 2147483647, 42, 2147483647, 1, 255], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 42, 2147483647, 2147483647, 1, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, 2, 9223372036854775807, 9223372036854775807, 2147483647, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 2, 2, 100, 1, -100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 2, 42, 2147483647, 42, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -1, 2, -2147483648, -1, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 42, 9223372036854775807, 0, 255, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, -100, -1, -1, -100, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 0, 7, -100, -2147483648, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 42, 255, -1, 2, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 255, 100, 1, -1, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 1, -1, -1, 0, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 2147483647, 2147483647, -1, 2, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 255, 42, -2147483648, -100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 0, 9223372036854775807, -1, 9223372036854775807, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 9223372036854775807, 255, -1, 0, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 2, 0, 2147483647, 42, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -100, -100, -2147483648, 9223372036854775807, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, -1, 255, 255, 2147483647, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 9223372036854775807, -1, 9223372036854775807, 0, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 2147483647, 42, 42, -1, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 2, -1, 1, -1, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 255, -1, -2147483648, -2147483648, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 2147483647, 7, 100, -2147483648, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 2, -2147483648, 0, 0, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 1, 1, 0, 42, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483647, 2147483647, -100, 100, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, -100, -1, 2, 1, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 7, -100, -100, 7, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 42, 0, -2147483648, 0, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 2147483647, -2147483648, 0, 9223372036854775807, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 2, 2, 42, 2, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 255, 42, 1, 9223372036854775807, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, -2147483648, 0, 0, -2147483648, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -1, 2, 255, -1, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, -1, -2147483648, 2147483647, -2147483648, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -100, 2147483647, -1, 100, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, -100, 0, -100, 7, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -2147483648, -1, 9223372036854775807, 0, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, -100, -100, 2, 1, 42], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -2147483648, -2147483648, -2147483648, 2147483647, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 9223372036854775807, 0, 9223372036854775807, 100, 7], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -1, 2147483647, -2147483648, -2147483648, 100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 100, 2147483647, 0, 42, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 2147483647, -100, 100, 2, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, -100, -1, 255, 2147483647, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 7, -2147483648, -1, 1, 42], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 2, 2147483647, 2147483647, 255, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 255, 2147483647, -1, 2147483647, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 1, 255, -2147483648, 9223372036854775807, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 1, 100, 42, 0, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 100, 7, 255, 0, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, -1, 42, 42, 2, 42], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 100, 42, 255, 2147483647, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 42, -100, 2147483647, 2147483647, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 9223372036854775807, 0, 7, 2, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, -2147483648, 42, -100, 2, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 2147483647, 255, -1, 0, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, -100, 1, 9223372036854775807, 2147483647, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 100, -2147483648, 2147483647, 255, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, -2147483648, 100, 1, -100, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -1, 0, 9223372036854775807, -1, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 100, -2147483648, 42, 2147483647, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, -1, 7, -1, 7, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, -1, 2, 2147483647, 42, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, -1, -1, 2, 0, -100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 2147483647, 42, -2147483648, 7, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, -1, 2147483647, 2147483647, 2, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, -100, 2147483647, 0, 2, 100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, -2147483648, 7, 0, 255, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 9223372036854775807, 2, -100, 7, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 2, 255, 2, 1, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 42, 255, 7, 7, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 42, 2, 2147483647, 1, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 9223372036854775807, 7, 42, 42, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 2, 1, 42, 100, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -1, -100, -100, 100, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, -1, -2147483648, 0, 0, 7], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 2, 255, -100, 1, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 9223372036854775807, 42, 100, -2147483648, 100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, -1, 42, 1, 2, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 7, 9223372036854775807, 100, 9223372036854775807, 2147483647], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, 7, -100, -100, -1, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 2, 100, 0, 42, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, -2147483648, 42, 42, 2147483647, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, 9223372036854775807, -1, -100, 2147483647], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 255, 42, 1, 2, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 1, 0, 9223372036854775807, 255, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-100, 1, 2147483647, 2, 100, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 2147483647, 9223372036854775807, -1, 42, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 2, 255, -100, 0, 2], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 2, 7, 7, 9223372036854775807, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 42, 255, 2, 0, 9223372036854775807], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 9223372036854775807, 255, 255, 2, 9223372036854775807], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 100, 100, 7, 7, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483647, 42, 7, 9223372036854775807, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 9223372036854775807, -1, 42, 2147483647, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, -100, 0, 100, 2, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483647, 100, 7, 1, 9223372036854775807], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 100, 9223372036854775807, 2147483647, 9223372036854775807, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 42, -2147483648, 255, 42, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 0, -2147483648, 255, 2147483647, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, -2147483648, -2147483648, 1, 9223372036854775807, -1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 2, 1, 0, 9223372036854775807, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 0, 7, -2147483648, 7, 7], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -1, -1, 7, 1, 100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, -1, 100, 0, 100, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 9223372036854775807, 7, -1, 0, -100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 7, 2147483647, -1, -2147483648, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [7, 1, -2147483648, 100, 2147483647, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483648, 9223372036854775807, 2, 42, 9223372036854775807, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 42, 100, 255, 255, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 9223372036854775807, 2147483647, 0, -2147483648, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 42, 255, 2147483647, 100, 255], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, 2147483647, 9223372036854775807, 0, -2147483648, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, -100, 0, 7, 7, 42], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483647, 9223372036854775807, -100, 9223372036854775807, 2, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 7, 100, 100, 2147483647, 100], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [42, -1, -100, -100, 7, 1], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [255, 9223372036854775807, 1, 100, 42, -100], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-7, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-1, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2147483648, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-2147483649, 255, 1, 2147483647, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9007199254740993, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [9223372036854775807, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [-9223372036854775808, 255, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -7, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -1, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 2147483648, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -2147483649, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 9007199254740993, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 9223372036854775807, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, -9223372036854775808, 1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, -7, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, -1, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 0, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 2147483648, 2147483647, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, -2147483649, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 9007199254740993, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 9223372036854775807, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, -9223372036854775808, 2147483647, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, -7, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, -1, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 0, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483648, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, -2147483649, -2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 9007199254740993, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 9223372036854775807, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, -9223372036854775808, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -7, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -1, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, 0, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, 2147483648, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483649, -2147483648], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, 9007199254740993, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, 9223372036854775807, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -9223372036854775808, -2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, -7], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, -1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, 2147483648], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, -2147483649], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, 9007199254740993], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, 9223372036854775807], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 255, 1, 2147483647, -2147483648, -9223372036854775808], "ok": true}
+{"fn": "BetweenDates", "args": [2, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [42, -2147483648, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 255, 42], "ok": true}
+{"fn": "BetweenDates", "args": [100, 100, -1], "ok": true}
+{"fn": "BetweenDates", "args": [100, -100, 2], "ok": false}
+{"fn": "BetweenDates", "args": [0, 2147483647, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [100, 1, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 9223372036854775807, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, 9223372036854775807, 0], "ok": false}
+{"fn": "BetweenDates", "args": [0, 100, 2], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, -2147483648, 1], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 9223372036854775807, -1], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 2, 100], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 255, 1], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 0, 2], "ok": false}
+{"fn": "BetweenDates", "args": [42, 9223372036854775807, -100], "ok": true}
+{"fn": "BetweenDates", "args": [7, 7, 100], "ok": true}
+{"fn": "BetweenDates", "args": [1, 2, 0], "ok": false}
+{"fn": "BetweenDates", "args": [1, 1, 255], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, -1, 2147483647], "ok": false}
+{"fn": "BetweenDates", "args": [255, -100, 255], "ok": true}
+{"fn": "BetweenDates", "args": [7, 9223372036854775807, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, 1, 2], "ok": false}
+{"fn": "BetweenDates", "args": [7, 42, 255], "ok": false}
+{"fn": "BetweenDates", "args": [7, -2147483648, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [-100, -100, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 255, 2], "ok": true}
+{"fn": "BetweenDates", "args": [-1, -1, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [42, -1, -2147483648], "ok": true}
+{"fn": "BetweenDates", "args": [7, -100, 2], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 1, 255], "ok": false}
+{"fn": "BetweenDates", "args": [100, -2147483648, -100], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 7, 1], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, -2147483648, -1], "ok": true}
+{"fn": "BetweenDates", "args": [2, 2147483647, 2], "ok": true}
+{"fn": "BetweenDates", "args": [42, 1, 2], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 9223372036854775807, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [42, -100, 1], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 1, 2147483647], "ok": false}
+{"fn": "BetweenDates", "args": [255, 100, 0], "ok": true}
+{"fn": "BetweenDates", "args": [42, 9223372036854775807, 1], "ok": false}
+{"fn": "BetweenDates", "args": [0, 0, 2], "ok": true}
+{"fn": "BetweenDates", "args": [100, 9223372036854775807, 1], "ok": false}
+{"fn": "BetweenDates", "args": [7, 100, 7], "ok": true}
+{"fn": "BetweenDates", "args": [2, -100, 1], "ok": false}
+{"fn": "BetweenDates", "args": [1, 255, 1], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 7, 2], "ok": true}
+{"fn": "BetweenDates", "args": [-100, 1, 1], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483648, 1, 0], "ok": true}
+{"fn": "BetweenDates", "args": [255, 2, -1], "ok": true}
+{"fn": "BetweenDates", "args": [42, -2147483648, -100], "ok": false}
+{"fn": "BetweenDates", "args": [42, 9223372036854775807, 2], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 2147483647, 255], "ok": true}
+{"fn": "BetweenDates", "args": [-100, -2147483648, 1], "ok": true}
+{"fn": "BetweenDates", "args": [100, 100, -100], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 42, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [-1, -2147483648, 42], "ok": true}
+{"fn": "BetweenDates", "args": [7, -100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [7, -2147483648, 1], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483648, 7, 255], "ok": false}
+{"fn": "BetweenDates", "args": [1, 1, 1], "ok": true}
+{"fn": "BetweenDates", "args": [100, 2, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [100, 7, 1], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 42, 1], "ok": true}
+{"fn": "BetweenDates", "args": [100, 9223372036854775807, 255], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 7, 42], "ok": false}
+{"fn": "BetweenDates", "args": [1, -2147483648, -100], "ok": false}
+{"fn": "BetweenDates", "args": [255, 100, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 0, 7], "ok": false}
+{"fn": "BetweenDates", "args": [-1, -2147483648, 0], "ok": true}
+{"fn": "BetweenDates", "args": [-1, -2147483648, 1], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 0, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [100, 0, 255], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, 2, 1], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 1, 7], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, 255, 255], "ok": false}
+{"fn": "BetweenDates", "args": [255, 2147483647, 100], "ok": false}
+{"fn": "BetweenDates", "args": [2, -2147483648, -100], "ok": false}
+{"fn": "BetweenDates", "args": [0, 2, 255], "ok": false}
+{"fn": "BetweenDates", "args": [255, 42, -100], "ok": true}
+{"fn": "BetweenDates", "args": [7, -1, -2147483648], "ok": true}
+{"fn": "BetweenDates", "args": [100, 2147483647, -1], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 42, 1], "ok": true}
+{"fn": "BetweenDates", "args": [42, 1, -2147483648], "ok": true}
+{"fn": "BetweenDates", "args": [1, 42, -1], "ok": false}
+{"fn": "BetweenDates", "args": [2, 255, 100], "ok": true}
+{"fn": "BetweenDates", "args": [-1, -100, 2], "ok": true}
+{"fn": "BetweenDates", "args": [1, 2147483647, -100], "ok": false}
+{"fn": "BetweenDates", "args": [7, 100, 1], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483648, 2147483647, -100], "ok": true}
+{"fn": "BetweenDates", "args": [1, 2, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [42, 42, 1], "ok": true}
+{"fn": "BetweenDates", "args": [-1, -1, 7], "ok": true}
+{"fn": "BetweenDates", "args": [42, 42, 100], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 0, 1], "ok": false}
+{"fn": "BetweenDates", "args": [7, 2147483647, 1], "ok": false}
+{"fn": "BetweenDates", "args": [255, 255, 0], "ok": true}
+{"fn": "BetweenDates", "args": [100, -1, 2], "ok": false}
+{"fn": "BetweenDates", "args": [7, 7, -100], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, -1, 1], "ok": true}
+{"fn": "BetweenDates", "args": [7, -100, 100], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 9223372036854775807, 42], "ok": true}
+{"fn": "BetweenDates", "args": [7, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [255, 7, 42], "ok": false}
+{"fn": "BetweenDates", "args": [2, -100, 7], "ok": true}
+{"fn": "BetweenDates", "args": [100, 255, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, 2147483647, 7], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 0, -100], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, 1, 2], "ok": false}
+{"fn": "BetweenDates", "args": [7, 255, 7], "ok": true}
+{"fn": "BetweenDates", "args": [2, 255, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, -1, -100], "ok": true}
+{"fn": "BetweenDates", "args": [7, 255, 42], "ok": true}
+{"fn": "BetweenDates", "args": [7, 255, -1], "ok": false}
+{"fn": "BetweenDates", "args": [0, 42, 2], "ok": true}
+{"fn": "BetweenDates", "args": [-1, -1, 100], "ok": true}
+{"fn": "BetweenDates", "args": [0, 9223372036854775807, 255], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, -1, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 0, -100], "ok": false}
+{"fn": "BetweenDates", "args": [-100, -100, 1], "ok": true}
+{"fn": "BetweenDates", "args": [7, 0, 255], "ok": true}
+{"fn": "BetweenDates", "args": [100, 7, 7], "ok": false}
+{"fn": "BetweenDates", "args": [100, -100, -100], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 9223372036854775807, 42], "ok": false}
+{"fn": "BetweenDates", "args": [1, 100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 0, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 7, 100], "ok": false}
+{"fn": "BetweenDates", "args": [-100, 255, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, -100, -2147483648], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, -100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [-1, -100, 42], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 2, 2], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 42, 2], "ok": true}
+{"fn": "BetweenDates", "args": [255, 7, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [100, 2147483647, 0], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, -1, -2147483648], "ok": true}
+{"fn": "BetweenDates", "args": [2, -2147483648, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 7, 2147483647], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 2, -1], "ok": true}
+{"fn": "BetweenDates", "args": [255, 9223372036854775807, -1], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, -2147483648, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, 2, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [2, 42, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [2, -1, 1], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, -100, 2], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 9223372036854775807, 1], "ok": true}
+{"fn": "BetweenDates", "args": [0, 2, 1], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 2147483647, 7], "ok": true}
+{"fn": "BetweenDates", "args": [2, 100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [1, 2147483647, 7], "ok": true}
+{"fn": "BetweenDates", "args": [2147483647, 100, 100], "ok": false}
+{"fn": "BetweenDates", "args": [7, 7, 7], "ok": true}
+{"fn": "BetweenDates", "args": [2, 42, -100], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 0, 2147483647], "ok": false}
+{"fn": "BetweenDates", "args": [0, 7, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [1, -100, -1], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483648, -100, 1], "ok": false}
+{"fn": "BetweenDates", "args": [0, -2147483648, 42], "ok": true}
+{"fn": "BetweenDates", "args": [-100, 1, 0], "ok": true}
+{"fn": "BetweenDates", "args": [42, 7, 9223372036854775807], "ok": true}
+{"fn": "BetweenDates", "args": [1, 7, 255], "ok": false}
+{"fn": "BetweenDates", "args": [42, -2147483648, 255], "ok": true}
+{"fn": "BetweenDates", "args": [2, -100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 1, 1], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483648, 9223372036854775807, 2147483647], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, -100, 100], "ok": true}
+{"fn": "BetweenDates", "args": [42, -100, 255], "ok": true}
+{"fn": "BetweenDates", "args": [0, 0, 2147483647], "ok": true}
+{"fn": "BetweenDates", "args": [7, 1, 1], "ok": false}
+{"fn": "BetweenDates", "args": [0, -1, 100], "ok": true}
+{"fn": "BetweenDates", "args": [42, 42, -1], "ok": true}
+{"fn": "BetweenDates", "args": [0, -1, 0], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 1, 255], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 2147483647, 0], "ok": true}
+{"fn": "BetweenDates", "args": [42, 2147483647, -100], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 2147483647, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, -1, 255], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 2, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 2147483647, 1], "ok": true}
+{"fn": "BetweenDates", "args": [-1, 1, 7], "ok": false}
+{"fn": "BetweenDates", "args": [0, 9223372036854775807, 100], "ok": true}
+{"fn": "BetweenDates", "args": [0, 100, 1], "ok": true}
+{"fn": "BetweenDates", "args": [42, 1, 100], "ok": true}
+{"fn": "BetweenDates", "args": [100, -2147483648, -1], "ok": false}
+{"fn": "BetweenDates", "args": [255, -2147483648, 100], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483648, -100, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [1, 100, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [2147483647, -100, 42], "ok": false}
+{"fn": "BetweenDates", "args": [0, 7, 100], "ok": false}
+{"fn": "BetweenDates", "args": [255, -100, 2], "ok": false}
+{"fn": "BetweenDates", "args": [-100, -100, 0], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, 255, 2147483647], "ok": false}
+{"fn": "BetweenDates", "args": [2, 7, 0], "ok": false}
+{"fn": "BetweenDates", "args": [100, 1, -100], "ok": true}
+{"fn": "BetweenDates", "args": [-2147483648, 255, 2], "ok": true}
+{"fn": "BetweenDates", "args": [9223372036854775807, 2147483647, -2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 2147483647, 100], "ok": true}
+{"fn": "BetweenDates", "args": [0, 1, 255], "ok": false}
+{"fn": "BetweenDates", "args": [0, 2, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [255, 0, 1], "ok": false}
+{"fn": "BetweenDates", "args": [-7, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [-1, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [0, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [2147483648, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [-2147483649, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [9007199254740993, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [9223372036854775807, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [-9223372036854775808, 42, 42], "ok": false}
+{"fn": "BetweenDates", "args": [2, -7, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, -1, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, 0, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, 2147483648, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, -2147483649, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, 9007199254740993, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, 9223372036854775807, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, -9223372036854775808, 42], "ok": true}
+{"fn": "BetweenDates", "args": [2, 42, -7], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, -1], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, 0], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, 2147483648], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, -2147483649], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, 9007199254740993], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, 9223372036854775807], "ok": false}
+{"fn": "BetweenDates", "args": [2, 42, -9223372036854775808], "ok": false}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 42.0], "ok": 214457125112880.75}
+{"fn": "SafeDivide", "args": [1.0, {"$num": "NaN"}], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [3.0, -2.5], "ok": -1.2}
+{"fn": "SafeDivide", "args": [10.0, 42.0], "ok": 0.23809523809523808}
+{"fn": "SafeDivide", "args": [1.0, 0.0], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [2.0, 2.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [100.0, 42.0], "ok": 2.380952380952381}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 2.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [-1.0, {"$num": "NaN"}], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [0.0, 0.5], "ok": 0.0}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, {"$num": "-0"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 1.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [100.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [2.0, -2.5], "ok": -0.8}
+{"fn": "SafeDivide", "args": [3.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [2.0, 0.0], "ok": 20000000000.0}
+{"fn": "SafeDivide", "args": [100.0, {"$num": "-0"}], "ok": 1000000000000.0}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [1000000.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [9007199254740992.0, -1.0], "ok": -9007199254740992.0}
+{"fn": "SafeDivide", "args": [2147483648.0, 1000000.0], "ok": 2147.483648}
+{"fn": "SafeDivide", "args": [1.0, {"$num": "-0"}], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [0.5, 3.0], "ok": 0.16666666666666666}
+{"fn": "SafeDivide", "args": [42.0, {"$num": "-0"}], "ok": 420000000000.0}
+{"fn": "SafeDivide", "args": [-1.0, 0.0], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [2.0, {"$num": "-Infinity"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 1000000.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [3.0, 42.0], "ok": 0.07142857142857142}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 9007199254740992.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [2.0, 100.0], "ok": 0.02}
+{"fn": "SafeDivide", "args": [1000.0, 2.0], "ok": 500.0}
+{"fn": "SafeDivide", "args": [42.0, 0.0], "ok": 420000000000.0}
+{"fn": "SafeDivide", "args": [1000000.0, {"$num": "-0"}], "ok": 1e+16}
+{"fn": "SafeDivide", "args": [2147483648.0, {"$num": "-0"}], "ok": 2.147483648e+19}
+{"fn": "SafeDivide", "args": [10.0, 100.0], "ok": 0.1}
+{"fn": "SafeDivide", "args": [-1.0, 1000.0], "ok": -0.001}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 10.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [1000000.0, 0.5], "ok": 2000000.0}
+{"fn": "SafeDivide", "args": [2147483648.0, 2.0], "ok": 1073741824.0}
+{"fn": "SafeDivide", "args": [-2.5, {"$num": "NaN"}], "ok": 25000000000.0}
+{"fn": "SafeDivide", "args": [0.5, -2.5], "ok": -0.2}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, {"$num": "Infinity"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 3.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [42.0, 100.0], "ok": 0.42}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 0.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [0.5, 0.0], "ok": 5000000000.0}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 2.0], "ok": 4503599627370496.0}
+{"fn": "SafeDivide", "args": [0.5, 9007199254740992.0], "ok": 5.551115123125783e-17}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 1000000.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [3.0, 9007199254740992.0], "ok": 3.3306690738754696e-16}
+{"fn": "SafeDivide", "args": [2147483648.0, -2.5], "ok": -858993459.2}
+{"fn": "SafeDivide", "args": [42.0, 2147483648.0], "ok": 1.955777406692505e-08}
+{"fn": "SafeDivide", "args": [10.0, 0.5], "ok": 20.0}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 0.0], "ok": 9.007199254740992e+25}
+{"fn": "SafeDivide", "args": [-2.5, 1000000.0], "ok": -2.5e-06}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 2147483648.0], "ok": 4194304.0}
+{"fn": "SafeDivide", "args": [42.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [2147483648.0, 0.0], "ok": 2.147483648e+19}
+{"fn": "SafeDivide", "args": [-2.5, 42.0], "ok": -0.05952380952380952}
+{"fn": "SafeDivide", "args": [42.0, 1000.0], "ok": 0.042}
+{"fn": "SafeDivide", "args": [42.0, 1.0], "ok": 42.0}
+{"fn": "SafeDivide", "args": [2147483648.0, 9007199254740992.0], "ok": 2.384185791015625e-07}
+{"fn": "SafeDivide", "args": [2.0, 0.5], "ok": 4.0}
+{"fn": "SafeDivide", "args": [3.0, 2147483648.0], "ok": 1.3969838619232178e-09}
+{"fn": "SafeDivide", "args": [2147483648.0, 1.0], "ok": 2147483648.0}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 10.0], "ok": 900719925474099.2}
+{"fn": "SafeDivide", "args": [0.5, 42.0], "ok": 0.011904761904761904}
+{"fn": "SafeDivide", "args": [1000.0, 9007199254740992.0], "ok": 1.1102230246251565e-13}
+{"fn": "SafeDivide", "args": [1000000.0, 2147483648.0], "ok": 0.00046566128730773926}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 2147483648.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [0.5, 2147483648.0], "ok": 2.3283064365386963e-10}
+{"fn": "SafeDivide", "args": [3.0, 10.0], "ok": 0.3}
+{"fn": "SafeDivide", "args": [2.0, 1000000.0], "ok": 2e-06}
+{"fn": "SafeDivide", "args": [0.5, 100.0], "ok": 0.005}
+{"fn": "SafeDivide", "args": [1000000.0, 9007199254740992.0], "ok": 1.1102230246251565e-10}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, 100.0], "ok": {"$num": "Infinity"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 3.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 2.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [100.0, 1000.0], "ok": 0.1}
+{"fn": "SafeDivide", "args": [2.0, {"$num": "NaN"}], "ok": -20000000000.0}
+{"fn": "SafeDivide", "args": [1000000.0, 3.0], "ok": 333333.3333333333}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "SafeDivide", "args": [0.5, 10.0], "ok": 0.05}
+{"fn": "SafeDivide", "args": [1000.0, 2147483648.0], "ok": 4.6566128730773926e-07}
+{"fn": "SafeDivide", "args": [1000.0, 0.5], "ok": 2000.0}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, -1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [100.0, 1.0], "ok": 100.0}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 0.5], "ok": 1.8014398509481984e+16}
+{"fn": "SafeDivide", "args": [9007199254740992.0, {"$num": "-Infinity"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [9007199254740992.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 0.5], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [-2.5, -2.5], "ok": 1.0}
+{"fn": "SafeDivide", "args": [3.0, {"$num": "NaN"}], "ok": -30000000000.0}
+{"fn": "SafeDivide", "args": [10.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [2.0, 1000.0], "ok": 0.002}
+{"fn": "SafeDivide", "args": [42.0, -2.5], "ok": -16.8}
+{"fn": "SafeDivide", "args": [3.0, -1.0], "ok": -3.0}
+{"fn": "SafeDivide", "args": [-1.0, 9007199254740992.0], "ok": -1.1102230246251565e-16}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, {"$num": "NaN"}], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [42.0, -1.0], "ok": -42.0}
+{"fn": "SafeDivide", "args": [9007199254740992.0, {"$num": "NaN"}], "ok": -9.007199254740992e+25}
+{"fn": "SafeDivide", "args": [-1.0, -1.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [1.0, 2.0], "ok": 0.5}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, -2.5], "ok": {"$num": "Infinity"}}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 9007199254740992.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [10.0, 3.0], "ok": 3.3333333333333335}
+{"fn": "SafeDivide", "args": [100.0, 0.0], "ok": 1000000000000.0}
+{"fn": "SafeDivide", "args": [1000000.0, 100.0], "ok": 10000.0}
+{"fn": "SafeDivide", "args": [-2.5, 1000.0], "ok": -0.0025}
+{"fn": "SafeDivide", "args": [42.0, 9007199254740992.0], "ok": 4.6629367034256575e-15}
+{"fn": "SafeDivide", "args": [-2.5, 0.5], "ok": -5.0}
+{"fn": "SafeDivide", "args": [10.0, 1000.0], "ok": 0.01}
+{"fn": "SafeDivide", "args": [-2.5, 3.0], "ok": -0.8333333333333334}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, -2.5], "ok": 0.0}
+{"fn": "SafeDivide", "args": [10.0, {"$num": "-0"}], "ok": 100000000000.0}
+{"fn": "SafeDivide", "args": [100.0, -1.0], "ok": -100.0}
+{"fn": "SafeDivide", "args": [1000000.0, 42.0], "ok": 23809.52380952381}
+{"fn": "SafeDivide", "args": [0.0, 10.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [1.0, 2147483648.0], "ok": 4.656612873077393e-10}
+{"fn": "SafeDivide", "args": [2147483648.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 42.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [100.0, 9007199254740992.0], "ok": 1.1102230246251565e-14}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 10.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [100.0, 2.0], "ok": 50.0}
+{"fn": "SafeDivide", "args": [3.0, {"$num": "-0"}], "ok": 30000000000.0}
+{"fn": "SafeDivide", "args": [100.0, -2.5], "ok": -40.0}
+{"fn": "SafeDivide", "args": [0.5, {"$num": "-Infinity"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [-1.0, -2.5], "ok": 0.4}
+{"fn": "SafeDivide", "args": [1000.0, {"$num": "-Infinity"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 1000.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 1000000.0], "ok": 9007199254.740992}
+{"fn": "SafeDivide", "args": [1.0, 100.0], "ok": 0.01}
+{"fn": "SafeDivide", "args": [1000.0, 1000.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 1.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, {"$num": "-Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, -1.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [10.0, 2.0], "ok": 5.0}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 9007199254740992.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [1000.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [0.5, 1000000.0], "ok": 5e-07}
+{"fn": "SafeDivide", "args": [2147483648.0, -1.0], "ok": -2147483648.0}
+{"fn": "SafeDivide", "args": [2147483648.0, {"$num": "NaN"}], "ok": -2.147483648e+19}
+{"fn": "SafeDivide", "args": [1.0, 9007199254740992.0], "ok": 1.1102230246251565e-16}
+{"fn": "SafeDivide", "args": [2.0, -1.0], "ok": -2.0}
+{"fn": "SafeDivide", "args": [-1.0, 0.5], "ok": -2.0}
+{"fn": "SafeDivide", "args": [0.0, {"$num": "NaN"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 2147483648.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 0.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [3.0, 3.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 3.0], "ok": 3002399751580330.5}
+{"fn": "SafeDivide", "args": [-1.0, 10.0], "ok": -0.1}
+{"fn": "SafeDivide", "args": [0.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [100.0, 1000000.0], "ok": 0.0001}
+{"fn": "SafeDivide", "args": [3.0, 1000000.0], "ok": 3e-06}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 0.5], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 9007199254740992.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [0.0, {"$num": "-Infinity"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, {"$num": "NaN"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [2.0, 3.0], "ok": 0.6666666666666666}
+{"fn": "SafeDivide", "args": [-2.5, 2.0], "ok": -1.25}
+{"fn": "SafeDivide", "args": [42.0, 10.0], "ok": 4.2}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 10.0], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [-2.5, 9007199254740992.0], "ok": -2.7755575615628914e-16}
+{"fn": "SafeDivide", "args": [9007199254740992.0, {"$num": "-0"}], "ok": 9.007199254740992e+25}
+{"fn": "SafeDivide", "args": [0.0, -1.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [10.0, -1.0], "ok": -10.0}
+{"fn": "SafeDivide", "args": [1000000.0, 1000000.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [1.0, 1.0], "ok": 1.0}
+{"fn": "SafeDivide", "args": [2.0, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [1000.0, {"$num": "-0"}], "ok": 10000000000000.0}
+{"fn": "SafeDivide", "args": [0.0, -2.5], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [0.5, {"$num": "Infinity"}], "ok": 0.0}
+{"fn": "SafeDivide", "args": [1000.0, 1.0], "ok": 1000.0}
+{"fn": "SafeDivide", "args": [3.0, 0.0], "ok": 30000000000.0}
+{"fn": "SafeDivide", "args": [2.0, 1.0], "ok": 2.0}
+{"fn": "SafeDivide", "args": [3.0, 1.0], "ok": 3.0}
+{"fn": "SafeDivide", "args": [2.0, 9007199254740992.0], "ok": 2.220446049250313e-16}
+{"fn": "SafeDivide", "args": [1.0, 1000.0], "ok": 0.001}
+{"fn": "SafeDivide", "args": [0.5, -1.0], "ok": -0.5}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, {"$num": "-0"}], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [-1.0, 2147483648.0], "ok": -4.656612873077393e-10}
+{"fn": "SafeDivide", "args": [{"$num": "NaN"}, 0.5], "ok": {"$num": "NaN"}}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 1000000.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [2.0, 10.0], "ok": 0.2}
+{"fn": "SafeDivide", "args": [9007199254740992.0, -2.5], "ok": -3602879701896397.0}
+{"fn": "SafeDivide", "args": [1000.0, 0.0], "ok": 10000000000000.0}
+{"fn": "SafeDivide", "args": [0.5, 1000.0], "ok": 0.0005}
+{"fn": "SafeDivide", "args": [{"$num": "Infinity"}, 0.5], "ok": {"$num": "Infinity"}}
+{"fn": "SafeDivide", "args": [{"$num": "-Infinity"}, 3.0], "ok": {"$num": "-Infinity"}}
+{"fn": "SafeDivide", "args": [0.0, 100.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [1.0, -1.0], "ok": -1.0}
+{"fn": "SafeDivide", "args": [-1.0, 3.0], "ok": -0.3333333333333333}
+{"fn": "SafeDivide", "args": [1000000.0, -1.0], "ok": -1000000.0}
+{"fn": "SafeDivide", "args": [-7.5, 42.0], "ok": -0.17857142857142858}
+{"fn": "SafeDivide", "args": [0.1, 42.0], "ok": 0.002380952380952381}
+{"fn": "SafeDivide", "args": [0.30000000000000004, 42.0], "ok": 0.0071428571428571435}
+{"fn": "SafeDivide", "args": [1e+21, 42.0], "ok": 2.380952380952381e+19}
+{"fn": "SafeDivide", "args": [1e-07, 42.0], "ok": 2.380952380952381e-09}
+{"fn": "SafeDivide", "args": [5e-324, 42.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [1.7976931348623157e+308, 42.0], "ok": 4.2802217496721805e+306}
+{"fn": "SafeDivide", "args": [{"$num": "-0"}, 42.0], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [9007199254740992.0, -7.5], "ok": -1200959900632132.2}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 0.1], "ok": 9.007199254740992e+16}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 0.30000000000000004], "ok": 3.0023997515803304e+16}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 1e+21], "ok": 9.007199254740991e-06}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 1e-07], "ok": 9.007199254740992e+22}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 5e-324], "ok": 9.007199254740992e+25}
+{"fn": "SafeDivide", "args": [9007199254740992.0, 1.7976931348623157e+308], "ok": 5.010420900022433e-293}
+{"fn": "rotAzmDiffDeg", "args": [0.0, -1.0], "ok": 1.0}
+{"fn": "rotAzmDiffDeg", "args": [1.0, -2.5], "ok": 3.5}
+{"fn": "rotAzmDiffDeg", "args": [1.0, -1.0], "ok": 2.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 9007199254740992.0], "ok": 9007199254740634.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 1000.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 2147483648.0], "ok": 2147483278.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 0.0], "ok": 1.0}
+{"fn": "rotAzmDiffDeg", "args": [42.0, 1000000.0], "ok": 999598.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, -1.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 10.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 0.5], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 1.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 0.0], "ok": 2.5}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 1.0], "ok": 999639.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 2.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, -2.5], "ok": 2147483290.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 0.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, {"$num": "-0"}], "ok": 1.0}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 9007199254740992.0], "ok": 9007199254740622.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 100.0], "ok": 999540.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 2.0], "ok": 4.5}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 1000000.0], "ok": 998640.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 0.5], "ok": 3.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 10.0], "ok": 10.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 42.0], "ok": 44.5}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, -2.5], "ok": 999642.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 3.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 9007199254740992.0], "ok": 9007197107256984.0}
+{"fn": "rotAzmDiffDeg", "args": [42.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 3.0], "ok": 2.5}
+{"fn": "rotAzmDiffDeg", "args": [2.0, 1000000.0], "ok": 999638.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 42.0], "ok": 9007199254740590.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 3.0], "ok": 999637.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 100.0], "ok": 540.0}
+{"fn": "rotAzmDiffDeg", "args": [42.0, 100.0], "ok": 58.0}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 3.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 2.0], "ok": 9007199254740630.0}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 9007199254740992.0], "ok": 9007199254740629.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 1000000.0], "ok": 999640.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, 9007199254740992.0], "ok": 9007199254740532.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, -1.0], "ok": 9007199254740632.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, 100.0], "ok": 98.0}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 42.0], "ok": 39.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 1.0], "ok": 3.5}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 0.0], "ok": 9007199254740632.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 3.0], "ok": 9007199254740629.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 100.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [0.5, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 100.0], "ok": 102.5}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 1000.0], "ok": 9007199254739632.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, -2.5], "ok": 9007199254740634.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, -2.5], "ok": 642.5}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 10.0], "ok": 2147483278.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 1000000.0], "ok": 9007199253740632.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1.0, 1000.0], "ok": 639.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 0.5], "ok": 0.5}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [3.0, {"$num": "-0"}], "ok": 3.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 100.0], "ok": 2147483188.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 0.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [42.0, 42.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [42.0, 2147483648.0], "ok": 2147483246.0}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 0.0], "ok": 0.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 1000000.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [100.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, {"$num": "-0"}], "ok": 2.5}
+{"fn": "rotAzmDiffDeg", "args": [1.0, 100.0], "ok": 99.0}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 1000.0], "ok": 630.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 100.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [3.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1.0, 3.0], "ok": 2.0}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 0.0], "ok": 2147483288.0}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 1.0], "ok": 2147483287.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, {"$num": "-0"}], "ok": 2.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 42.0], "ok": 999598.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, 1000.0], "ok": 638.0}
+{"fn": "rotAzmDiffDeg", "args": [1.0, 0.5], "ok": 0.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 3.0], "ok": 5.5}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 1000000.0], "ok": 999630.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 2.0], "ok": 638.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 100.0], "ok": 100.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 42.0], "ok": 43.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 9007199254740992.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [42.0, 1000.0], "ok": 598.0}
+{"fn": "rotAzmDiffDeg", "args": [0.5, {"$num": "-0"}], "ok": 0.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 10.0], "ok": 12.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 1000.0], "ok": 2147482288.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 0.0], "ok": 640.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 2147483648.0], "ok": 2147483290.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 1.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 9007199254740992.0], "ok": 9007199254739632.0}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 2.0], "ok": 1.5}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 100.0], "ok": 101.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 9007199254740992.0], "ok": 9007199254740632.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 3.0], "ok": 4.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 1000.0], "ok": 641.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 9007199254740992.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 9007199254740992.0], "ok": 9007199254740632.0}
+{"fn": "rotAzmDiffDeg", "args": [42.0, -1.0], "ok": 43.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 2147483648.0], "ok": 2147483287.5}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, {"$num": "-0"}], "ok": 2147483288.0}
+{"fn": "rotAzmDiffDeg", "args": [1.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2.0, 0.0], "ok": 2.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, -2.5], "ok": 4.5}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 2.0], "ok": 8.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, -1.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 1.0], "ok": 2.0}
+{"fn": "rotAzmDiffDeg", "args": [10.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [10.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [2.0, 10.0], "ok": 8.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, 10.0], "ok": 90.0}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, -1.0], "ok": 2147483289.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 1000000.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [10.0, -2.5], "ok": 12.5}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 0.0], "ok": 3.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, -1.0], "ok": 3.0}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 1000000.0], "ok": 2146483288.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 42.0], "ok": 42.0}
+{"fn": "rotAzmDiffDeg", "args": [2.0, 42.0], "ok": 40.0}
+{"fn": "rotAzmDiffDeg", "args": [42.0, 0.0], "ok": 42.0}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 2147483648.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [10.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, -1.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 9007199254740992.0], "ok": 9007199254740632.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [100.0, {"$num": "-0"}], "ok": 100.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, -1.0], "ok": 101.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, -1.0], "ok": 1.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, -1.0], "ok": 641.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 42.0], "ok": 42.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "Infinity"}, {"$num": "-0"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [100.0, 42.0], "ok": 58.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-Infinity"}, 0.5], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 1000000.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 0.5], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, 1000000.0], "ok": 999642.5}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 9007199254740992.0], "ok": 9007199253740632.0}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, {"$num": "-0"}], "ok": 9007199254740632.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, {"$num": "-0"}], "ok": 999640.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, 0.0], "ok": 100.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 0.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [10.0, 3.0], "ok": 7.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 1000000.0], "ok": 999641.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 10.0], "ok": 10.0}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 1000.0], "ok": 637.0}
+{"fn": "rotAzmDiffDeg", "args": [10.0, {"$num": "-0"}], "ok": 10.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, 1000000.0], "ok": 999540.0}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 10.0], "ok": 11.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 1.0], "ok": 1.0}
+{"fn": "rotAzmDiffDeg", "args": [0.5, -1.0], "ok": 1.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 1000000.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [3.0, 2147483648.0], "ok": 2147483285.0}
+{"fn": "rotAzmDiffDeg", "args": [0.5, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, 2.0], "ok": 2.0}
+{"fn": "rotAzmDiffDeg", "args": [1.0, 9007199254740992.0], "ok": 9007199254740631.0}
+{"fn": "rotAzmDiffDeg", "args": [100.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, 42.0], "ok": 598.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, 10.0], "ok": 999630.0}
+{"fn": "rotAzmDiffDeg", "args": [1000000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [2147483648.0, 3.0], "ok": 2147483285.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, -2.5], "ok": 2.5}
+{"fn": "rotAzmDiffDeg", "args": [9007199254740992.0, 100.0], "ok": 9007199254740532.0}
+{"fn": "rotAzmDiffDeg", "args": [1000.0, {"$num": "-0"}], "ok": 640.0}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "-0"}, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 10.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 2147483648.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [0.5, 10.0], "ok": 9.5}
+{"fn": "rotAzmDiffDeg", "args": [{"$num": "NaN"}, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "rotAzmDiffDeg", "args": [-1.0, 2.0], "ok": 3.0}
+{"fn": "rotAzmDiffDeg", "args": [-2.5, -2.5], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 2147483648.0], "ok": 2147483288.0}
+{"fn": "rotAzmDiffDeg", "args": [-7.5, -1.0], "ok": 6.5}
+{"fn": "rotAzmDiffDeg", "args": [0.1, -1.0], "ok": 1.1}
+{"fn": "rotAzmDiffDeg", "args": [0.30000000000000004, -1.0], "ok": 1.3}
+{"fn": "rotAzmDiffDeg", "args": [1e+21, -1.0], "ok": 1e+21}
+{"fn": "rotAzmDiffDeg", "args": [1e-07, -1.0], "ok": 1.0000001}
+{"fn": "rotAzmDiffDeg", "args": [5e-324, -1.0], "ok": 1.0}
+{"fn": "rotAzmDiffDeg", "args": [1.7976931348623157e+308, -1.0], "ok": 1.7976931348623157e+308}
+{"fn": "rotAzmDiffDeg", "args": [0.0, -7.5], "ok": 7.5}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.1], "ok": 0.1}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.30000000000000004], "ok": 0.30000000000000004}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 1e+21], "ok": 1e+21}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 1e-07], "ok": 1e-07}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 5e-324], "ok": 5e-324}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 1.7976931348623157e+308], "ok": 1.7976931348623157e+308}
+{"fn": "epexp", "args": [100.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [100.0, 9007199254740992.0], "ok": 1.000000000000011}
+{"fn": "epexp", "args": [2147483648.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [1000000.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [42.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 100.0], "ok": 0.0}
+{"fn": "epexp", "args": [1.0, 100.0], "ok": 1.010050167084168}
+{"fn": "epexp", "args": [-1.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [2147483648.0, 9007199254740992.0], "ok": 1.0000002384186075}
+{"fn": "epexp", "args": [9007199254740992.0, 2147483648.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [2.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [-1.0, 3.0], "ok": 0.7165313105737893}
+{"fn": "epexp", "args": [{"$num": "-0"}, 1000.0], "ok": 1.0}
+{"fn": "epexp", "args": [2.0, 3.0], "ok": 1.9477340410546757}
+{"fn": "epexp", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 2147483648.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 42.0], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [1000000.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.5, 1000000.0], "ok": 1.000000500000125}
+{"fn": "epexp", "args": [-2.5, 9007199254740992.0], "ok": 0.9999999999999998}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 42.0], "ok": 0.0}
+{"fn": "epexp", "args": [0.0, 100.0], "ok": 1.0}
+{"fn": "epexp", "args": [42.0, -2.5], "ok": 5.05653134833552e-08}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 2147483648.0], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [{"$num": "-0"}, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [-2.5, 42.0], "ok": 0.9422130996789303}
+{"fn": "epexp", "args": [2147483648.0, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 10.0], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [42.0, -1.0], "ok": 5.74952226429356e-19}
+{"fn": "epexp", "args": [-2.5, 10.0], "ok": 0.7788007830714049}
+{"fn": "epexp", "args": [1.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [1000.0, 42.0], "ok": 21894992825.535973}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 1000000.0], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [42.0, 10.0], "ok": 66.68633104092515}
+{"fn": "epexp", "args": [1.0, 10.0], "ok": 1.1051709180756477}
+{"fn": "epexp", "args": [10.0, 1.0], "ok": 22026.465794806718}
+{"fn": "epexp", "args": [1.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.5, 9007199254740992.0], "ok": 1.0}
+{"fn": "epexp", "args": [2.0, 2.0], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [1000000.0, -2.5], "ok": 0.0}
+{"fn": "epexp", "args": [2147483648.0, 0.5], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [3.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [42.0, 100.0], "ok": 1.5219615556186337}
+{"fn": "epexp", "args": [-1.0, -2.5], "ok": 1.4918246976412703}
+{"fn": "epexp", "args": [2.0, 2147483648.0], "ok": 1.0000000009313226}
+{"fn": "epexp", "args": [42.0, 1000.0], "ok": 1.0428944787507632}
+{"fn": "epexp", "args": [1000000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [9007199254740992.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [10.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [100.0, -1.0], "ok": 3.720075976020836e-44}
+{"fn": "epexp", "args": [3.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 1000000.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-2.5, 2.0], "ok": 0.2865047968601901}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 2.0], "ok": 0.0}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 9007199254740992.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [42.0, 1.0], "ok": 1.739274941520501e+18}
+{"fn": "epexp", "args": [-2.5, 100.0], "ok": 0.9753099120283326}
+{"fn": "epexp", "args": [2.0, 9007199254740992.0], "ok": 1.0000000000000002}
+{"fn": "epexp", "args": [3.0, 42.0], "ok": 1.0740414307162958}
+{"fn": "epexp", "args": [-1.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [10.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [-2.5, 1000000.0], "ok": 0.999997500003125}
+{"fn": "epexp", "args": [3.0, 2.0], "ok": 4.4816890703380645}
+{"fn": "epexp", "args": [1000.0, 2.0], "ok": 1.4035922178528375e+217}
+{"fn": "epexp", "args": [0.0, 2.0], "ok": 1.0}
+{"fn": "epexp", "args": [42.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [1.0, 1000.0], "ok": 1.0010005001667084}
+{"fn": "epexp", "args": [-1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [2.0, 1.0], "ok": 7.38905609893065}
+{"fn": "epexp", "args": [3.0, 1000.0], "ok": 1.003004504503377}
+{"fn": "epexp", "args": [10.0, 2.0], "ok": 148.4131591025766}
+{"fn": "epexp", "args": [2147483648.0, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [100.0, 0.5], "ok": 7.225973768125749e+86}
+{"fn": "epexp", "args": [2147483648.0, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [0.0, 1.0], "ok": 1.0}
+{"fn": "epexp", "args": [10.0, 9007199254740992.0], "ok": 1.000000000000001}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [{"$num": "-0"}, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [1000.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [-2.5, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [1000.0, 10.0], "ok": 2.6881171418161356e+43}
+{"fn": "epexp", "args": [{"$num": "NaN"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 0.5], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [2147483648.0, 1.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-1.0, 100.0], "ok": 0.9900498337491681}
+{"fn": "epexp", "args": [0.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [9007199254740992.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [42.0, 2147483648.0], "ok": 1.0000000195577743}
+{"fn": "epexp", "args": [1000.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 1000.0], "ok": 0.0}
+{"fn": "epexp", "args": [3.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.5, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, -2.5], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [1.0, -2.5], "ok": 0.6703200460356393}
+{"fn": "epexp", "args": [-2.5, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [1000000.0, -1.0], "ok": 0.0}
+{"fn": "epexp", "args": [10.0, 10.0], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [10.0, 3.0], "ok": 28.03162489452614}
+{"fn": "epexp", "args": [0.5, 2.0], "ok": 1.2840254166877414}
+{"fn": "epexp", "args": [2.0, -2.5], "ok": 0.44932896411722156}
+{"fn": "epexp", "args": [0.5, 42.0], "ok": 1.0119759056187942}
+{"fn": "epexp", "args": [3.0, -1.0], "ok": 0.049787068367863944}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 1.0], "ok": 0.0}
+{"fn": "epexp", "args": [3.0, 10.0], "ok": 1.3498588075760032}
+{"fn": "epexp", "args": [-1.0, -1.0], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 100.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 2.0], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [10.0, 42.0], "ok": 1.2688300280258125}
+{"fn": "epexp", "args": [{"$num": "NaN"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [-2.5, 3.0], "ok": 0.4345982085070782}
+{"fn": "epexp", "args": [9007199254740992.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [1000.0, 3.0], "ok": 5.818717881446886e+144}
+{"fn": "epexp", "args": [0.5, 2147483648.0], "ok": 1.0000000002328306}
+{"fn": "epexp", "args": [-2.5, 2147483648.0], "ok": 0.9999999988358468}
+{"fn": "epexp", "args": [100.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.0, 9007199254740992.0], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-0"}, 100.0], "ok": 1.0}
+{"fn": "epexp", "args": [0.5, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [10.0, 0.5], "ok": 485165195.4097903}
+{"fn": "epexp", "args": [2147483648.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [1000000.0, 3.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [1.0, 42.0], "ok": 1.0240952335529787}
+{"fn": "epexp", "args": [-1.0, 9007199254740992.0], "ok": 0.9999999999999999}
+{"fn": "epexp", "args": [1000000.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [2147483648.0, 1000000.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [42.0, 3.0], "ok": 1202604.2841647768}
+{"fn": "epexp", "args": [1000000.0, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [-2.5, -2.5], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [{"$num": "-0"}, 1000000.0], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 3.0], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [2.0, 10.0], "ok": 1.2214027581601699}
+{"fn": "epexp", "args": [-1.0, 2147483648.0], "ok": 0.9999999995343387}
+{"fn": "epexp", "args": [9007199254740992.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-0"}, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [9007199254740992.0, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [2147483648.0, -1.0], "ok": 0.0}
+{"fn": "epexp", "args": [{"$num": "-0"}, 9007199254740992.0], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, -2.5], "ok": 0.0}
+{"fn": "epexp", "args": [0.5, 1000.0], "ok": 1.0005001250208359}
+{"fn": "epexp", "args": [2.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [9007199254740992.0, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-2.5, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [1.0, 1000000.0], "ok": 1.0000010000005}
+{"fn": "epexp", "args": [9007199254740992.0, 0.5], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [0.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 10.0], "ok": 0.0}
+{"fn": "epexp", "args": [1000000.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [1000.0, 2147483648.0], "ok": 1.0000004656613957}
+{"fn": "epexp", "args": [3.0, -2.5], "ok": 0.30119421191220214}
+{"fn": "epexp", "args": [10.0, 1000000.0], "ok": 1.00001000005}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 1.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [3.0, 3.0], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [42.0, 1000000.0], "ok": 1.0000420008820123}
+{"fn": "epexp", "args": [0.0, 10.0], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [9007199254740992.0, 100.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-1.0, 1000.0], "ok": 0.999000499833375}
+{"fn": "epexp", "args": [10.0, -1.0], "ok": 4.5399929762484854e-05}
+{"fn": "epexp", "args": [1000.0, 1.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-1.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [10.0, 100.0], "ok": 1.1051709180756477}
+{"fn": "epexp", "args": [{"$num": "NaN"}, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, 3.0], "ok": 0.0}
+{"fn": "epexp", "args": [0.0, 1000000.0], "ok": 1.0}
+{"fn": "epexp", "args": [-2.5, -1.0], "ok": 12.182493960703473}
+{"fn": "epexp", "args": [1000.0, 1000.0], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [100.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.0, -2.5], "ok": 1.0}
+{"fn": "epexp", "args": [1000.0, 9007199254740992.0], "ok": 1.000000000000111}
+{"fn": "epexp", "args": [1000000.0, 2147483648.0], "ok": 1.000465769724356}
+{"fn": "epexp", "args": [2147483648.0, 100.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [0.0, 1000.0], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 0.5], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [10.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [1000.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-0"}, 42.0], "ok": 1.0}
+{"fn": "epexp", "args": [3.0, 100.0], "ok": 1.030454533953517}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-2.5, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [{"$num": "NaN"}, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [10.0, 2147483648.0], "ok": 1.0000000046566129}
+{"fn": "epexp", "args": [-1.0, 1000000.0], "ok": 0.9999990000005}
+{"fn": "epexp", "args": [2.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [10.0, 1000.0], "ok": 1.010050167084168}
+{"fn": "epexp", "args": [{"$num": "Infinity"}, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [2.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [2147483648.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [0.5, 3.0], "ok": 1.1813604128656459}
+{"fn": "epexp", "args": [{"$num": "NaN"}, {"$num": "-Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [0.0, -1.0], "ok": 1.0}
+{"fn": "epexp", "args": [2.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [{"$num": "-Infinity"}, -1.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [42.0, {"$num": "Infinity"}], "ok": 1.0}
+{"fn": "epexp", "args": [2147483648.0, 3.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [9007199254740992.0, 1000000.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-7.5, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [0.1, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [0.30000000000000004, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [1e+21, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [1e-07, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [5e-324, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [1.7976931348623157e+308, {"$num": "-0"}], "ok": 0.0}
+{"fn": "epexp", "args": [100.0, -7.5], "ok": 1.6195967923126097e-06}
+{"fn": "epexp", "args": [100.0, 0.1], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [100.0, 0.30000000000000004], "ok": 5.818717881446555e+144}
+{"fn": "epexp", "args": [100.0, 1e+21], "ok": 1.0}
+{"fn": "epexp", "args": [100.0, 1e-07], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [100.0, 5e-324], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [100.0, 1.7976931348623157e+308], "ok": 1.0}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 42.0], "ok": 90194313195.5}
+{"fn": "Interp", "args": [1000.0, 1000.0, 2147483648.0], "ok": 1000.0}
+{"fn": "Interp", "args": [0.0, -2.5, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [10.0, 1000000.0, 1000000.0], "ok": 999990000010.0}
+{"fn": "Interp", "args": [100.0, {"$num": "Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [1.0, -2.5, -2.5], "ok": 9.75}
+{"fn": "Interp", "args": [1.0, {"$num": "-Infinity"}, 100.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [2.0, 1000.0, 9007199254740992.0], "ok": 8.98918485623151e+18}
+{"fn": "Interp", "args": [2.0, 100.0, -2.5], "ok": -243.0}
+{"fn": "Interp", "args": [9007199254740992.0, 1.0, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [2.0, 2.0, 10.0], "ok": 2.0}
+{"fn": "Interp", "args": [-2.5, 100.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [10.0, -1.0, 100.0], "ok": -1090.0}
+{"fn": "Interp", "args": [2.0, -2.5, 1000000.0], "ok": -4499998.0}
+{"fn": "Interp", "args": [1000.0, {"$num": "Infinity"}, 9007199254740992.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [10.0, {"$num": "-Infinity"}, 1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [100.0, {"$num": "-0"}, {"$num": "-0"}], "ok": 100.0}
+{"fn": "Interp", "args": [-2.5, {"$num": "NaN"}, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.0, -1.0, {"$num": "Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "-0"}, 3.0, 3.0], "ok": 9.0}
+{"fn": "Interp", "args": [2147483648.0, {"$num": "NaN"}, 100.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-2.5, 10.0, 10.0], "ok": 122.5}
+{"fn": "Interp", "args": [0.5, {"$num": "NaN"}, 1.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [10.0, 9007199254740992.0, {"$num": "-Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 2.0, 1000.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [1000000.0, -1.0, {"$num": "-0"}], "ok": 1000000.0}
+{"fn": "Interp", "args": [100.0, {"$num": "Infinity"}, -2.5], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [0.0, 1000000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [100.0, -2.5, 1000000.0], "ok": -102499900.0}
+{"fn": "Interp", "args": [3.0, {"$num": "-0"}, 9007199254740992.0], "ok": -2.7021597764222972e+16}
+{"fn": "Interp", "args": [10.0, 10.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 3.0, 1.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [42.0, 1000.0, 42.0], "ok": 40278.0}
+{"fn": "Interp", "args": [1.0, {"$num": "-Infinity"}, 2147483648.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [-1.0, {"$num": "NaN"}, {"$num": "-Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.5, 0.5, -2.5], "ok": 0.5}
+{"fn": "Interp", "args": [100.0, 42.0, 2147483648.0], "ok": -124554051484.0}
+{"fn": "Interp", "args": [3.0, -2.5, 42.0], "ok": -228.0}
+{"fn": "Interp", "args": [10.0, -1.0, 2.0], "ok": -12.0}
+{"fn": "Interp", "args": [0.0, {"$num": "NaN"}, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [9007199254740992.0, {"$num": "-0"}, 0.0], "ok": 9007199254740992.0}
+{"fn": "Interp", "args": [0.5, 0.0, 0.5], "ok": 0.25}
+{"fn": "Interp", "args": [2147483648.0, 1.0, 1.0], "ok": 1.0}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, {"$num": "NaN"}, -1.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.5, 1000000.0, 0.5], "ok": 500000.25}
+{"fn": "Interp", "args": [100.0, 1.0, 100.0], "ok": -9800.0}
+{"fn": "Interp", "args": [-2.5, 1.0, 1.0], "ok": 1.0}
+{"fn": "Interp", "args": [1.0, 2.0, 2.0], "ok": 3.0}
+{"fn": "Interp", "args": [100.0, 42.0, 1.0], "ok": 42.0}
+{"fn": "Interp", "args": [-1.0, {"$num": "Infinity"}, {"$num": "-0"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [1000.0, 42.0, 1000000.0], "ok": -957999000.0}
+{"fn": "Interp", "args": [1.0, {"$num": "Infinity"}, 10.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [1000.0, {"$num": "-0"}, {"$num": "Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 1000.0, 1.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [1000000.0, 2.0, 100.0], "ok": -98999800.0}
+{"fn": "Interp", "args": [{"$num": "-0"}, {"$num": "-0"}, 42.0], "ok": 0.0}
+{"fn": "Interp", "args": [9007199254740992.0, 10.0, 0.0], "ok": 9007199254740992.0}
+{"fn": "Interp", "args": [2147483648.0, 1000000.0, 9007199254740992.0], "ok": -1.9333805914579324e+25}
+{"fn": "Interp", "args": [2147483648.0, {"$num": "-Infinity"}, 9007199254740992.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [42.0, 100.0, {"$num": "-Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 3.0, 2.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [100.0, -2.5, {"$num": "-0"}], "ok": 100.0}
+{"fn": "Interp", "args": [10.0, {"$num": "Infinity"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 100.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "NaN"}, {"$num": "NaN"}, -1.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 0.5, {"$num": "-0"}], "ok": -1.0}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, -1.0, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [42.0, {"$num": "NaN"}, 1000000.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 9007199254740992.0, 2147483648.0], "ok": 1.9342813113834067e+25}
+{"fn": "Interp", "args": [9007199254740992.0, {"$num": "-Infinity"}, 1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [10.0, 3.0, 2.0], "ok": -4.0}
+{"fn": "Interp", "args": [3.0, {"$num": "Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [42.0, {"$num": "Infinity"}, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 0.0, 100.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [1000.0, 0.5, 2147483648.0], "ok": -2146409905176.0}
+{"fn": "Interp", "args": [1000000.0, -1.0, 0.5], "ok": 499999.5}
+{"fn": "Interp", "args": [10.0, -2.5, 1000.0], "ok": -12490.0}
+{"fn": "Interp", "args": [9007199254740992.0, 2147483648.0, 0.0], "ok": 9007199254740992.0}
+{"fn": "Interp", "args": [2147483648.0, 0.5, -2.5], "ok": 7516192766.75}
+{"fn": "Interp", "args": [9007199254740992.0, {"$num": "-0"}, -1.0], "ok": 1.8014398509481984e+16}
+{"fn": "Interp", "args": [0.5, 1000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [2.0, 2.0, {"$num": "-Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 0.0, 10.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "-0"}, 1.0, 42.0], "ok": 42.0}
+{"fn": "Interp", "args": [3.0, 2.0, 0.0], "ok": 3.0}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 0.0, 2147483648.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [42.0, -2.5, 0.0], "ok": 42.0}
+{"fn": "Interp", "args": [100.0, 1000000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [1000000.0, 0.5, -2.5], "ok": 3499998.75}
+{"fn": "Interp", "args": [42.0, 42.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 0.5, -2.5], "ok": -4.75}
+{"fn": "Interp", "args": [{"$num": "NaN"}, -1.0, 1000.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [2147483648.0, {"$num": "-Infinity"}, -1.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, {"$num": "-Infinity"}, 42.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [100.0, {"$num": "Infinity"}, {"$num": "-0"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.0, 3.0, 2.0], "ok": 6.0}
+{"fn": "Interp", "args": [2.0, 10.0, 0.5], "ok": 6.0}
+{"fn": "Interp", "args": [2.0, 0.5, 0.5], "ok": 1.25}
+{"fn": "Interp", "args": [0.5, {"$num": "Infinity"}, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 100.0, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.0, -2.5, 10.0], "ok": -25.0}
+{"fn": "Interp", "args": [{"$num": "-0"}, {"$num": "Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [3.0, 10.0, 0.5], "ok": 6.5}
+{"fn": "Interp", "args": [9007199254740992.0, 10.0, 100.0], "ok": -8.917127262193572e+17}
+{"fn": "Interp", "args": [-2.5, -2.5, 2147483648.0], "ok": -2.5}
+{"fn": "Interp", "args": [-2.5, 3.0, 1.0], "ok": 3.0}
+{"fn": "Interp", "args": [10.0, 100.0, 2147483648.0], "ok": 193273528330.0}
+{"fn": "Interp", "args": [1.0, 1.0, {"$num": "-0"}], "ok": 1.0}
+{"fn": "Interp", "args": [{"$num": "NaN"}, {"$num": "Infinity"}, {"$num": "-0"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [10.0, 0.0, 10.0], "ok": -90.0}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 42.0, {"$num": "-Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [10.0, {"$num": "-Infinity"}, 9007199254740992.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [10.0, 1000000.0, -1.0], "ok": -999980.0}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 1000.0, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [3.0, 1000000.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 1000.0, {"$num": "-Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [1000000.0, 10.0, 9007199254740992.0], "ok": -9.007109182748444e+21}
+{"fn": "Interp", "args": [0.5, 10.0, 1.0], "ok": 10.0}
+{"fn": "Interp", "args": [0.5, 3.0, 1.0], "ok": 3.0}
+{"fn": "Interp", "args": [1.0, -2.5, 9007199254740992.0], "ok": -3.152519739159347e+16}
+{"fn": "Interp", "args": [{"$num": "-0"}, 9007199254740992.0, 100.0], "ok": 9.007199254740992e+17}
+{"fn": "Interp", "args": [100.0, 2147483648.0, 2147483648.0], "ok": 4.611685803679023e+18}
+{"fn": "Interp", "args": [1000.0, 1.0, 3.0], "ok": -1997.0}
+{"fn": "Interp", "args": [{"$num": "-0"}, 1000000.0, 2.0], "ok": 2000000.0}
+{"fn": "Interp", "args": [-1.0, {"$num": "-Infinity"}, 2.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [1.0, 2147483648.0, 0.5], "ok": 1073741824.5}
+{"fn": "Interp", "args": [9007199254740992.0, 42.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [10.0, 10.0, -1.0], "ok": 10.0}
+{"fn": "Interp", "args": [{"$num": "-0"}, 42.0, -1.0], "ok": -42.0}
+{"fn": "Interp", "args": [{"$num": "-0"}, 2147483648.0, {"$num": "-0"}], "ok": {"$num": "-0"}}
+{"fn": "Interp", "args": [-2.5, 0.0, {"$num": "-Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "NaN"}, {"$num": "-0"}, 2.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [2.0, {"$num": "Infinity"}, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.5, {"$num": "NaN"}, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-2.5, 1.0, 10.0], "ok": 32.5}
+{"fn": "Interp", "args": [1000000.0, 3.0, 9007199254740992.0], "ok": -9.007172233143227e+21}
+{"fn": "Interp", "args": [1000.0, 1000000.0, -1.0], "ok": -998000.0}
+{"fn": "Interp", "args": [2.0, {"$num": "-Infinity"}, 1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [42.0, -2.5, 0.5], "ok": 19.75}
+{"fn": "Interp", "args": [9007199254740992.0, {"$num": "-Infinity"}, 1000000.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 2.0, 1.0], "ok": 2.0}
+{"fn": "Interp", "args": [100.0, {"$num": "-0"}, 2147483648.0], "ok": -214748364700.0}
+{"fn": "Interp", "args": [1.0, {"$num": "-0"}, 42.0], "ok": -41.0}
+{"fn": "Interp", "args": [{"$num": "NaN"}, 1.0, 1.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [9007199254740992.0, 1.0, 10.0], "ok": -8.106479329266891e+16}
+{"fn": "Interp", "args": [1000.0, 9007199254740992.0, -1.0], "ok": -9007199254738992.0}
+{"fn": "Interp", "args": [42.0, -2.5, 1.0], "ok": -2.5}
+{"fn": "Interp", "args": [3.0, 3.0, {"$num": "-Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 100.0, 1000.0], "ok": 100999.0}
+{"fn": "Interp", "args": [1.0, -1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [2.0, 1000.0, 100.0], "ok": 99802.0}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 1.0, 9007199254740992.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [1000000.0, {"$num": "Infinity"}, {"$num": "-Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [3.0, 2147483648.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "NaN"}, 42.0, {"$num": "-0"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 1000.0, 1000000.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-2.5, {"$num": "Infinity"}, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [1000000.0, -2.5, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [-2.5, 42.0, 1000000.0], "ok": 44499997.5}
+{"fn": "Interp", "args": [0.0, 2147483648.0, 1000.0], "ok": 2147483648000.0}
+{"fn": "Interp", "args": [{"$num": "-0"}, {"$num": "-Infinity"}, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [3.0, {"$num": "-Infinity"}, 0.5], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "-0"}, {"$num": "-Infinity"}, -2.5], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [{"$num": "NaN"}, 100.0, 1000.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.0, 100.0, 0.5], "ok": 50.0}
+{"fn": "Interp", "args": [-1.0, 9007199254740992.0, -2.5], "ok": -2.251799813685248e+16}
+{"fn": "Interp", "args": [-2.5, 0.5, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 100.0, -1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [100.0, {"$num": "-Infinity"}, 3.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 2.0, 100.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [{"$num": "-Infinity"}, 9007199254740992.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.0, {"$num": "-Infinity"}, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [0.5, 1000000.0, -1.0], "ok": -999999.0}
+{"fn": "Interp", "args": [3.0, {"$num": "-Infinity"}, -1.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [-2.5, 0.5, -2.5], "ok": -10.0}
+{"fn": "Interp", "args": [-1.0, {"$num": "-0"}, 9007199254740992.0], "ok": 9007199254740991.0}
+{"fn": "Interp", "args": [-1.0, 1000000.0, 2.0], "ok": 2000001.0}
+{"fn": "Interp", "args": [10.0, 0.5, 3.0], "ok": -18.5}
+{"fn": "Interp", "args": [{"$num": "-0"}, 2.0, 0.5], "ok": 1.0}
+{"fn": "Interp", "args": [1000.0, 1.0, 1000.0], "ok": -998000.0}
+{"fn": "Interp", "args": [100.0, 9007199254740992.0, 9007199254740992.0], "ok": 8.112963841460578e+31}
+{"fn": "Interp", "args": [2147483648.0, 9007199254740992.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [0.5, 3.0, 10.0], "ok": 25.5}
+{"fn": "Interp", "args": [{"$num": "Infinity"}, 2147483648.0, 2.0], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [100.0, 0.5, -1.0], "ok": 199.5}
+{"fn": "Interp", "args": [2147483648.0, 2.0, 3.0], "ok": -4294967290.0}
+{"fn": "Interp", "args": [100.0, 100.0, 0.5], "ok": 100.0}
+{"fn": "Interp", "args": [1000.0, 1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.5, 1.0, 0.0], "ok": 0.5}
+{"fn": "Interp", "args": [{"$num": "NaN"}, 1000000.0, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [-1.0, 2147483648.0, 1.0], "ok": 2147483648.0}
+{"fn": "Interp", "args": [0.0, 9007199254740992.0, 0.0], "ok": 0.0}
+{"fn": "Interp", "args": [1.0, {"$num": "Infinity"}, 0.5], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [1000.0, {"$num": "-Infinity"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [0.5, {"$num": "-0"}, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [-1.0, {"$num": "Infinity"}, 3.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [{"$num": "NaN"}, 0.5, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "Interp", "args": [2147483648.0, 9007199254740992.0, 1000.0], "ok": 9.007197109404828e+18}
+{"fn": "Interp", "args": [42.0, 10.0, {"$num": "Infinity"}], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [-7.5, 2147483648.0, 42.0], "ok": 90194313523.5}
+{"fn": "Interp", "args": [0.1, 2147483648.0, 42.0], "ok": 90194313211.90001}
+{"fn": "Interp", "args": [0.30000000000000004, 2147483648.0, 42.0], "ok": 90194313203.70001}
+{"fn": "Interp", "args": [1e+21, 2147483648.0, 42.0], "ok": -4.09999999999098e+22}
+{"fn": "Interp", "args": [1e-07, 2147483648.0, 42.0], "ok": 90194313216.0}
+{"fn": "Interp", "args": [5e-324, 2147483648.0, 42.0], "ok": 90194313216.0}
+{"fn": "Interp", "args": [1.7976931348623157e+308, 2147483648.0, 42.0], "ok": {"$num": "-Infinity"}}
+{"fn": "Interp", "args": [9007199254740992.0, 2147483648.0, 42.0], "ok": -3.6929507925006746e+17}
+{"fn": "Interp", "args": [{"$num": "-0"}, 2147483648.0, 42.0], "ok": 90194313216.0}
+{"fn": "Interp", "args": [0.5, -7.5, 42.0], "ok": -335.5}
+{"fn": "Interp", "args": [0.5, 0.1, 42.0], "ok": -16.3}
+{"fn": "Interp", "args": [0.5, 0.30000000000000004, 42.0], "ok": -7.899999999999999}
+{"fn": "Interp", "args": [0.5, 1e+21, 42.0], "ok": 4.2e+22}
+{"fn": "Interp", "args": [0.5, 1e-07, 42.0], "ok": -20.4999958}
+{"fn": "Interp", "args": [0.5, 5e-324, 42.0], "ok": -20.5}
+{"fn": "Interp", "args": [0.5, 1.7976931348623157e+308, 42.0], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [0.5, 9007199254740992.0, 42.0], "ok": 3.7830236869912166e+17}
+{"fn": "Interp", "args": [0.5, {"$num": "-0"}, 42.0], "ok": -20.5}
+{"fn": "Interp", "args": [0.5, 2147483648.0, -7.5], "ok": -16106127355.75}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 0.1], "ok": 214748365.25}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 0.30000000000000004], "ok": 644245094.7500001}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 1e+21], "ok": 2.1474836475e+30}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 1e-07], "ok": 215.24836474999998}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 5e-324], "ok": 0.5}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 1.7976931348623157e+308], "ok": {"$num": "Infinity"}}
+{"fn": "Interp", "args": [0.5, 2147483648.0, 9007199254740992.0], "ok": 1.9342813109330467e+25}
+{"fn": "Interp", "args": [0.5, 2147483648.0, {"$num": "-0"}], "ok": 0.5}
+{"fn": "OrdinalDay", "args": [1, 1, 0], "ok": 1}
+{"fn": "OrdinalDay", "args": [10, 17, 0], "ok": 290}
+{"fn": "OrdinalDay", "args": [11, 13, 0], "ok": 317}
+{"fn": "OrdinalDay", "args": [2, 28, 1], "ok": 59}
+{"fn": "OrdinalDay", "args": [1, 21, 1], "ok": 21}
+{"fn": "OrdinalDay", "args": [1, 6, 1], "ok": 6}
+{"fn": "OrdinalDay", "args": [3, 29, 0], "ok": 88}
+{"fn": "OrdinalDay", "args": [8, 23, 1], "ok": 236}
+{"fn": "OrdinalDay", "args": [4, 21, 1], "ok": 112}
+{"fn": "OrdinalDay", "args": [12, 31, 1], "ok": 366}
+{"fn": "OrdinalDay", "args": [5, 13, 1], "ok": 134}
+{"fn": "OrdinalDay", "args": [12, 23, 1], "ok": 358}
+{"fn": "OrdinalDay", "args": [0, 0, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [5, 11, 0], "ok": 131}
+{"fn": "OrdinalDay", "args": [7, 25, 1], "ok": 207}
+{"fn": "OrdinalDay", "args": [13, 32, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [10, 23, 1], "ok": 297}
+{"fn": "OrdinalDay", "args": [10, 8, 1], "ok": 282}
+{"fn": "OrdinalDay", "args": [-1, 1, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [10, 8, 1], "ok": 282}
+{"fn": "OrdinalDay", "args": [4, 25, 1], "ok": 116}
+{"fn": "OrdinalDay", "args": [1, 28, 1], "ok": 28}
+{"fn": "OrdinalDay", "args": [5, 22, 0], "ok": 142}
+{"fn": "OrdinalDay", "args": [2, 15, 1], "ok": 46}
+{"fn": "OrdinalDay", "args": [2, 29, 0], "ok": 60}
+{"fn": "OrdinalDay", "args": [8, 6, 0], "ok": 218}
+{"fn": "OrdinalDay", "args": [9, 10, 1], "ok": 254}
+{"fn": "OrdinalDay", "args": [3, 31, 1], "ok": 91}
+{"fn": "OrdinalDay", "args": [5, 6, 0], "ok": 126}
+{"fn": "OrdinalDay", "args": [12, 14, 0], "ok": 348}
+{"fn": "OrdinalDay", "args": [12, 0, 0], "ok": 334}
+{"fn": "OrdinalDay", "args": [8, 3, 1], "ok": 216}
+{"fn": "OrdinalDay", "args": [6, 14, 0], "ok": 165}
+{"fn": "OrdinalDay", "args": [0, 32, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [12, 15, 1], "ok": 350}
+{"fn": "OrdinalDay", "args": [12, 26, 1], "ok": 361}
+{"fn": "OrdinalDay", "args": [13, 1, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 30, 0], "ok": 211}
+{"fn": "OrdinalDay", "args": [7, 7, 1], "ok": 189}
+{"fn": "OrdinalDay", "args": [-1, 28, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [11, 6, 0], "ok": 310}
+{"fn": "OrdinalDay", "args": [5, 14, 0], "ok": 134}
+{"fn": "OrdinalDay", "args": [1, 29, 0], "ok": 29}
+{"fn": "OrdinalDay", "args": [5, 25, 0], "ok": 145}
+{"fn": "OrdinalDay", "args": [7, 6, 1], "ok": 188}
+{"fn": "OrdinalDay", "args": [2, 31, 1], "ok": 62}
+{"fn": "OrdinalDay", "args": [5, 7, 1], "ok": 128}
+{"fn": "OrdinalDay", "args": [12, 8, 0], "ok": 342}
+{"fn": "OrdinalDay", "args": [3, 0, 0], "ok": 59}
+{"fn": "OrdinalDay", "args": [12, 13, 0], "ok": 347}
+{"fn": "OrdinalDay", "args": [3, 5, 1], "ok": 65}
+{"fn": "OrdinalDay", "args": [12, 32, 1], "ok": 367}
+{"fn": "OrdinalDay", "args": [11, 11, 0], "ok": 315}
+{"fn": "OrdinalDay", "args": [2, 22, 1], "ok": 53}
+{"fn": "OrdinalDay", "args": [0, 1, 0], "ok": 0}
+{"fn": "OrdinalDay", "args": [5, 3, 0], "ok": 123}
+{"fn": "OrdinalDay", "args": [5, 3, 0], "ok": 123}
+{"fn": "OrdinalDay", "args": [13, 28, 1], "ok": 0}
+{"fn": "OrdinalDay", "args": [7, 8, 0], "ok": 189}
+{"fn": "OrdinalDay", "args": [10, 15, 0], "ok": 288}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, 1, 0, 1, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [358, 11, 335, 19, 85, 20], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [302, 21, 209, 22, 331, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 24, 365, 24, 365, 24], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [118, 15, 161, 21, 36, 19], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [218, 20, 219, 22, 142, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [366, 12, 366, 12, 366, 12], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [241, 7, 169, 7, 233, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [107, 17, 280, 13, 122, 12], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 1, 0, 1, 0, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [289, 18, 309, 1, 197, 18], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [268, 18, 72, 19, 338, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [59, 0, 59, 0, 59, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [14, 22, 153, 1, 27, 13], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [49, 1, 103, 24, 152, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [60, 24, 60, 24, 60, 24], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [166, 8, 242, 15, 108, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 16, 234, 18, 180, 20], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 12, 1, 12, 1, 12], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [3, 24, 237, 12, 199, 17], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [30, 11, 236, 9, 246, 5], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 1, 365, 1, 365, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [24, 15, 117, 15, 288, 17], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [119, 12, 312, 0, 250, 10], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [366, 0, 366, 0, 366, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [106, 3, 22, 23, 109, 22], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [326, 3, 145, 21, 164, 21], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 24, 0, 24, 0, 24], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [163, 14, 147, 9, 339, 22], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [162, 19, 206, 10, 316, 16], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [59, 12, 59, 12, 59, 12], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [138, 22, 249, 3, 192, 3], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [6, 10, 219, 22, 115, 22], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [60, 1, 60, 1, 60, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [120, 17, 39, 17, 295, 2], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [304, 4, 263, 13, 112, 17], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, 1, 0, 1, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [341, 7, 229, 24, 261, 20], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [132, 0, 339, 22, 60, 14], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 24, 365, 24, 365, 24], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [332, 1, 365, 0, 59, 3], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [57, 7, 180, 1, 99, 6], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [366, 12, 366, 12, 366, 12], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [164, 18, 245, 8, 230, 17], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [73, 9, 91, 20, 104, 0], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 1, 0, 1, 0, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [208, 2, 177, 14, 13, 16], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 7, 6, 13, 68, 4], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [59, 0, 59, 0, 59, 0], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [280, 21, 343, 16, 262, 17], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [277, 12, 292, 9, 201, 8], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [60, 24, 60, 24, 60, 24], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [356, 20, 10, 15, 24, 5], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [126, 3, 233, 14, 161, 18], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 12, 1, 12, 1, 12], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [142, 16, 96, 19, 108, 15], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [236, 20, 124, 1, 284, 10], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 1, 365, 1, 365, 1], "ok": true}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 8, 179, 17, 155, 9], "ok": false}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [73, 5, 70, 6, 359, 4], "ok": true}
+{"fn": "BetweenDates", "args": [1, 1, 1], "ok": true}
+{"fn": "BetweenDates", "args": [120, 223, 238], "ok": false}
+{"fn": "BetweenDates", "args": [132, 259, 149], "ok": true}
+{"fn": "BetweenDates", "args": [365, 365, 365], "ok": true}
+{"fn": "BetweenDates", "args": [226, 278, 265], "ok": true}
+{"fn": "BetweenDates", "args": [143, 2, 99], "ok": false}
+{"fn": "BetweenDates", "args": [366, 366, 366], "ok": true}
+{"fn": "BetweenDates", "args": [257, 182, 208], "ok": false}
+{"fn": "BetweenDates", "args": [311, 351, 90], "ok": false}
+{"fn": "BetweenDates", "args": [0, 0, 0], "ok": true}
+{"fn": "BetweenDates", "args": [43, 143, 336], "ok": false}
+{"fn": "BetweenDates", "args": [72, 319, 37], "ok": false}
+{"fn": "BetweenDates", "args": [59, 59, 59], "ok": true}
+{"fn": "BetweenDates", "args": [254, 152, 250], "ok": false}
+{"fn": "BetweenDates", "args": [220, 274, 213], "ok": false}
+{"fn": "BetweenDates", "args": [60, 60, 60], "ok": true}
+{"fn": "BetweenDates", "args": [117, 35, 359], "ok": true}
+{"fn": "BetweenDates", "args": [44, 69, 289], "ok": false}
+{"fn": "BetweenDates", "args": [1, 1, 1], "ok": true}
+{"fn": "BetweenDates", "args": [227, 91, 240], "ok": true}
+{"fn": "BetweenDates", "args": [182, 339, 219], "ok": true}
+{"fn": "BetweenDates", "args": [365, 365, 365], "ok": true}
+{"fn": "BetweenDates", "args": [34, 84, 180], "ok": false}
+{"fn": "BetweenDates", "args": [103, 354, 179], "ok": true}
+{"fn": "BetweenDates", "args": [366, 366, 366], "ok": true}
+{"fn": "BetweenDates", "args": [83, 202, 260], "ok": false}
+{"fn": "BetweenDates", "args": [245, 187, 33], "ok": true}
+{"fn": "BetweenDates", "args": [0, 0, 0], "ok": true}
+{"fn": "BetweenDates", "args": [220, 158, 277], "ok": true}
+{"fn": "BetweenDates", "args": [140, 113, 353], "ok": true}
+{"fn": "BetweenDates", "args": [59, 59, 59], "ok": true}
+{"fn": "BetweenDates", "args": [131, 281, 119], "ok": false}
+{"fn": "BetweenDates", "args": [49, 7, 55], "ok": true}
+{"fn": "BetweenDates", "args": [60, 60, 60], "ok": true}
+{"fn": "BetweenDates", "args": [238, 296, 14], "ok": false}
+{"fn": "BetweenDates", "args": [6, 248, 53], "ok": true}
+{"fn": "BetweenDates", "args": [1, 1, 1], "ok": true}
+{"fn": "BetweenDates", "args": [184, 48, 344], "ok": true}
+{"fn": "BetweenDates", "args": [18, 355, 240], "ok": true}
+{"fn": "BetweenDates", "args": [365, 365, 365], "ok": true}
+{"fn": "BetweenDates", "args": [323, 173, 270], "ok": false}
+{"fn": "BetweenDates", "args": [79, 269, 251], "ok": true}
+{"fn": "BetweenDates", "args": [366, 366, 366], "ok": true}
+{"fn": "BetweenDates", "args": [251, 15, 126], "ok": false}
+{"fn": "BetweenDates", "args": [244, 282, 229], "ok": false}
+{"fn": "BetweenDates", "args": [0, 0, 0], "ok": true}
+{"fn": "BetweenDates", "args": [20, 347, 225], "ok": true}
+{"fn": "BetweenDates", "args": [58, 60, 241], "ok": false}
+{"fn": "BetweenDates", "args": [59, 59, 59], "ok": true}
+{"fn": "BetweenDates", "args": [190, 204, 276], "ok": false}
+{"fn": "BetweenDates", "args": [128, 279, 344], "ok": false}
+{"fn": "BetweenDates", "args": [60, 60, 60], "ok": true}
+{"fn": "BetweenDates", "args": [46, 155, 24], "ok": false}
+{"fn": "BetweenDates", "args": [3, 147, 170], "ok": false}
+{"fn": "BetweenDates", "args": [1, 1, 1], "ok": true}
+{"fn": "BetweenDates", "args": [101, 203, 185], "ok": true}
+{"fn": "BetweenDates", "args": [315, 34, 359], "ok": true}
+{"fn": "BetweenDates", "args": [365, 365, 365], "ok": true}
+{"fn": "BetweenDates", "args": [79, 244, 63], "ok": false}
+{"fn": "BetweenDates", "args": [93, 5, 44], "ok": false}
+{"fn": "SafeDivide", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [-954.0973183202177, -0.39415293266816986], "ok": 2420.6272216765537}
+{"fn": "SafeDivide", "args": [575.7403402122707, 0.890045701775724], "ok": 646.8660418938209}
+{"fn": "SafeDivide", "args": [1.0, -0.0], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [-924.7901915584163, 0.5234800804125239], "ok": -1766.6196406740892}
+{"fn": "SafeDivide", "args": [948.8720852773095, 0.5311288776077698], "ok": 1786.519478193457}
+{"fn": "SafeDivide", "args": [-1.0, 1e-10], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [-533.2217383009552, 0.6768394283572678], "ok": -787.8112827958591}
+{"fn": "SafeDivide", "args": [-652.0651339261103, -0.734379826314681], "ok": 887.9126448752706}
+{"fn": "SafeDivide", "args": [0.0, -1e-10], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [-867.0071481989867, 0.5543125594652709], "ok": -1564.1124008363856}
+{"fn": "SafeDivide", "args": [487.42239766071884, -0.6379265366590856], "ok": -764.0729294840454}
+{"fn": "SafeDivide", "args": [1.0, 1e-11], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [-486.13200673799724, -0.03424673011293322], "ok": 14194.990445362557}
+{"fn": "SafeDivide", "args": [-565.9430615615852, 0.6882460127635761], "ok": -822.2976247826023}
+{"fn": "SafeDivide", "args": [-1.0, -1e-11], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [-120.33863902592066, 0.6941033121909019], "ok": -173.37280619808288}
+{"fn": "SafeDivide", "args": [648.5153250405185, 0.4675677974172301], "ok": 1386.997412188807}
+{"fn": "SafeDivide", "args": [0.0, {"$num": "NaN"}], "ok": {"$num": "-0"}}
+{"fn": "SafeDivide", "args": [-620.3045912648157, -0.9636778832928259], "ok": 643.6845776155768}
+{"fn": "SafeDivide", "args": [-370.4012486637182, 0.119597125121081], "ok": -3097.0748526665775}
+{"fn": "SafeDivide", "args": [1.0, 2.0], "ok": 0.5}
+{"fn": "SafeDivide", "args": [23.096172480073164, 0.05171346929148446], "ok": 446.618120897883}
+{"fn": "SafeDivide", "args": [176.6412173422898, 0.7709158042717965], "ok": 229.13165920777078}
+{"fn": "SafeDivide", "args": [-1.0, 0.0], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [-714.6509925654208, 0.7433082900306593], "ok": -961.4462829897182}
+{"fn": "SafeDivide", "args": [-460.7526590657411, -0.737313095784192], "ok": 624.9077382461157}
+{"fn": "SafeDivide", "args": [0.0, -0.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [694.1710492597019, 0.7053504825097019], "ok": 984.1505272524624}
+{"fn": "SafeDivide", "args": [122.81999093112245, 0.5290136794944387], "ok": 232.16789223389753}
+{"fn": "SafeDivide", "args": [1.0, 1e-10], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [615.6841560206328, 0.1290618447119709], "ok": 4770.458359669844}
+{"fn": "SafeDivide", "args": [-217.1056900067057, 0.8666593029425764], "ok": -250.5086938657033}
+{"fn": "SafeDivide", "args": [-1.0, -1e-10], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [197.83833834263487, -0.49453514727947767], "ok": -400.04909546061054}
+{"fn": "SafeDivide", "args": [-837.6101102928657, -0.915613637381594], "ok": 914.8073773651984}
+{"fn": "SafeDivide", "args": [0.0, 1e-11], "ok": 0.0}
+{"fn": "SafeDivide", "args": [-307.5511549409638, 0.6194587843829504], "ok": -496.48364458552123}
+{"fn": "SafeDivide", "args": [-783.6921069233547, -0.8850945450632997], "ok": 885.4332130894638}
+{"fn": "SafeDivide", "args": [1.0, -1e-11], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [-14.324824659710316, -0.4900011752731006], "ok": 29.234265921355025}
+{"fn": "SafeDivide", "args": [718.6110640062086, -0.11787481803560529], "ok": -6096.391714379103}
+{"fn": "SafeDivide", "args": [-1.0, {"$num": "NaN"}], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [-57.84478982190126, -0.7360798771126544], "ok": 78.58493571214461}
+{"fn": "SafeDivide", "args": [827.6696952920795, -0.8209824814591893], "ok": -1008.1453794495159}
+{"fn": "SafeDivide", "args": [0.0, 2.0], "ok": 0.0}
+{"fn": "SafeDivide", "args": [266.33965679585594, 0.6675977436085432], "ok": 398.9523022594704}
+{"fn": "SafeDivide", "args": [81.16685670424408, 0.19440021347639158], "ok": 417.5245245504896}
+{"fn": "SafeDivide", "args": [1.0, 0.0], "ok": 10000000000.0}
+{"fn": "SafeDivide", "args": [867.6403117402394, -0.34226355915379325], "ok": -2535.006396489825}
+{"fn": "SafeDivide", "args": [478.76267577230624, 0.7139311621355331], "ok": 670.6006141267408}
+{"fn": "SafeDivide", "args": [-1.0, -0.0], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [-36.76240791736609, -0.9568298657244674], "ok": 38.421049796069326}
+{"fn": "SafeDivide", "args": [516.0142095588344, 0.400483367166538], "ok": 1288.4785033887656}
+{"fn": "SafeDivide", "args": [0.0, 1e-10], "ok": 0.0}
+{"fn": "SafeDivide", "args": [435.8833257618146, -0.7537778769322392], "ok": -578.2649492656817}
+{"fn": "SafeDivide", "args": [-747.3225471655725, -0.9723884464083425], "ok": 768.5432194571176}
+{"fn": "SafeDivide", "args": [1.0, -1e-10], "ok": -10000000000.0}
+{"fn": "SafeDivide", "args": [599.1198377377475, -0.2794353982617388], "ok": -2144.0370170158967}
+{"fn": "SafeDivide", "args": [786.8804076477184, 0.28237797120419295], "ok": 2786.6210819919447}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [56.61282378539603, 87.91763292286538], "ok": 31.30480913746935}
+{"fn": "rotAzmDiffDeg", "args": [180.48715685968622, 213.34327480765927], "ok": 32.85611794797305}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [282.1635928256692, 129.89844873559866], "ok": 152.26514409007052}
+{"fn": "rotAzmDiffDeg", "args": [164.64000653353114, 225.79238035297146], "ok": 61.15237381944033}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [84.77732916697447, 346.5763872734415], "ok": 98.20094189353296}
+{"fn": "rotAzmDiffDeg", "args": [71.24856044072448, 98.08547929743759], "ok": 26.836918856713112}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [165.65511785075046, 240.87693964845158], "ok": 75.22182179770112}
+{"fn": "rotAzmDiffDeg", "args": [207.21758783911886, 135.21446795231583], "ok": 72.00311988680303}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [120.02009058453646, 168.9949734651065], "ok": 48.97488288057005}
+{"fn": "rotAzmDiffDeg", "args": [346.90495631512556, 322.8375031402679], "ok": 24.067453174857633}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [280.31837055366964, 355.9394763719316], "ok": 75.62110581826198}
+{"fn": "rotAzmDiffDeg", "args": [10.503897355542374, 165.26169985177125], "ok": 154.7578024962289}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [15.71010619420771, 114.36010856090866], "ok": 98.65000236670095}
+{"fn": "rotAzmDiffDeg", "args": [296.943356745787, 113.2468449507788], "ok": 176.30348820499177}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [221.33772567983337, 46.96989036737798], "ok": 174.36783531245538}
+{"fn": "rotAzmDiffDeg", "args": [247.13178203772563, 344.7527007651778], "ok": 97.62091872745216}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [111.27102629534065, 212.41084752642308], "ok": 101.13982123108244}
+{"fn": "rotAzmDiffDeg", "args": [48.63310787449815, 97.09266513601297], "ok": 48.45955726151482}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [56.70143230745655, 316.79660099767517], "ok": 99.9048313097814}
+{"fn": "rotAzmDiffDeg", "args": [87.55973429319756, 121.08774803892402], "ok": 33.528013745726454}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [229.94257569439608, 233.67388218675288], "ok": 3.7313064923567936}
+{"fn": "rotAzmDiffDeg", "args": [75.5173132600836, 180.97670532279386], "ok": 105.45939206271026}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [345.2774005880534, 202.79461313784014], "ok": 142.48278745021327}
+{"fn": "rotAzmDiffDeg", "args": [188.45867908253462, 55.3109786713685], "ok": 133.1477004111661}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [261.4065485313608, 124.31919411317307], "ok": 137.08735441818772}
+{"fn": "rotAzmDiffDeg", "args": [297.76273979005344, 23.958684620092896], "ok": 86.19594483003948}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [237.10774917393994, 89.93124509033574], "ok": 147.1765040836042}
+{"fn": "rotAzmDiffDeg", "args": [323.84050996801125, 31.613590195231914], "ok": 67.77308022722065}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [332.4545583594584, 121.56474155747637], "ok": 149.11018319801795}
+{"fn": "rotAzmDiffDeg", "args": [88.52669172386756, 51.83960373205855], "ok": 36.68708799180901}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [15.830154753131737, 348.9996169596771], "ok": 26.830537793454653}
+{"fn": "rotAzmDiffDeg", "args": [114.53483480927325, 42.05835328396348], "ok": 72.47648152530977}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [224.3216421709048, 205.57843889442782], "ok": 18.743203276476976}
+{"fn": "rotAzmDiffDeg", "args": [241.5898181108021, 11.615009279054398], "ok": 130.0251911682523}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0], "ok": 0.0}
+{"fn": "rotAzmDiffDeg", "args": [95.77901565695858, 192.86714956087312], "ok": 97.08813390391454}
+{"fn": "rotAzmDiffDeg", "args": [53.809903569703096, 323.1115802534043], "ok": 90.6983233162988}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [282.2755686578053, 277.1031106729248], "ok": 5.172457984880509}
+{"fn": "rotAzmDiffDeg", "args": [244.36437505124007, 253.1087422501251], "ok": 8.744367198885016}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0], "ok": 179.0}
+{"fn": "rotAzmDiffDeg", "args": [255.50268299781644, 219.08330409352513], "ok": 36.41937890429131}
+{"fn": "rotAzmDiffDeg", "args": [119.72299038852358, 6.278464887353694], "ok": 113.44452550116989}
+{"fn": "epexp", "args": [0.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [15.32752996265775, -0.5221441803494358], "ok": 1.7835933329386386e-13}
+{"fn": "epexp", "args": [-31.75570760158485, 3.1451169209176797], "ok": 4.121002700064515e-05}
+{"fn": "epexp", "args": [1.0, -0.0], "ok": 0.0}
+{"fn": "epexp", "args": [3.0281260220236277, 0.2664923524442546], "ok": 86068.62862833215}
+{"fn": "epexp", "args": [17.318324148746385, 1.947968478466077], "ok": 7262.315517073506}
+{"fn": "epexp", "args": [-800.0, 1.0], "ok": 0.0}
+{"fn": "epexp", "args": [20.215990611240784, 3.582918723087671], "ok": 282.117780390626}
+{"fn": "epexp", "args": [-44.72568633902028, 2.130886716702472], "ok": 7.664612216704511e-10}
+{"fn": "epexp", "args": [800.0, 1e-300], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [2.8277565825243656, 2.488303345355643], "ok": 3.115593163684426}
+{"fn": "epexp", "args": [34.42865597960072, 8.275474049199396], "ok": 64.09230590317584}
+{"fn": "epexp", "args": [0.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [-38.61814752592713, -6.143781325311155], "ok": 536.8557848050743}
+{"fn": "epexp", "args": [15.835733367688789, 2.5966491547584667], "ok": 445.20122864121595}
+{"fn": "epexp", "args": [1.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [-20.899520975339094, 4.753796249098691], "ok": 0.012321796447597353}
+{"fn": "epexp", "args": [-40.28963647526812, -7.205421147061177], "ok": 268.1570298695721}
+{"fn": "epexp", "args": [-800.0, -0.0], "ok": 0.0}
+{"fn": "epexp", "args": [42.92791777514043, -6.550557191394681], "ok": 0.001425371065559562}
+{"fn": "epexp", "args": [19.298581897691477, -5.246479552042905], "ok": 0.025263693682882164}
+{"fn": "epexp", "args": [800.0, 1.0], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [27.60521035063026, 8.462834540017607], "ok": 26.099973801511336}
+{"fn": "epexp", "args": [3.575224069906554, -1.319970317090771], "ok": 0.06663242281243464}
+{"fn": "epexp", "args": [0.0, 1e-300], "ok": 1.0}
+{"fn": "epexp", "args": [37.22074261600291, -3.6119762288436323], "ok": 3.347158006811974e-05}
+{"fn": "epexp", "args": [-28.31707916394526, -6.6155106573610745], "ok": 72.26985918558223}
+{"fn": "epexp", "args": [1.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [-34.33217872872498, 0.19242539543902204], "ok": 3.2658164739559754e-78}
+{"fn": "epexp", "args": [-18.167031241554245, -4.098206196809288], "ok": 84.17708131887797}
+{"fn": "epexp", "args": [-800.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [5.631146513990807, -8.817639041073313], "ok": 0.5280190407791572}
+{"fn": "epexp", "args": [23.55654713164489, 8.675456776991176], "ok": 15.109280322411593}
+{"fn": "epexp", "args": [800.0, -0.0], "ok": 0.0}
+{"fn": "epexp", "args": [-13.742860482510707, -0.42918798522460655], "ok": 80607158845482.34}
+{"fn": "epexp", "args": [-10.05459875488225, 1.6070509164837965], "ok": 0.0019178457986804723}
+{"fn": "epexp", "args": [0.0, 1.0], "ok": 1.0}
+{"fn": "epexp", "args": [3.1718699355298696, -3.4607047905657957], "ok": 0.3999008174542312}
+{"fn": "epexp", "args": [-30.76256676068748, 3.3658727646036564], "ok": 0.00010733548143551846}
+{"fn": "epexp", "args": [1.0, 1e-300], "ok": {"$num": "Infinity"}}
+{"fn": "epexp", "args": [-32.622440560489764, 0.5169330327901243], "ok": 3.9145878912175556e-28}
+{"fn": "epexp", "args": [-29.881088327937622, -4.522643925201926], "ok": 740.2556198803283}
+{"fn": "epexp", "args": [-800.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [46.227964421222396, -3.0771107209397126], "ok": 2.9889536962187374e-07}
+{"fn": "epexp", "args": [39.92355954472876, 8.710392842407337], "ok": 97.85038288426229}
+{"fn": "epexp", "args": [800.0, 0.0], "ok": 0.0}
+{"fn": "epexp", "args": [-28.964096466707357, -7.0719336784991], "ok": 60.07779375704415}
+{"fn": "epexp", "args": [34.06933969450654, 7.716181345592087], "ok": 82.7075516829909}
+{"fn": "epexp", "args": [0.0, -0.0], "ok": 0.0}
+{"fn": "epexp", "args": [-5.159889087051653, 2.909981712907687], "ok": 0.16979407412425923}
+{"fn": "epexp", "args": [31.290017254876574, -8.516441954419848], "ok": 0.025372951622129696}
+{"fn": "epexp", "args": [1.0, 1.0], "ok": 2.718281828459045}
+{"fn": "epexp", "args": [46.065699781247176, -1.1553911400154107], "ok": 4.837078604876278e-18}
+{"fn": "epexp", "args": [-0.3458989395239698, -5.574776567219047], "ok": 1.064012500596802}
+{"fn": "epexp", "args": [-800.0, 1e-300], "ok": 0.0}
+{"fn": "epexp", "args": [-39.71266682763566, -8.168334031292614], "ok": 129.254446331022}
+{"fn": "epexp", "args": [-26.076842755341755, 5.7071859946596675], "ok": 0.010367033170115518}
+{"fn": "epexp", "args": [800.0, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "epexp", "args": [-10.941448887859742, -8.878708313173327], "ok": 3.429191088875822}
+{"fn": "epexp", "args": [-13.80320741285589, 5.698870144230174], "ok": 0.0887354822667961}
+{"fn": "Interp", "args": [0.0, 0.0, 0.0], "ok": 0.0}
+{"fn": "Interp", "args": [-49.54430608833162, 17.308973106752006, 0.8953075999825696], "ok": 10.309942858783351}
+{"fn": "Interp", "args": [-81.4277325437412, 35.12675201357379, 0.28616934744281575], "ok": -48.07341175644062}
+{"fn": "Interp", "args": [1.0, 2.0, 1.0], "ok": 2.0}
+{"fn": "Interp", "args": [-41.74626336089335, 9.442129598234402, 0.4347939464252435], "ok": -19.489859975028047}
+{"fn": "Interp", "args": [-31.948040946450448, 21.03212461083413, 0.1793224224063622], "ok": -22.44750931922806}
+{"fn": "Interp", "args": [0.0, 0.0, 0.5], "ok": 0.0}
+{"fn": "Interp", "args": [91.51976235939767, 46.250140521081704, 0.24838817732138496], "ok": 80.27532350295}
+{"fn": "Interp", "args": [88.22566165031833, -97.69407802353327, 0.8204375783876066], "ok": -64.30987934215071}
+{"fn": "Interp", "args": [1.0, 2.0, -0.5], "ok": 0.5}
+{"fn": "Interp", "args": [59.48561929784813, 95.2554506873656, 0.2448218731552242], "ok": 68.24285642107634}
+{"fn": "Interp", "args": [-76.84444526444992, 10.321224174778195, 0.8448119582805038], "ok": -3.205845370664548}
+{"fn": "Interp", "args": [0.0, 0.0, 1.5], "ok": 0.0}
+{"fn": "Interp", "args": [35.773924096660465, 58.187823809104344, 0.3026762405681429], "ok": 42.55807899809436}
+{"fn": "Interp", "args": [-55.21000066962767, 85.777142133213, 0.9893203864000986], "ok": 84.27145392552455}
+{"fn": "Interp", "args": [1.0, 2.0, 0.0], "ok": 1.0}
+{"fn": "Interp", "args": [-62.97685331448544, 36.32619393033747, 0.6176427852462677], "ok": -1.6430426307513102}
+{"fn": "Interp", "args": [-24.58037357776972, -18.664372756303877, 0.745812376496554], "ok": -20.168146945756714}
+{"fn": "Interp", "args": [0.0, 0.0, 1.0], "ok": 0.0}
+{"fn": "Interp", "args": [92.15799072059025, -47.99344620820345, 0.5191377375476848], "ok": 19.400090839319247}
+{"fn": "Interp", "args": [92.20653064498222, -56.69773845826549, 0.4512055355833674], "ok": 25.020100153601476}
+{"fn": "Interp", "args": [1.0, 2.0, 0.5], "ok": 1.5}
+{"fn": "Interp", "args": [81.44869838780212, 97.55159882266003, 0.7215506204978879], "ok": 93.06775618838955}
+{"fn": "Interp", "args": [5.302405987679066, 14.339519615971597, 0.3004706633243738], "ok": 8.017793514109862}
+{"fn": "Interp", "args": [0.0, 0.0, -0.5], "ok": 0.0}
+{"fn": "Interp", "args": [-34.163764533347816, -28.74494272241786, 0.9456018871967973], "ok": -29.039716402549285}
+{"fn": "Interp", "args": [-22.643477913552772, 97.06234243539828, 0.9031129016932172], "ok": 85.46439285135538}
+{"fn": "Interp", "args": [1.0, 2.0, 1.5], "ok": 2.5}
+{"fn": "Interp", "args": [-0.43288267435256955, 79.86247910109017, 0.9545868630817553], "ok": 76.216014842882}
+{"fn": "Interp", "args": [-76.91419381411819, -8.705900659135096, 0.3231863983035752], "ok": -54.870201214924805}
+{"fn": "Interp", "args": [0.0, 0.0, 0.0], "ok": 0.0}
+{"fn": "Interp", "args": [68.33399340274664, 17.373611790338586, 0.7732240358567282], "ok": 28.930201463601485}
+{"fn": "Interp", "args": [54.42018411708858, -34.24178393454042, 0.11957257498375118], "ok": 43.81864429402822}
+{"fn": "Interp", "args": [1.0, 2.0, 1.0], "ok": 2.0}
+{"fn": "Interp", "args": [66.24856478166978, -46.193396911976926, 0.8480694965885566], "ok": -29.110033067290942}
+{"fn": "Interp", "args": [19.547003663945347, -77.8936516668924, 0.0980655340964417], "ok": 9.991433756219454}
+{"fn": "Interp", "args": [0.0, 0.0, 0.5], "ok": 0.0}
+{"fn": "Interp", "args": [47.683815425035476, -0.9203664937714251, 0.05065488200793866], "ok": 45.221776324845926}
+{"fn": "Interp", "args": [41.591103591772196, -80.77020922368128, 0.6283268891173185], "ok": -35.291799437872754}
+{"fn": "Interp", "args": [1.0, 2.0, -0.5], "ok": 0.5}
+{"fn": "Interp", "args": [-80.31411112506575, 68.697680203136, 0.508692192829574], "ok": -4.512976236859899}
+{"fn": "Interp", "args": [-44.1601039346343, -0.6590936311663853, 0.6833281141575301], "ok": -14.43464060001828}
+{"fn": "Interp", "args": [0.0, 0.0, 1.5], "ok": 0.0}
+{"fn": "Interp", "args": [6.828405643153928, 42.73210108675738, 0.38072029760478354], "ok": 20.497671257554146}
+{"fn": "Interp", "args": [-75.61752567299742, 57.89091172849618, 0.4830964940368314], "ok": -11.120067640000073}
+{"fn": "Interp", "args": [1.0, 2.0, 0.0], "ok": 1.0}
+{"fn": "Interp", "args": [-49.70979035993499, 52.1962384217407, 0.3847383991955242], "ok": -10.502627978100065}
+{"fn": "Interp", "args": [-54.37003102896738, -95.60251079794917, 0.7950378926362831], "ok": -87.15141485266685}
+{"fn": "Interp", "args": [0.0, 0.0, 1.0], "ok": 0.0}
+{"fn": "Interp", "args": [-11.495765728082745, 54.74822191705891, 0.6914024964598912], "ok": 34.305492705226385}
+{"fn": "Interp", "args": [17.172886271500772, -22.5584520556459, 0.6075965983314602], "ok": -6.967739743229913}
+{"fn": "Interp", "args": [1.0, 2.0, 0.5], "ok": 1.5}
+{"fn": "Interp", "args": [63.50112929854558, 69.77351714446789, 0.29314928806003104], "ok": 65.3398753300141}
+{"fn": "Interp", "args": [32.88679383638987, -98.4131856553534, 0.3843723063872454], "ok": -17.58128210944951}
+{"fn": "Interp", "args": [0.0, 0.0, -0.5], "ok": 0.0}
+{"fn": "Interp", "args": [96.08897730117681, 19.242475631593663, 0.8062345401885206], "ok": 34.132673362504065}
+{"fn": "Interp", "args": [87.7915966848773, 70.16742205689812, 0.767685891184731], "ok": 74.26176647920178}
+{"fn": "Interp", "args": [1.0, 2.0, 1.5], "ok": 2.5}
+{"fn": "Interp", "args": [4.463936591210853, 16.126483889718358, 0.16582879135951323], "ok": 6.397922713895509}
+{"fn": "Interp", "args": [-48.98618829163155, -15.77701311604838, 0.957367707661751], "ok": -17.192796380445962}

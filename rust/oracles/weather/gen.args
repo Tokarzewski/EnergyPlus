@@ -1,0 +1,11 @@
+weather
+WeatherManager.hh
+Weather
+calculateWaterBoundaryConvectionCoefficient
+interpolateWindDirection
+AirMass
+GetSTM
+isLeapYear
+computeJulianDate
+calculateDayOfYear@Month>=1&&Month<=12@0
+validMonthDay

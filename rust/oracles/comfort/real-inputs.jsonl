@@ -1,0 +1,240 @@
+{"fn": "CalcFangerPPD", "args": [0.0]}
+{"fn": "CalcFangerPPD", "args": [2.8524377153688807]}
+{"fn": "CalcFangerPPD", "args": [0.029551829604327118]}
+{"fn": "CalcFangerPPD", "args": [3.0]}
+{"fn": "CalcFangerPPD", "args": [0.7587036066331629]}
+{"fn": "CalcFangerPPD", "args": [1.0096320040724187]}
+{"fn": "CalcFangerPPD", "args": [-3.0]}
+{"fn": "CalcFangerPPD", "args": [-2.7827460737941703]}
+{"fn": "CalcFangerPPD", "args": [0.7680435055529413]}
+{"fn": "CalcFangerPPD", "args": [0.5]}
+{"fn": "CalcFangerPPD", "args": [1.8250627227497578]}
+{"fn": "CalcFangerPPD", "args": [-1.972354198839537]}
+{"fn": "CalcFangerPPD", "args": [10.0]}
+{"fn": "CalcFangerPPD", "args": [-0.012580645778692556]}
+{"fn": "CalcFangerPPD", "args": [-0.04660068928412908]}
+{"fn": "CalcFangerPPD", "args": [-10.0]}
+{"fn": "CalcFangerPPD", "args": [0.7887027723607241]}
+{"fn": "CalcFangerPPD", "args": [-1.2049395114826948]}
+{"fn": "CalcFangerPPD", "args": [4.85]}
+{"fn": "CalcFangerPPD", "args": [0.16988603449694395]}
+{"fn": "CalcFangerPPD", "args": [2.6422039877729535]}
+{"fn": "CalcFangerPPD", "args": [{"$num": "NaN"}]}
+{"fn": "CalcFangerPPD", "args": [1.2242748501536322]}
+{"fn": "CalcFangerPPD", "args": [0.10466656706727084]}
+{"fn": "CalcFangerPPD", "args": [0.0]}
+{"fn": "CalcFangerPPD", "args": [2.441072759754128]}
+{"fn": "CalcFangerPPD", "args": [-0.9804480163395599]}
+{"fn": "CalcFangerPPD", "args": [3.0]}
+{"fn": "CalcFangerPPD", "args": [2.198292235510035]}
+{"fn": "CalcFangerPPD", "args": [-0.6529236693735672]}
+{"fn": "CalcFangerPPD", "args": [-3.0]}
+{"fn": "CalcFangerPPD", "args": [0.11245156552124502]}
+{"fn": "CalcFangerPPD", "args": [-0.785863879104642]}
+{"fn": "CalcFangerPPD", "args": [0.5]}
+{"fn": "CalcFangerPPD", "args": [1.1527057869801798]}
+{"fn": "CalcFangerPPD", "args": [-0.38132055408637155]}
+{"fn": "CalcFangerPPD", "args": [10.0]}
+{"fn": "CalcFangerPPD", "args": [-1.6531082344426342]}
+{"fn": "CalcFangerPPD", "args": [0.8011442074679289]}
+{"fn": "CalcFangerPPD", "args": [-10.0]}
+{"fn": "CalcFangerPPD", "args": [-1.3306190111023117]}
+{"fn": "CalcFangerPPD", "args": [-1.6847233794806318]}
+{"fn": "CalcFangerPPD", "args": [4.85]}
+{"fn": "CalcFangerPPD", "args": [-0.02340053668406661]}
+{"fn": "CalcFangerPPD", "args": [-1.7277702047844874]}
+{"fn": "CalcFangerPPD", "args": [{"$num": "NaN"}]}
+{"fn": "CalcFangerPPD", "args": [0.6409358562701843]}
+{"fn": "CalcFangerPPD", "args": [-1.425039827705422]}
+{"fn": "CalcFangerPPD", "args": [0.0]}
+{"fn": "CalcFangerPPD", "args": [-2.638765539163299]}
+{"fn": "CalcFangerPPD", "args": [-0.30144556954258217]}
+{"fn": "CalcFangerPPD", "args": [3.0]}
+{"fn": "CalcFangerPPD", "args": [-0.9337196741464364]}
+{"fn": "CalcFangerPPD", "args": [-1.8769657828293829]}
+{"fn": "CalcFangerPPD", "args": [-3.0]}
+{"fn": "CalcFangerPPD", "args": [0.3204311861396594]}
+{"fn": "CalcFangerPPD", "args": [1.5601927342782194]}
+{"fn": "CalcFangerPPD", "args": [0.5]}
+{"fn": "CalcFangerPPD", "args": [2.493062916118694]}
+{"fn": "CalcFangerPPD", "args": [-1.4116931773269392]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0761478776784694, 1.1224609152263163]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.8487405476416814, 2.595915358321982]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.4360437162302886, 0.9733380450942601]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.7074966332248318, 1.763444634084927]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.2676735327103381, 2.212693989056233]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.1250307985110346, 1.897039124794819]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.5909604856223885, 1.915454889584143]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.8346122207622528, 2.019360912596616]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.8672713887898587, 1.234200910171349]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5575398865499586, 1.0143887216463947]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.5346930717933445, 1.10115381147173]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.36622232145732103, 2.311697123287944]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5669605614096469, 3.503459188910581]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9334215775353392, 1.4848697014005772]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.34189137438136497, 2.028222822511431]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.3660157173190317, 1.153320146039405]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9577771847993906, 2.8854567897201147]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.15854269440018798, 2.8761580254152035]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.8577697569881377, 1.6266891260115353]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.4460108025199998, 0.9843474156474539]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.7780418581295425, 1.4109713117838387]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.1761028388433596, 1.4159975700379035]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.3978474284483986, 1.8489045802815238]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.2202821220844515, 3.2159633304563906]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.2817233143528457, 2.9541903625222705]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.763264029142407, 2.0446639646952773]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.418105641686969, 0.8822515529285107]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9655818916102679, 1.734584647400817]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.949323798105945, 0.9274509248545495]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.23618212975138, 2.8414642349540715]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.423571695025018, 0.7564971055927291]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.489440654666053, 3.9243394270738943]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9065135273085805, 1.3879168187845923]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.091073489444248, 1.4808389688361343]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.6301478059025853, 3.9456109282530996]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.1799958140071092, 0.824471738700189]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.133725039996671, 2.567396530947485]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.8476385563788131, 3.403696869145376]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0]}
+{"fn": "CalcRelativeAirVelocity", "args": [1.3181031499555904, 0.7885856673132126]}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5967010267328559, 3.940360205600757]}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-6.862160139066507]}
+{"fn": "CalcSatVapPressFromTemp", "args": [14.880972398167437]}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-6.420797169253609]}
+{"fn": "CalcSatVapPressFromTemp", "args": [36.79067128046321]}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [7.770844403137787]}
+{"fn": "CalcSatVapPressFromTemp", "args": [9.401506281876124]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [6.351474138311584]}
+{"fn": "CalcSatVapPressFromTemp", "args": [19.006067628859554]}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [2.55792603120819]}
+{"fn": "CalcSatVapPressFromTemp", "args": [35.25149104512464]}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [1.7129338615675174]}
+{"fn": "CalcSatVapPressFromTemp", "args": [17.3653262435679]}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [11.00797960239083]}
+{"fn": "CalcSatVapPressFromTemp", "args": [28.038946094495067]}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [35.23888221195555]}
+{"fn": "CalcSatVapPressFromTemp", "args": [13.198791171005514]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [22.76318850729364]}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.01344148900595]}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [35.61272000999549]}
+{"fn": "CalcSatVapPressFromTemp", "args": [7.526113271718941]}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [45.86133492817201]}
+{"fn": "CalcSatVapPressFromTemp", "args": [18.771848658207496]}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-0.30209017769169577]}
+{"fn": "CalcSatVapPressFromTemp", "args": [18.6276986592974]}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [3.682699862576131]}
+{"fn": "CalcSatVapPressFromTemp", "args": [23.740262490452885]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [46.98592831757496]}
+{"fn": "CalcSatVapPressFromTemp", "args": [39.748994662727036]}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [47.65995989679942]}
+{"fn": "CalcSatVapPressFromTemp", "args": [46.373490643096375]}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [13.316096339288716]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-9.808120616990157]}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [19.2685152611684]}
+{"fn": "CalcSatVapPressFromTemp", "args": [42.941806408401305]}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-3.4979229978184723]}
+{"fn": "CalcSatVapPressFromTemp", "args": [34.876462465048135]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [32.04286484526531]}
+{"fn": "CalcSatVapPressFromTemp", "args": [-3.986719273940718]}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTemp", "args": [30.31387326977105]}
+{"fn": "CalcSatVapPressFromTemp", "args": [9.187862425479455]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.409859888420655]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.72378457192376]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [17.04660055925862]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [8.064059314395017]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [33.069261155108606]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [27.3472649160532]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [9.220693982723876]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.34540426849732]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [32.503930248804515]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-3.3983431578292667]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-2.9590895721231414]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [10.283913504985286]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [32.703908931139814]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [31.40967960668204]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [40.76892846765715]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-5.489310966862457]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [24.56881855087373]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [25.607557215734587]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.7457081656843]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [15.20971632962717]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [3.0267571858487585]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [29.855207156692664]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [16.768300126673303]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [34.93104420979165]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [28.518539483856493]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-8.59909266515569]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [32.969917856069365]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [48.480937578649176]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [17.89381577716777]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-7.497120926610994]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [46.496477978083576]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [39.404349483597564]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-3.1928735419182637]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-3.333546855041578]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [10.989032117313617]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1.5943590716140843]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [9.123668323515993]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [25.39206287717564]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [5.735486946599341]}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [22.42297572840102]}

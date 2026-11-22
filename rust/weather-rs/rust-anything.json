@@ -1,0 +1,250 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/weather",
+  "unit": "weather.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "weather-rs",
+  "exports": [
+    {
+      "name": "calculateWaterBoundaryConvectionCoefficient",
+      "file": "weather.c",
+      "line": 15,
+      "params": [
+        {
+          "name": "curWaterTemp",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "curWaterVelocity",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "distanceFromLeadingEdge",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double calculateWaterBoundaryConvectionCoefficient(double curWaterTemp, double curWaterVelocity, double distanceFromLeadingEdge)"
+    },
+    {
+      "name": "interpolateWindDirection",
+      "file": "weather.c",
+      "line": 20,
+      "params": [
+        {
+          "name": "prevHrWindDir",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "curHrWindDir",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "curHrWeight",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double interpolateWindDirection(double prevHrWindDir, double curHrWindDir, double curHrWeight)"
+    },
+    {
+      "name": "AirMass",
+      "file": "weather.c",
+      "line": 25,
+      "params": [
+        {
+          "name": "CosZen",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double AirMass(double CosZen)"
+    },
+    {
+      "name": "GetSTM",
+      "file": "weather.c",
+      "line": 30,
+      "params": [
+        {
+          "name": "Longitude",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double GetSTM(double Longitude)"
+    },
+    {
+      "name": "isLeapYear",
+      "file": "weather.c",
+      "line": 35,
+      "params": [
+        {
+          "name": "Year",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "boolean",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "bool",
+      "prototype": "bool isLeapYear(int Year)"
+    },
+    {
+      "name": "computeJulianDate",
+      "file": "weather.c",
+      "line": 40,
+      "params": [
+        {
+          "name": "gyyyy",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "gmm",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "gdd",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "int",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "int",
+      "prototype": "int computeJulianDate(int gyyyy, int gmm, int gdd)"
+    },
+    {
+      "name": "calculateDayOfYear",
+      "file": "weather.c",
+      "line": 45,
+      "params": [
+        {
+          "name": "Month",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "Day",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "leapYear",
+          "ts_type": "boolean",
+          "optional": false,
+          "rest": false,
+          "native_type": "bool"
+        }
+      ],
+      "returns": "int",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "int",
+      "prototype": "int calculateDayOfYear(int Month, int Day, bool leapYear)"
+    },
+    {
+      "name": "validMonthDay",
+      "file": "weather.c",
+      "line": 50,
+      "params": [
+        {
+          "name": "month",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "day",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "leapYearAdd",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "boolean",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "bool",
+      "prototype": "bool validMonthDay(int month, int day, int leapYearAdd)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/comfort",
+  "unit": "comfort.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "comfort-rs",
+  "exports": [
+    {
+      "name": "CalcFangerPPD",
+      "file": "comfort.c",
+      "line": 11,
+      "params": [
+        {
+          "name": "PMV",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CalcFangerPPD(double PMV)"
+    },
+    {
+      "name": "CalcRelativeAirVelocity",
+      "file": "comfort.c",
+      "line": 16,
+      "params": [
+        {
+          "name": "AirVel",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "ActMet",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CalcRelativeAirVelocity(double AirVel, double ActMet)"
+    },
+    {
+      "name": "CalcSatVapPressFromTemp",
+      "file": "comfort.c",
+      "line": 21,
+      "params": [
+        {
+          "name": "Temp",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CalcSatVapPressFromTemp(double Temp)"
+    },
+    {
+      "name": "CalcSatVapPressFromTempTorr",
+      "file": "comfort.c",
+      "line": 26,
+      "params": [
+        {
+          "name": "Temp",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double CalcSatVapPressFromTempTorr(double Temp)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

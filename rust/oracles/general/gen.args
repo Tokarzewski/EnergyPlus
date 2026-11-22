@@ -1,0 +1,10 @@
+general
+General.hh
+General
+OrdinalDay
+BetweenDateHoursLeftInclusive
+BetweenDates
+SafeDivide
+rotAzmDiffDeg
+epexp
+Interp=EnergyPlus::Interp

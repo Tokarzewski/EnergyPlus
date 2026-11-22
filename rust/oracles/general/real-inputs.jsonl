@@ -1,0 +1,420 @@
+{"fn": "OrdinalDay", "args": [1, 1, 0]}
+{"fn": "OrdinalDay", "args": [10, 17, 0]}
+{"fn": "OrdinalDay", "args": [11, 13, 0]}
+{"fn": "OrdinalDay", "args": [2, 28, 1]}
+{"fn": "OrdinalDay", "args": [1, 21, 1]}
+{"fn": "OrdinalDay", "args": [1, 6, 1]}
+{"fn": "OrdinalDay", "args": [3, 29, 0]}
+{"fn": "OrdinalDay", "args": [8, 23, 1]}
+{"fn": "OrdinalDay", "args": [4, 21, 1]}
+{"fn": "OrdinalDay", "args": [12, 31, 1]}
+{"fn": "OrdinalDay", "args": [5, 13, 1]}
+{"fn": "OrdinalDay", "args": [12, 23, 1]}
+{"fn": "OrdinalDay", "args": [0, 0, 0]}
+{"fn": "OrdinalDay", "args": [5, 11, 0]}
+{"fn": "OrdinalDay", "args": [7, 25, 1]}
+{"fn": "OrdinalDay", "args": [13, 32, 1]}
+{"fn": "OrdinalDay", "args": [10, 23, 1]}
+{"fn": "OrdinalDay", "args": [10, 8, 1]}
+{"fn": "OrdinalDay", "args": [-1, 1, 0]}
+{"fn": "OrdinalDay", "args": [10, 8, 1]}
+{"fn": "OrdinalDay", "args": [4, 25, 1]}
+{"fn": "OrdinalDay", "args": [1, 28, 1]}
+{"fn": "OrdinalDay", "args": [5, 22, 0]}
+{"fn": "OrdinalDay", "args": [2, 15, 1]}
+{"fn": "OrdinalDay", "args": [2, 29, 0]}
+{"fn": "OrdinalDay", "args": [8, 6, 0]}
+{"fn": "OrdinalDay", "args": [9, 10, 1]}
+{"fn": "OrdinalDay", "args": [3, 31, 1]}
+{"fn": "OrdinalDay", "args": [5, 6, 0]}
+{"fn": "OrdinalDay", "args": [12, 14, 0]}
+{"fn": "OrdinalDay", "args": [12, 0, 0]}
+{"fn": "OrdinalDay", "args": [8, 3, 1]}
+{"fn": "OrdinalDay", "args": [6, 14, 0]}
+{"fn": "OrdinalDay", "args": [0, 32, 1]}
+{"fn": "OrdinalDay", "args": [12, 15, 1]}
+{"fn": "OrdinalDay", "args": [12, 26, 1]}
+{"fn": "OrdinalDay", "args": [13, 1, 0]}
+{"fn": "OrdinalDay", "args": [7, 30, 0]}
+{"fn": "OrdinalDay", "args": [7, 7, 1]}
+{"fn": "OrdinalDay", "args": [-1, 28, 1]}
+{"fn": "OrdinalDay", "args": [11, 6, 0]}
+{"fn": "OrdinalDay", "args": [5, 14, 0]}
+{"fn": "OrdinalDay", "args": [1, 29, 0]}
+{"fn": "OrdinalDay", "args": [5, 25, 0]}
+{"fn": "OrdinalDay", "args": [7, 6, 1]}
+{"fn": "OrdinalDay", "args": [2, 31, 1]}
+{"fn": "OrdinalDay", "args": [5, 7, 1]}
+{"fn": "OrdinalDay", "args": [12, 8, 0]}
+{"fn": "OrdinalDay", "args": [3, 0, 0]}
+{"fn": "OrdinalDay", "args": [12, 13, 0]}
+{"fn": "OrdinalDay", "args": [3, 5, 1]}
+{"fn": "OrdinalDay", "args": [12, 32, 1]}
+{"fn": "OrdinalDay", "args": [11, 11, 0]}
+{"fn": "OrdinalDay", "args": [2, 22, 1]}
+{"fn": "OrdinalDay", "args": [0, 1, 0]}
+{"fn": "OrdinalDay", "args": [5, 3, 0]}
+{"fn": "OrdinalDay", "args": [5, 3, 0]}
+{"fn": "OrdinalDay", "args": [13, 28, 1]}
+{"fn": "OrdinalDay", "args": [7, 8, 0]}
+{"fn": "OrdinalDay", "args": [10, 15, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, 1, 0, 1, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [358, 11, 335, 19, 85, 20]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [302, 21, 209, 22, 331, 1]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 24, 365, 24, 365, 24]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [118, 15, 161, 21, 36, 19]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [218, 20, 219, 22, 142, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [366, 12, 366, 12, 366, 12]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [241, 7, 169, 7, 233, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [107, 17, 280, 13, 122, 12]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 1, 0, 1, 0, 1]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [289, 18, 309, 1, 197, 18]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [268, 18, 72, 19, 338, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [59, 0, 59, 0, 59, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [14, 22, 153, 1, 27, 13]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [49, 1, 103, 24, 152, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [60, 24, 60, 24, 60, 24]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [166, 8, 242, 15, 108, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [100, 16, 234, 18, 180, 20]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 12, 1, 12, 1, 12]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [3, 24, 237, 12, 199, 17]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [30, 11, 236, 9, 246, 5]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 1, 365, 1, 365, 1]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [24, 15, 117, 15, 288, 17]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [119, 12, 312, 0, 250, 10]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [366, 0, 366, 0, 366, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [106, 3, 22, 23, 109, 22]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [326, 3, 145, 21, 164, 21]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 24, 0, 24, 0, 24]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [163, 14, 147, 9, 339, 22]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [162, 19, 206, 10, 316, 16]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [59, 12, 59, 12, 59, 12]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [138, 22, 249, 3, 192, 3]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [6, 10, 219, 22, 115, 22]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [60, 1, 60, 1, 60, 1]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [120, 17, 39, 17, 295, 2]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [304, 4, 263, 13, 112, 17]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 0, 1, 0, 1, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [341, 7, 229, 24, 261, 20]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [132, 0, 339, 22, 60, 14]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 24, 365, 24, 365, 24]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [332, 1, 365, 0, 59, 3]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [57, 7, 180, 1, 99, 6]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [366, 12, 366, 12, 366, 12]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [164, 18, 245, 8, 230, 17]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [73, 9, 91, 20, 104, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [0, 1, 0, 1, 0, 1]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [208, 2, 177, 14, 13, 16]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 7, 6, 13, 68, 4]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [59, 0, 59, 0, 59, 0]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [280, 21, 343, 16, 262, 17]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [277, 12, 292, 9, 201, 8]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [60, 24, 60, 24, 60, 24]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [356, 20, 10, 15, 24, 5]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [126, 3, 233, 14, 161, 18]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [1, 12, 1, 12, 1, 12]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [142, 16, 96, 19, 108, 15]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [236, 20, 124, 1, 284, 10]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [365, 1, 365, 1, 365, 1]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [2, 8, 179, 17, 155, 9]}
+{"fn": "BetweenDateHoursLeftInclusive", "args": [73, 5, 70, 6, 359, 4]}
+{"fn": "BetweenDates", "args": [1, 1, 1]}
+{"fn": "BetweenDates", "args": [120, 223, 238]}
+{"fn": "BetweenDates", "args": [132, 259, 149]}
+{"fn": "BetweenDates", "args": [365, 365, 365]}
+{"fn": "BetweenDates", "args": [226, 278, 265]}
+{"fn": "BetweenDates", "args": [143, 2, 99]}
+{"fn": "BetweenDates", "args": [366, 366, 366]}
+{"fn": "BetweenDates", "args": [257, 182, 208]}
+{"fn": "BetweenDates", "args": [311, 351, 90]}
+{"fn": "BetweenDates", "args": [0, 0, 0]}
+{"fn": "BetweenDates", "args": [43, 143, 336]}
+{"fn": "BetweenDates", "args": [72, 319, 37]}
+{"fn": "BetweenDates", "args": [59, 59, 59]}
+{"fn": "BetweenDates", "args": [254, 152, 250]}
+{"fn": "BetweenDates", "args": [220, 274, 213]}
+{"fn": "BetweenDates", "args": [60, 60, 60]}
+{"fn": "BetweenDates", "args": [117, 35, 359]}
+{"fn": "BetweenDates", "args": [44, 69, 289]}
+{"fn": "BetweenDates", "args": [1, 1, 1]}
+{"fn": "BetweenDates", "args": [227, 91, 240]}
+{"fn": "BetweenDates", "args": [182, 339, 219]}
+{"fn": "BetweenDates", "args": [365, 365, 365]}
+{"fn": "BetweenDates", "args": [34, 84, 180]}
+{"fn": "BetweenDates", "args": [103, 354, 179]}
+{"fn": "BetweenDates", "args": [366, 366, 366]}
+{"fn": "BetweenDates", "args": [83, 202, 260]}
+{"fn": "BetweenDates", "args": [245, 187, 33]}
+{"fn": "BetweenDates", "args": [0, 0, 0]}
+{"fn": "BetweenDates", "args": [220, 158, 277]}
+{"fn": "BetweenDates", "args": [140, 113, 353]}
+{"fn": "BetweenDates", "args": [59, 59, 59]}
+{"fn": "BetweenDates", "args": [131, 281, 119]}
+{"fn": "BetweenDates", "args": [49, 7, 55]}
+{"fn": "BetweenDates", "args": [60, 60, 60]}
+{"fn": "BetweenDates", "args": [238, 296, 14]}
+{"fn": "BetweenDates", "args": [6, 248, 53]}
+{"fn": "BetweenDates", "args": [1, 1, 1]}
+{"fn": "BetweenDates", "args": [184, 48, 344]}
+{"fn": "BetweenDates", "args": [18, 355, 240]}
+{"fn": "BetweenDates", "args": [365, 365, 365]}
+{"fn": "BetweenDates", "args": [323, 173, 270]}
+{"fn": "BetweenDates", "args": [79, 269, 251]}
+{"fn": "BetweenDates", "args": [366, 366, 366]}
+{"fn": "BetweenDates", "args": [251, 15, 126]}
+{"fn": "BetweenDates", "args": [244, 282, 229]}
+{"fn": "BetweenDates", "args": [0, 0, 0]}
+{"fn": "BetweenDates", "args": [20, 347, 225]}
+{"fn": "BetweenDates", "args": [58, 60, 241]}
+{"fn": "BetweenDates", "args": [59, 59, 59]}
+{"fn": "BetweenDates", "args": [190, 204, 276]}
+{"fn": "BetweenDates", "args": [128, 279, 344]}
+{"fn": "BetweenDates", "args": [60, 60, 60]}
+{"fn": "BetweenDates", "args": [46, 155, 24]}
+{"fn": "BetweenDates", "args": [3, 147, 170]}
+{"fn": "BetweenDates", "args": [1, 1, 1]}
+{"fn": "BetweenDates", "args": [101, 203, 185]}
+{"fn": "BetweenDates", "args": [315, 34, 359]}
+{"fn": "BetweenDates", "args": [365, 365, 365]}
+{"fn": "BetweenDates", "args": [79, 244, 63]}
+{"fn": "BetweenDates", "args": [93, 5, 44]}
+{"fn": "SafeDivide", "args": [0.0, 0.0]}
+{"fn": "SafeDivide", "args": [-954.0973183202177, -0.39415293266816986]}
+{"fn": "SafeDivide", "args": [575.7403402122707, 0.890045701775724]}
+{"fn": "SafeDivide", "args": [1.0, -0.0]}
+{"fn": "SafeDivide", "args": [-924.7901915584163, 0.5234800804125239]}
+{"fn": "SafeDivide", "args": [948.8720852773095, 0.5311288776077698]}
+{"fn": "SafeDivide", "args": [-1.0, 1e-10]}
+{"fn": "SafeDivide", "args": [-533.2217383009552, 0.6768394283572678]}
+{"fn": "SafeDivide", "args": [-652.0651339261103, -0.734379826314681]}
+{"fn": "SafeDivide", "args": [0.0, -1e-10]}
+{"fn": "SafeDivide", "args": [-867.0071481989867, 0.5543125594652709]}
+{"fn": "SafeDivide", "args": [487.42239766071884, -0.6379265366590856]}
+{"fn": "SafeDivide", "args": [1.0, 1e-11]}
+{"fn": "SafeDivide", "args": [-486.13200673799724, -0.03424673011293322]}
+{"fn": "SafeDivide", "args": [-565.9430615615852, 0.6882460127635761]}
+{"fn": "SafeDivide", "args": [-1.0, -1e-11]}
+{"fn": "SafeDivide", "args": [-120.33863902592066, 0.6941033121909019]}
+{"fn": "SafeDivide", "args": [648.5153250405185, 0.4675677974172301]}
+{"fn": "SafeDivide", "args": [0.0, {"$num": "NaN"}]}
+{"fn": "SafeDivide", "args": [-620.3045912648157, -0.9636778832928259]}
+{"fn": "SafeDivide", "args": [-370.4012486637182, 0.119597125121081]}
+{"fn": "SafeDivide", "args": [1.0, 2.0]}
+{"fn": "SafeDivide", "args": [23.096172480073164, 0.05171346929148446]}
+{"fn": "SafeDivide", "args": [176.6412173422898, 0.7709158042717965]}
+{"fn": "SafeDivide", "args": [-1.0, 0.0]}
+{"fn": "SafeDivide", "args": [-714.6509925654208, 0.7433082900306593]}
+{"fn": "SafeDivide", "args": [-460.7526590657411, -0.737313095784192]}
+{"fn": "SafeDivide", "args": [0.0, -0.0]}
+{"fn": "SafeDivide", "args": [694.1710492597019, 0.7053504825097019]}
+{"fn": "SafeDivide", "args": [122.81999093112245, 0.5290136794944387]}
+{"fn": "SafeDivide", "args": [1.0, 1e-10]}
+{"fn": "SafeDivide", "args": [615.6841560206328, 0.1290618447119709]}
+{"fn": "SafeDivide", "args": [-217.1056900067057, 0.8666593029425764]}
+{"fn": "SafeDivide", "args": [-1.0, -1e-10]}
+{"fn": "SafeDivide", "args": [197.83833834263487, -0.49453514727947767]}
+{"fn": "SafeDivide", "args": [-837.6101102928657, -0.915613637381594]}
+{"fn": "SafeDivide", "args": [0.0, 1e-11]}
+{"fn": "SafeDivide", "args": [-307.5511549409638, 0.6194587843829504]}
+{"fn": "SafeDivide", "args": [-783.6921069233547, -0.8850945450632997]}
+{"fn": "SafeDivide", "args": [1.0, -1e-11]}
+{"fn": "SafeDivide", "args": [-14.324824659710316, -0.4900011752731006]}
+{"fn": "SafeDivide", "args": [718.6110640062086, -0.11787481803560529]}
+{"fn": "SafeDivide", "args": [-1.0, {"$num": "NaN"}]}
+{"fn": "SafeDivide", "args": [-57.84478982190126, -0.7360798771126544]}
+{"fn": "SafeDivide", "args": [827.6696952920795, -0.8209824814591893]}
+{"fn": "SafeDivide", "args": [0.0, 2.0]}
+{"fn": "SafeDivide", "args": [266.33965679585594, 0.6675977436085432]}
+{"fn": "SafeDivide", "args": [81.16685670424408, 0.19440021347639158]}
+{"fn": "SafeDivide", "args": [1.0, 0.0]}
+{"fn": "SafeDivide", "args": [867.6403117402394, -0.34226355915379325]}
+{"fn": "SafeDivide", "args": [478.76267577230624, 0.7139311621355331]}
+{"fn": "SafeDivide", "args": [-1.0, -0.0]}
+{"fn": "SafeDivide", "args": [-36.76240791736609, -0.9568298657244674]}
+{"fn": "SafeDivide", "args": [516.0142095588344, 0.400483367166538]}
+{"fn": "SafeDivide", "args": [0.0, 1e-10]}
+{"fn": "SafeDivide", "args": [435.8833257618146, -0.7537778769322392]}
+{"fn": "SafeDivide", "args": [-747.3225471655725, -0.9723884464083425]}
+{"fn": "SafeDivide", "args": [1.0, -1e-10]}
+{"fn": "SafeDivide", "args": [599.1198377377475, -0.2794353982617388]}
+{"fn": "SafeDivide", "args": [786.8804076477184, 0.28237797120419295]}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0]}
+{"fn": "rotAzmDiffDeg", "args": [56.61282378539603, 87.91763292286538]}
+{"fn": "rotAzmDiffDeg", "args": [180.48715685968622, 213.34327480765927]}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0]}
+{"fn": "rotAzmDiffDeg", "args": [282.1635928256692, 129.89844873559866]}
+{"fn": "rotAzmDiffDeg", "args": [164.64000653353114, 225.79238035297146]}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0]}
+{"fn": "rotAzmDiffDeg", "args": [84.77732916697447, 346.5763872734415]}
+{"fn": "rotAzmDiffDeg", "args": [71.24856044072448, 98.08547929743759]}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0]}
+{"fn": "rotAzmDiffDeg", "args": [165.65511785075046, 240.87693964845158]}
+{"fn": "rotAzmDiffDeg", "args": [207.21758783911886, 135.21446795231583]}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0]}
+{"fn": "rotAzmDiffDeg", "args": [120.02009058453646, 168.9949734651065]}
+{"fn": "rotAzmDiffDeg", "args": [346.90495631512556, 322.8375031402679]}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0]}
+{"fn": "rotAzmDiffDeg", "args": [280.31837055366964, 355.9394763719316]}
+{"fn": "rotAzmDiffDeg", "args": [10.503897355542374, 165.26169985177125]}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0]}
+{"fn": "rotAzmDiffDeg", "args": [15.71010619420771, 114.36010856090866]}
+{"fn": "rotAzmDiffDeg", "args": [296.943356745787, 113.2468449507788]}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0]}
+{"fn": "rotAzmDiffDeg", "args": [221.33772567983337, 46.96989036737798]}
+{"fn": "rotAzmDiffDeg", "args": [247.13178203772563, 344.7527007651778]}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0]}
+{"fn": "rotAzmDiffDeg", "args": [111.27102629534065, 212.41084752642308]}
+{"fn": "rotAzmDiffDeg", "args": [48.63310787449815, 97.09266513601297]}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0]}
+{"fn": "rotAzmDiffDeg", "args": [56.70143230745655, 316.79660099767517]}
+{"fn": "rotAzmDiffDeg", "args": [87.55973429319756, 121.08774803892402]}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0]}
+{"fn": "rotAzmDiffDeg", "args": [229.94257569439608, 233.67388218675288]}
+{"fn": "rotAzmDiffDeg", "args": [75.5173132600836, 180.97670532279386]}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0]}
+{"fn": "rotAzmDiffDeg", "args": [345.2774005880534, 202.79461313784014]}
+{"fn": "rotAzmDiffDeg", "args": [188.45867908253462, 55.3109786713685]}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0]}
+{"fn": "rotAzmDiffDeg", "args": [261.4065485313608, 124.31919411317307]}
+{"fn": "rotAzmDiffDeg", "args": [297.76273979005344, 23.958684620092896]}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0]}
+{"fn": "rotAzmDiffDeg", "args": [237.10774917393994, 89.93124509033574]}
+{"fn": "rotAzmDiffDeg", "args": [323.84050996801125, 31.613590195231914]}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0]}
+{"fn": "rotAzmDiffDeg", "args": [332.4545583594584, 121.56474155747637]}
+{"fn": "rotAzmDiffDeg", "args": [88.52669172386756, 51.83960373205855]}
+{"fn": "rotAzmDiffDeg", "args": [0.0, 0.0]}
+{"fn": "rotAzmDiffDeg", "args": [15.830154753131737, 348.9996169596771]}
+{"fn": "rotAzmDiffDeg", "args": [114.53483480927325, 42.05835328396348]}
+{"fn": "rotAzmDiffDeg", "args": [180.0, 180.0]}
+{"fn": "rotAzmDiffDeg", "args": [224.3216421709048, 205.57843889442782]}
+{"fn": "rotAzmDiffDeg", "args": [241.5898181108021, 11.615009279054398]}
+{"fn": "rotAzmDiffDeg", "args": [360.0, 360.0]}
+{"fn": "rotAzmDiffDeg", "args": [95.77901565695858, 192.86714956087312]}
+{"fn": "rotAzmDiffDeg", "args": [53.809903569703096, 323.1115802534043]}
+{"fn": "rotAzmDiffDeg", "args": [-180.0, 359.0]}
+{"fn": "rotAzmDiffDeg", "args": [282.2755686578053, 277.1031106729248]}
+{"fn": "rotAzmDiffDeg", "args": [244.36437505124007, 253.1087422501251]}
+{"fn": "rotAzmDiffDeg", "args": [540.0, 1.0]}
+{"fn": "rotAzmDiffDeg", "args": [255.50268299781644, 219.08330409352513]}
+{"fn": "rotAzmDiffDeg", "args": [119.72299038852358, 6.278464887353694]}
+{"fn": "epexp", "args": [0.0, 0.0]}
+{"fn": "epexp", "args": [15.32752996265775, -0.5221441803494358]}
+{"fn": "epexp", "args": [-31.75570760158485, 3.1451169209176797]}
+{"fn": "epexp", "args": [1.0, -0.0]}
+{"fn": "epexp", "args": [3.0281260220236277, 0.2664923524442546]}
+{"fn": "epexp", "args": [17.318324148746385, 1.947968478466077]}
+{"fn": "epexp", "args": [-800.0, 1.0]}
+{"fn": "epexp", "args": [20.215990611240784, 3.582918723087671]}
+{"fn": "epexp", "args": [-44.72568633902028, 2.130886716702472]}
+{"fn": "epexp", "args": [800.0, 1e-300]}
+{"fn": "epexp", "args": [2.8277565825243656, 2.488303345355643]}
+{"fn": "epexp", "args": [34.42865597960072, 8.275474049199396]}
+{"fn": "epexp", "args": [0.0, {"$num": "NaN"}]}
+{"fn": "epexp", "args": [-38.61814752592713, -6.143781325311155]}
+{"fn": "epexp", "args": [15.835733367688789, 2.5966491547584667]}
+{"fn": "epexp", "args": [1.0, 0.0]}
+{"fn": "epexp", "args": [-20.899520975339094, 4.753796249098691]}
+{"fn": "epexp", "args": [-40.28963647526812, -7.205421147061177]}
+{"fn": "epexp", "args": [-800.0, -0.0]}
+{"fn": "epexp", "args": [42.92791777514043, -6.550557191394681]}
+{"fn": "epexp", "args": [19.298581897691477, -5.246479552042905]}
+{"fn": "epexp", "args": [800.0, 1.0]}
+{"fn": "epexp", "args": [27.60521035063026, 8.462834540017607]}
+{"fn": "epexp", "args": [3.575224069906554, -1.319970317090771]}
+{"fn": "epexp", "args": [0.0, 1e-300]}
+{"fn": "epexp", "args": [37.22074261600291, -3.6119762288436323]}
+{"fn": "epexp", "args": [-28.31707916394526, -6.6155106573610745]}
+{"fn": "epexp", "args": [1.0, {"$num": "NaN"}]}
+{"fn": "epexp", "args": [-34.33217872872498, 0.19242539543902204]}
+{"fn": "epexp", "args": [-18.167031241554245, -4.098206196809288]}
+{"fn": "epexp", "args": [-800.0, 0.0]}
+{"fn": "epexp", "args": [5.631146513990807, -8.817639041073313]}
+{"fn": "epexp", "args": [23.55654713164489, 8.675456776991176]}
+{"fn": "epexp", "args": [800.0, -0.0]}
+{"fn": "epexp", "args": [-13.742860482510707, -0.42918798522460655]}
+{"fn": "epexp", "args": [-10.05459875488225, 1.6070509164837965]}
+{"fn": "epexp", "args": [0.0, 1.0]}
+{"fn": "epexp", "args": [3.1718699355298696, -3.4607047905657957]}
+{"fn": "epexp", "args": [-30.76256676068748, 3.3658727646036564]}
+{"fn": "epexp", "args": [1.0, 1e-300]}
+{"fn": "epexp", "args": [-32.622440560489764, 0.5169330327901243]}
+{"fn": "epexp", "args": [-29.881088327937622, -4.522643925201926]}
+{"fn": "epexp", "args": [-800.0, {"$num": "NaN"}]}
+{"fn": "epexp", "args": [46.227964421222396, -3.0771107209397126]}
+{"fn": "epexp", "args": [39.92355954472876, 8.710392842407337]}
+{"fn": "epexp", "args": [800.0, 0.0]}
+{"fn": "epexp", "args": [-28.964096466707357, -7.0719336784991]}
+{"fn": "epexp", "args": [34.06933969450654, 7.716181345592087]}
+{"fn": "epexp", "args": [0.0, -0.0]}
+{"fn": "epexp", "args": [-5.159889087051653, 2.909981712907687]}
+{"fn": "epexp", "args": [31.290017254876574, -8.516441954419848]}
+{"fn": "epexp", "args": [1.0, 1.0]}
+{"fn": "epexp", "args": [46.065699781247176, -1.1553911400154107]}
+{"fn": "epexp", "args": [-0.3458989395239698, -5.574776567219047]}
+{"fn": "epexp", "args": [-800.0, 1e-300]}
+{"fn": "epexp", "args": [-39.71266682763566, -8.168334031292614]}
+{"fn": "epexp", "args": [-26.076842755341755, 5.7071859946596675]}
+{"fn": "epexp", "args": [800.0, {"$num": "NaN"}]}
+{"fn": "epexp", "args": [-10.941448887859742, -8.878708313173327]}
+{"fn": "epexp", "args": [-13.80320741285589, 5.698870144230174]}
+{"fn": "Interp", "args": [0.0, 0.0, 0.0]}
+{"fn": "Interp", "args": [-49.54430608833162, 17.308973106752006, 0.8953075999825696]}
+{"fn": "Interp", "args": [-81.4277325437412, 35.12675201357379, 0.28616934744281575]}
+{"fn": "Interp", "args": [1.0, 2.0, 1.0]}
+{"fn": "Interp", "args": [-41.74626336089335, 9.442129598234402, 0.4347939464252435]}
+{"fn": "Interp", "args": [-31.948040946450448, 21.03212461083413, 0.1793224224063622]}
+{"fn": "Interp", "args": [0.0, 0.0, 0.5]}
+{"fn": "Interp", "args": [91.51976235939767, 46.250140521081704, 0.24838817732138496]}
+{"fn": "Interp", "args": [88.22566165031833, -97.69407802353327, 0.8204375783876066]}
+{"fn": "Interp", "args": [1.0, 2.0, -0.5]}
+{"fn": "Interp", "args": [59.48561929784813, 95.2554506873656, 0.2448218731552242]}
+{"fn": "Interp", "args": [-76.84444526444992, 10.321224174778195, 0.8448119582805038]}
+{"fn": "Interp", "args": [0.0, 0.0, 1.5]}
+{"fn": "Interp", "args": [35.773924096660465, 58.187823809104344, 0.3026762405681429]}
+{"fn": "Interp", "args": [-55.21000066962767, 85.777142133213, 0.9893203864000986]}
+{"fn": "Interp", "args": [1.0, 2.0, 0.0]}
+{"fn": "Interp", "args": [-62.97685331448544, 36.32619393033747, 0.6176427852462677]}
+{"fn": "Interp", "args": [-24.58037357776972, -18.664372756303877, 0.745812376496554]}
+{"fn": "Interp", "args": [0.0, 0.0, 1.0]}
+{"fn": "Interp", "args": [92.15799072059025, -47.99344620820345, 0.5191377375476848]}
+{"fn": "Interp", "args": [92.20653064498222, -56.69773845826549, 0.4512055355833674]}
+{"fn": "Interp", "args": [1.0, 2.0, 0.5]}
+{"fn": "Interp", "args": [81.44869838780212, 97.55159882266003, 0.7215506204978879]}
+{"fn": "Interp", "args": [5.302405987679066, 14.339519615971597, 0.3004706633243738]}
+{"fn": "Interp", "args": [0.0, 0.0, -0.5]}
+{"fn": "Interp", "args": [-34.163764533347816, -28.74494272241786, 0.9456018871967973]}
+{"fn": "Interp", "args": [-22.643477913552772, 97.06234243539828, 0.9031129016932172]}
+{"fn": "Interp", "args": [1.0, 2.0, 1.5]}
+{"fn": "Interp", "args": [-0.43288267435256955, 79.86247910109017, 0.9545868630817553]}
+{"fn": "Interp", "args": [-76.91419381411819, -8.705900659135096, 0.3231863983035752]}
+{"fn": "Interp", "args": [0.0, 0.0, 0.0]}
+{"fn": "Interp", "args": [68.33399340274664, 17.373611790338586, 0.7732240358567282]}
+{"fn": "Interp", "args": [54.42018411708858, -34.24178393454042, 0.11957257498375118]}
+{"fn": "Interp", "args": [1.0, 2.0, 1.0]}
+{"fn": "Interp", "args": [66.24856478166978, -46.193396911976926, 0.8480694965885566]}
+{"fn": "Interp", "args": [19.547003663945347, -77.8936516668924, 0.0980655340964417]}
+{"fn": "Interp", "args": [0.0, 0.0, 0.5]}
+{"fn": "Interp", "args": [47.683815425035476, -0.9203664937714251, 0.05065488200793866]}
+{"fn": "Interp", "args": [41.591103591772196, -80.77020922368128, 0.6283268891173185]}
+{"fn": "Interp", "args": [1.0, 2.0, -0.5]}
+{"fn": "Interp", "args": [-80.31411112506575, 68.697680203136, 0.508692192829574]}
+{"fn": "Interp", "args": [-44.1601039346343, -0.6590936311663853, 0.6833281141575301]}
+{"fn": "Interp", "args": [0.0, 0.0, 1.5]}
+{"fn": "Interp", "args": [6.828405643153928, 42.73210108675738, 0.38072029760478354]}
+{"fn": "Interp", "args": [-75.61752567299742, 57.89091172849618, 0.4830964940368314]}
+{"fn": "Interp", "args": [1.0, 2.0, 0.0]}
+{"fn": "Interp", "args": [-49.70979035993499, 52.1962384217407, 0.3847383991955242]}
+{"fn": "Interp", "args": [-54.37003102896738, -95.60251079794917, 0.7950378926362831]}
+{"fn": "Interp", "args": [0.0, 0.0, 1.0]}
+{"fn": "Interp", "args": [-11.495765728082745, 54.74822191705891, 0.6914024964598912]}
+{"fn": "Interp", "args": [17.172886271500772, -22.5584520556459, 0.6075965983314602]}
+{"fn": "Interp", "args": [1.0, 2.0, 0.5]}
+{"fn": "Interp", "args": [63.50112929854558, 69.77351714446789, 0.29314928806003104]}
+{"fn": "Interp", "args": [32.88679383638987, -98.4131856553534, 0.3843723063872454]}
+{"fn": "Interp", "args": [0.0, 0.0, -0.5]}
+{"fn": "Interp", "args": [96.08897730117681, 19.242475631593663, 0.8062345401885206]}
+{"fn": "Interp", "args": [87.7915966848773, 70.16742205689812, 0.767685891184731]}
+{"fn": "Interp", "args": [1.0, 2.0, 1.5]}
+{"fn": "Interp", "args": [4.463936591210853, 16.126483889718358, 0.16582879135951323]}
+{"fn": "Interp", "args": [-48.98618829163155, -15.77701311604838, 0.957367707661751]}

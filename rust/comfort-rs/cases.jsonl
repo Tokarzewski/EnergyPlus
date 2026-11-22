@@ -1,0 +1,531 @@
+{"fn": "CalcFangerPPD", "args": [10.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [{"$num": "-0"}], "ok": 5.0}
+{"fn": "CalcFangerPPD", "args": [2.0], "ok": 76.76181358773741}
+{"fn": "CalcFangerPPD", "args": [2147483648.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [-2.5], "ok": 93.43182335487431}
+{"fn": "CalcFangerPPD", "args": [{"$num": "Infinity"}], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [1000.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [9007199254740992.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [100.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [0.0], "ok": 5.0}
+{"fn": "CalcFangerPPD", "args": [{"$num": "NaN"}], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [1.0], "ok": 26.119650083580567}
+{"fn": "CalcFangerPPD", "args": [{"$num": "-Infinity"}], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [42.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [0.5], "ok": 10.225024554501047}
+{"fn": "CalcFangerPPD", "args": [1000000.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [-1.0], "ok": 26.119650083580567}
+{"fn": "CalcFangerPPD", "args": [-7.5], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [0.1], "ok": 5.207097472909709}
+{"fn": "CalcFangerPPD", "args": [0.30000000000000004], "ok": 6.870192586403547}
+{"fn": "CalcFangerPPD", "args": [1e+21], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [1e-07], "ok": 5.000000000000213}
+{"fn": "CalcFangerPPD", "args": [5e-324], "ok": 5.0}
+{"fn": "CalcFangerPPD", "args": [1.7976931348623157e+308], "ok": 100.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 9007199254740992.0], "ok": 2702159776422294.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, {"$num": "-0"}], "ok": 3.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 100.0], "ok": 1000029.7}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 10.0], "ok": 1002.7}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, {"$num": "NaN"}], "ok": 1000000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0, 0.5], "ok": 1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 0.5], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 2147483648.0], "ok": 644245094.6}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, {"$num": "-Infinity"}], "ok": 9007199254740992.0}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 3.0], "ok": 42.6}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, {"$num": "-0"}], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, {"$num": "-Infinity"}], "ok": 2147483648.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 3.0], "ok": 2.6}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 10.0], "ok": 5.699999999999999}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 0.5], "ok": 1000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, -2.5], "ok": 1000000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 2147483648.0], "ok": 644245097.1}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, -2.5], "ok": 2.0}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 0.0], "ok": 10.0}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 100.0], "ok": 39.7}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0, 1.0], "ok": 1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 2.0], "ok": 0.8}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 100.0], "ok": 2147483677.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, {"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, -2.5], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, -2.5], "ok": 1000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, {"$num": "-0"}], "ok": 1000000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 100.0], "ok": 28.7}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 1.0], "ok": 10.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, -1.0], "ok": {"$num": "-0"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 0.0], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 9007199254740992.0], "ok": 2702159776422300.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, {"$num": "NaN"}], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 3.0], "ok": 0.6}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 1000.0], "ok": 300.2}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 0.0], "ok": -1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, 42.0], "ok": 9007199254741004.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 1000.0], "ok": 1000299.7}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 3.0], "ok": 1.1}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 1000000.0], "ok": 300001.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 1000.0], "ok": 299.7}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 9007199254740992.0], "ok": 2702159776422297.5}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, 3.0], "ok": 9007199254740992.0}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 0.5], "ok": -1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 0.0], "ok": 2147483648.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, {"$num": "NaN"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 1000.0], "ok": 1299.7}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 9007199254740992.0], "ok": 2702159776422307.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 0.0], "ok": {"$num": "-0"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, -1.0], "ok": 2.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 1000.0], "ok": 301.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 10.0], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, {"$num": "-Infinity"}], "ok": 42.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 2147483648.0], "ok": 644245091.6}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1000000.0], "ok": 299999.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 0.5], "ok": 42.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 9007199254740992.0], "ok": 2702159777422297.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 100.0], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, -2.5], "ok": 3.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 10.0], "ok": 1.6999999999999997}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, {"$num": "-Infinity"}], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0, -2.5], "ok": 1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, -1.0], "ok": 1000000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, {"$num": "-0"}], "ok": 100.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, -2.5], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 42.0], "ok": 14.299999999999999}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 3.0], "ok": 100.6}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, -2.5], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, 9007199254740992.0], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 2.0], "ok": 100.3}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 100.0], "ok": 71.7}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 2147483648.0], "ok": 644245094.1}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, {"$num": "-0"}], "ok": 1000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 1000.0], "ok": 341.7}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 10.0], "ok": 1000002.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 1.0], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 100.0], "ok": 27.2}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 3.0], "ok": 1000.6}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 3.0], "ok": 10.6}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 3.0], "ok": 3.6}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 1000.0], "ok": 298.7}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 0.0], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 1.0], "ok": 2147483648.0}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 2.0], "ok": 3.3}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 0.0], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 1000000.0], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 0.5], "ok": {"$num": "-0"}}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 2147483648.0], "ok": 644246094.1}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, {"$num": "NaN"}], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 3.0], "ok": -0.4}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 2147483648.0], "ok": 644245093.1}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 2147483648.0], "ok": 645245094.1}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, -2.5], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 42.0], "ok": 12.299999999999999}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 9007199254740992.0], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, {"$num": "NaN"}], "ok": 2147483648.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 100.0], "ok": 30.2}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 2147483648.0], "ok": 644245104.1}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 10.0], "ok": 12.7}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 1000000.0], "ok": 300009.7}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 10.0], "ok": 0.19999999999999973}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, {"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 1.0], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 2.0], "ok": 0.3}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, {"$num": "NaN"}], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, -1.0], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 2.0], "ok": 1000.3}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, {"$num": "-0"}], "ok": {"$num": "-0"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 42.0], "ok": 12.799999999999999}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 1.0], "ok": 1000000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 42.0], "ok": 2147483660.3}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 2147483648.0], "ok": 644245136.1}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 42.0], "ok": 112.3}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 100.0], "ok": 31.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 0.5], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, -2.5], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, 2147483648.0], "ok": 9007199898986086.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 1000.0], "ok": 297.2}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, -1.0], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, -2.5], "ok": 9007199254740992.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, {"$num": "-Infinity"}], "ok": -1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 0.5], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 2147483648.0], "ok": 2791728742.1}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, {"$num": "-0"}], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 2.0], "ok": -2.2}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, 2.0], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, -1.0], "ok": 42.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 100.0], "ok": 129.7}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 42.0], "ok": 11.299999999999999}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, -2.5], "ok": {"$num": "-0"}}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 100.0], "ok": 29.7}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 1.0], "ok": -1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 1000.0], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0, {"$num": "-Infinity"}], "ok": 1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 1000000.0], "ok": 300002.7}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, {"$num": "NaN"}], "ok": 3.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, -2.5], "ok": 2147483648.0}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, {"$num": "NaN"}], "ok": 10.0}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, 0.5], "ok": 10.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, -1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 9007199254740992.0], "ok": 2702159776422397.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 2.0], "ok": 2147483648.3}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, {"$num": "-Infinity"}], "ok": 2.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, {"$num": "NaN"}], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 2.0], "ok": 42.3}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, 10.0], "ok": 3.1999999999999997}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "Infinity"}, 1000.0], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 9007199254740992.0], "ok": 2702159776422299.0}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 1000000.0], "ok": 300041.7}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, {"$num": "-Infinity"}], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 9007199254740992.0], "ok": 2702159776422297.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 42.0], "ok": 1012.3}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 100.0], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 3.0], "ok": 1000000.6}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 1000000.0], "ok": 300099.7}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 1000000.0], "ok": 299997.2}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 9007199254740992.0], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 10.0], "ok": 2.6999999999999997}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 42.0], "ok": 15.299999999999999}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, {"$num": "-Infinity"}], "ok": 10.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, -2.5], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5, {"$num": "-0"}], "ok": 0.5}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 0.0], "ok": 1000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 3.0], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2.0, 2147483648.0], "ok": 644245096.1}
+{"fn": "CalcRelativeAirVelocity", "args": [100.0, 1.0], "ok": 100.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000000.0, 0.5], "ok": 1000000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 1.0], "ok": 42.0}
+{"fn": "CalcRelativeAirVelocity", "args": [10.0, -2.5], "ok": 10.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, {"$num": "Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1000.0], "ok": 299.7}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "NaN"}, 2147483648.0], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 1000000.0], "ok": 2147783647.7}
+{"fn": "CalcRelativeAirVelocity", "args": [3.0, 0.5], "ok": 3.0}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, {"$num": "NaN"}], "ok": 9007199254740992.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, {"$num": "-0"}], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, -1.0], "ok": -1.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 0.5], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, {"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "CalcRelativeAirVelocity", "args": [-1.0, 9007199254740992.0], "ok": 2702159776422296.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-Infinity"}, 3.0], "ok": {"$num": "-Infinity"}}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 0.5], "ok": 2147483648.0}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, {"$num": "NaN"}], "ok": {"$num": "-0"}}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, -1.0], "ok": 9007199254740992.0}
+{"fn": "CalcRelativeAirVelocity", "args": [42.0, 9007199254740992.0], "ok": 2702159776422339.0}
+{"fn": "CalcRelativeAirVelocity", "args": [2147483648.0, 9007199254740992.0], "ok": 2702161923905945.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1000.0, 1.0], "ok": 1000.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-7.5, 9007199254740992.0], "ok": 2702159776422289.5}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 9007199254740992.0], "ok": 2702159776422297.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.30000000000000004, 9007199254740992.0], "ok": 2702159776422297.5}
+{"fn": "CalcRelativeAirVelocity", "args": [1e+21, 9007199254740992.0], "ok": 1.0000027021597764e+21}
+{"fn": "CalcRelativeAirVelocity", "args": [1e-07, 9007199254740992.0], "ok": 2702159776422297.0}
+{"fn": "CalcRelativeAirVelocity", "args": [5e-324, 9007199254740992.0], "ok": 2702159776422297.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.7976931348623157e+308, 9007199254740992.0], "ok": 1.7976931348623157e+308}
+{"fn": "CalcRelativeAirVelocity", "args": [9007199254740992.0, 9007199254740992.0], "ok": 1.1709359031163288e+16}
+{"fn": "CalcRelativeAirVelocity", "args": [{"$num": "-0"}, 9007199254740992.0], "ok": 2702159776422297.0}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, -7.5], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 0.1], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 0.30000000000000004], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 1e+21], "ok": 3e+20}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 1e-07], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 5e-324], "ok": -2.5}
+{"fn": "CalcRelativeAirVelocity", "args": [-2.5, 1.7976931348623157e+308], "ok": 5.393079404586947e+307}
+{"fn": "CalcSatVapPressFromTemp", "args": [{"$num": "Infinity"}], "ok": {"$num": "NaN"}}
+{"fn": "CalcSatVapPressFromTemp", "args": [1000000.0], "ok": 1.048756468151855e+19}
+{"fn": "CalcSatVapPressFromTemp", "args": [{"$num": "-0"}], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [1000.0], "ok": 9973585.41796}
+{"fn": "CalcSatVapPressFromTemp", "args": [9007199254740992.0], "ok": 6.90329641208352e+58}
+{"fn": "CalcSatVapPressFromTemp", "args": [2147483648.0], "ok": 2.230575318457426e+32}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.5], "ok": 6.176846498719686}
+{"fn": "CalcSatVapPressFromTemp", "args": [42.0], "ok": 61.213058314639994}
+{"fn": "CalcSatVapPressFromTemp", "args": [{"$num": "-Infinity"}], "ok": {"$num": "Infinity"}}
+{"fn": "CalcSatVapPressFromTemp", "args": [-1.0], "ok": 6.204339392414999}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0], "ok": 862.8106600000001}
+{"fn": "CalcSatVapPressFromTemp", "args": [-2.5], "ok": 6.400834915429687}
+{"fn": "CalcSatVapPressFromTemp", "args": [3.0], "ok": 6.476316921215}
+{"fn": "CalcSatVapPressFromTemp", "args": [{"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "CalcSatVapPressFromTemp", "args": [2.0], "ok": 6.306999175439999}
+{"fn": "CalcSatVapPressFromTemp", "args": [1.0], "ok": 6.203238683815}
+{"fn": "CalcSatVapPressFromTemp", "args": [10.0], "ok": 9.30434185}
+{"fn": "CalcSatVapPressFromTemp", "args": [-7.5], "ok": 8.448119209179689}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.1], "ok": 6.168317636194511}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.30000000000000004], "ok": 6.17116889488763}
+{"fn": "CalcSatVapPressFromTemp", "args": [1e+21], "ok": 1.0488114999999998e+79}
+{"fn": "CalcSatVapPressFromTemp", "args": [1e-07], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [5e-324], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [1.7976931348623157e+308], "ok": {"$num": "NaN"}}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [{"$num": "-0"}], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [2.0], "ok": 5.278323027376837}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.5], "ok": 4.736490168574251}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [3.0], "ok": 5.669256515871309}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [9007199254740992.0], "ok": 128135646.62309076}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [{"$num": "Infinity"}], "ok": 128135646.62314813}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [{"$num": "NaN"}], "ok": {"$num": "NaN"}}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-2.5], "ok": 3.798018828640719}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [42.0], "ok": 61.510192210830546}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1000.0], "ok": 4902686.74013869}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1.0], "ok": 4.91137228152998}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-1.0], "ok": 4.244379879377941}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [2147483648.0], "ok": 128135406.1512061}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [10.0], "ok": 9.196964365990826}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [{"$num": "-Infinity"}], "ok": 128135646.62314813}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0], "ok": 763.7213405049464}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1000000.0], "ok": 127620396.57542945}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-7.5], "ok": 2.5948011618300786}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.1], "ok": 4.600567904139647}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.30000000000000004], "ok": 4.668092109018992}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1e+21], "ok": 128135646.62314813}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1e-07], "ok": 4.56713052434058}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [5e-324], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1.7976931348623157e+308], "ok": 128135646.62314813}
+{"fn": "CalcFangerPPD", "args": [0.0], "ok": 5.0}
+{"fn": "CalcFangerPPD", "args": [2.8524377153688807], "ok": 98.24716420131865}
+{"fn": "CalcFangerPPD", "args": [0.029551829604327118], "ok": 5.018078675712218}
+{"fn": "CalcFangerPPD", "args": [3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [0.7587036066331629], "ok": 17.1247343178906}
+{"fn": "CalcFangerPPD", "args": [1.0096320040724187], "ok": 26.526968586589675}
+{"fn": "CalcFangerPPD", "args": [-3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [-2.7827460737941703], "ok": 97.6464617931467}
+{"fn": "CalcFangerPPD", "args": [0.7680435055529413], "ok": 17.427870641656042}
+{"fn": "CalcFangerPPD", "args": [0.5], "ok": 10.225024554501047}
+{"fn": "CalcFangerPPD", "args": [1.8250627227497578], "ok": 68.30742955532152}
+{"fn": "CalcFangerPPD", "args": [-1.972354198839537], "ok": 75.49738417288034}
+{"fn": "CalcFangerPPD", "args": [10.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [-0.012580645778692556], "ok": 5.003276346249621}
+{"fn": "CalcFangerPPD", "args": [-0.04660068928412908], "ok": 5.044958088165231}
+{"fn": "CalcFangerPPD", "args": [-10.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [0.7887027723607241], "ok": 18.111599170810948}
+{"fn": "CalcFangerPPD", "args": [-1.2049395114826948], "ok": 35.48919465878792}
+{"fn": "CalcFangerPPD", "args": [4.85], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [0.16988603449694395], "ok": 5.59820456139154}
+{"fn": "CalcFangerPPD", "args": [2.6422039877729535], "ok": 95.95092725969373}
+{"fn": "CalcFangerPPD", "args": [{"$num": "NaN"}], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [1.2242748501536322], "ok": 36.442121815610996}
+{"fn": "CalcFangerPPD", "args": [0.10466656706727084], "ok": 5.2268867656512015}
+{"fn": "CalcFangerPPD", "args": [0.0], "ok": 5.0}
+{"fn": "CalcFangerPPD", "args": [2.441072759754128], "ok": 92.11570880431364}
+{"fn": "CalcFangerPPD", "args": [-0.9804480163395599], "ok": 25.303685785041196}
+{"fn": "CalcFangerPPD", "args": [3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [2.198292235510035], "ok": 84.85223098762563}
+{"fn": "CalcFangerPPD", "args": [-0.6529236693735672], "ok": 13.953283726223745}
+{"fn": "CalcFangerPPD", "args": [-3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [0.11245156552124502], "ok": 5.261912807270718}
+{"fn": "CalcFangerPPD", "args": [-0.785863879104642], "ok": 18.016568664053523}
+{"fn": "CalcFangerPPD", "args": [0.5], "ok": 10.225024554501047}
+{"fn": "CalcFangerPPD", "args": [1.1527057869801798], "ok": 32.96945367830115}
+{"fn": "CalcFangerPPD", "args": [-0.38132055408637155], "ok": 8.028003286428344}
+{"fn": "CalcFangerPPD", "args": [10.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [-1.6531082344426342], "ok": 59.227637194731905}
+{"fn": "CalcFangerPPD", "args": [0.8011442074679289], "ok": 18.53210135347328}
+{"fn": "CalcFangerPPD", "args": [-10.0], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [-1.3306190111023117], "ok": 41.85361894553361}
+{"fn": "CalcFangerPPD", "args": [-1.6847233794806318], "ok": 60.932210286533994}
+{"fn": "CalcFangerPPD", "args": [4.85], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [-0.02340053668406661], "ok": 5.011335564498651}
+{"fn": "CalcFangerPPD", "args": [-1.7277702047844874], "ok": 63.23279931516772}
+{"fn": "CalcFangerPPD", "args": [{"$num": "NaN"}], "ok": 100.0}
+{"fn": "CalcFangerPPD", "args": [0.6409358562701843], "ok": 13.624379754442444}
+{"fn": "CalcFangerPPD", "args": [-1.425039827705422], "ok": 46.85071564360286}
+{"fn": "CalcFangerPPD", "args": [0.0], "ok": 5.0}
+{"fn": "CalcFangerPPD", "args": [-2.638765539163299], "ok": 95.90021474152567}
+{"fn": "CalcFangerPPD", "args": [-0.30144556954258217], "ok": 6.888325225909824}
+{"fn": "CalcFangerPPD", "args": [3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [-0.9337196741464364], "ok": 23.413660330273274}
+{"fn": "CalcFangerPPD", "args": [-1.8769657828293829], "ok": 70.91983360896278}
+{"fn": "CalcFangerPPD", "args": [-3.0], "ok": 99.11587171526925}
+{"fn": "CalcFangerPPD", "args": [0.3204311861396594], "ok": 7.134679838781324}
+{"fn": "CalcFangerPPD", "args": [1.5601927342782194], "ok": 54.17692031992701}
+{"fn": "CalcFangerPPD", "args": [0.5], "ok": 10.225024554501047}
+{"fn": "CalcFangerPPD", "args": [2.493062916118694], "ok": 93.28555710079753}
+{"fn": "CalcFangerPPD", "args": [-1.4116931773269392], "ok": 46.13599691813307}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.0761478776784694, 1.1224609152263163], "ok": 1.1128861522463642}
+{"fn": "CalcRelativeAirVelocity", "args": [0.8487405476416814, 2.595915358321982], "ok": 1.327515155138276}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001], "ok": 0.10000003000000002}
+{"fn": "CalcRelativeAirVelocity", "args": [0.4360437162302886, 0.9733380450942601], "ok": 0.4360437162302886}
+{"fn": "CalcRelativeAirVelocity", "args": [1.7074966332248318, 1.763444634084927], "ok": 1.93653002345031}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.2676735327103381, 2.212693989056233], "ok": 0.631481729427208}
+{"fn": "CalcRelativeAirVelocity", "args": [1.1250307985110346, 1.897039124794819], "ok": 1.3941425359494803}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0], "ok": 0.4}
+{"fn": "CalcRelativeAirVelocity", "args": [1.5909604856223885, 1.915454889584143], "ok": 1.8655969524976315}
+{"fn": "CalcRelativeAirVelocity", "args": [1.8346122207622528, 2.019360912596616], "ok": 2.1404204945412375}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.8672713887898587, 1.234200910171349], "ok": 0.9375316618412634}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5575398865499586, 1.0143887216463947], "ok": 0.561856503043877}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001], "ok": 0.10000003000000002}
+{"fn": "CalcRelativeAirVelocity", "args": [1.5346930717933445, 1.10115381147173], "ok": 1.5650392152348636}
+{"fn": "CalcRelativeAirVelocity", "args": [0.36622232145732103, 2.311697123287944], "ok": 0.7597314584437043}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5669605614096469, 3.503459188910581], "ok": 1.3179983180828212}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9334215775353392, 1.4848697014005772], "ok": 1.0788824879555123}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0], "ok": 0.4}
+{"fn": "CalcRelativeAirVelocity", "args": [0.34189137438136497, 2.028222822511431], "ok": 0.6503582211347942}
+{"fn": "CalcRelativeAirVelocity", "args": [0.3660157173190317, 1.153320146039405], "ok": 0.4120117611308532}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9577771847993906, 2.8854567897201147], "ok": 1.523414221715425}
+{"fn": "CalcRelativeAirVelocity", "args": [0.15854269440018798, 2.8761580254152035], "ok": 0.721390102024749}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001], "ok": 0.10000003000000002}
+{"fn": "CalcRelativeAirVelocity", "args": [0.8577697569881377, 1.6266891260115353], "ok": 1.0457764947915984}
+{"fn": "CalcRelativeAirVelocity", "args": [0.4460108025199998, 0.9843474156474539], "ok": 0.4460108025199998}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.7780418581295425, 1.4109713117838387], "ok": 0.9013332516646941}
+{"fn": "CalcRelativeAirVelocity", "args": [1.1761028388433596, 1.4159975700379035], "ok": 1.3009021098547306}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0], "ok": 0.4}
+{"fn": "CalcRelativeAirVelocity", "args": [1.3978474284483986, 1.8489045802815238], "ok": 1.6525188025328557}
+{"fn": "CalcRelativeAirVelocity", "args": [1.2202821220844515, 3.2159633304563906], "ok": 1.8850711212213687}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.2817233143528457, 2.9541903625222705], "ok": 1.8679804231095267}
+{"fn": "CalcRelativeAirVelocity", "args": [1.763264029142407, 2.0446639646952773], "ok": 2.07666321855099}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001], "ok": 0.10000003000000002}
+{"fn": "CalcRelativeAirVelocity", "args": [1.418105641686969, 0.8822515529285107], "ok": 1.418105641686969}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9655818916102679, 1.734584647400817], "ok": 1.185957285830513}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.949323798105945, 0.9274509248545495], "ok": 1.949323798105945}
+{"fn": "CalcRelativeAirVelocity", "args": [1.23618212975138, 2.8414642349540715], "ok": 1.7886214002376013}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0], "ok": 0.4}
+{"fn": "CalcRelativeAirVelocity", "args": [1.423571695025018, 0.7564971055927291], "ok": 1.423571695025018}
+{"fn": "CalcRelativeAirVelocity", "args": [0.489440654666053, 3.9243394270738943], "ok": 1.3667424827882213}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 1.0], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [0.9065135273085805, 1.3879168187845923], "ok": 1.022888572943958}
+{"fn": "CalcRelativeAirVelocity", "args": [1.091073489444248, 1.4808389688361343], "ok": 1.2353251800950882}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 1.0000001], "ok": 0.10000003000000002}
+{"fn": "CalcRelativeAirVelocity", "args": [1.6301478059025853, 3.9456109282530996], "ok": 2.5138310843785154}
+{"fn": "CalcRelativeAirVelocity", "args": [1.1799958140071092, 0.824471738700189], "ok": 1.1799958140071092}
+{"fn": "CalcRelativeAirVelocity", "args": [0.0, 0.8], "ok": 0.0}
+{"fn": "CalcRelativeAirVelocity", "args": [1.133725039996671, 2.567396530947485], "ok": 1.6039439992809164}
+{"fn": "CalcRelativeAirVelocity", "args": [1.8476385563788131, 3.403696869145376], "ok": 2.568747617122426}
+{"fn": "CalcRelativeAirVelocity", "args": [0.1, 2.0], "ok": 0.4}
+{"fn": "CalcRelativeAirVelocity", "args": [1.3181031499555904, 0.7885856673132126], "ok": 1.3181031499555904}
+{"fn": "CalcRelativeAirVelocity", "args": [0.5967010267328559, 3.940360205600757], "ok": 1.478809088413083}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [-6.862160139066507], "ok": 8.055722813627538}
+{"fn": "CalcSatVapPressFromTemp", "args": [14.880972398167437], "ok": 12.80046837976114}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0], "ok": 17.770644}
+{"fn": "CalcSatVapPressFromTemp", "args": [-6.420797169253609], "ok": 7.808147420504055}
+{"fn": "CalcSatVapPressFromTemp", "args": [36.79067128046321], "ok": 46.459011625986065}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0], "ok": 46.982874688615}
+{"fn": "CalcSatVapPressFromTemp", "args": [7.770844403137787], "ok": 8.110890421546658}
+{"fn": "CalcSatVapPressFromTemp", "args": [9.401506281876124], "ok": 8.958504560928676}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0], "ok": 41113.336376934385}
+{"fn": "CalcSatVapPressFromTemp", "args": [6.351474138311584], "ok": 7.4889774353568255}
+{"fn": "CalcSatVapPressFromTemp", "args": [19.006067628859554], "ok": 16.69678718132667}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0], "ok": 862.8106600000001}
+{"fn": "CalcSatVapPressFromTemp", "args": [2.55792603120819], "ok": 6.393558269356359}
+{"fn": "CalcSatVapPressFromTemp", "args": [35.25149104512464], "ok": 42.765740786746676}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [1.7129338615675174], "ok": 6.2703809447077905}
+{"fn": "CalcSatVapPressFromTemp", "args": [17.3653262435679], "ok": 15.040963630477084}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0], "ok": 17.770644}
+{"fn": "CalcSatVapPressFromTemp", "args": [11.00797960239083], "ok": 9.928180485746715}
+{"fn": "CalcSatVapPressFromTemp", "args": [28.038946094495067], "ok": 28.678540995153202}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0], "ok": 46.982874688615}
+{"fn": "CalcSatVapPressFromTemp", "args": [35.23888221195555], "ok": 42.73660614523851}
+{"fn": "CalcSatVapPressFromTemp", "args": [13.198791171005514], "ok": 11.460689688919842}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0], "ok": 41113.336376934385}
+{"fn": "CalcSatVapPressFromTemp", "args": [22.76318850729364], "ok": 21.052331064433794}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.01344148900595], "ok": 47.016694873222924}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0], "ok": 862.8106600000001}
+{"fn": "CalcSatVapPressFromTemp", "args": [35.61272000999549], "ok": 43.60799695746053}
+{"fn": "CalcSatVapPressFromTemp", "args": [7.526113271718941], "ok": 7.995843223353958}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [45.86133492817201], "ok": 74.81385062004844}
+{"fn": "CalcSatVapPressFromTemp", "args": [18.771848658207496], "ok": 16.45160618523191}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0], "ok": 17.770644}
+{"fn": "CalcSatVapPressFromTemp", "args": [-0.30209017769169577], "ok": 6.171244005938709}
+{"fn": "CalcSatVapPressFromTemp", "args": [18.6276986592974], "ok": 16.302183431085187}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0], "ok": 46.982874688615}
+{"fn": "CalcSatVapPressFromTemp", "args": [3.682699862576131], "ok": 6.628182392163173}
+{"fn": "CalcSatVapPressFromTemp", "args": [23.740262490452885], "ok": 22.323046726864142}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0], "ok": 41113.336376934385}
+{"fn": "CalcSatVapPressFromTemp", "args": [46.98592831757496], "ok": 79.27302980384943}
+{"fn": "CalcSatVapPressFromTemp", "args": [39.748994662727036], "ok": 54.378851302997774}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0], "ok": 862.8106600000001}
+{"fn": "CalcSatVapPressFromTemp", "args": [47.65995989679942], "ok": 82.06270064810266}
+{"fn": "CalcSatVapPressFromTemp", "args": [46.373490643096375], "ok": 76.81491219772406}
+{"fn": "CalcSatVapPressFromTemp", "args": [0.0], "ok": 6.16796}
+{"fn": "CalcSatVapPressFromTemp", "args": [13.316096339288716], "ok": 11.549523584476592}
+{"fn": "CalcSatVapPressFromTemp", "args": [-9.808120616990157], "ok": 10.230014810606662}
+{"fn": "CalcSatVapPressFromTemp", "args": [20.0], "ok": 17.770644}
+{"fn": "CalcSatVapPressFromTemp", "args": [19.2685152611684], "ok": 16.97506059943563}
+{"fn": "CalcSatVapPressFromTemp", "args": [42.941806408401305], "ok": 64.30078179945369}
+{"fn": "CalcSatVapPressFromTemp", "args": [37.0], "ok": 46.982874688615}
+{"fn": "CalcSatVapPressFromTemp", "args": [-3.4979229978184723], "ok": 6.631341222813153}
+{"fn": "CalcSatVapPressFromTemp", "args": [34.876462465048135], "ok": 41.90671738735979}
+{"fn": "CalcSatVapPressFromTemp", "args": [-235.0], "ok": 41113.336376934385}
+{"fn": "CalcSatVapPressFromTemp", "args": [32.04286484526531], "ok": 35.89453632156579}
+{"fn": "CalcSatVapPressFromTemp", "args": [-3.986719273940718], "ok": 6.774780024968399}
+{"fn": "CalcSatVapPressFromTemp", "args": [100.0], "ok": 862.8106600000001}
+{"fn": "CalcSatVapPressFromTemp", "args": [30.31387326977105], "ok": 32.608389091960234}
+{"fn": "CalcSatVapPressFromTemp", "args": [9.187862425479455], "ok": 8.839527986721375}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.409859888420655], "ok": 48.13664475549476}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.72378457192376], "ok": 48.963412239092875}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0], "ok": 17.53082542615424}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [17.04660055925862], "ok": 14.567123914895038}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [8.064059314395017], "ok": 8.067597786209353}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0], "ok": 47.075407706614314}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [33.069261155108606], "ok": 37.88249393980866}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [27.3472649160532], "ok": 27.291725121795064}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0], "ok": 0.0}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [9.220693982723876], "ok": 8.726658547014674}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.34540426849732], "ok": 17.90964920653634}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0], "ok": 763.7213405049464}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [32.503930248804515], "ok": 36.69779541712338}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-3.3983431578292667], "ok": 3.551050537467085}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-2.9590895721231414], "ok": 3.669972850324189}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [10.283913504985286], "ok": 9.373755832136622}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0], "ok": 17.53082542615424}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [32.703908931139814], "ok": 37.11314112370998}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [31.40967960668204], "ok": 34.49571455945445}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0], "ok": 47.075407706614314}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [40.76892846765715], "ok": 57.64204906639554}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-5.489310966862457], "ok": 3.030439376459478}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0], "ok": 0.0}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [24.56881855087373], "ok": 23.15352963430474}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [25.607557215734587], "ok": 24.631672438173325}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0], "ok": 763.7213405049464}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.7457081656843], "ok": 18.35761086989316}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [15.20971632962717], "ok": 12.953678325762597}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [3.0267571858487585], "ok": 5.680058461508182}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [29.855207156692664], "ok": 31.56497505246113}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0], "ok": 17.53082542615424}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [16.768300126673303], "ok": 14.311913631445627}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [34.93104420979165], "ok": 42.02157555359086}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0], "ok": 47.075407706614314}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [28.518539483856493], "ok": 29.220306662738718}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-8.59909266515569], "ok": 2.3809740769662233}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0], "ok": 0.0}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [32.969917856069365], "ok": 37.67194205547544}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [48.480937578649176], "ok": 85.78387221105427}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0], "ok": 763.7213405049464}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [17.89381577716777], "ok": 15.368722943912937}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-7.497120926610994], "ok": 2.5953829460938405}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [0.0], "ok": 4.567130491010804}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [46.496477978083576], "ok": 77.60309978479513}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [39.404349483597564], "ok": 53.601495641649066}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [20.0], "ok": 17.53082542615424}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-3.1928735419182637], "ok": 3.606247403627711}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-3.333546855041578], "ok": 3.5683759801568056}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [37.0], "ok": 47.075407706614314}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [10.989032117313617], "ok": 9.82580232464487}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [1.5943590716140843], "ok": 5.1266549398522905}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [-235.0], "ok": 0.0}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [9.123668323515993], "ok": 8.669610133072752}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [25.39206287717564], "ok": 24.31844220490056}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [100.0], "ok": 763.7213405049464}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [5.735486946599341], "ok": 6.872132715497964}
+{"fn": "CalcSatVapPressFromTempTorr", "args": [22.42297572840102], "ok": 20.34267393604519}

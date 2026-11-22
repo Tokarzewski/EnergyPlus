@@ -1,0 +1,257 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/general",
+  "unit": "general.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "general-rs",
+  "exports": [
+    {
+      "name": "OrdinalDay",
+      "file": "general.c",
+      "line": 14,
+      "params": [
+        {
+          "name": "Month",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "Day",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "LeapYearValue",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "int",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "int",
+      "prototype": "int OrdinalDay(int Month, int Day, int LeapYearValue)"
+    },
+    {
+      "name": "BetweenDateHoursLeftInclusive",
+      "file": "general.c",
+      "line": 19,
+      "params": [
+        {
+          "name": "TestDate",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "TestHour",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "StartDate",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "StartHour",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "EndDate",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "EndHour",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "boolean",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "bool",
+      "prototype": "bool BetweenDateHoursLeftInclusive(int TestDate, int TestHour, int StartDate, int StartHour, int EndDate, int EndHour)"
+    },
+    {
+      "name": "BetweenDates",
+      "file": "general.c",
+      "line": 24,
+      "params": [
+        {
+          "name": "TestDate",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "StartDate",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "EndDate",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "boolean",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "bool",
+      "prototype": "bool BetweenDates(int TestDate, int StartDate, int EndDate)"
+    },
+    {
+      "name": "SafeDivide",
+      "file": "general.c",
+      "line": 29,
+      "params": [
+        {
+          "name": "a",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "b",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double SafeDivide(double a, double b)"
+    },
+    {
+      "name": "rotAzmDiffDeg",
+      "file": "general.c",
+      "line": 34,
+      "params": [
+        {
+          "name": "AzmA",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "AzmB",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double rotAzmDiffDeg(double AzmA, double AzmB)"
+    },
+    {
+      "name": "epexp",
+      "file": "general.c",
+      "line": 39,
+      "params": [
+        {
+          "name": "numerator",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "denominator",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double epexp(double numerator, double denominator)"
+    },
+    {
+      "name": "Interp",
+      "file": "general.c",
+      "line": 44,
+      "params": [
+        {
+          "name": "Lower",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "Upper",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "InterpFac",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double Interp(double Lower, double Upper, double InterpFac)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}

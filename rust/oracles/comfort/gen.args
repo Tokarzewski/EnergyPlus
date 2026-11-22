@@ -1,0 +1,7 @@
+comfort
+ThermalComfort.hh
+ThermalComfort
+CalcFangerPPD
+CalcRelativeAirVelocity
+CalcSatVapPressFromTemp
+CalcSatVapPressFromTempTorr

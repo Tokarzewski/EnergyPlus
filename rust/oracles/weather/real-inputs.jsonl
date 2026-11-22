@@ -1,0 +1,480 @@
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 0.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [34.13922000631847, 7.573879574010817, 62.682415050442174]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [23.38952002375577, 0.5431348155145738, 62.83792436745648]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 1.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [28.146199216040255, 2.5691145029011575, 49.84053224778478]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [17.22816264584258, 9.47175693090181, 29.987757133813133]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.0, 0.0, 50.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [18.491001867898838, 14.105509969432383, 70.43417625505798]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [18.11055497455908, 13.60268189938532, 33.725540527946336]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 1.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [30.32337137380854, 5.867690826566082, 51.92231856592874]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [12.915794038556255, 10.381764467450449, 43.701012774461915]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 0.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [7.856868632417967, 9.502860518669822, 27.895193465146512]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [7.672446953029648, 7.4414986582898335, 21.282626090338287]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.0, 1.0, 50.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [21.238792494909408, 3.937400430736445, 6.114553772931073]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [15.741567511001604, 5.165700814633909, 18.798519715890777]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 0.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [19.369181919148012, 11.400481835695548, 91.55949755337626]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [9.265123132259522, 8.07110908258852, 12.889044070033036]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 1.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [14.852959583729424, 8.617797083281737, 21.88038362570292]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [2.8990398722118504, 12.806224749186239, 32.293369377298255]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.0, 0.0, 50.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.684286822430917, 6.875881768437425, 56.295288385626186]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [12.695869505399598, 11.932203642167913, 36.89513438468361]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 1.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [32.105713863339425, 5.9970950572573445, 43.420205870053444]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [5.665767229090063, 4.181549149124689, 9.61740402802268]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 0.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [26.857128756383528, 1.8234264157805913, 18.39280495679319]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [17.093757368205466, 4.252204210572351, 84.96835544611122]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.0, 1.0, 50.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [16.334877606868435, 3.567589551820806, 17.177474150349184]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [14.087211753909116, 2.745117879892738, 13.823237148283804]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 0.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [16.761100733989334, 9.933894498727797, 8.01920758528939]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [23.08046390591883, 6.433273177411033, 28.153407178349205]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 1.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [7.805189044099997, 1.292488252942972, 38.963190813570655]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [7.540604821949807, 8.820771291325197, 21.775199165692904]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.0, 0.0, 50.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [24.462329997846975, 5.2222935467342, 61.05309199811836]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [26.684459565446573, 9.612924857646343, 68.34049006544691]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 1.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [30.857120509992125, 6.11210893043308, 70.9343768022641]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [1.9329710159084468, 7.241864187077009, 31.41969887131565]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 0.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [34.11316646685404, 1.0338678402479524, 61.84729738108143]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [22.712499461634092, 10.676787712687634, 1.8103214693071634]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [4.0, 1.0, 50.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [8.565211456655927, 14.656088304881338, 45.3803506890636]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [7.296087471957796, 8.18305117083186, 23.738125147493893]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [25.0, 0.0, 1.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [28.527586603295244, 14.752776946604998, 59.04079090965511]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [1.3201548043959443, 8.502937799975033, 56.63118589141024]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.0, 1.0, 0.0]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [32.33367473662923, 12.289531223388074, 65.93925234028174]}
+{"fn": "calculateWaterBoundaryConvectionCoefficient", "args": [0.9395449563522551, 4.475257700496419, 98.19454076955019]}
+{"fn": "interpolateWindDirection", "args": [0.0, 0.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [18.82703916560096, 149.28583438900463, 0.059653380512439846]}
+{"fn": "interpolateWindDirection", "args": [280.74402768277923, 106.62506641882672, 0.32335843803126874]}
+{"fn": "interpolateWindDirection", "args": [1.0, 1.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [98.1088448298695, 174.03640577315733, 0.20929876718680318]}
+{"fn": "interpolateWindDirection", "args": [271.5089462707478, 70.27760316940511, 0.45608877072613163]}
+{"fn": "interpolateWindDirection", "args": [180.0, 180.0, 1.0]}
+{"fn": "interpolateWindDirection", "args": [126.04787761434497, 228.23367656697042, 0.7539813701992591]}
+{"fn": "interpolateWindDirection", "args": [139.1927470260331, 196.57913104376186, 0.7835573581500992]}
+{"fn": "interpolateWindDirection", "args": [359.0, 359.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [273.67632005997297, 105.15667963031363, 0.9310222488028669]}
+{"fn": "interpolateWindDirection", "args": [172.631091949245, 58.187458933849825, 0.47712831098829]}
+{"fn": "interpolateWindDirection", "args": [360.0, 360.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [82.09619917545679, 202.44157494271732, 0.9497654719595827]}
+{"fn": "interpolateWindDirection", "args": [298.49396797636217, 345.9597593807965, 0.9395581773849396]}
+{"fn": "interpolateWindDirection", "args": [0.0, 0.0, 1.0]}
+{"fn": "interpolateWindDirection", "args": [139.8965780357323, 1.1512762980590585, 0.48780858768614]}
+{"fn": "interpolateWindDirection", "args": [317.65083845040783, 39.01246201308916, 0.7479410410841356]}
+{"fn": "interpolateWindDirection", "args": [1.0, 1.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [252.25718907159188, 36.07968435635569, 0.6718978878295175]}
+{"fn": "interpolateWindDirection", "args": [115.12717455287674, 284.45915933052396, 0.7953964095320627]}
+{"fn": "interpolateWindDirection", "args": [180.0, 180.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [162.27960335555173, 108.3843558863701, 0.7178210192518101]}
+{"fn": "interpolateWindDirection", "args": [224.08358949631918, 115.32416389634325, 0.5057567378082887]}
+{"fn": "interpolateWindDirection", "args": [359.0, 359.0, 1.0]}
+{"fn": "interpolateWindDirection", "args": [255.0235814928271, 39.6099410530244, 0.11734850713128098]}
+{"fn": "interpolateWindDirection", "args": [121.70348102991173, 256.2234535868389, 0.690161326778034]}
+{"fn": "interpolateWindDirection", "args": [360.0, 360.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [304.6135708059429, 27.064134198825258, 0.5761469758478955]}
+{"fn": "interpolateWindDirection", "args": [213.64534329440752, 184.47424899410578, 0.4201619388271195]}
+{"fn": "interpolateWindDirection", "args": [0.0, 0.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [78.16054311509255, 239.131242940156, 0.44613833544455506]}
+{"fn": "interpolateWindDirection", "args": [269.5862652587499, 231.11123690313897, 0.023348455580738503]}
+{"fn": "interpolateWindDirection", "args": [1.0, 1.0, 1.0]}
+{"fn": "interpolateWindDirection", "args": [257.8195071364162, 350.885625471895, 0.46489692961946283]}
+{"fn": "interpolateWindDirection", "args": [15.017274440334036, 338.9788678685015, 0.823405824726626]}
+{"fn": "interpolateWindDirection", "args": [180.0, 180.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [40.84275874849042, 39.99871886975053, 0.3498172019552269]}
+{"fn": "interpolateWindDirection", "args": [69.5661544296845, 114.74200994109597, 0.589867714619594]}
+{"fn": "interpolateWindDirection", "args": [359.0, 359.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [94.41292167959605, 194.53785437040614, 0.142304765363664]}
+{"fn": "interpolateWindDirection", "args": [63.349911646544356, 230.4123591059413, 0.20307808384901194]}
+{"fn": "interpolateWindDirection", "args": [360.0, 360.0, 1.0]}
+{"fn": "interpolateWindDirection", "args": [276.3066684156191, 283.3284192622797, 0.0763374848312528]}
+{"fn": "interpolateWindDirection", "args": [124.14037938661576, 284.55530080555343, 0.9570895286266263]}
+{"fn": "interpolateWindDirection", "args": [0.0, 0.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [181.78418101506057, 328.53342277107174, 0.23106031128289406]}
+{"fn": "interpolateWindDirection", "args": [151.60505404296634, 47.36876642874951, 0.5467543817173157]}
+{"fn": "interpolateWindDirection", "args": [1.0, 1.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [237.99693793602776, 187.1842418915151, 0.5484368021796486]}
+{"fn": "interpolateWindDirection", "args": [137.3453737721224, 326.4721161584178, 0.7936098618062399]}
+{"fn": "interpolateWindDirection", "args": [180.0, 180.0, 1.0]}
+{"fn": "interpolateWindDirection", "args": [109.48679134821984, 98.62052775807736, 0.644029826060542]}
+{"fn": "interpolateWindDirection", "args": [349.82712551627765, 16.602868913398762, 0.2456250348978003]}
+{"fn": "interpolateWindDirection", "args": [359.0, 359.0, 0.0]}
+{"fn": "interpolateWindDirection", "args": [163.70166378424534, 158.2066609911002, 0.9044680638885073]}
+{"fn": "interpolateWindDirection", "args": [99.61535861019841, 347.26268609516706, 0.5963234246470109]}
+{"fn": "interpolateWindDirection", "args": [360.0, 360.0, 0.5]}
+{"fn": "interpolateWindDirection", "args": [174.95757971582523, 229.66062312460895, 0.053906348007364824]}
+{"fn": "interpolateWindDirection", "args": [120.37144393610816, 96.77110079985694, 0.5404194168833674]}
+{"fn": "AirMass", "args": [0.001]}
+{"fn": "AirMass", "args": [-0.4223292448878697]}
+{"fn": "AirMass", "args": [-0.6660534904369964]}
+{"fn": "AirMass", "args": [0.0011]}
+{"fn": "AirMass", "args": [-0.7271107403217489]}
+{"fn": "AirMass", "args": [0.3997234276471422]}
+{"fn": "AirMass", "args": [1.0]}
+{"fn": "AirMass", "args": [0.4810365869529025]}
+{"fn": "AirMass", "args": [-0.5313780775598618]}
+{"fn": "AirMass", "args": [0.999999]}
+{"fn": "AirMass", "args": [-0.13240767323870273]}
+{"fn": "AirMass", "args": [0.9769172963125323]}
+{"fn": "AirMass", "args": [0.0]}
+{"fn": "AirMass", "args": [-0.4856040998647484]}
+{"fn": "AirMass", "args": [-0.4198761814895877]}
+{"fn": "AirMass", "args": [-1.0]}
+{"fn": "AirMass", "args": [0.7931312105487243]}
+{"fn": "AirMass", "args": [0.03158082483320879]}
+{"fn": "AirMass", "args": [0.5]}
+{"fn": "AirMass", "args": [-0.9940779665326318]}
+{"fn": "AirMass", "args": [-0.613900519900668]}
+{"fn": "AirMass", "args": [0.001]}
+{"fn": "AirMass", "args": [0.5407799982278783]}
+{"fn": "AirMass", "args": [0.8089412064113468]}
+{"fn": "AirMass", "args": [0.0011]}
+{"fn": "AirMass", "args": [0.21195985343279]}
+{"fn": "AirMass", "args": [0.37096354625478445]}
+{"fn": "AirMass", "args": [1.0]}
+{"fn": "AirMass", "args": [0.9421893045664529]}
+{"fn": "AirMass", "args": [-0.8332509357102285]}
+{"fn": "AirMass", "args": [0.999999]}
+{"fn": "AirMass", "args": [0.30935767502124256]}
+{"fn": "AirMass", "args": [0.9311578866537766]}
+{"fn": "AirMass", "args": [0.0]}
+{"fn": "AirMass", "args": [0.24409012602439795]}
+{"fn": "AirMass", "args": [-0.009958888656962372]}
+{"fn": "AirMass", "args": [-1.0]}
+{"fn": "AirMass", "args": [-0.026535514739560728]}
+{"fn": "AirMass", "args": [0.8020933632238882]}
+{"fn": "AirMass", "args": [0.5]}
+{"fn": "AirMass", "args": [0.47202547690414387]}
+{"fn": "AirMass", "args": [0.6868042342209264]}
+{"fn": "AirMass", "args": [0.001]}
+{"fn": "AirMass", "args": [-0.1714856441593542]}
+{"fn": "AirMass", "args": [0.7776443074234249]}
+{"fn": "AirMass", "args": [0.0011]}
+{"fn": "AirMass", "args": [0.402272598219354]}
+{"fn": "AirMass", "args": [-0.7338807596299579]}
+{"fn": "AirMass", "args": [1.0]}
+{"fn": "AirMass", "args": [0.8637317056084528]}
+{"fn": "AirMass", "args": [-0.1145372539892997]}
+{"fn": "AirMass", "args": [0.999999]}
+{"fn": "AirMass", "args": [-0.6468078871298839]}
+{"fn": "AirMass", "args": [0.4961836837919573]}
+{"fn": "AirMass", "args": [0.0]}
+{"fn": "AirMass", "args": [0.3225844416967907]}
+{"fn": "AirMass", "args": [0.9344388703443638]}
+{"fn": "AirMass", "args": [-1.0]}
+{"fn": "AirMass", "args": [0.8414763087417527]}
+{"fn": "AirMass", "args": [0.8921989999940094]}
+{"fn": "GetSTM", "args": [0.0]}
+{"fn": "GetSTM", "args": [-108.19095426194824]}
+{"fn": "GetSTM", "args": [-54.28825871502718]}
+{"fn": "GetSTM", "args": [7.5]}
+{"fn": "GetSTM", "args": [162.93364005844836]}
+{"fn": "GetSTM", "args": [-38.132186364804795]}
+{"fn": "GetSTM", "args": [-7.5]}
+{"fn": "GetSTM", "args": [136.13281884727638]}
+{"fn": "GetSTM", "args": [-48.83404595751048]}
+{"fn": "GetSTM", "args": [180.0]}
+{"fn": "GetSTM", "args": [-25.37159360451821]}
+{"fn": "GetSTM", "args": [160.62575231067024]}
+{"fn": "GetSTM", "args": [-180.0]}
+{"fn": "GetSTM", "args": [147.07287367178935]}
+{"fn": "GetSTM", "args": [-81.56291783482794]}
+{"fn": "GetSTM", "args": [187.5]}
+{"fn": "GetSTM", "args": [81.31500637656899]}
+{"fn": "GetSTM", "args": [-88.5934132566595]}
+{"fn": "GetSTM", "args": [360.0]}
+{"fn": "GetSTM", "args": [-96.5949777232591]}
+{"fn": "GetSTM", "args": [165.16069445318556]}
+{"fn": "GetSTM", "args": [540.0]}
+{"fn": "GetSTM", "args": [-175.39215296733823]}
+{"fn": "GetSTM", "args": [-141.92606592799547]}
+{"fn": "GetSTM", "args": [-172.5]}
+{"fn": "GetSTM", "args": [27.90811933166981]}
+{"fn": "GetSTM", "args": [-176.44665647895914]}
+{"fn": "GetSTM", "args": [0.0]}
+{"fn": "GetSTM", "args": [-143.4085890575895]}
+{"fn": "GetSTM", "args": [-50.64224443549503]}
+{"fn": "GetSTM", "args": [7.5]}
+{"fn": "GetSTM", "args": [-146.85473709018748]}
+{"fn": "GetSTM", "args": [122.1040571651007]}
+{"fn": "GetSTM", "args": [-7.5]}
+{"fn": "GetSTM", "args": [69.32511037927699]}
+{"fn": "GetSTM", "args": [147.10886181522108]}
+{"fn": "GetSTM", "args": [180.0]}
+{"fn": "GetSTM", "args": [124.459228713465]}
+{"fn": "GetSTM", "args": [-58.66563089429644]}
+{"fn": "GetSTM", "args": [-180.0]}
+{"fn": "GetSTM", "args": [-124.65594687696836]}
+{"fn": "GetSTM", "args": [-3.6067195512730166]}
+{"fn": "GetSTM", "args": [187.5]}
+{"fn": "GetSTM", "args": [-170.11413061186494]}
+{"fn": "GetSTM", "args": [138.4642820208117]}
+{"fn": "GetSTM", "args": [360.0]}
+{"fn": "GetSTM", "args": [91.15637132070572]}
+{"fn": "GetSTM", "args": [97.03854440219669]}
+{"fn": "GetSTM", "args": [540.0]}
+{"fn": "GetSTM", "args": [-19.10654445895935]}
+{"fn": "GetSTM", "args": [111.61148081253884]}
+{"fn": "GetSTM", "args": [-172.5]}
+{"fn": "GetSTM", "args": [63.31417358646411]}
+{"fn": "GetSTM", "args": [-22.43310540545349]}
+{"fn": "GetSTM", "args": [0.0]}
+{"fn": "GetSTM", "args": [167.64088756993402]}
+{"fn": "GetSTM", "args": [-137.8663843172243]}
+{"fn": "GetSTM", "args": [7.5]}
+{"fn": "GetSTM", "args": [-46.451479024855644]}
+{"fn": "GetSTM", "args": [14.048614870373484]}
+{"fn": "isLeapYear", "args": [1900]}
+{"fn": "isLeapYear", "args": [2039]}
+{"fn": "isLeapYear", "args": [2071]}
+{"fn": "isLeapYear", "args": [2000]}
+{"fn": "isLeapYear", "args": [1922]}
+{"fn": "isLeapYear", "args": [1977]}
+{"fn": "isLeapYear", "args": [2100]}
+{"fn": "isLeapYear", "args": [1911]}
+{"fn": "isLeapYear", "args": [1901]}
+{"fn": "isLeapYear", "args": [2024]}
+{"fn": "isLeapYear", "args": [1973]}
+{"fn": "isLeapYear", "args": [1984]}
+{"fn": "isLeapYear", "args": [2023]}
+{"fn": "isLeapYear", "args": [1950]}
+{"fn": "isLeapYear", "args": [2001]}
+{"fn": "isLeapYear", "args": [0]}
+{"fn": "isLeapYear", "args": [2094]}
+{"fn": "isLeapYear", "args": [1992]}
+{"fn": "isLeapYear", "args": [-4]}
+{"fn": "isLeapYear", "args": [2057]}
+{"fn": "isLeapYear", "args": [2091]}
+{"fn": "isLeapYear", "args": [1900]}
+{"fn": "isLeapYear", "args": [1916]}
+{"fn": "isLeapYear", "args": [2079]}
+{"fn": "isLeapYear", "args": [2000]}
+{"fn": "isLeapYear", "args": [1939]}
+{"fn": "isLeapYear", "args": [2021]}
+{"fn": "isLeapYear", "args": [2100]}
+{"fn": "isLeapYear", "args": [1931]}
+{"fn": "isLeapYear", "args": [1946]}
+{"fn": "isLeapYear", "args": [2024]}
+{"fn": "isLeapYear", "args": [1902]}
+{"fn": "isLeapYear", "args": [1921]}
+{"fn": "isLeapYear", "args": [2023]}
+{"fn": "isLeapYear", "args": [1905]}
+{"fn": "isLeapYear", "args": [1977]}
+{"fn": "isLeapYear", "args": [0]}
+{"fn": "isLeapYear", "args": [2014]}
+{"fn": "isLeapYear", "args": [1948]}
+{"fn": "isLeapYear", "args": [-4]}
+{"fn": "isLeapYear", "args": [1909]}
+{"fn": "isLeapYear", "args": [2095]}
+{"fn": "isLeapYear", "args": [1900]}
+{"fn": "isLeapYear", "args": [2033]}
+{"fn": "isLeapYear", "args": [2085]}
+{"fn": "isLeapYear", "args": [2000]}
+{"fn": "isLeapYear", "args": [2095]}
+{"fn": "isLeapYear", "args": [2057]}
+{"fn": "isLeapYear", "args": [2100]}
+{"fn": "isLeapYear", "args": [1959]}
+{"fn": "isLeapYear", "args": [1937]}
+{"fn": "isLeapYear", "args": [2024]}
+{"fn": "isLeapYear", "args": [1944]}
+{"fn": "isLeapYear", "args": [2055]}
+{"fn": "isLeapYear", "args": [2023]}
+{"fn": "isLeapYear", "args": [1933]}
+{"fn": "isLeapYear", "args": [1928]}
+{"fn": "isLeapYear", "args": [0]}
+{"fn": "isLeapYear", "args": [1917]}
+{"fn": "isLeapYear", "args": [1952]}
+{"fn": "computeJulianDate", "args": [1900, 1, 1]}
+{"fn": "computeJulianDate", "args": [2098, 3, 24]}
+{"fn": "computeJulianDate", "args": [2001, 3, 26]}
+{"fn": "computeJulianDate", "args": [2000, 2, 28]}
+{"fn": "computeJulianDate", "args": [1965, 5, 16]}
+{"fn": "computeJulianDate", "args": [1955, 1, 28]}
+{"fn": "computeJulianDate", "args": [2024, 3, 29]}
+{"fn": "computeJulianDate", "args": [1917, 8, 21]}
+{"fn": "computeJulianDate", "args": [2099, 12, 24]}
+{"fn": "computeJulianDate", "args": [1900, 12, 31]}
+{"fn": "computeJulianDate", "args": [1948, 9, 1]}
+{"fn": "computeJulianDate", "args": [1980, 9, 7]}
+{"fn": "computeJulianDate", "args": [2000, 1, 1]}
+{"fn": "computeJulianDate", "args": [2030, 9, 6]}
+{"fn": "computeJulianDate", "args": [2050, 7, 29]}
+{"fn": "computeJulianDate", "args": [2024, 2, 28]}
+{"fn": "computeJulianDate", "args": [1936, 12, 28]}
+{"fn": "computeJulianDate", "args": [1969, 8, 5]}
+{"fn": "computeJulianDate", "args": [1900, 3, 29]}
+{"fn": "computeJulianDate", "args": [2086, 9, 28]}
+{"fn": "computeJulianDate", "args": [2054, 9, 3]}
+{"fn": "computeJulianDate", "args": [2000, 12, 31]}
+{"fn": "computeJulianDate", "args": [2095, 2, 26]}
+{"fn": "computeJulianDate", "args": [1975, 10, 26]}
+{"fn": "computeJulianDate", "args": [2024, 1, 1]}
+{"fn": "computeJulianDate", "args": [2000, 5, 20]}
+{"fn": "computeJulianDate", "args": [1936, 5, 2]}
+{"fn": "computeJulianDate", "args": [1900, 2, 28]}
+{"fn": "computeJulianDate", "args": [1920, 1, 2]}
+{"fn": "computeJulianDate", "args": [1988, 6, 26]}
+{"fn": "computeJulianDate", "args": [2000, 3, 29]}
+{"fn": "computeJulianDate", "args": [1980, 2, 2]}
+{"fn": "computeJulianDate", "args": [2040, 8, 10]}
+{"fn": "computeJulianDate", "args": [2024, 12, 31]}
+{"fn": "computeJulianDate", "args": [1965, 3, 15]}
+{"fn": "computeJulianDate", "args": [2020, 3, 21]}
+{"fn": "computeJulianDate", "args": [1900, 1, 1]}
+{"fn": "computeJulianDate", "args": [1904, 2, 10]}
+{"fn": "computeJulianDate", "args": [2062, 3, 18]}
+{"fn": "computeJulianDate", "args": [2000, 2, 28]}
+{"fn": "computeJulianDate", "args": [2040, 10, 16]}
+{"fn": "computeJulianDate", "args": [2074, 6, 12]}
+{"fn": "computeJulianDate", "args": [2024, 3, 29]}
+{"fn": "computeJulianDate", "args": [2089, 5, 28]}
+{"fn": "computeJulianDate", "args": [1967, 8, 19]}
+{"fn": "computeJulianDate", "args": [1900, 12, 31]}
+{"fn": "computeJulianDate", "args": [1905, 11, 25]}
+{"fn": "computeJulianDate", "args": [2005, 12, 27]}
+{"fn": "computeJulianDate", "args": [2000, 1, 1]}
+{"fn": "computeJulianDate", "args": [2083, 2, 5]}
+{"fn": "computeJulianDate", "args": [1903, 12, 12]}
+{"fn": "computeJulianDate", "args": [2024, 2, 28]}
+{"fn": "computeJulianDate", "args": [1966, 11, 28]}
+{"fn": "computeJulianDate", "args": [1940, 9, 8]}
+{"fn": "computeJulianDate", "args": [1900, 3, 29]}
+{"fn": "computeJulianDate", "args": [1972, 9, 8]}
+{"fn": "computeJulianDate", "args": [2051, 2, 12]}
+{"fn": "computeJulianDate", "args": [2000, 12, 31]}
+{"fn": "computeJulianDate", "args": [2017, 6, 21]}
+{"fn": "computeJulianDate", "args": [1960, 3, 31]}
+{"fn": "calculateDayOfYear", "args": [1, 1, true]}
+{"fn": "calculateDayOfYear", "args": [8, 7, false]}
+{"fn": "calculateDayOfYear", "args": [3, 15, true]}
+{"fn": "calculateDayOfYear", "args": [2, 29, false]}
+{"fn": "calculateDayOfYear", "args": [3, 19, true]}
+{"fn": "calculateDayOfYear", "args": [8, 11, false]}
+{"fn": "calculateDayOfYear", "args": [12, 31, true]}
+{"fn": "calculateDayOfYear", "args": [12, 31, false]}
+{"fn": "calculateDayOfYear", "args": [6, 3, true]}
+{"fn": "calculateDayOfYear", "args": [0, 1, false]}
+{"fn": "calculateDayOfYear", "args": [8, 15, true]}
+{"fn": "calculateDayOfYear", "args": [6, 24, false]}
+{"fn": "calculateDayOfYear", "args": [13, 29, true]}
+{"fn": "calculateDayOfYear", "args": [6, 20, true]}
+{"fn": "calculateDayOfYear", "args": [6, 22, true]}
+{"fn": "calculateDayOfYear", "args": [1, 31, false]}
+{"fn": "calculateDayOfYear", "args": [5, 13, false]}
+{"fn": "calculateDayOfYear", "args": [3, 26, true]}
+{"fn": "calculateDayOfYear", "args": [2, 1, true]}
+{"fn": "calculateDayOfYear", "args": [3, 6, false]}
+{"fn": "calculateDayOfYear", "args": [4, 1, true]}
+{"fn": "calculateDayOfYear", "args": [12, 29, false]}
+{"fn": "calculateDayOfYear", "args": [11, 25, false]}
+{"fn": "calculateDayOfYear", "args": [4, 1, false]}
+{"fn": "calculateDayOfYear", "args": [0, 31, true]}
+{"fn": "calculateDayOfYear", "args": [2, 19, false]}
+{"fn": "calculateDayOfYear", "args": [3, 5, true]}
+{"fn": "calculateDayOfYear", "args": [13, 1, false]}
+{"fn": "calculateDayOfYear", "args": [2, 12, false]}
+{"fn": "calculateDayOfYear", "args": [10, 3, true]}
+{"fn": "calculateDayOfYear", "args": [1, 29, true]}
+{"fn": "calculateDayOfYear", "args": [2, 8, true]}
+{"fn": "calculateDayOfYear", "args": [1, 3, false]}
+{"fn": "calculateDayOfYear", "args": [2, 31, false]}
+{"fn": "calculateDayOfYear", "args": [1, 11, false]}
+{"fn": "calculateDayOfYear", "args": [3, 3, true]}
+{"fn": "calculateDayOfYear", "args": [12, 1, true]}
+{"fn": "calculateDayOfYear", "args": [6, 13, true]}
+{"fn": "calculateDayOfYear", "args": [10, 28, false]}
+{"fn": "calculateDayOfYear", "args": [0, 29, false]}
+{"fn": "calculateDayOfYear", "args": [11, 16, true]}
+{"fn": "calculateDayOfYear", "args": [5, 7, false]}
+{"fn": "calculateDayOfYear", "args": [13, 31, true]}
+{"fn": "calculateDayOfYear", "args": [3, 4, false]}
+{"fn": "calculateDayOfYear", "args": [12, 25, false]}
+{"fn": "calculateDayOfYear", "args": [1, 1, false]}
+{"fn": "calculateDayOfYear", "args": [5, 23, false]}
+{"fn": "calculateDayOfYear", "args": [8, 20, false]}
+{"fn": "calculateDayOfYear", "args": [2, 29, true]}
+{"fn": "calculateDayOfYear", "args": [1, 12, false]}
+{"fn": "calculateDayOfYear", "args": [8, 24, true]}
+{"fn": "calculateDayOfYear", "args": [12, 31, false]}
+{"fn": "calculateDayOfYear", "args": [11, 12, false]}
+{"fn": "calculateDayOfYear", "args": [9, 29, false]}
+{"fn": "calculateDayOfYear", "args": [0, 1, true]}
+{"fn": "calculateDayOfYear", "args": [10, 6, false]}
+{"fn": "calculateDayOfYear", "args": [11, 17, true]}
+{"fn": "calculateDayOfYear", "args": [13, 29, false]}
+{"fn": "calculateDayOfYear", "args": [10, 22, false]}
+{"fn": "calculateDayOfYear", "args": [10, 3, false]}
+{"fn": "validMonthDay", "args": [1, 28, 0]}
+{"fn": "validMonthDay", "args": [5, 4, 0]}
+{"fn": "validMonthDay", "args": [8, 22, 1]}
+{"fn": "validMonthDay", "args": [2, 29, 1]}
+{"fn": "validMonthDay", "args": [5, 26, 0]}
+{"fn": "validMonthDay", "args": [5, 5, 0]}
+{"fn": "validMonthDay", "args": [4, 30, 0]}
+{"fn": "validMonthDay", "args": [3, 27, 0]}
+{"fn": "validMonthDay", "args": [4, 24, 0]}
+{"fn": "validMonthDay", "args": [12, 31, 1]}
+{"fn": "validMonthDay", "args": [4, 18, 1]}
+{"fn": "validMonthDay", "args": [3, 28, 0]}
+{"fn": "validMonthDay", "args": [0, 32, 0]}
+{"fn": "validMonthDay", "args": [6, 28, 0]}
+{"fn": "validMonthDay", "args": [12, 6, 0]}
+{"fn": "validMonthDay", "args": [13, 28, 1]}
+{"fn": "validMonthDay", "args": [12, 17, 1]}
+{"fn": "validMonthDay", "args": [7, 10, 0]}
+{"fn": "validMonthDay", "args": [1, 29, 0]}
+{"fn": "validMonthDay", "args": [2, 24, 1]}
+{"fn": "validMonthDay", "args": [6, 29, 1]}
+{"fn": "validMonthDay", "args": [2, 30, 1]}
+{"fn": "validMonthDay", "args": [3, 13, 0]}
+{"fn": "validMonthDay", "args": [9, 25, 1]}
+{"fn": "validMonthDay", "args": [4, 31, 0]}
+{"fn": "validMonthDay", "args": [5, 7, 0]}
+{"fn": "validMonthDay", "args": [8, 17, 0]}
+{"fn": "validMonthDay", "args": [12, 32, 1]}
+{"fn": "validMonthDay", "args": [3, 9, 1]}
+{"fn": "validMonthDay", "args": [9, 12, 0]}
+{"fn": "validMonthDay", "args": [0, 28, 0]}
+{"fn": "validMonthDay", "args": [3, 15, 1]}
+{"fn": "validMonthDay", "args": [8, 4, 1]}
+{"fn": "validMonthDay", "args": [13, 29, 1]}
+{"fn": "validMonthDay", "args": [2, 17, 1]}
+{"fn": "validMonthDay", "args": [5, 16, 1]}
+{"fn": "validMonthDay", "args": [1, 30, 0]}
+{"fn": "validMonthDay", "args": [4, 25, 0]}
+{"fn": "validMonthDay", "args": [2, 8, 0]}
+{"fn": "validMonthDay", "args": [2, 31, 1]}
+{"fn": "validMonthDay", "args": [2, 26, 1]}
+{"fn": "validMonthDay", "args": [1, 5, 1]}
+{"fn": "validMonthDay", "args": [4, 32, 0]}
+{"fn": "validMonthDay", "args": [10, 26, 0]}
+{"fn": "validMonthDay", "args": [5, 1, 0]}
+{"fn": "validMonthDay", "args": [12, 28, 1]}
+{"fn": "validMonthDay", "args": [2, 23, 0]}
+{"fn": "validMonthDay", "args": [5, 21, 1]}
+{"fn": "validMonthDay", "args": [0, 29, 0]}
+{"fn": "validMonthDay", "args": [9, 30, 1]}
+{"fn": "validMonthDay", "args": [11, 11, 0]}
+{"fn": "validMonthDay", "args": [13, 30, 1]}
+{"fn": "validMonthDay", "args": [2, 31, 0]}
+{"fn": "validMonthDay", "args": [5, 1, 0]}
+{"fn": "validMonthDay", "args": [1, 31, 0]}
+{"fn": "validMonthDay", "args": [12, 26, 1]}
+{"fn": "validMonthDay", "args": [4, 19, 0]}
+{"fn": "validMonthDay", "args": [2, 32, 1]}
+{"fn": "validMonthDay", "args": [12, 18, 1]}
+{"fn": "validMonthDay", "args": [11, 22, 0]}
