@@ -31,9 +31,8 @@ rust-anything gate .     # fmt, clippy, tests, unsafe, API, diff
 `src/EnergyPlus/GroundHeatExchangers/Vertical.cc`: `distances`, `calcResponse`, `integral`,
 `doubleIntegral`, `setupTimeVectors` and `calcUniformHeatFluxGFunctions`, with the borehole points
 placed as `GLHEResponseFactors::SetupBHPointsForResponseFactorsObject` places them, plus
-`frictionFactor`, `calcPipeConductionResistance` and `getAnnualTimeConstant`. Not ported yet: the
-short-time-step finite-volume g-functions, the resistances that read the plant loop's fluid
-properties, and the GHEDesigner path. The oracle's fields are up to 3 by 3 boreholes; a time
+`frictionFactor`, `calcPipeConductionResistance` and `getAnnualTimeConstant`. The short-time-step g-functions and the resistances that read the plant loop's fluid properties are in
+`vert-fluid-rs`. Not ported yet: the GHEDesigner path. The oracle's fields are up to 3 by 3 boreholes; a time
 vector longer than 1000 values (or one that never ends, for a zero or negative time scale) returns
 NaN or 0 (ADR-009).
 

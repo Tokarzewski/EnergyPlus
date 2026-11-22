@@ -23,7 +23,8 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 11 | Equivalent-layer window helpers | `window-eql-rs` | `WindowEquivalentLayer.cc` | done | 2334/2334 | `FRA` uses `BCP` and `BVISC` for the quadratic terms, kept as in the C++ |
 | 12 | Root finder | `solveroot-rs` | `General.cc` (`SolveRoot`, `SolveRoot2`) | done | 3441/3441 | all six `RootAlgo` methods; size waived (ADR-007); units 6 and later can call `solve_root` |
 | 13 | Leaf helpers from eleven modules | `leaf-rs` | `WindowManager`, `WaterThermalTanks`, `TARCOGCommon`, `OutputReportTabular`, `IceThermalStorage`, `PlantUtilities`, `PhotovoltaicThermalCollectors`, `TranspiredCollector`, `UtilityRoutines`, `SwimmingPool`, `MicroCHPElectricGenerator` | done | 7386/7386 | 26 functions; `overallUfactorFromFilmsAndCond` left out (its class needs constructor arguments) |
-| 14 | Vertical ground heat exchanger g-functions | `vert-rs` | `GroundHeatExchangers/Vertical.cc`, `ResponseFactors.cc` | done | 3118/3118, 21 known diffs | uniform heat flux g-functions, friction factor, pipe conduction; `erfc` from libm (ADR-006); size waived (ADR-007); not yet: short-time-step g-functions and the fluid-dependent resistances |
+| 14 | Vertical ground heat exchanger g-functions | `vert-rs` | `GroundHeatExchangers/Vertical.cc`, `ResponseFactors.cc` | done | 3118/3118, 21 known diffs | uniform heat flux g-functions, friction factor, pipe conduction; `erfc` from libm (ADR-006); size waived (ADR-007); the short-time-step g-functions and fluid-dependent resistances are unit 15 |
+| 15 | Vertical ground heat exchanger resistances and short-time-step g-functions | `vert-fluid-rs` | `GroundHeatExchangers/Vertical.cc`, `Base.cc` (`TDMA`) | done | 2524/2524 | first unit on shim-built plant state (a water loop and an inlet node); uses `fluidproperties-rs` and `vert-rs`; size waived (ADR-007); not yet: the GHEDesigner path and combining short and long g-functions |
 
 ## Next (plain-number leaf code, ADR-005)
 
@@ -32,8 +33,10 @@ Units 8 to 11 and 13 were generated with the shared plain-number oracle tools in
 `real_inputs.py` and a one-line `build_shim.sh`; `gen.args` may list several headers and
 namespaces, comma-separated. The headers' plain-number functions are now nearly all ported.
 
-- Vertical GHE short-time-step g-functions and resistances (they read plant-loop fluid properties).
-- Units that read simulation state through a shim-built `EnergyPlusData`.
+- Units that read simulation state through a shim-built `EnergyPlusData` (unit 15 shows the
+  pattern: the shim allocates the plant loops and nodes the code reads).
+- Combining the vertical GHE's short and long g-functions (`combineShortAndLongTimestepGFunctions`,
+  `interpGFunc`, `getGFunc`).
 
 ## Not started
 
