@@ -1,0 +1,1306 @@
+{
+  "version": 1,
+  "command": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "main.cpp",
+    "simulation.cpp",
+    "ep_kernels.cpp"
+  ],
+  "lang": "cpp",
+  "runtime": "g++",
+  "base": ".",
+  "wall": 7.925655729,
+  "hotspots": [
+    {
+      "id": "simulation.SimulateYear",
+      "file": "simulation.cpp",
+      "line": 37,
+      "end_line": 140,
+      "name": "SimulateYear",
+      "qualname": "SimulateYear",
+      "module": "simulation",
+      "kind": "function",
+      "ncalls": 1,
+      "tottime": 1.048492627,
+      "cumtime": 7.900205981,
+      "share": 0.9967889410201254,
+      "portability": 0.9,
+      "score": 0.8971100469181129,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "tdb",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "tdp",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "pb",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "wspd",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "wdir",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    size_t const n = tdb.size();\n    if (n == 0 || tdp.size() < n || pb.size() < n || wspd.size() < n || wdir.size() < n) return 0.0;\n    constexpr int nZones = 5, timestepsPerHour = 6, hvacIters = 3, surfsPerZone = 12;\n    std::vector<Surface> surfs;\n    for (int z = 0; z < nZones; ++z) {\n        for (int s = 0; s < surfsPerZone; ++s) {\n            double cosTilt = s == 0 ? 1.0 : (s == 1 ? -1.0 : 0.0); // roof, floor, walls\n            surfs.push_back({cosTilt, 90.0 * (s % 4), 10.0 + 3.0 * s, 14.0 + s, s % 6, (z + s) % 4});\n        }\n    }\n    std::vector<double> zoneT(nZones, 22.0), zoneW(nZones, 0.008), surfT(surfs.size(), 20.0);\n\n    // Wet-bulb requests are collected for a day and solved in one batched call (the results only\n    // feed reporting, not the next state), the way EnergyPlus's weather manager fills a day's\n    // timestep arrays at once.\n    std::vector<double> qTdb, qW, qPb, qWeight;\n    double checksum = 0.0;\n    auto wetBulb = [&](double qtdb, double qw, double qpb, double weight) {\n        qTdb.push_back(qtdb);\n        qW.push_back(qw);\n        qPb.push_back(qpb);\n        qWeight.push_back(weight);\n    };\n    auto flush = [&]() {\n        if (qTdb.empty()) return;\n        std::vector<double> twb = PsyTwbFnTdbWPbBatch(qTdb, qW, qPb);\n        for (size_t i = 0; i < twb.size(); ++i) checksum += twb[i] * qWeight[i];\n        qTdb.clear();\n        qW.clear();\n        qPb.clear();\n        qWeight.clear();\n    };\n    for (size_t h = 0; h < n; ++h) {\n        size_t c = h;\n        size_t x = (h + 1) % n;\n        for (int ts = 0; ts < timestepsPerHour; ++ts) {\n            double frac = (ts + 1.0) / timestepsPerHour;\n            double tout = tdb[c] + (tdb[x] - tdb[c]) * frac;\n            double tdpNow = std::min(tout, tdp[c] + (tdp[x] - tdp[c]) * frac);\n            double pbNow = pb[c] + (pb[x] - pb[c]) * frac;\n            double wind = wspd[c] + (wspd[x] - wspd[c]) * frac;\n\n            // outdoor air state\n            double wOut = PsyWFnTdpPb(tdpNow, pbNow);\n            wetBulb(tout, wOut, pbNow, 1e-3);\n            double hOut = PsyHFnTdbW(tout, wOut);\n            checksum += hOut * 1e-9;\n\n            for (int it = 0; it < hvacIters; ++it) {\n                for (int z = 0; z < nZones; ++z) {\n                    // zone air: drift towards set point with outdoor coupling\n                    double tz = zoneT[z] + 0.05 * (tout - zoneT[z]) / (1 + it);\n                    double wz = zoneW[z] + 0.02 * (wOut - zoneW[z]);\n                    wetBulb(tz, wz, pbNow, 1e-3);\n                    double hz = PsyHFnTdbW(tz, wz);\n                    double rho = PsyRhoAirFnPbTdbW(pbNow, tz, wz);\n                    double cp = PsyCpAirFnW(wz);\n                    // cooling/heating coil leaving air: remove or add 10% of the enthalpy difference\n                    double hCoil = hz - 0.1 * (hz - PsyHFnTdbW(tz > 24.0 ? 13.0 : 30.0, wz));\n                    double tCoil = PsyTdbFnHW(hCoil, wz);\n                    wetBulb(tCoil, wz, pbNow, 1e-4);\n                    zoneT[z] = tz + (21.0 + (tz > 24.0 ? 3.0 : 0.0) - tz) * 0.3;\n                    zoneW[z] = wz;\n                    checksum += rho * cp * 1e-6;\n\n                    // exterior convection for the zone's surfaces\n                    for (int s = 0; s < surfsPerZone; ++s) {\n                        size_t i = (size_t)z * surfsPerZone + s;\n                        const Surface &sf = surfs[i];\n                        double ts_ = surfT[i];\n                        double windward = std::cos((wdir[c] - sf.azimuth) * 3.14159265358979 / 180.0) > 0.0;\n                        double hc;\n                        switch (sf.model) {\n                        case 0:\n                            hc = windward ? CalcDOE2Windward(ts_, tout, sf.cosTilt, wind, sf.roughness)\n                                          : CalcDOE2Leeward(ts_, tout, sf.cosTilt, wind, sf.roughness);\n                            break;\n                        case 1:\n                            hc = windward ? CalcMoWITTWindward(ts_ - tout, wind) : CalcMoWITTLeeward(ts_ - tout, wind);\n                            break;\n                        case 2:\n                            hc = CalcASHRAETARPNatural(ts_, tout, sf.cosTilt) +\n                                 CalcSparrowWindward(sf.roughness, sf.perimeter, sf.area, wind);\n                            break;\n                        default:\n                            hc = CalcASHRAESimpExtConvCoeff(sf.roughness, wind);\n                        }\n                        // crude surface heat balance: 0.4 m2K/W wall between zone and outside film\n                        double U = 1.0 / (0.4 + 1.0 / (hc + 1e-9));\n                        surfT[i] = tout + (zoneT[z] - tout) * U * 0.4;\n                        checksum += hc * 1e-5;\n                    }\n                }\n            }\n        }\n        if (h % 24 == 23) flush();\n    }\n    flush();\n    // the saturation temperature at the site pressure, once per run (sizing)\n    checksum += PsyTsatFnPb(pb[0]) * 1e-3 + PsyPsatFnTemp(20.0) * 1e-6;\n    return checksum;\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyTwbFnTdbWPbBatch",
+      "file": "ep_kernels.cpp",
+      "line": 170,
+      "end_line": 177,
+      "name": "PsyTwbFnTdbWPbBatch",
+      "qualname": "PsyTwbFnTdbWPbBatch",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 365,
+      "tottime": 0.089552555,
+      "cumtime": 4.126160831,
+      "share": 0.520608132889543,
+      "portability": 0.9,
+      "score": 0.4685473196005887,
+      "blockers": [],
+      "warnings": [
+        "calls PsyTwbFnTdbWPb, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "tdb",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "w",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "pb",
+          "annotation": "const std::vector<double>&",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "std::vector<double>",
+      "source": "{\n    std::vector<double> out(tdb.size());\n    for (size_t i = 0; i < tdb.size(); ++i) {\n        out[i] = PsyTwbFnTdbWPb(tdb[i], w[i], pb[i]);\n    }\n    return out;\n}",
+      "calls": [
+        "PsyTwbFnTdbWPb"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcDOE2Forced",
+      "file": "ep_kernels.cpp",
+      "line": 285,
+      "end_line": 290,
+      "name": "CalcDOE2Forced",
+      "qualname": "CalcDOE2Forced",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 2365200,
+      "tottime": 0.289582832,
+      "cumtime": 0.743616651,
+      "share": 0.09382399090072815,
+      "portability": 0.9,
+      "score": 0.08444159181065534,
+      "blockers": [],
+      "warnings": [
+        "calls CalcASHRAETARPNatural, pow_2, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "SurfaceTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "AirTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "CosineTilt",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "HfSmooth",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "RoughnessIndex",
+          "annotation": "int",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double Hn = CalcASHRAETARPNatural(SurfaceTemp, AirTemp, CosineTilt);\n    double HcSmooth = std::sqrt(pow_2(Hn) + pow_2(HfSmooth));\n    return RoughnessMultiplier[RoughnessIndex] * (HcSmooth - Hn);\n}",
+      "calls": [
+        "CalcASHRAETARPNatural",
+        "pow_2"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcDOE2Windward",
+      "file": "ep_kernels.cpp",
+      "line": 292,
+      "end_line": 296,
+      "name": "CalcDOE2Windward",
+      "qualname": "CalcDOE2Windward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1187352,
+      "tottime": 0.109028149,
+      "cumtime": 0.57480352,
+      "share": 0.0725244118157684,
+      "portability": 0.9,
+      "score": 0.06527197063419156,
+      "blockers": [],
+      "warnings": [
+        "calls CalcDOE2Forced, CalcMoWITTForcedWindward, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "SurfaceTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "AirTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "CosineTilt",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "RoughnessIndex",
+          "annotation": "int",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double HfSmooth = CalcMoWITTForcedWindward(WindAtZ);\n    return CalcDOE2Forced(SurfaceTemp, AirTemp, CosineTilt, HfSmooth, RoughnessIndex);\n}",
+      "calls": [
+        "CalcDOE2Forced",
+        "CalcMoWITTForcedWindward"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcDOE2Leeward",
+      "file": "ep_kernels.cpp",
+      "line": 298,
+      "end_line": 302,
+      "name": "CalcDOE2Leeward",
+      "qualname": "CalcDOE2Leeward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1177848,
+      "tottime": 0.104309448,
+      "cumtime": 0.561651772,
+      "share": 0.07086502255515773,
+      "portability": 0.9,
+      "score": 0.06377852029964196,
+      "blockers": [],
+      "warnings": [
+        "calls CalcDOE2Forced, CalcMoWITTForcedLeeward, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "SurfaceTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "AirTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "CosineTilt",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "RoughnessIndex",
+          "annotation": "int",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double HfSmooth = CalcMoWITTForcedLeeward(WindAtZ);\n    return CalcDOE2Forced(SurfaceTemp, AirTemp, CosineTilt, HfSmooth, RoughnessIndex);\n}",
+      "calls": [
+        "CalcDOE2Forced",
+        "CalcMoWITTForcedLeeward"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcMoWITTLeeward",
+      "file": "ep_kernels.cpp",
+      "line": 278,
+      "end_line": 283,
+      "name": "CalcMoWITTLeeward",
+      "qualname": "CalcMoWITTLeeward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1201878,
+      "tottime": 0.183731004,
+      "cumtime": 0.434162122,
+      "share": 0.054779331432653504,
+      "portability": 0.9,
+      "score": 0.049301398289388156,
+      "blockers": [],
+      "warnings": [
+        "calls CalcMoWITTForcedLeeward, CalcMoWITTNatural, pow_2, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "DeltaTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double Hn = CalcMoWITTNatural(DeltaTemp);\n    double Hf = CalcMoWITTForcedLeeward(WindAtZ);\n    return std::sqrt(pow_2(Hn) + pow_2(Hf));\n}",
+      "calls": [
+        "CalcMoWITTForcedLeeward",
+        "CalcMoWITTNatural",
+        "pow_2"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcMoWITTWindward",
+      "file": "ep_kernels.cpp",
+      "line": 271,
+      "end_line": 276,
+      "name": "CalcMoWITTWindward",
+      "qualname": "CalcMoWITTWindward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1163322,
+      "tottime": 0.177724458,
+      "cumtime": 0.402782697,
+      "share": 0.05082011012996904,
+      "portability": 0.9,
+      "score": 0.04573809911697214,
+      "blockers": [],
+      "warnings": [
+        "calls CalcMoWITTForcedWindward, CalcMoWITTNatural, pow_2, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "DeltaTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double Hn = CalcMoWITTNatural(DeltaTemp);\n    double Hf = CalcMoWITTForcedWindward(WindAtZ);\n    return std::sqrt(pow_2(Hn) + pow_2(Hf));\n}",
+      "calls": [
+        "CalcMoWITTForcedWindward",
+        "CalcMoWITTNatural",
+        "pow_2"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcSparrowWindward",
+      "file": "ep_kernels.cpp",
+      "line": 304,
+      "end_line": 307,
+      "name": "CalcSparrowWindward",
+      "qualname": "CalcSparrowWindward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 2365200,
+      "tottime": 0.078009663,
+      "cumtime": 0.078009663,
+      "share": 0.009842676198331754,
+      "portability": 0.9,
+      "score": 0.008858408578498579,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "RoughnessIndex",
+          "annotation": "int",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "FacePerimeter",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "FaceArea",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 2.537 * RoughnessMultiplier[RoughnessIndex] * std::sqrt(FacePerimeter * WindAtZ / FaceArea);\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyHFnTdbW",
+      "file": "ep_kernels.cpp",
+      "line": 195,
+      "end_line": 198,
+      "name": "PsyHFnTdbW",
+      "qualname": "PsyHFnTdbW",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1629360,
+      "tottime": 0.056911271,
+      "cumtime": 0.056911271,
+      "share": 0.007180638794562004,
+      "portability": 0.9,
+      "score": 0.006462574915105804,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "TDB",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "dW",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 1.00484e3 * TDB + std::max(dW, 1.0e-5) * (2.50094e6 + 1.85895e3 * TDB);\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyCpAirFnW",
+      "file": "ep_kernels.cpp",
+      "line": 206,
+      "end_line": 210,
+      "name": "PsyCpAirFnW",
+      "qualname": "PsyCpAirFnW",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 788400,
+      "tottime": 0.027493921,
+      "cumtime": 0.027493921,
+      "share": 0.0034689774499540344,
+      "portability": 0.9,
+      "score": 0.003122079704958631,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "dw",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double const w(std::max(dw, 1.0e-5));\n    return (1.00484e3 + w * 1.85895e3);\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyTdbFnHW",
+      "file": "ep_kernels.cpp",
+      "line": 200,
+      "end_line": 204,
+      "name": "PsyTdbFnHW",
+      "qualname": "PsyTdbFnHW",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 788400,
+      "tottime": 0.022002165,
+      "cumtime": 0.022002165,
+      "share": 0.0027760687257073263,
+      "portability": 0.9,
+      "score": 0.002498461853136594,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "H",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "dW",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double const W(std::max(dW, 1.0e-5));\n    return (H - 2.50094e6 * W) / (1.00484e3 + 1.85895e3 * W);\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyRhoAirFnPbTdbW",
+      "file": "ep_kernels.cpp",
+      "line": 212,
+      "end_line": 216,
+      "name": "PsyRhoAirFnPbTdbW",
+      "qualname": "PsyRhoAirFnPbTdbW",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 788400,
+      "tottime": 0.021400652,
+      "cumtime": 0.021400652,
+      "share": 0.002700174311343722,
+      "portability": 0.9,
+      "score": 0.00243015688020935,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "pb",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "tdb",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "dw",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    // Psychrometrics.hh PsyRhoAirFnPbTdbW (non-_fast branch)\n    return pb / (287.0 * (tdb + Kelvin) * (1.0 + 1.6077687 * std::max(dw, 1.0e-5)));\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyWFnTdpPb",
+      "file": "ep_kernels.cpp",
+      "line": 179,
+      "end_line": 193,
+      "name": "PsyWFnTdpPb",
+      "qualname": "PsyWFnTdpPb",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 52560,
+      "tottime": 0.003651352,
+      "cumtime": 0.011831956,
+      "share": 0.0014928677707646111,
+      "portability": 0.9,
+      "score": 0.00134358099368815,
+      "blockers": [],
+      "warnings": [
+        "calls PsyPsatFnTemp, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "TDP",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "PB",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double const PDEW(PsyPsatFnTemp(TDP));\n    double const W(PDEW * 0.62198 / (PB - PDEW));\n    if (W < 0.0) {\n        double DeltaT = 0.0;\n        double PDEW1 = PDEW;\n        while (PDEW1 >= PB) {\n            DeltaT++;\n            PDEW1 = PsyPsatFnTemp(TDP - DeltaT);\n        }\n        return PDEW1 * 0.62198 / (PB - PDEW1);\n    }\n    return W;\n}",
+      "calls": [
+        "PsyPsatFnTemp"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "main.main",
+      "file": "main.cpp",
+      "line": 44,
+      "end_line": 69,
+      "name": "main",
+      "qualname": "main",
+      "module": "main",
+      "kind": "function",
+      "ncalls": 1,
+      "tottime": 0.000719126,
+      "cumtime": 7.925524501,
+      "share": 0.9999834426318166,
+      "portability": 0.0,
+      "score": 0.0,
+      "blockers": [
+        "the entry point",
+        "does I/O: fprintf, printf"
+      ],
+      "warnings": [
+        "calls read_epw, they get ported together with it"
+      ],
+      "params": [],
+      "returns": "int",
+      "source": "{\n    const char *candidates[] = {\"weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw\",\n                                \"../weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw\",\n                                \"../../weather/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw\"};\n    std::vector<Hour> hours;\n    for (auto c : candidates) {\n        hours = read_epw(c);\n        if (!hours.empty()) break;\n    }\n    if (hours.empty()) {\n        std::fprintf(stderr, \"weather file not found\\n\");\n        return 1;\n    }\n    std::vector<double> tdb, tdp, pb, wspd, wdir;\n    for (const Hour &h : hours) {\n        tdb.push_back(h.tdb);\n        tdp.push_back(h.tdp);\n        pb.push_back(h.pb);\n        wspd.push_back(h.wspd);\n        wdir.push_back(h.wdir);\n    }\n    double checksum = SimulateYear(tdb, tdp, pb, wspd, wdir);\n    std::printf(\"%zu hours, checksum %.9f\\n\", hours.size(), checksum);\n    return 0;\n}",
+      "calls": [
+        "read_epw"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyTwbFnTdbWPb",
+      "file": "ep_kernels.cpp",
+      "line": 122,
+      "end_line": 165,
+      "name": "PsyTwbFnTdbWPb",
+      "qualname": "PsyTwbFnTdbWPb",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1629360,
+      "tottime": 0.943676014,
+      "cumtime": 4.036608276,
+      "share": 0.5093090608553734,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [
+        "calls Iterate, PsyPsatFnTemp, PsyTsatFnPb, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "TDB",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "dW",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Patm",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    constexpr int itmax(100);\n    double newW;\n    double W;\n    double ResultX = 0.0;\n    double WBT;\n    double error;\n    double X1 = 0.0;\n    double Y1 = 0.0;\n    double Wstar;\n    double PSatstar;\n    int icvg = 0;\n\n    W = dW;\n    if (W < 0.0) {\n        W = 1.0e-5;\n    }\n    double const tBoil = PsyTsatFnPb(Patm);\n    WBT = TDB;\n    for (int iter = 1; iter <= itmax; ++iter) {\n        if (WBT >= (tBoil - 0.09)) {\n            WBT = tBoil - 0.1;\n        }\n        PSatstar = PsyPsatFnTemp(WBT);\n        Wstar = 0.62198 * PSatstar / (Patm - PSatstar);\n        if (WBT >= 0.0) {\n            newW = ((2501.0 - 2.326 * WBT) * Wstar - 1.006 * (TDB - WBT)) / (2501.0 + 1.86 * TDB - 4.186 * WBT);\n        } else {\n            newW = ((2830.0 - 0.24 * WBT) * Wstar - 1.006 * (TDB - WBT)) / (2830.0 + 1.86 * TDB - 2.1 * WBT);\n        }\n        error = W - newW;\n        Iterate(ResultX, iconvTol, WBT, error, X1, Y1, iter, icvg);\n        WBT = ResultX;\n        if (icvg == 1) {\n            break;\n        }\n    }\n    double TWB = WBT;\n    if (TWB > TDB) {\n        TWB = TDB;\n    }\n    return TWB;\n}",
+      "calls": [
+        "Iterate",
+        "PsyPsatFnTemp",
+        "PsyTsatFnPb"
+      ],
+      "covered_by": "ep_kernels.PsyTwbFnTdbWPbBatch",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyTsatFnPb",
+      "file": "ep_kernels.cpp",
+      "line": 91,
+      "end_line": 120,
+      "name": "PsyTsatFnPb",
+      "qualname": "PsyTsatFnPb",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 1629361,
+      "tottime": 0.699222482,
+      "cumtime": 1.788758061,
+      "share": 0.2256921221615681,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [
+        "calls Iterate, PsyPsatFnTemp, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "Press",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    constexpr int itmax(50);\n    constexpr double convTol(0.0001);\n    double tSat = 100.0;\n    if (Press >= 1555000.0) {\n        tSat = 200.0;\n    } else if (Press <= 0.0017) {\n        tSat = -100.0;\n    } else if ((Press > 611.000) && (Press < 611.25)) {\n        tSat = 0.0;\n    } else {\n        double pSat;\n        double error;\n        double X1 = 0.0;\n        double Y1 = 0.0;\n        double ResultX = 0.0;\n        int icvg = 0;\n        for (int iter = 1; iter <= itmax; ++iter) {\n            pSat = PsyPsatFnTemp(tSat);\n            error = Press - pSat;\n            Iterate(ResultX, convTol, tSat, error, X1, Y1, iter, icvg);\n            tSat = ResultX;\n            if (icvg == 1) {\n                break;\n            }\n        }\n    }\n    return tSat;\n}",
+      "calls": [
+        "Iterate",
+        "PsyPsatFnTemp"
+      ],
+      "covered_by": "ep_kernels.PsyTwbFnTdbWPb",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.PsyPsatFnTemp",
+      "file": "ep_kernels.cpp",
+      "line": 62,
+      "end_line": 89,
+      "name": "PsyPsatFnTemp",
+      "qualname": "PsyPsatFnTemp",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 21695213,
+      "tottime": 1.767232351,
+      "cumtime": 1.767232351,
+      "share": 0.22297616896652364,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "T",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double Pascal;\n    double const Tkel(T + Kelvin);\n    if (Tkel < 173.15) {\n        Pascal = 0.001405102123874164;\n    } else if (Tkel < TriplePointOfWaterTempKelvin) {\n        constexpr double C1(-5674.5359);\n        constexpr double C2(6.3925247);\n        constexpr double C3(-0.9677843e-2);\n        constexpr double C4(0.62215701e-6);\n        constexpr double C5(0.20747825e-8);\n        constexpr double C6(-0.9484024e-12);\n        constexpr double C7(4.1635019);\n        Pascal = std::exp(C1 / Tkel + C2 + Tkel * (C3 + Tkel * (C4 + Tkel * (C5 + C6 * Tkel))) + C7 * std::log(Tkel));\n    } else if (Tkel <= 473.15) {\n        constexpr double C8(-5800.2206);\n        constexpr double C9(1.3914993);\n        constexpr double C10(-0.048640239);\n        constexpr double C11(0.41764768e-4);\n        constexpr double C12(-0.14452093e-7);\n        constexpr double C13(6.5459673);\n        Pascal = std::exp(C8 / Tkel + C9 + Tkel * (C10 + Tkel * (C11 + Tkel * C12)) + C13 * std::log(Tkel));\n    } else {\n        Pascal = 1555073.745636215;\n    }\n    return Pascal;\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.PsyTwbFnTdbWPb",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcASHRAETARPNatural",
+      "file": "ep_kernels.cpp",
+      "line": 235,
+      "end_line": 245,
+      "name": "CalcASHRAETARPNatural",
+      "qualname": "CalcASHRAETARPNatural",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 4730400,
+      "tottime": 0.287967025,
+      "cumtime": 0.655104887,
+      "share": 0.0826562380956025,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [
+        "calls CalcASHRAEVerticalWall, CalcWaltonStableHorizontalOrTilt, CalcWaltonUnstableHorizontalOrTilt, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "Tsurf",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Tamb",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "cosTilt",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    double DeltaTemp = Tsurf - Tamb;\n    if ((DeltaTemp == 0.0) || (cosTilt == 0.0)) {\n        return CalcASHRAEVerticalWall(DeltaTemp);\n    }\n    if (((DeltaTemp < 0.0) && (cosTilt < 0.0)) || ((DeltaTemp > 0.0) && (cosTilt > 0.0))) {\n        return CalcWaltonUnstableHorizontalOrTilt(DeltaTemp, cosTilt);\n    }\n    return CalcWaltonStableHorizontalOrTilt(DeltaTemp, cosTilt);\n}",
+      "calls": [
+        "CalcASHRAEVerticalWall",
+        "CalcWaltonStableHorizontalOrTilt",
+        "CalcWaltonUnstableHorizontalOrTilt"
+      ],
+      "covered_by": "ep_kernels.CalcDOE2Forced",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.Iterate",
+      "file": "ep_kernels.cpp",
+      "line": 30,
+      "end_line": 57,
+      "name": "Iterate",
+      "qualname": "Iterate",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 21642652,
+      "tottime": 0.634659058,
+      "cumtime": 0.634659058,
+      "share": 0.08007653621362588,
+      "portability": 0.0,
+      "score": 0.0,
+      "blockers": [
+        "takes a non-const reference (double&)",
+        "takes a non-const reference (double&)",
+        "takes a non-const reference (double&)",
+        "takes a non-const reference (int&)",
+        "returns nothing (void)"
+      ],
+      "warnings": [],
+      "params": [
+        {
+          "name": "ResultX",
+          "annotation": "double&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Tol",
+          "annotation": "double const",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "X0",
+          "annotation": "double const",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Y0",
+          "annotation": "double const",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "X1",
+          "annotation": "double&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Y1",
+          "annotation": "double&",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Iter",
+          "annotation": "int const",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "Cnvg",
+          "annotation": "int&",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "void",
+      "source": "{\n    constexpr double small(1.e-9);\n    constexpr double Perturb(0.1);\n    if (Iter != 1) {\n        if (std::abs(X0 - X1) < Tol || Y0 == 0.0) {\n            ResultX = X0;\n            Cnvg = 1;\n            return;\n        }\n    }\n    Cnvg = 0;\n    if (Iter == 1) {\n        if (std::abs(X0) > small) {\n            ResultX = X0 * (1.0 + Perturb);\n        } else {\n            ResultX = Perturb;\n        }\n    } else {\n        double DY = Y0 - Y1;\n        if (std::abs(DY) < small) {\n            DY = small;\n        }\n        ResultX = (Y0 * X1 - Y1 * X0) / DY;\n    }\n    X1 = X0;\n    Y1 = Y0;\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.pow_2",
+      "file": "ep_kernels.cpp",
+      "line": 27,
+      "end_line": 27,
+      "name": "pow_2",
+      "qualname": "pow_2",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 11826000,
+      "tottime": 0.318734405,
+      "cumtime": 0.318734405,
+      "share": 0.04021552485982324,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "x",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "inline double pow_2(double x) { return x * x; }",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcDOE2Forced",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcASHRAEVerticalWall",
+      "file": "ep_kernels.cpp",
+      "line": 220,
+      "end_line": 223,
+      "name": "CalcASHRAEVerticalWall",
+      "qualname": "CalcASHRAEVerticalWall",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 3942000,
+      "tottime": 0.306524783,
+      "cumtime": 0.306524783,
+      "share": 0.03867500601602273,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "DeltaTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 1.31 * std::pow(std::abs(DeltaTemp), 1.0 / 3.0);\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcASHRAETARPNatural",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcASHRAESimpExtConvCoeff",
+      "file": "ep_kernels.cpp",
+      "line": 247,
+      "end_line": 253,
+      "name": "CalcASHRAESimpExtConvCoeff",
+      "qualname": "CalcASHRAESimpExtConvCoeff",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 2365200,
+      "tottime": 0.143161312,
+      "cumtime": 0.20444481,
+      "share": 0.025795318014121632,
+      "portability": 0.0,
+      "score": 0.0,
+      "blockers": [
+        "keeps static variables"
+      ],
+      "warnings": [
+        "calls pow_2, they get ported together with it"
+      ],
+      "params": [
+        {
+          "name": "Roughness",
+          "annotation": "int",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "SurfWindSpeed",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    constexpr static std::array<double, 6> D = {11.58, 12.49, 10.79, 8.23, 10.22, 8.23};\n    constexpr static std::array<double, 6> E = {5.894, 4.065, 4.192, 4.00, 3.100, 3.33};\n    constexpr static std::array<double, 6> F = {0.0, 0.028, 0.0, -0.057, 0.0, -0.036};\n    return D[Roughness] + E[Roughness] * SurfWindSpeed + F[Roughness] * pow_2(SurfWindSpeed);\n}",
+      "calls": [
+        "pow_2"
+      ],
+      "covered_by": null,
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcMoWITTForcedLeeward",
+      "file": "ep_kernels.cpp",
+      "line": 266,
+      "end_line": 269,
+      "name": "CalcMoWITTForcedLeeward",
+      "qualname": "CalcMoWITTForcedLeeward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 2379726,
+      "tottime": 0.178635453,
+      "cumtime": 0.178635453,
+      "share": 0.02253888625850506,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 3.55 * std::pow(WindAtZ, 0.617);\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcDOE2Leeward",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcMoWITTForcedWindward",
+      "file": "ep_kernels.cpp",
+      "line": 261,
+      "end_line": 264,
+      "name": "CalcMoWITTForcedWindward",
+      "qualname": "CalcMoWITTForcedWindward",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 2350674,
+      "tottime": 0.175680502,
+      "cumtime": 0.175680502,
+      "share": 0.02216605262794654,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "WindAtZ",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 3.26 * std::pow(WindAtZ, 0.89);\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcDOE2Windward",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcMoWITTNatural",
+      "file": "ep_kernels.cpp",
+      "line": 255,
+      "end_line": 259,
+      "name": "CalcMoWITTNatural",
+      "qualname": "CalcMoWITTNatural",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 2365200,
+      "tottime": 0.17220942,
+      "cumtime": 0.17220942,
+      "share": 0.021728097445601273,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "DeltaTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    constexpr double temp_fac(0.84);\n    return temp_fac * std::pow(std::abs(DeltaTemp), 1.0 / 3.0);\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcMoWITTLeeward",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcWaltonUnstableHorizontalOrTilt",
+      "file": "ep_kernels.cpp",
+      "line": 225,
+      "end_line": 228,
+      "name": "CalcWaltonUnstableHorizontalOrTilt",
+      "qualname": "CalcWaltonUnstableHorizontalOrTilt",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 440213,
+      "tottime": 0.033968845,
+      "cumtime": 0.033968845,
+      "share": 0.0042859349638046836,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "DeltaTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "CosineTilt",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 9.482 * std::pow(std::abs(DeltaTemp), 1.0 / 3.0) / (7.238 - std::abs(CosineTilt));\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcASHRAETARPNatural",
+      "owner": null
+    },
+    {
+      "id": "ep_kernels.CalcWaltonStableHorizontalOrTilt",
+      "file": "ep_kernels.cpp",
+      "line": 230,
+      "end_line": 233,
+      "name": "CalcWaltonStableHorizontalOrTilt",
+      "qualname": "CalcWaltonStableHorizontalOrTilt",
+      "module": "ep_kernels",
+      "kind": "function",
+      "ncalls": 348187,
+      "tottime": 0.026644234,
+      "cumtime": 0.026644234,
+      "share": 0.003361770295233574,
+      "portability": 0.9,
+      "score": 0.0,
+      "blockers": [],
+      "warnings": [],
+      "params": [
+        {
+          "name": "DeltaTemp",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        },
+        {
+          "name": "CosineTilt",
+          "annotation": "double",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "double",
+      "source": "{\n    return 1.810 * std::pow(std::abs(DeltaTemp), 1.0 / 3.0) / (1.382 + std::abs(CosineTilt));\n}",
+      "calls": [],
+      "covered_by": "ep_kernels.CalcASHRAETARPNatural",
+      "owner": null
+    },
+    {
+      "id": "main.read_epw",
+      "file": "main.cpp",
+      "line": 24,
+      "end_line": 42,
+      "name": "read_epw",
+      "qualname": "read_epw",
+      "module": "main",
+      "kind": "function",
+      "ncalls": 2,
+      "tottime": 0.024599394,
+      "cumtime": 0.024599394,
+      "share": 0.0031037676680795937,
+      "portability": 0.0,
+      "score": 0.0,
+      "blockers": [
+        "takes a const char*",
+        "returns a std::vector<Hour>",
+        "does I/O: ifstream, getline"
+      ],
+      "warnings": [],
+      "params": [
+        {
+          "name": "path",
+          "annotation": "const char*",
+          "default": null,
+          "kwonly": false
+        }
+      ],
+      "returns": "std::vector<Hour>",
+      "source": "{\n    std::vector<Hour> hours;\n    std::ifstream in(path);\n    if (!in) return hours;\n    std::string line;\n    for (int i = 0; i < 8 && std::getline(in, line); ++i) {\n    }\n    while (std::getline(in, line)) {\n        std::vector<std::string> f;\n        std::stringstream ss(line);\n        std::string cell;\n        while (std::getline(ss, cell, ',')) f.push_back(cell);\n        if (f.size() < 22) continue;\n        hours.push_back({std::atof(f[6].c_str()), std::atof(f[7].c_str()), std::atof(f[9].c_str()), std::atof(f[21].c_str()),\n                         std::atof(f[20].c_str())});\n    }\n    return hours;\n}",
+      "calls": [],
+      "covered_by": null,
+      "owner": null
+    }
+  ],
+  "ports": {
+    "ep_kernels.PsyTwbFnTdbWPb": {
+      "id": "ep_kernels.PsyTwbFnTdbWPb",
+      "file": "ep_kernels.cpp",
+      "module": "ep_kernels",
+      "func": "PsyTwbFnTdbWPb",
+      "ext": "fa_ep_kernels_psytwbfntdbwpb",
+      "crate_dir": ".fast/ports/ep_kernels.PsyTwbFnTdbWPb",
+      "recorded": 500,
+      "calls_seen": 1629360,
+      "verify": {
+        "built": true,
+        "build_log": null,
+        "total": 547,
+        "derived": 47,
+        "edges": 47,
+        "passed": 547,
+        "failed": 0,
+        "failures": [],
+        "micro": {
+          "original_ns": 945.506,
+          "rust_ns": 900.154,
+          "speedup": 1.0503824901072485
+        },
+        "lang": "cpp",
+        "source_hash": "3eab66adea10a769"
+      },
+      "enabled": false,
+      "lang": "cpp",
+      "owner": null,
+      "line": 120,
+      "sources": [
+        "{\n    constexpr int itmax(100);\n    double newW;\n    double W;\n    double ResultX = 0.0;\n    double WBT;\n    double error;\n    double X1 = 0.0;\n    double Y1 = 0.0;\n    double Wstar;\n    double PSatstar;\n    int icvg = 0;\n\n    W = dW;\n    if (W < 0.0) {\n        W = 1.0e-5;\n    }\n    double const tBoil = PsyTsatFnPb(Patm);\n    WBT = TDB;\n    for (int iter = 1; iter <= itmax; ++iter) {\n        if (WBT >= (tBoil - 0.09)) {\n            WBT = tBoil - 0.1;\n        }\n        PSatstar = PsyPsatFnTemp(WBT);\n        Wstar = 0.62198 * PSatstar / (Patm - PSatstar);\n        if (WBT >= 0.0) {\n            newW = ((2501.0 - 2.326 * WBT) * Wstar - 1.006 * (TDB - WBT)) / (2501.0 + 1.86 * TDB - 4.186 * WBT);\n        } else {\n            newW = ((2830.0 - 0.24 * WBT) * Wstar - 1.006 * (TDB - WBT)) / (2830.0 + 1.86 * TDB - 2.1 * WBT);\n        }\n        error = W - newW;\n        Iterate(ResultX, iconvTol, WBT, error, X1, Y1, iter, icvg);\n        WBT = ResultX;\n        if (icvg == 1) {\n            break;\n        }\n    }\n    double TWB = WBT;\n    if (TWB > TDB) {\n        TWB = TDB;\n    }\n    return TWB;\n}",
+        "{\n    constexpr double small(1.e-9);\n    constexpr double Perturb(0.1);\n    if (Iter != 1) {\n        if (std::abs(X0 - X1) < Tol || Y0 == 0.0) {\n            ResultX = X0;\n            Cnvg = 1;\n            return;\n        }\n    }\n    Cnvg = 0;\n    if (Iter == 1) {\n        if (std::abs(X0) > small) {\n            ResultX = X0 * (1.0 + Perturb);\n        } else {\n            ResultX = Perturb;\n        }\n    } else {\n        double DY = Y0 - Y1;\n        if (std::abs(DY) < small) {\n            DY = small;\n        }\n        ResultX = (Y0 * X1 - Y1 * X0) / DY;\n    }\n    X1 = X0;\n    Y1 = Y0;\n}",
+        "{\n    double Pascal;\n    double const Tkel(T + Kelvin);\n    if (Tkel < 173.15) {\n        Pascal = 0.001405102123874164;\n    } else if (Tkel < TriplePointOfWaterTempKelvin) {\n        constexpr double C1(-5674.5359);\n        constexpr double C2(6.3925247);\n        constexpr double C3(-0.9677843e-2);\n        constexpr double C4(0.62215701e-6);\n        constexpr double C5(0.20747825e-8);\n        constexpr double C6(-0.9484024e-12);\n        constexpr double C7(4.1635019);\n        Pascal = std::exp(C1 / Tkel + C2 + Tkel * (C3 + Tkel * (C4 + Tkel * (C5 + C6 * Tkel))) + C7 * std::log(Tkel));\n    } else if (Tkel <= 473.15) {\n        constexpr double C8(-5800.2206);\n        constexpr double C9(1.3914993);\n        constexpr double C10(-0.048640239);\n        constexpr double C11(0.41764768e-4);\n        constexpr double C12(-0.14452093e-7);\n        constexpr double C13(6.5459673);\n        Pascal = std::exp(C8 / Tkel + C9 + Tkel * (C10 + Tkel * (C11 + Tkel * C12)) + C13 * std::log(Tkel));\n    } else {\n        Pascal = 1555073.745636215;\n    }\n    return Pascal;\n}",
+        "{\n    constexpr int itmax(50);\n    constexpr double convTol(0.0001);\n    double tSat = 100.0;\n    if (Press >= 1555000.0) {\n        tSat = 200.0;\n    } else if (Press <= 0.0017) {\n        tSat = -100.0;\n    } else if ((Press > 611.000) && (Press < 611.25)) {\n        tSat = 0.0;\n    } else {\n        double pSat;\n        double error;\n        double X1 = 0.0;\n        double Y1 = 0.0;\n        double ResultX = 0.0;\n        int icvg = 0;\n        for (int iter = 1; iter <= itmax; ++iter) {\n            pSat = PsyPsatFnTemp(tSat);\n            error = Press - pSat;\n            Iterate(ResultX, convTol, tSat, error, X1, Y1, iter, icvg);\n            tSat = ResultX;\n            if (icvg == 1) {\n                break;\n            }\n        }\n    }\n    return tSat;\n}"
+      ]
+    },
+    "ep_kernels.PsyTwbFnTdbWPbBatch": {
+      "id": "ep_kernels.PsyTwbFnTdbWPbBatch",
+      "file": "ep_kernels.cpp",
+      "module": "ep_kernels",
+      "func": "PsyTwbFnTdbWPbBatch",
+      "ext": "fa_ep_kernels_psytwbfntdbwpbbatch",
+      "crate_dir": ".fast/ports/ep_kernels.PsyTwbFnTdbWPbBatch",
+      "recorded": 365,
+      "calls_seen": 365,
+      "verify": {
+        "built": true,
+        "build_log": null,
+        "total": 365,
+        "derived": 0,
+        "edges": 0,
+        "passed": 365,
+        "failed": 0,
+        "failures": [],
+        "micro": {
+          "original_ns": 2825228.195,
+          "rust_ns": 3631358.169863013,
+          "speedup": 0.7780086851379292
+        },
+        "lang": "cpp",
+        "source_hash": "51b15248877e0ecd"
+      },
+      "enabled": false,
+      "lang": "cpp",
+      "owner": null,
+      "line": 170,
+      "sources": [
+        "{\n    std::vector<double> out(tdb.size());\n    for (size_t i = 0; i < tdb.size(); ++i) {\n        out[i] = PsyTwbFnTdbWPb(tdb[i], w[i], pb[i]);\n    }\n    return out;\n}",
+        "{\n    constexpr int itmax(100);\n    double newW;\n    double W;\n    double ResultX = 0.0;\n    double WBT;\n    double error;\n    double X1 = 0.0;\n    double Y1 = 0.0;\n    double Wstar;\n    double PSatstar;\n    int icvg = 0;\n\n    W = dW;\n    if (W < 0.0) {\n        W = 1.0e-5;\n    }\n    double const tBoil = PsyTsatFnPb(Patm);\n    WBT = TDB;\n    for (int iter = 1; iter <= itmax; ++iter) {\n        if (WBT >= (tBoil - 0.09)) {\n            WBT = tBoil - 0.1;\n        }\n        PSatstar = PsyPsatFnTemp(WBT);\n        Wstar = 0.62198 * PSatstar / (Patm - PSatstar);\n        if (WBT >= 0.0) {\n            newW = ((2501.0 - 2.326 * WBT) * Wstar - 1.006 * (TDB - WBT)) / (2501.0 + 1.86 * TDB - 4.186 * WBT);\n        } else {\n            newW = ((2830.0 - 0.24 * WBT) * Wstar - 1.006 * (TDB - WBT)) / (2830.0 + 1.86 * TDB - 2.1 * WBT);\n        }\n        error = W - newW;\n        Iterate(ResultX, iconvTol, WBT, error, X1, Y1, iter, icvg);\n        WBT = ResultX;\n        if (icvg == 1) {\n            break;\n        }\n    }\n    double TWB = WBT;\n    if (TWB > TDB) {\n        TWB = TDB;\n    }\n    return TWB;\n}"
+      ]
+    }
+  },
+  "bench": {
+    "lang": "cpp",
+    "command": [
+      "g++",
+      "-O2",
+      "-std=c++17",
+      "main.cpp",
+      "ep_kernels.cpp"
+    ],
+    "runs": 5,
+    "ports": [],
+    "before": {
+      "median": 1.645186513,
+      "mean": 1.6331740714000005,
+      "min": 1.517479554,
+      "max": 1.719547505,
+      "stddev": 0.06657621384683854
+    },
+    "after": {
+      "median": 1.683227909,
+      "mean": 1.6106575166,
+      "min": 1.341494384,
+      "max": 1.75513347,
+      "stddev": 0.14542902149717474
+    },
+    "speedup": 0.977399735474562
+  }
+}

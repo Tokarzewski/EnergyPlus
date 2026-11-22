@@ -1,0 +1,8 @@
+[package]
+name = "simulate-year"
+version = "0.1.0"
+edition = "2024"
+description = "Rust port of fast/simulation.cpp SimulateYear, run on the same EPW for a checksum and timing"
+
+[profile.release]
+opt-level = 3
