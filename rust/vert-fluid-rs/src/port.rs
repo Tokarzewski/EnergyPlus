@@ -212,12 +212,55 @@ fn half(r_a: f64, r_b: f64, k: f64) -> f64 {
     (r_a / r_b).ln() / (2.0 * PI * k)
 }
 
-/// Runs `calcShortTimestepGFunctions` (`Vertical.cc:1048`) for `steps` steps and returns the last
-/// step's g-function and LNTTS. The matrix and TDMA's forward sweep do not change between steps,
-/// so they are worked out once; the values are the ones the C++ recomputes each step.
-fn short_step(b: &Bore, rho_cps: [f64; 3], soil: (f64, f64), steps: i32) -> (f64, f64) {
-    let [grout_rho_cp, pipe_rho_cp, soil_rho_cp] = rho_cps;
-    let (soil_k, diffusivity) = soil;
+/// A borehole and its loop for the short-time-step model, as plain numbers: `bh` is
+/// `[bhLength, bhDiameter, uTubeDist, groutK]`, `pipe` is `[outDia, thickness, k]`.
+#[derive(Clone, Copy, Debug)]
+pub struct ShortInputs {
+    pub bh: [f64; 4],
+    pub grout_rho_cp: f64,
+    pub soil_k: f64,
+    pub soil_rho_cp: f64,
+    pub pipe: [f64; 3],
+    pub pipe_rho_cp: f64,
+    pub mass_flow: f64,
+    pub num_bh: i32,
+    pub inlet_temp: f64,
+}
+
+impl ShortInputs {
+    fn diffusivity(&self) -> f64 {
+        self.soil_k / self.soil_rho_cp
+    }
+
+    /// The steps the run takes, or `None` outside the oracle's domain (ADR-009).
+    fn steps(&self) -> Option<i32> {
+        let n = short_steps(self.bh[0], self.diffusivity());
+        (self.num_bh >= 1 && n > 0).then_some(n)
+    }
+}
+
+/// Port of `calcShortTimestepGFunctions` (`Vertical.cc:1048`): every step's g-function and LNTTS
+/// (`GFNC_shortTimestep`, `LNTTS_shortTimestep`), or `None` outside the oracle's domain.
+pub fn short_series(inp: &ShortInputs) -> Option<Vec<(f64, f64)>> {
+    Some(short_run(inp, inp.steps()?))
+}
+
+/// The first `steps` steps of `calcShortTimestepGFunctions`. The matrix and TDMA's forward sweep
+/// do not change between steps, so they are worked out once; the values are the ones the C++
+/// recomputes each step.
+fn short_run(inp: &ShortInputs, steps: i32) -> Vec<(f64, f64)> {
+    let (grout_rho_cp, pipe_rho_cp, soil_rho_cp) =
+        (inp.grout_rho_cp, inp.pipe_rho_cp, inp.soil_rho_cp);
+    let (soil_k, diffusivity) = (inp.soil_k, inp.diffusivity());
+    let pipe = Pipe::new(inp.pipe[0], inp.pipe[1], inp.pipe[2]);
+    let b = &Bore::new(
+        pipe,
+        inp.mass_flow,
+        inp.num_bh,
+        inp.inlet_temp,
+        inp.bh,
+        soil_k,
+    );
     let pcf = b.pipe.thickness / 4.0;
     let r_pipe_out = 2.0f64.sqrt() * b.pipe.out_radius;
     let r_pipe_in = r_pipe_out - b.pipe.thickness;
@@ -314,6 +357,7 @@ fn short_step(b: &Bore, rho_cps: [f64; 3], soil: (f64, f64), steps: i32) -> (f64
     let mut temps = vec![t0; n + 1];
     let mut d = vec![0.0; n + 1];
     let mut total = 0.0;
+    let mut out = Vec::with_capacity(usize::try_from(steps).unwrap_or(0));
     for _ in 0..steps {
         d[0] = (-temps[0] - src[0]) / piv[0];
         for i in 1..n {
@@ -325,11 +369,12 @@ fn short_step(b: &Bore, rho_cps: [f64; 3], soil: (f64, f64), steps: i32) -> (f64
         }
         std::mem::swap(&mut temps, &mut d);
         total += TIME_STEP;
+        out.push((
+            2.0 * PI * soil_k * ((temps[0] - t0) / HEAT_FLUX - bh_res),
+            (total / t_s).ln(),
+        ));
     }
-    (
-        2.0 * PI * soil_k * ((temps[0] - t0) / HEAT_FLUX - bh_res),
-        (total / t_s).ln(),
-    )
+    out
 }
 
 pub fn VFConvectionResistance(
@@ -398,30 +443,11 @@ pub fn VFShortSteps(bhLength: f64, soilK: f64, soilRhoCp: f64) -> i32 {
 }
 
 /// The k-th short time step's g-function and LNTTS, or `None` where the oracle returns NaN.
-fn short_at(
-    k: i32,
-    bh: [f64; 4],
-    groutRhoCp: f64,
-    soilK: f64,
-    soilRhoCp: f64,
-    pipe: [f64; 3],
-    pipeRhoCp: f64,
-    massFlow: f64,
-    numBH: i32,
-    inletTemp: f64,
-) -> Option<(f64, f64)> {
-    let diffusivity = soilK / soilRhoCp;
-    if numBH < 1 || k < 0 || k >= short_steps(bh[0], diffusivity) {
+fn short_at(k: i32, inp: &ShortInputs) -> Option<(f64, f64)> {
+    if k < 0 || k >= inp.steps()? {
         return None;
     }
-    let pipe = Pipe::new(pipe[0], pipe[1], pipe[2]);
-    let b = Bore::new(pipe, massFlow, numBH, inletTemp, bh, soilK);
-    Some(short_step(
-        &b,
-        [groutRhoCp, pipeRhoCp, soilRhoCp],
-        (soilK, diffusivity),
-        k + 1,
-    ))
+    short_run(inp, k + 1).last().copied()
 }
 
 pub fn VFShortGFunction(
@@ -441,10 +467,19 @@ pub fn VFShortGFunction(
     numBH: i32,
     inletTemp: f64,
 ) -> f64 {
-    let bh = [bhLength, bhDiameter, uTubeDist, groutK];
-    let pipe = [outDia, thickness, kPipe];
     short_at(
-        k, bh, groutRhoCp, soilK, soilRhoCp, pipe, pipeRhoCp, massFlow, numBH, inletTemp,
+        k,
+        &ShortInputs {
+            bh: [bhLength, bhDiameter, uTubeDist, groutK],
+            grout_rho_cp: groutRhoCp,
+            soil_k: soilK,
+            soil_rho_cp: soilRhoCp,
+            pipe: [outDia, thickness, kPipe],
+            pipe_rho_cp: pipeRhoCp,
+            mass_flow: massFlow,
+            num_bh: numBH,
+            inlet_temp: inletTemp,
+        },
     )
     .map_or(f64::NAN, |r| r.0)
 }
@@ -466,10 +501,19 @@ pub fn VFShortLntts(
     numBH: i32,
     inletTemp: f64,
 ) -> f64 {
-    let bh = [bhLength, bhDiameter, uTubeDist, groutK];
-    let pipe = [outDia, thickness, kPipe];
     short_at(
-        k, bh, groutRhoCp, soilK, soilRhoCp, pipe, pipeRhoCp, massFlow, numBH, inletTemp,
+        k,
+        &ShortInputs {
+            bh: [bhLength, bhDiameter, uTubeDist, groutK],
+            grout_rho_cp: groutRhoCp,
+            soil_k: soilK,
+            soil_rho_cp: soilRhoCp,
+            pipe: [outDia, thickness, kPipe],
+            pipe_rho_cp: pipeRhoCp,
+            mass_flow: massFlow,
+            num_bh: numBH,
+            inlet_temp: inletTemp,
+        },
     )
     .map_or(f64::NAN, |r| r.1)
 }

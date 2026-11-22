@@ -37,6 +37,8 @@ The short-time-step matrix and the forward sweep of `TDMA` do not change between
 the port works them out once; the C++ recomputes the same values every step. That makes a short
 g-function about 80 times faster than the C++.
 
+`short_series` and `ShortInputs` give the whole short-time-step curve to `vert-gfunc-rs`.
+
 ## Accepted gate exceptions (2026-11-22)
 
 - **Size:** `rust-anything gate` fails only its size check: about 450 lines in `src/port.rs`
