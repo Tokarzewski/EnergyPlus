@@ -28,6 +28,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 16 | Vertical ground heat exchanger g-function curve | `vert-gfunc-rs` | `GroundHeatExchangers/Vertical.cc` (`calcGFunctions`, `combineShortAndLongTimestepGFunctions`, `getGFunc`), `Base.cc` (`interpGFunc`) | done | 1841/1841 | fields up to 2 by 2; uses `vert-rs` and `vert-fluid-rs`; size waived (ADR-007) |
 | 17 | Ground heat exchanger time stepping and load aggregation | `glhe-sim-rs` | `GroundHeatExchangers/Base.cc` (`calcGroundHeatExchanger`, `calcAggregateLoad`) | done | 601/601 | first unit that keeps state between time steps; copies the glycol specific heat cache; runs up to 6000 steps with a given g-function curve; size waived (ADR-007); speed a tie |
 | 18 | Ground temperature models | `groundtemp-rs` | `GroundTemperatureModeling/` (Kusuda-Achenbach, Xing, four site tables) | done | 2252/2252 | `remainder` from libm (exact); size waived (ADR-007); not yet: the finite difference model and the input factories |
+| 19 | Surface geometry helpers | `vectors-rs` | `Vectors.cc`, `Geometry/Plane.cc`, `Geometry/Vector3D.hh` | done | 9525/9525 | polygons of 3 to 5 vertices; size waived (ADR-007); not yet: `CalcPolyhedronVolume` |
 
 ## Next (plain-number leaf code, ADR-005)
 
