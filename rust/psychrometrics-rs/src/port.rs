@@ -287,6 +287,8 @@ thread_local! {
     static CACHED_TWB: std::cell::RefCell<Vec<(TwbKey, f64)>> = const { std::cell::RefCell::new(Vec::new()) };
     /// `cached_Tsat`, keyed by `iPb`; slots start at key `0`.
     static CACHED_TSAT: std::cell::RefCell<Vec<(i64, f64)>> = const { std::cell::RefCell::new(Vec::new()) };
+    /// `cached_Tsat_HPb`, keyed by (`iH`, `iPb`); slots start at keys `0`.
+    static CACHED_TSAT_HPB: std::cell::RefCell<Vec<((i64, i64), f64)>> = const { std::cell::RefCell::new(Vec::new()) };
 }
 
 /// The C++ cache lookup: slot `hash` returns its result when its key is
@@ -354,14 +356,17 @@ pub fn PsyPsatFnTemp_raw(T: f64) -> f64 {
 
 /// Port of `double PsyTsatFnHPb(double H, double PB)` (`psychrometrics.c:139`).
 ///
-/// The cached variant: keys are the inputs' top 40 bits, but `_raw` runs on the inputs as given.
-/// A cache slot starts with both keys `0` and a result of `0.0`.
+/// The cached variant, with the C++ `cached_Tsat_HPb` table: each input keeps its top 40 bits as
+/// its key, the slot is the XOR of the two keys, and `_raw` runs on the inputs as given, so a
+/// later call whose inputs share both keys gets the earlier call's result. A slot starts with both
+/// keys `0` and a result of `0.0`.
 pub fn PsyTsatFnHPb(H: f64, PB: f64) -> f64 {
     const GRID_SHIFT: u32 = 64 - 12 - 28;
-    if tag_i64(H, GRID_SHIFT) == 0 && tag_i64(PB, GRID_SHIFT) == 0 {
-        return 0.0;
-    }
-    PsyTsatFnHPb_raw(H, PB)
+    let key = (tag_i64(H, GRID_SHIFT), tag_i64(PB, GRID_SHIFT));
+    let hash = ((key.0 ^ key.1) & (CACHE_SIZE as i64 - 1)) as usize;
+    cached(&CACHED_TSAT_HPB, (0, 0), hash, key, || {
+        PsyTsatFnHPb_raw(H, PB)
+    })
 }
 
 /// Port of `double PsyTsatFnHPb_raw(double H, double PB)` (`psychrometrics.c:144`).
