@@ -10,7 +10,7 @@
 #![forbid(unsafe_code)]
 
 /// `DataBranchAirLoopPlant::MassFlowTolerance` (kg/s).
-const MASS_FLOW_TOLERANCE: f64 = 0.000000001;
+pub const MASS_FLOW_TOLERANCE: f64 = 0.000000001;
 
 /// ObjexxFCL `min(a, b)`.
 fn min(a: f64, b: f64) -> f64 {
@@ -24,32 +24,32 @@ fn max(a: f64, b: f64) -> f64 {
 
 /// The flow fields of one loop node.
 #[derive(Clone, Copy, Default)]
-struct Node {
-    mass_flow_rate: f64,
-    min: f64,
-    max: f64,
-    min_avail: f64,
-    max_avail: f64,
-    request: f64,
+pub struct Node {
+    pub mass_flow_rate: f64,
+    pub min: f64,
+    pub max: f64,
+    pub min_avail: f64,
+    pub max_avail: f64,
+    pub request: f64,
 }
 
 /// The branch and the calling component's settings.
-struct Branch {
+pub struct Branch {
     /// Nodes 1 to `ncomp + 1`; component `c` runs from node `c` to node `c + 1`.
-    nodes: [Node; 4],
-    ncomp: usize,
+    pub nodes: [Node; 4],
+    pub ncomp: usize,
     /// Each component's EMS load override, if on, is zero.
-    ems_off: [bool; 3],
-    locked: bool,
-    autosize: bool,
-    series_active: bool,
-    demand: bool,
-    sim_loop_side_needed: bool,
+    pub ems_off: [bool; 3],
+    pub locked: bool,
+    pub autosize: bool,
+    pub series_active: bool,
+    pub demand: bool,
+    pub sim_loop_side_needed: bool,
 }
 
 impl Branch {
     /// `SetComponentFlowRate` for the component from node `i` to node `o` (0-based).
-    fn set_component_flow_rate(&mut self, comp_flow: &mut f64, i: usize, o: usize) {
+    pub fn set_component_flow_rate(&mut self, comp_flow: &mut f64, i: usize, o: usize) {
         let mdot_old_request = self.nodes[i].request;
         self.nodes[i].request = *comp_flow;
         if self.demand {
