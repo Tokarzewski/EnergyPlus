@@ -60,9 +60,7 @@ zone equipment's demand.
   (`.rust-anything/driver_c.py record` and `diff`). All 12512/12512 match. The gate was run on a
   copy of this crate with the first 4000 cases (its `psychrometrics-rs` path made absolute):
   every check passes (behaviour 4000/4000) except size.
-- **Speed:** 0.83x, slower: 84 ns per call against 70 ns for the C++, even though the C++ figure
-  includes the oracle's per-call setup. The likely cause is the saturation pressure: the C++
-  keeps a cache of `PsyPsatFnTemp` results, which the bench's repeated cases hit, while
-  `psychrometrics-rs` computes each value again (an `exp` and a `ln`), two to four times a call.
-  Timed by a direct in-process loop over the recorded cases, both sides called through a C
+- **Speed:** 1.25x faster: 58 ns per call against 72 ns for the C++, whose figure includes the
+  oracle's per-call setup. It ran at 0.83x until `psychrometrics-rs` kept the same saturation
+  pressure cache as the C++ (2026-11-23). Timed by a direct in-process loop over the recorded cases, both sides called through a C
   function pointer, best of 15 interleaved runs.

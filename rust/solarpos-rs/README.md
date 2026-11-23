@@ -38,7 +38,6 @@ the clock and the day's solar variables per call and returns one of a routine's 
 
 - **Size:** `rust-anything gate` fails only its size check: about 350 lines in `src/port.rs`
   against a limit set by the 36-line C forwarder in `rust/oracles/solarpos/`. Waived under ADR-007.
-- **Speed:** overall a tie with the C++ (1.00x). `CalcSkyEmissivity` runs at 0.5x: the C++ reads
-  the saturation pressure from its process-wide cache, while `psychrometrics-rs` computes it from
-  the truncated key each time (the same value). `WaterMainsTempFromCorrelation` runs at 0.86x
-  (about 5 ns per call). The other five are 1.1x to 1.5x faster.
+- **Speed:** overall a tie with the C++ (1.00x). `CalcSkyEmissivity` ran at 0.5x while `psychrometrics-rs` computed each
+  saturation pressure again; with the same cache as the C++ (2026-11-23) it runs at 1.07x
+  (16 ns per call against 17 ns). The other five are 1.1x to 1.5x faster.

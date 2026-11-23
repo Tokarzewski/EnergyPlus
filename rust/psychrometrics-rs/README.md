@@ -51,3 +51,14 @@ rust-anything diff .     # run the recorded cases against Rust
 rust-anything shadow .   # run both in the app, log mismatches
 rust-anything gate .     # fmt, clippy, tests, unsafe, API, diff
 ```
+
+## Saturation pressure cache (2026-11-23)
+
+`PsyPsatFnTemp` keeps the C++ `cached_Psat` table: 2^20 slots per thread, hashed by the low
+bits of the truncated temperature key, each starting with key `-1000` and result `0.0`, so a
+value asked for again is a lookup instead of an `exp` and a `ln`. The results are the same bits
+as before (a slot holds `PsyPsatFnTemp_raw` of its key); only a slot never written that is asked
+for key `-1000` returns `0.0`, as in the C++. After the change, 7844/7844 cases here still
+match, as do all cases of the three crates that use it (`solarpos-rs` 10812, `predhum-rs` 12512,
+`corrhum-rs` 12520). They got faster: zone predicted humidity load 0.83x to 1.25x, humidity
+ratio corrector 0.96x to 1.06x, sky emissivity 0.5x to 1.07x.

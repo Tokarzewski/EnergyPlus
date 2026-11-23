@@ -55,8 +55,7 @@ sizing reports.
   (`.rust-anything/driver_c.py record` and `diff`). All 12520/12520 match. The gate was run on a
   copy of this crate with the first 4000 cases (its `psychrometrics-rs` path made absolute):
   every check passes (behaviour 4000/4000) except size.
-- **Speed:** 0.96x, slightly slower: 56 ns per call against 54 ns for the C++, even though the
-  C++ figure includes the oracle's per-call setup. As for `predhum-rs`, the likely cause is that
-  the C++ caches saturation pressures, which `psychrometrics-rs` computes again. Timed by a
-  direct in-process loop over the recorded cases, both sides called through a C function
-  pointer, best of 15 interleaved runs.
+- **Speed:** 1.06x faster: 49 ns per call against 52 ns for the C++, whose figure includes the
+  oracle's per-call setup. It ran at 0.96x until `psychrometrics-rs` kept the same saturation
+  pressure cache as the C++ (2026-11-23). Timed by a direct in-process loop over the recorded cases, both sides called through a C
+  function pointer, best of 15 interleaved runs.
