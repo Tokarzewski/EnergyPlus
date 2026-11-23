@@ -1,0 +1,123 @@
+//! C ABI for `zonesums.c`: drop-in replacements with the original names and signatures, generated
+//! by rust-anything from `rust-anything.json`. All of the crate's `unsafe` code lives in this file.
+
+pub mod port;
+
+/// `double ZoneSums(int which, int corrector, int kind, int ndev, double cg1, double rg1, double cg2, double rg2, double cg3, double rg3, double radsys, double pool, int noheatret, double mcpi, double mcpti, double mcpv, double mcptv, double mcpm, double mcptm, double mcpe, double mcpte, double mcpc, double mcptc, double mdotcpoa, double outdb, double airhumrat, int ninlets, double m1, double t1, double m2, double t2, double m3, double t3, int hasadu, int upleak, double mup, double tup, int dnleak, double mdn, double tdn, int haspiu, double leak, double tpri, int hasnode, int mult, int listmult)` (`zonesums.c:8`).
+#[cfg(not(feature = "shadow"))]
+// SAFETY: exported under the C name it replaces: link it instead of the original object.
+#[unsafe(no_mangle)]
+pub extern "C" fn ZoneSums(
+    which: std::ffi::c_int,
+    corrector: std::ffi::c_int,
+    kind: std::ffi::c_int,
+    ndev: std::ffi::c_int,
+    cg1: f64,
+    rg1: f64,
+    cg2: f64,
+    rg2: f64,
+    cg3: f64,
+    rg3: f64,
+    radsys: f64,
+    pool: f64,
+    noheatret: std::ffi::c_int,
+    mcpi: f64,
+    mcpti: f64,
+    mcpv: f64,
+    mcptv: f64,
+    mcpm: f64,
+    mcptm: f64,
+    mcpe: f64,
+    mcpte: f64,
+    mcpc: f64,
+    mcptc: f64,
+    mdotcpoa: f64,
+    outdb: f64,
+    airhumrat: f64,
+    ninlets: std::ffi::c_int,
+    m1: f64,
+    t1: f64,
+    m2: f64,
+    t2: f64,
+    m3: f64,
+    t3: f64,
+    hasadu: std::ffi::c_int,
+    upleak: std::ffi::c_int,
+    mup: f64,
+    tup: f64,
+    dnleak: std::ffi::c_int,
+    mdn: f64,
+    tdn: f64,
+    haspiu: std::ffi::c_int,
+    leak: f64,
+    tpri: f64,
+    hasnode: std::ffi::c_int,
+    mult: std::ffi::c_int,
+    listmult: std::ffi::c_int,
+) -> f64 {
+    port::ZoneSums(
+        which, corrector, kind, ndev, cg1, rg1, cg2, rg2, cg3, rg3, radsys, pool, noheatret, mcpi,
+        mcpti, mcpv, mcptv, mcpm, mcptm, mcpe, mcpte, mcpc, mcptc, mdotcpoa, outdb, airhumrat,
+        ninlets, m1, t1, m2, t2, m3, t3, hasadu, upleak, mup, tup, dnleak, mdn, tdn, haspiu, leak,
+        tpri, hasnode, mult, listmult,
+    )
+}
+
+/// `ZoneSums` as `rust_anything_ZoneSums`, for shadow builds beside the original.
+// SAFETY: a name no C code defines.
+#[unsafe(no_mangle)]
+pub extern "C" fn rust_anything_ZoneSums(
+    which: std::ffi::c_int,
+    corrector: std::ffi::c_int,
+    kind: std::ffi::c_int,
+    ndev: std::ffi::c_int,
+    cg1: f64,
+    rg1: f64,
+    cg2: f64,
+    rg2: f64,
+    cg3: f64,
+    rg3: f64,
+    radsys: f64,
+    pool: f64,
+    noheatret: std::ffi::c_int,
+    mcpi: f64,
+    mcpti: f64,
+    mcpv: f64,
+    mcptv: f64,
+    mcpm: f64,
+    mcptm: f64,
+    mcpe: f64,
+    mcpte: f64,
+    mcpc: f64,
+    mcptc: f64,
+    mdotcpoa: f64,
+    outdb: f64,
+    airhumrat: f64,
+    ninlets: std::ffi::c_int,
+    m1: f64,
+    t1: f64,
+    m2: f64,
+    t2: f64,
+    m3: f64,
+    t3: f64,
+    hasadu: std::ffi::c_int,
+    upleak: std::ffi::c_int,
+    mup: f64,
+    tup: f64,
+    dnleak: std::ffi::c_int,
+    mdn: f64,
+    tdn: f64,
+    haspiu: std::ffi::c_int,
+    leak: f64,
+    tpri: f64,
+    hasnode: std::ffi::c_int,
+    mult: std::ffi::c_int,
+    listmult: std::ffi::c_int,
+) -> f64 {
+    port::ZoneSums(
+        which, corrector, kind, ndev, cg1, rg1, cg2, rg2, cg3, rg3, radsys, pool, noheatret, mcpi,
+        mcpti, mcpv, mcptv, mcpm, mcptm, mcpe, mcpte, mcpc, mcptc, mdotcpoa, outdb, airhumrat,
+        ninlets, m1, t1, m2, t2, m3, t3, hasadu, upleak, mup, tup, dnleak, mdn, tdn, haspiu, leak,
+        tpri, hasnode, mult, listmult,
+    )
+}
