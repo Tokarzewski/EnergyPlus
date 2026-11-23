@@ -96,6 +96,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 84 | Plant half-loop tank update | `halfloop-rs` | `HVACInterfaceManager.cc` (`UpdateHalfLoopInletTemp`: well-mixed half-loop tank, exact or steady solution over the time step, loop side inlet energy terms) | done | 13786/13786 | size waived (ADR-007); uses `fluidproperties-rs`; 1.42x; not yet: UpdatePlantLoopInterface, common pipes |
 | 85 | Plant loop interface update | `plantiface-rs` | `HVACInterfaceManager.cc` (`UpdatePlantLoopInterface` without a common pipe: inlet enthalpy, half-loop tank temperature, rotated convergence histories and tolerances, out-of-tolerance flag, flows passed across) | done | 13864/13864 | size waived (ADR-007); uses `halfloop-rs`; 1.65x (partly shim setup); not yet: common pipes |
 | 86 | Single common pipe update | `commonpipe-rs` | `HVACInterfaceManager.cc` (`UpdateCommonPipe` with `ManageSingleCommonPipe`: tank over the time step, primary or secondary recirculation, mixed inlet temperatures) | done | 13805/13805 | size waived (ADR-007); uses `halfloop-rs`; 5.97x flattered by shim node resets; not yet: two-way common pipe |
+| 87 | Two-way common pipe | `twowaypipe-rs` | `HVACInterfaceManager.cc` (`ManageTwoWayCommonPipe` with a constant speed primary pump: primary-to-secondary and leg flows, inlet temperatures, supply- or demand-led iterations) | done | 13829/13829 | size waived (ADR-007); 1.10x; not yet: variable speed primary pump |
 
 ## Next (plain-number leaf code, ADR-005)
 
