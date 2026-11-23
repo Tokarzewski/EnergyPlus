@@ -13,31 +13,31 @@
     reason = "the exports keep the oracle's plain signatures"
 )]
 
-const STEFAN_BOLTZMANN: f64 = 5.6697e-8; // `Constant::StefanBoltzmann`
+pub const STEFAN_BOLTZMANN: f64 = 5.6697e-8; // `Constant::StefanBoltzmann`
 
 /// The most surfaces a box zone has.
-const MAX: usize = 7;
+pub const MAX: usize = 7;
 
 /// An N by N `Array2D<Real64>`: row-major, 1-based, N at most `MAX`, kept on the stack.
 #[derive(Clone, Copy)]
-struct Mat {
-    n: usize,
-    v: [f64; MAX * MAX],
+pub struct Mat {
+    pub n: usize,
+    pub v: [f64; MAX * MAX],
 }
 
 impl Mat {
-    fn new(n: usize, x: f64) -> Self {
+    pub fn new(n: usize, x: f64) -> Self {
         Mat {
             n,
             v: [x; MAX * MAX],
         }
     }
 
-    fn at(&self, r: usize, c: usize) -> f64 {
+    pub fn at(&self, r: usize, c: usize) -> f64 {
         self.v[(r - 1) * self.n + (c - 1)]
     }
 
-    fn set(&mut self, r: usize, c: usize, x: f64) {
+    pub fn set(&mut self, r: usize, c: usize, x: f64) {
         self.v[(r - 1) * self.n + (c - 1)] = x;
     }
 
@@ -66,7 +66,7 @@ impl Mat {
 }
 
 #[derive(Clone, Copy, PartialEq)]
-enum Class {
+pub enum Class {
     Floor,
     Roof,
     Wall,
@@ -74,16 +74,25 @@ enum Class {
 }
 
 /// The oracle's box zone: the surfaces in `mask`, with areas, azimuths, tilts and emissivities.
-struct Zone {
-    n: usize,
-    class: [Class; MAX],
-    area: [f64; MAX],
-    azimuth: [f64; MAX],
-    tilt: [f64; MAX],
-    emiss: [f64; MAX],
+pub struct Zone {
+    pub n: usize,
+    pub class: [Class; MAX],
+    pub area: [f64; MAX],
+    pub azimuth: [f64; MAX],
+    pub tilt: [f64; MAX],
+    pub emiss: [f64; MAX],
 }
 
-fn zone(mask: i32, l: f64, w: f64, h: f64, mass: f64, rot: f64, e0: f64, de: f64) -> Option<Zone> {
+pub fn zone(
+    mask: i32,
+    l: f64,
+    w: f64,
+    h: f64,
+    mass: f64,
+    rot: f64,
+    e0: f64,
+    de: f64,
+) -> Option<Zone> {
     if !(1..=127).contains(&mask) {
         return None;
     }
@@ -120,7 +129,7 @@ fn zone(mask: i32, l: f64, w: f64, h: f64, mass: f64, rot: f64, e0: f64, de: f64
 }
 
 /// `CalcApproximateViewFactors` (`HeatBalanceIntRadExchange.cc:1487`).
-fn approximate_view_factors(z: &Zone) -> Mat {
+pub fn approximate_view_factors(z: &Zone) -> Mat {
     let n = z.n;
     let sees = |i: usize, j: usize| {
         let (ci, cj) = (z.class[i - 1], z.class[j - 1]);
@@ -151,17 +160,17 @@ fn approximate_view_factors(z: &Zone) -> Mat {
 
 /// What `FixViewFactors` reports besides the matrix.
 #[derive(Default)]
-struct FixChecks {
-    original: f64,
-    fixed: f64,
-    final_: f64,
-    iterations: i32,
-    row_sum: f64,
+pub struct FixChecks {
+    pub original: f64,
+    pub fixed: f64,
+    pub final_: f64,
+    pub iterations: i32,
+    pub row_sum: f64,
 }
 
 /// `FixViewFactors` (`HeatBalanceIntRadExchange.cc:1601`); `None` where the C++ stops with a
 /// fatal error.
-fn fix_view_factors(a: &[f64], f: &mut Mat) -> Option<FixChecks> {
+pub fn fix_view_factors(a: &[f64], f: &mut Mat) -> Option<FixChecks> {
     let n = a.len();
     let nf = n as f64;
     let at = |i: usize| a[i - 1];
@@ -337,7 +346,7 @@ fn matrix_inverse(a: &mut Mat) -> Mat {
 
 /// `CalcScriptF` (`HeatBalanceIntRadExchange.cc:1903`): the transposed ScriptF matrix; clips
 /// emissivities above 0.99999 as the C++ does.
-fn script_f(a: &[f64], f: &Mat, emiss: &mut [f64]) -> Mat {
+pub fn script_f(a: &[f64], f: &Mat, emiss: &mut [f64]) -> Mat {
     let n = a.len();
     let mut c = Mat::new(n, 0.0);
     for j in 1..=n {
@@ -378,7 +387,7 @@ fn script_f(a: &[f64], f: &Mat, emiss: &mut [f64]) -> Mat {
 }
 
 /// `CalcFMRT` (`HeatBalanceIntRadExchange.cc:2106`).
-fn fmrt(a: &[f64]) -> [f64; MAX] {
+pub fn fmrt(a: &[f64]) -> [f64; MAX] {
     let n = a.len();
     let mut f = [1.0; MAX];
     let mut sum_af = a.iter().fold(0.0, |s, &x| s + x);
