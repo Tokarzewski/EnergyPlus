@@ -23,7 +23,7 @@ thread_local! {
 
 /// `GlycolProps::getSpecificHeat` for water, which caches its results by temperature; this keeps
 /// the last one (the value is the table's either way).
-fn water_cp(t: f64) -> f64 {
+pub fn water_cp(t: f64) -> f64 {
     let key = t.to_bits();
     let (k, v) = CP_CACHE.get();
     if k == key {
@@ -41,7 +41,7 @@ fn within(v: f64, lo: f64, hi: f64) -> bool {
 
 /// The tank's average and final temperatures, inlet m cp dT, M cp dT/dt and the last time step's
 /// outlet temperature used.
-fn half_loop(
+pub fn half_loop(
     tank_inlet_temp: f64,
     mass_flow_rate: f64,
     pump_heat: f64,
