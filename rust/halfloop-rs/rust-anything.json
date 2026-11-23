@@ -1,0 +1,96 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/halfloop",
+  "unit": "halfloop.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "halfloop-rs",
+  "exports": [
+    {
+      "name": "HalfLoop",
+      "file": "halfloop.c",
+      "line": 8,
+      "params": [
+        {
+          "name": "which",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "side",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "newstep",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "tin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "mdot",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "pump",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "mass",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "last",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "prev",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "tssec",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double HalfLoop(int which, int side, int newstep, double tin, double mdot, double pump, double mass, double last, double prev, double tssec)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
