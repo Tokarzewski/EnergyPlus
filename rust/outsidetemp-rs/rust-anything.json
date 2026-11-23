@@ -1,0 +1,271 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/outsidetemp",
+  "unit": "outsidetemp.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "outsidetemp-rs",
+  "exports": [
+    {
+      "name": "OutsideSurfTemp",
+      "file": "outsidetemp.c",
+      "line": 8,
+      "params": [
+        {
+          "name": "which",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "cross0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "inside0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outside0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "srcout0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "srcin0",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "src",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "hconvint",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hconvext",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hairext",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hskyext",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hgrdext",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hsrdext",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "ctfout",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "ctfin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qswout",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qswin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qsrc",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "tempin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qaddout",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qintgains",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qnetlwin",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "mat",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "qswmvins",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hmov",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "text",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "skytemp",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "odb",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "hassrd",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "srdtemp",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "usegnd",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "gndtemp",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "osc",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "osctrad",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "oschrad",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double OutsideSurfTemp(int which, double cross0, double inside0, double outside0, double srcout0, double srcin0, int src, double hconvint, double hconvext, double hairext, double hskyext, double hgrdext, double hsrdext, double ctfout, double ctfin, double qswout, double qswin, double qsrc, double tempin, double qaddout, double qintgains, double qnetlwin, double mat, double qswmvins, double hmov, double text, double skytemp, double odb, int hassrd, double srdtemp, int usegnd, double gndtemp, int osc, double osctrad, double oschrad)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
