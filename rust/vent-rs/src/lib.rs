@@ -1,0 +1,121 @@
+//! C ABI for `vent.c`: drop-in replacements with the original names and signatures, generated
+//! by rust-anything from `rust-anything.json`. All of the crate's `unsafe` code lives in this file.
+
+pub mod port;
+
+/// `double Ventilation(int which, int nvent, int mod, int den, double avail, double dl, double c0, double ct, double cv, double cvv, int fantype, double fanp, double fane, double openarea, double openfrac, double openeff, double disc, double effangle, double dh, int scheds, double mint, double maxt, double minot, double maxot, double delt, double maxwind, int hybrid, int ems, double emsflow, int systs, double mat, double hum, double xmpt, double wprev, double outdb, double wind, double winddir, double outbaro, double outhum, double outenth, int linked, double linkedhum, double linkedenth, double stdrho, double tsyssec)` (`vent.c:8`).
+#[cfg(not(feature = "shadow"))]
+// SAFETY: exported under the C name it replaces: link it instead of the original object.
+#[unsafe(no_mangle)]
+pub extern "C" fn Ventilation(
+    which: std::ffi::c_int,
+    nvent: std::ffi::c_int,
+    r#mod: std::ffi::c_int,
+    den: std::ffi::c_int,
+    avail: f64,
+    dl: f64,
+    c0: f64,
+    ct: f64,
+    cv: f64,
+    cvv: f64,
+    fantype: std::ffi::c_int,
+    fanp: f64,
+    fane: f64,
+    openarea: f64,
+    openfrac: f64,
+    openeff: f64,
+    disc: f64,
+    effangle: f64,
+    dh: f64,
+    scheds: std::ffi::c_int,
+    mint: f64,
+    maxt: f64,
+    minot: f64,
+    maxot: f64,
+    delt: f64,
+    maxwind: f64,
+    hybrid: std::ffi::c_int,
+    ems: std::ffi::c_int,
+    emsflow: f64,
+    systs: std::ffi::c_int,
+    mat: f64,
+    hum: f64,
+    xmpt: f64,
+    wprev: f64,
+    outdb: f64,
+    wind: f64,
+    winddir: f64,
+    outbaro: f64,
+    outhum: f64,
+    outenth: f64,
+    linked: std::ffi::c_int,
+    linkedhum: f64,
+    linkedenth: f64,
+    stdrho: f64,
+    tsyssec: f64,
+) -> f64 {
+    port::Ventilation(
+        which, nvent, r#mod, den, avail, dl, c0, ct, cv, cvv, fantype, fanp, fane, openarea,
+        openfrac, openeff, disc, effangle, dh, scheds, mint, maxt, minot, maxot, delt, maxwind,
+        hybrid, ems, emsflow, systs, mat, hum, xmpt, wprev, outdb, wind, winddir, outbaro, outhum,
+        outenth, linked, linkedhum, linkedenth, stdrho, tsyssec,
+    )
+}
+
+/// `Ventilation` as `rust_anything_Ventilation`, for shadow builds beside the original.
+// SAFETY: a name no C code defines.
+#[unsafe(no_mangle)]
+pub extern "C" fn rust_anything_Ventilation(
+    which: std::ffi::c_int,
+    nvent: std::ffi::c_int,
+    r#mod: std::ffi::c_int,
+    den: std::ffi::c_int,
+    avail: f64,
+    dl: f64,
+    c0: f64,
+    ct: f64,
+    cv: f64,
+    cvv: f64,
+    fantype: std::ffi::c_int,
+    fanp: f64,
+    fane: f64,
+    openarea: f64,
+    openfrac: f64,
+    openeff: f64,
+    disc: f64,
+    effangle: f64,
+    dh: f64,
+    scheds: std::ffi::c_int,
+    mint: f64,
+    maxt: f64,
+    minot: f64,
+    maxot: f64,
+    delt: f64,
+    maxwind: f64,
+    hybrid: std::ffi::c_int,
+    ems: std::ffi::c_int,
+    emsflow: f64,
+    systs: std::ffi::c_int,
+    mat: f64,
+    hum: f64,
+    xmpt: f64,
+    wprev: f64,
+    outdb: f64,
+    wind: f64,
+    winddir: f64,
+    outbaro: f64,
+    outhum: f64,
+    outenth: f64,
+    linked: std::ffi::c_int,
+    linkedhum: f64,
+    linkedenth: f64,
+    stdrho: f64,
+    tsyssec: f64,
+) -> f64 {
+    port::Ventilation(
+        which, nvent, r#mod, den, avail, dl, c0, ct, cv, cvv, fantype, fanp, fane, openarea,
+        openfrac, openeff, disc, effangle, dh, scheds, mint, maxt, minot, maxot, delt, maxwind,
+        hybrid, ems, emsflow, systs, mat, hum, xmpt, wprev, outdb, wind, winddir, outbaro, outhum,
+        outenth, linked, linkedhum, linkedenth, stdrho, tsyssec,
+    )
+}
