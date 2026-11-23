@@ -91,6 +91,7 @@ Read first: [DECISIONS.md](DECISIONS.md) (ADR-001 to ADR-010), then [HANDOFF.md]
 | 79 | Plant node helpers | `plantnode-rs` | `PlantUtilities.cc` (`InitComponentNodes`, `SafeCopyPlantNode`, `BoundValueToNodeMinMaxAvail`, `TightenNodeMinMaxAvails`, `BoundValueToWithinTwoValues`, with ObjexxFCL min and max) | done | 14749/14749 | size waived (ADR-007); BoundTwo 1.07x; the others not comparable (shim node resets on the C++ side); not yet: fluid type copy |
 | 80 | Simple set point managers | `spmfollow-rs` | `SetPointManager.cc` (`SPMSingleZoneOneStageCooling`/`Heating`, `SPMSingleZoneHum`, `SPMOutsideAirPretreat`, `SPMFollowOutsideAirTemp`, `SPMFollowSysNodeTemp`) | done | 14748/14748 | size waived (ADR-007); 1.5x to 16x, flattered by the shim building a manager per call; not yet: the pretreat missing set point check, ground temperature, multizone managers |
 | 81 | Multizone set point managers | `mzspm-rs` | `SetPointManager.cc` (`SPMMultiZoneTemp`: heating and cooling average; `SPMMultiZoneHum`: minimum and maximum humidity, average or per zone) | done | 14284/14284 | size waived (ADR-007); uses `psychrometrics-rs`; level (0.87x to 1.10x) |
+| 82 | Return water and system node reset managers | `spmreturn-rs` | `SetPointManager.cc` (`SPMReturnWaterTemp`: chilled and hot water supply reset for a return target; `SPMSystemNode` with `interpSetPoint`) | done | 14032/14032 | size waived (ADR-007); RetWater 1.32x, SysNode 1.87x; not yet: the plant loop search and node check, the missing return set point fatal |
 
 ## Next (plain-number leaf code, ADR-005)
 
