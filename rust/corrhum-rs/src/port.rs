@@ -26,38 +26,38 @@ fn min(a: f64, b: f64) -> f64 {
 }
 
 /// The zone terms `correctHumRat` reads.
-struct Zone<'a> {
+pub struct Zone<'a> {
     /// The supply air inlets (mass flow, humidity ratio) of a controlled zone.
-    inlets: &'a [(f64, f64)],
-    zone_mult: i32,
-    zt: f64,
-    out_baro_press: f64,
-    air_hum_rat: f64,
-    latent_gain: f64,
-    sum_latent_ht_rad_sys: f64,
-    sum_latent_pool: f64,
-    time_step_sys_sec: f64,
-    oamfl: f64,
-    vamfl: f64,
-    ctmfl: f64,
-    eamfl: f64,
-    eamfl_x_hum_rat: f64,
-    sum_hm_a_ra_w: f64,
-    sum_hm_a_ra: f64,
-    mixing_mass_flow_x_hum_rat: f64,
-    mixing_mass_flow_zone: f64,
-    mdot_oa: f64,
-    out_hum_rat: f64,
-    volume: f64,
-    zone_vol_cap_multp_moist: f64,
-    algo: i32,
-    w_prev_zone_ts_temp: [f64; 3],
-    w1: f64,
+    pub inlets: &'a [(f64, f64)],
+    pub zone_mult: i32,
+    pub zt: f64,
+    pub out_baro_press: f64,
+    pub air_hum_rat: f64,
+    pub latent_gain: f64,
+    pub sum_latent_ht_rad_sys: f64,
+    pub sum_latent_pool: f64,
+    pub time_step_sys_sec: f64,
+    pub oamfl: f64,
+    pub vamfl: f64,
+    pub ctmfl: f64,
+    pub eamfl: f64,
+    pub eamfl_x_hum_rat: f64,
+    pub sum_hm_a_ra_w: f64,
+    pub sum_hm_a_ra: f64,
+    pub mixing_mass_flow_x_hum_rat: f64,
+    pub mixing_mass_flow_zone: f64,
+    pub mdot_oa: f64,
+    pub out_hum_rat: f64,
+    pub volume: f64,
+    pub zone_vol_cap_multp_moist: f64,
+    pub algo: i32,
+    pub w_prev_zone_ts_temp: [f64; 3],
+    pub w1: f64,
 }
 
 impl Zone<'_> {
     /// `correctHumRat`'s new `airHumRatTemp`; `None` where EnergyPlus stops on a fatal error.
-    fn correct_hum_rat(&self) -> Option<f64> {
+    pub fn correct_hum_rat(&self) -> Option<f64> {
         let zone_mult = f64::from(self.zone_mult);
         let mut moisture_mass_flow_rate = 0.0;
         let mut zone_mass_flow_rate = 0.0;

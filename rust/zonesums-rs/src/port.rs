@@ -18,7 +18,7 @@ use psychrometrics_rs::port::PsyCpAirFnW;
 
 /// The zone's kind of system air flow.
 #[derive(Clone, Copy, PartialEq)]
-enum Kind {
+pub enum Kind {
     Uncontrolled,
     Controlled,
     ReturnPlenum,
@@ -27,65 +27,65 @@ enum Kind {
 
 /// An internal gain device: convective and return air convective gain rates (W).
 #[derive(Clone, Copy)]
-struct Device {
-    convect_gain_rate: f64,
-    return_air_conv_gain_rate: f64,
+pub struct Device {
+    pub convect_gain_rate: f64,
+    pub return_air_conv_gain_rate: f64,
 }
 
 /// A node's mass flow rate (kg/s) and temperature (C).
 #[derive(Clone, Copy)]
-struct Node {
-    mass_flow_rate: f64,
-    temp: f64,
+pub struct Node {
+    pub mass_flow_rate: f64,
+    pub temp: f64,
 }
 
 /// An air distribution unit leaking to the return plenum.
-struct AirDistUnit {
-    up_stream_leak: bool,
-    mass_flow_rate_up_str_lk: f64,
-    inlet_temp: f64,
-    down_stream_leak: bool,
-    mass_flow_rate_dn_str_lk: f64,
-    outlet_temp: f64,
+pub struct AirDistUnit {
+    pub up_stream_leak: bool,
+    pub mass_flow_rate_up_str_lk: f64,
+    pub inlet_temp: f64,
+    pub down_stream_leak: bool,
+    pub mass_flow_rate_dn_str_lk: f64,
+    pub outlet_temp: f64,
 }
 
 /// A parallel PIU's backdraft damper leakage (kg/s) and its primary air inlet temperature (C).
-struct Piu {
-    leak_flow: f64,
-    pri_air_in_temp: f64,
+pub struct Piu {
+    pub leak_flow: f64,
+    pub pri_air_in_temp: f64,
 }
 
 /// The zone, its space's gain devices and the heat balance terms the sums start from.
-struct Zone<'a> {
-    devices: &'a [Device],
-    sum_conv_ht_rad_sys: f64,
-    sum_conv_pool: f64,
-    no_heat_to_return_air: bool,
+pub struct Zone<'a> {
+    pub devices: &'a [Device],
+    pub sum_conv_ht_rad_sys: f64,
+    pub sum_conv_pool: f64,
+    pub no_heat_to_return_air: bool,
     /// MCPI, MCPV, MCPM, MCPE, MCPC.
-    mcp: [f64; 5],
+    pub mcp: [f64; 5],
     /// MCPTI, MCPTV, MCPTM, MCPTE, MCPTC.
-    mcpt: [f64; 5],
-    mdot_cp_oa: f64,
-    out_dry_bulb_temp: f64,
-    air_hum_rat: f64,
-    kind: Kind,
+    pub mcpt: [f64; 5],
+    pub mdot_cp_oa: f64,
+    pub out_dry_bulb_temp: f64,
+    pub air_hum_rat: f64,
+    pub kind: Kind,
     /// The first `ninlets` inlet nodes.
-    inlets: &'a [Node],
+    pub inlets: &'a [Node],
     /// All three inlet nodes (the supply plenum reads the first whatever the inlet count).
-    inlets_all: &'a [Node; 3],
-    adu: Option<AirDistUnit>,
-    piu: Option<Piu>,
-    has_system_node: bool,
-    zone_mult: i32,
+    pub inlets_all: &'a [Node; 3],
+    pub adu: Option<AirDistUnit>,
+    pub piu: Option<Piu>,
+    pub has_system_node: bool,
+    pub zone_mult: i32,
 }
 
 /// The sums calcZoneOrSpaceSums sets.
-struct Sums {
-    sum_int_gain: f64,
-    sum_mcp: f64,
-    sum_mcp_t: f64,
-    sum_sys_mcp: f64,
-    sum_sys_mcp_t: f64,
+pub struct Sums {
+    pub sum_int_gain: f64,
+    pub sum_mcp: f64,
+    pub sum_mcp_t: f64,
+    pub sum_sys_mcp: f64,
+    pub sum_sys_mcp_t: f64,
 }
 
 /// `InternalHeatGains::zoneSumAllInternalConvectionGains` for the zone's one space.
@@ -115,7 +115,7 @@ fn zone_sum_all_return_air_convection_gains(devices: &[Device]) -> f64 {
 }
 
 /// `calcZoneOrSpaceSums` for the zone (`spaceNum` 0).
-fn calc_zone_or_space_sums(z: &Zone, corrector_flag: bool) -> Sums {
+pub fn calc_zone_or_space_sums(z: &Zone, corrector_flag: bool) -> Sums {
     let mut sum_sys_mcp = 0.0;
     let mut sum_sys_mcp_t = 0.0;
     let mut sum_int_gain = zone_sum_all_internal_convection_gains(z.devices);
