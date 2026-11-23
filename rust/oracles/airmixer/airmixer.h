@@ -1,0 +1,7 @@
+// Written by hand alongside shim/ep_airmixer_shim.cc.
+#ifndef EP_AIRMIXER_H
+#define EP_AIRMIXER_H
+
+double AirMixer(int which, int n, double m1, double maxav1, double minav1, double t1, double w1, double h1, double p1, double f1, double m2, double maxav2, double minav2, double t2, double w2, double h2, double p2, double f2, double m3, double maxav3, double minav3, double t3, double w3, double h3, double p3, double f3, double m4, double maxav4, double minav4, double t4, double w4, double h4, double p4, double f4);
+
+#endif
