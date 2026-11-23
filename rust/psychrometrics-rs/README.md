@@ -62,3 +62,18 @@ for key `-1000` returns `0.0`, as in the C++. After the change, 7844/7844 cases 
 match, as do all cases of the three crates that use it (`solarpos-rs` 10812, `predhum-rs` 12512,
 `corrhum-rs` 12520). They got faster: zone predicted humidity load 0.83x to 1.25x, humidity
 ratio corrector 0.96x to 1.06x, sky emissivity 0.5x to 1.07x.
+
+## Wet bulb and saturation temperature caches (2026-11-23)
+
+`PsyTwbFnTdbWPb` and `PsyTsatFnPb` keep the C++ `cached_Twb` and `cached_Tsat` tables the same
+way: 2^20 slots per thread each, hashed as the C++ does (the three truncated keys XORed for
+the wet bulb, the truncated pressure key for the saturation temperature), every slot starting
+with keys `0` and result `0.0`. Like the C++, a wet bulb slot holds `PsyTwbFnTdbWPb_raw` of the
+truncated inputs, and a saturation temperature slot holds `PsyTsatFnPb_raw` of the pressure
+that first filled it. Before, the wet bulb solve and the saturation temperature iteration ran
+on every call, so the zone mean air temperatures (unit 53) ran at 0.10x. After the change,
+7844/7844 cases here still match, as do all cases of the crates that reach these functions
+(`meanair-rs` 12884, `resilience-rs` 12642). Mean air temperatures now run at 1.99x and the
+zone heat index and humidex at 2.39x (2.07x before). The three caches, the saturation pressure
+one included, share one lookup (`cached`), which keeps the port at 607 lines for 186 lines of C
+(3.3x, inside the gate's limit of three times plus 50).

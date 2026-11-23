@@ -188,21 +188,21 @@ pub fn PsyRhFnTdbRhovLBnd0C(Tdb: f64, Rhovapor: f64) -> f64 {
 
 /// Port of `double PsyTwbFnTdbWPb(double TDB, double dW, double Patm)` (`psychrometrics.c:109`).
 ///
-/// The cached variant: each input keeps its top 32 bits, and `_raw` runs on those truncated
-/// values. A cache slot starts with all-zero keys and a result of `0.0`.
+/// The cached variant, with the C++ `cached_Twb` table: each input keeps its top 32 bits, the
+/// slot is the XOR of the three keys, and `_raw` runs on the truncated values; a slot still
+/// holding its initial all-zero keys returns `0.0`.
 pub fn PsyTwbFnTdbWPb(TDB: f64, dW: f64, Patm: f64) -> f64 {
     const GRID_SHIFT: u32 = 64 - 12 - 20;
-    let tdb_tag = TDB.to_bits() >> GRID_SHIFT;
-    let w_tag = dW.to_bits() >> GRID_SHIFT;
-    let pb_tag = Patm.to_bits() >> GRID_SHIFT;
-    if tdb_tag == 0 && w_tag == 0 && pb_tag == 0 {
-        return 0.0;
-    }
-    PsyTwbFnTdbWPb_raw(
-        f64::from_bits(tdb_tag << GRID_SHIFT),
-        f64::from_bits(w_tag << GRID_SHIFT),
-        f64::from_bits(pb_tag << GRID_SHIFT),
-    )
+    let key = (
+        TDB.to_bits() >> GRID_SHIFT,
+        dW.to_bits() >> GRID_SHIFT,
+        Patm.to_bits() >> GRID_SHIFT,
+    );
+    let hash = (key.0 ^ (key.1 ^ key.2)) as usize & (CACHE_SIZE - 1);
+    let untag = |t: u64| f64::from_bits(t << GRID_SHIFT);
+    cached(&CACHED_TWB, (0, 0, 0), hash, key, || {
+        PsyTwbFnTdbWPb_raw(untag(key.0), untag(key.1), untag(key.2))
+    })
 }
 
 /// Port of `double PsyTwbFnTdbWPb_raw(double TDB, double dW, double Patm)` (`psychrometrics.c:114`).
@@ -270,42 +270,57 @@ pub fn PsyWFnTdbH(TDB: f64, H: f64) -> f64 {
     w
 }
 
-/// `psatcache_size`: the slots of the C++ `cached_Psat` table.
-const PSATCACHE_SIZE: usize = 1024 * 1024;
-/// `psatcache_mask`.
-const PSATCACHE_MASK: i64 = PSATCACHE_SIZE as i64 - 1;
+/// The slots of each C++ cache table (`psatcache_size`, `twbcache_size`, `tsatcache_size`).
+const CACHE_SIZE: usize = 1024 * 1024;
+
+/// A cache table: per slot, the key and the result, filled on the first call on each thread with
+/// the C++ default slot (`empty`, `0.0`).
+type Table<K> = std::thread::LocalKey<std::cell::RefCell<Vec<(K, f64)>>>;
+
+/// The `cached_Twb` key: the top bits of `TDB`, `dW` and `Patm`.
+type TwbKey = (u64, u64, u64);
 
 thread_local! {
-    /// `PsychCacheData::cached_Psat`: per slot, the key (`iTdb`) and the result (`Psat`). Every
-    /// slot starts as the C++ default `cached_psat_t`, key `-1000` and result `0.0`; the table is
-    /// filled on the first call on each thread.
+    /// `cached_Psat`, keyed by `iTdb`; slots start at key `-1000`.
     static CACHED_PSAT: std::cell::RefCell<Vec<(i64, f64)>> = const { std::cell::RefCell::new(Vec::new()) };
+    /// `cached_Twb`, keyed by (`iTdb`, `iW`, `iPb`); slots start at keys `0`.
+    static CACHED_TWB: std::cell::RefCell<Vec<(TwbKey, f64)>> = const { std::cell::RefCell::new(Vec::new()) };
+    /// `cached_Tsat`, keyed by `iPb`; slots start at key `0`.
+    static CACHED_TSAT: std::cell::RefCell<Vec<(i64, f64)>> = const { std::cell::RefCell::new(Vec::new()) };
+}
+
+/// The C++ cache lookup: slot `hash` returns its result when its key is
+/// `key`, and otherwise is refilled with `key` and `compute()`.
+fn cached<K: Copy + PartialEq>(
+    table: &'static Table<K>,
+    empty: K,
+    hash: usize,
+    key: K,
+    compute: impl FnOnce() -> f64,
+) -> f64 {
+    table.with_borrow_mut(|cache| {
+        // A no-op once the table is full.
+        cache.resize(CACHE_SIZE, (empty, 0.0));
+        let Some(slot) = cache.get_mut(hash) else {
+            return compute();
+        };
+        if slot.0 != key {
+            *slot = (key, compute());
+        }
+        slot.1
+    })
 }
 
 /// Port of `double PsyPsatFnTemp(double T)` (`psychrometrics.c:129`).
 ///
-/// The cached variant: `T` keeps its top 36 bits and `_raw` runs on the truncated value. Like the
-/// C++, the result is kept in a table of 2^20 slots hashed by the low bits of that key, so a value
-/// asked for again costs a lookup; a slot still holding its initial key `-1000` returns `0.0`.
+/// The cached variant, with the C++ `cached_Psat` table: `T` keeps its top 36 bits and `_raw`
+/// runs on the truncated value; a slot still holding its initial key `-1000` returns `0.0`.
 pub fn PsyPsatFnTemp(T: f64) -> f64 {
     const GRID_SHIFT: u32 = 64 - 12 - 24;
     let tdb_tag = tag_i64(T, GRID_SHIFT);
-    // The mask keeps the hash in 0..PSATCACHE_SIZE, so the conversion and the slot always exist.
-    let hash = usize::try_from(tdb_tag & PSATCACHE_MASK).unwrap_or(0);
-    CACHED_PSAT.with(|cache| {
-        let mut cache = cache.borrow_mut();
-        if cache.is_empty() {
-            *cache = vec![(-1000, 0.0); PSATCACHE_SIZE];
-        }
-        match cache.get_mut(hash) {
-            Some(slot) => {
-                if slot.0 != tdb_tag {
-                    *slot = (tdb_tag, PsyPsatFnTemp_raw(untag_i64(tdb_tag, GRID_SHIFT)));
-                }
-                slot.1
-            }
-            None => PsyPsatFnTemp_raw(untag_i64(tdb_tag, GRID_SHIFT)),
-        }
+    let hash = (tdb_tag & (CACHE_SIZE as i64 - 1)) as usize;
+    cached(&CACHED_PSAT, -1000, hash, tdb_tag, || {
+        PsyPsatFnTemp_raw(untag_i64(tdb_tag, GRID_SHIFT))
     })
 }
 
@@ -594,14 +609,14 @@ pub fn PsyHFnTdbRhPb(TDB: f64, RH: f64, PB: f64) -> f64 {
 
 /// Port of `double PsyTsatFnPb(double Press)` (`psychrometrics.c:184`).
 ///
-/// The cached variant: the key is the input's top 36 bits, but `_raw` runs on the input as given.
-/// A cache slot starts with the key `0` and a result of `0.0`.
+/// The cached variant, with the C++ `cached_Tsat` table and the default `tsatprecision_bits` of
+/// 24: `Press` keeps its top 36 bits as the key, and a slot whose key differs is filled with
+/// `_raw` of the untruncated `Press`; a slot still holding its initial key `0` returns `0.0`.
 pub fn PsyTsatFnPb(Press: f64) -> f64 {
     const GRID_SHIFT: u32 = 64 - 12 - 24;
-    if tag_i64(Press, GRID_SHIFT) == 0 {
-        return 0.0;
-    }
-    PsyTsatFnPb_raw(Press)
+    let pb_tag = tag_i64(Press, GRID_SHIFT);
+    let hash = (pb_tag & (CACHE_SIZE as i64 - 1)) as usize;
+    cached(&CACHED_TSAT, 0, hash, pb_tag, || PsyTsatFnPb_raw(Press))
 }
 
 /// Port of `double PsyTsatFnPb_raw(double Press)` (`psychrometrics.c:189`).
@@ -712,14 +727,25 @@ mod tests {
     }
 
     #[test]
-    fn psat_cache_returns_the_same_bits_on_a_hit() {
-        let t: f64 = 23.456;
-        let first = PsyPsatFnTemp(t);
-        assert_eq!(PsyPsatFnTemp(t).to_bits(), first.to_bits());
+    fn caches_return_the_same_bits_on_a_hit() {
+        let first = PsyPsatFnTemp(23.456);
         // Another key on the same slot replaces it, and the first comes back unchanged.
-        let other = f64::from_bits(t.to_bits() + ((PSATCACHE_SIZE as u64) << 28));
+        let other = f64::from_bits(23.456_f64.to_bits() + ((CACHE_SIZE as u64) << 28));
         assert_ne!(PsyPsatFnTemp(other).to_bits(), first.to_bits());
-        assert_eq!(PsyPsatFnTemp(t).to_bits(), first.to_bits());
+        assert_eq!(PsyPsatFnTemp(23.456).to_bits(), first.to_bits());
+        let twb = PsyTwbFnTdbWPb(25.0, 0.01, 101325.0);
+        assert_eq!(
+            PsyTwbFnTdbWPb(25.0, 0.01, 101325.0).to_bits(),
+            twb.to_bits()
+        );
+        assert_eq!(
+            PsyTsatFnPb(1200.0).to_bits(),
+            PsyTsatFnPb_raw(1200.0).to_bits()
+        );
+        assert_eq!(
+            PsyTsatFnPb(1200.0).to_bits(),
+            PsyTsatFnPb_raw(1200.0).to_bits()
+        );
     }
 
     #[test]

@@ -46,7 +46,7 @@ Not ported yet: setting up the output variables on the first call.
   crate's own driver (`.rust-anything/driver_c.py record` and `diff`). All 12642/12642 match. The
   gate was run on a copy of this crate with the first 4000 cases (its path dependencies made
   absolute): every check passes (behaviour 4000/4000) except size.
-- **Speed:** 2.07x faster: 2.2 us per call against 4.6 us for the C++, both dominated by the
-  extended heat index's root solving. Timed by a direct in-process loop over the recorded cases,
-  both sides called through a C function pointer, best of 15 interleaved runs (four runs gave
-  1.96x to 2.12x).
+- **Speed:** 2.39x faster: 1.9 us per call against 4.5 us for the C++, both dominated by the
+  extended heat index's root solving. It ran at 2.07x until `psychrometrics-rs` kept the same
+  saturation temperature cache as the C++ (2026-11-23). Timed by a direct in-process loop over
+  the recorded cases, both sides called through a C function pointer, best of 15 interleaved runs.
