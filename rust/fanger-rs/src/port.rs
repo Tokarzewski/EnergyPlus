@@ -33,15 +33,15 @@ fn max(a: f64, b: f64) -> f64 {
 }
 
 /// What `CalcFangerPMV` returns and leaves in the state.
-struct Pmv {
-    pmv: f64,
-    clo_surf_temp: f64,
-    iter_num: i32,
-    hc: f64,
+pub struct Pmv {
+    pub pmv: f64,
+    pub clo_surf_temp: f64,
+    pub iter_num: i32,
+    pub hc: f64,
 }
 
 /// `CalcFangerPMV`.
-fn calc_fanger_pmv(
+pub fn calc_fanger_pmv(
     air_temp: f64,
     rad_temp: f64,
     rel_hum: f64,
@@ -110,31 +110,31 @@ fn calc_fanger_pmv(
 }
 
 /// What `CalcStandardEffectiveTemp` returns and leaves in the state.
-struct Set {
-    set: f64,
-    eff_temp: f64,
-    skin_temp: f64,
-    core_temp: f64,
-    skin_wet_tot: f64,
-    dry_heat_loss_set: f64,
+pub struct Set {
+    pub set: f64,
+    pub eff_temp: f64,
+    pub skin_temp: f64,
+    pub core_temp: f64,
+    pub skin_wet_tot: f64,
+    pub dry_heat_loss_set: f64,
 }
 
 /// A person's surroundings and state, as `CalcStandardEffectiveTemp` takes them: air and mean
 /// radiant temperatures (C), relative humidity (0 to 1), air velocity (m/s), activity (met),
 /// clothing (clo) and work efficiency (W/m2).
 #[derive(Clone, Copy)]
-struct Person {
-    air_temp: f64,
-    rad_temp: f64,
-    rel_hum: f64,
-    air_vel: f64,
-    act_met: f64,
-    clo_unit: f64,
-    work_eff: f64,
+pub struct Person {
+    pub air_temp: f64,
+    pub rad_temp: f64,
+    pub rel_hum: f64,
+    pub air_vel: f64,
+    pub act_met: f64,
+    pub clo_unit: f64,
+    pub work_eff: f64,
 }
 
 /// `CalcStandardEffectiveTemp`, at outdoor barometric pressure `out_baro_press`.
-fn calc_standard_effective_temp(out_baro_press: f64, person: Person) -> Set {
+pub fn calc_standard_effective_temp(out_baro_press: f64, person: Person) -> Set {
     let Person {
         air_temp,
         rad_temp,
