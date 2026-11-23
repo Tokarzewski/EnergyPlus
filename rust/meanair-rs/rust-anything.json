@@ -1,0 +1,96 @@
+{
+  "schema": "rust-anything/bridge@1",
+  "root": "/home/bart/github/EnergyPlus/rust/oracles/meanair",
+  "unit": "meanair.c",
+  "language": "c",
+  "kind": "c-abi",
+  "crate_name": "meanair-rs",
+  "exports": [
+    {
+      "name": "MeanAirTemps",
+      "file": "meanair.c",
+      "line": 8,
+      "params": [
+        {
+          "name": "which",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "ztav",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "w",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "mrt",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "outbaro",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "anyop",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "controlled",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "opctrl",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        },
+        {
+          "name": "frac",
+          "ts_type": "number",
+          "optional": false,
+          "rest": false,
+          "native_type": "double"
+        },
+        {
+          "name": "wbgt",
+          "ts_type": "int",
+          "optional": false,
+          "rest": false,
+          "native_type": "int"
+        }
+      ],
+      "returns": "number",
+      "is_async": false,
+      "is_generator": false,
+      "type_params": [],
+      "uses_instanceof": false,
+      "native_return": "double",
+      "prototype": "double MeanAirTemps(int which, double ztav, double w, double mrt, double outbaro, int anyop, int controlled, int opctrl, double frac, int wbgt)"
+    }
+  ],
+  "classes": [],
+  "js_only": []
+}
