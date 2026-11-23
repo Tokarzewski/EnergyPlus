@@ -1,0 +1,7 @@
+// Written by hand alongside shim/ep_shadowinterior_shim.cc.
+#ifndef EP_SHADOWINTERIOR_H
+#define EP_SHADOWINTERIOR_H
+
+double ShadowInterior(int which, int algo, int nvr, double rx1, double ry1, double rz1, double rx2, double ry2, double rz2, double rx3, double ry3, double rz3, double rx4, double ry4, double rz4, int ncast, int nv1, double c1x1, double c1y1, double c1z1, double c1x2, double c1y2, double c1z2, double c1x3, double c1y3, double c1z3, double c1x4, double c1y4, double c1z4, double q1, double t1, int nv2, double c2x1, double c2y1, double c2z1, double c2x2, double c2y2, double c2z2, double c2x3, double c2y3, double c2z3, double c2x4, double c2y4, double c2z4, double q2, double t2, int nback, int nb1, double b1x1, double b1y1, double b1z1, double b1x2, double b1y2, double b1z2, double b1x3, double b1y3, double b1z3, double b1x4, double b1y4, double b1z4, double p1, int nb2, double b2x1, double b2y1, double b2z1, double b2x2, double b2y2, double b2z2, double b2x3, double b2y3, double b2z3, double b2x4, double b2y4, double b2z4, double p2, int nvw, double wx1, double wy1, double wx2, double wy2, double wx3, double wy3, double wx4, double wy4, double rev, double warea, double wgross, double tdiff, int ebc, double gfrac, int b2base, double ox, double oy, double oz, double lxx, double lxy, double lxz, double lyx, double lyy, double lyz, double lzx, double lzy, double lzz, double sx, double sy, double sz, double area);
+
+#endif

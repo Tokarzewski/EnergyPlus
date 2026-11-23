@@ -1,0 +1,260 @@
+"""Inputs for SHADOW with one receiving surface, one or two shadowing surfaces, up to two back
+surfaces and one window on the receiving surface, which mostly transmits, so
+CalcInteriorSolarOverlaps finds how much of it sends beam to each back surface: building-like
+scenes in world coordinates, in metres. The
+receiving surface and the casters are drawn as in unit 31's inputs. The window or door is a
+rectangle (or a triangle) inside the receiving surface, near its edges or filling it, given in
+the receiving plane as ShadeV holds it (rounded to 0.1 mm, as SurfaceGeometry rounds it), with
+no reveal or a reveal of 2 cm to 40 cm (sometimes deeper than the window is wide, so the reveal
+shades all of it). The back surfaces are the zone's other walls, floor and ceiling behind the
+receiving surface: the opposite wall, the floor or ceiling and the side walls (sharing an edge
+with the receiving surface, so their projected vertices fall on or within a few tenths of a
+millimetre of the receiving ones), a smaller or offset wall, and a wall far off to the side. Their
+sun cosines are mostly negative (the sun comes in through the receiving surface), sometimes at or
+just past -SunIsUpValue or positive, which skips them. In a quarter of the scenes back surface 6
+is a window in back surface 5 (the opposite wall), whose overlap area is taken off the wall's. The
+window's diffuse transmittance is mostly 0.4 to 0.9 (sometimes 0: opaque, no overlaps), its
+glazed fraction mostly 1 (sometimes 0.7 to 1), and the receiving surface is sometimes interzone
+(ExtBoundCond 1), which takes the simple distribution. The receiving surface's net area leaves
+the window out. Each scene is asked
+for both sunlit areas, the sunlit fraction without reveal, the reveal status, the overlap status,
+the figure pointers, every figure's vertex count, area, transmittance and back surface number,
+the overlap pointers and the first three back surface overlaps, and several figure
+vertices. 150 more scenes have the sun in front, two back surfaces and a window that
+transmits, and are asked only for the areas, pointers and overlaps.
+Usage: python3 real_inputs.py > real-inputs.jsonl"""
+
+import json
+import math
+import random
+
+rng = random.Random(20261223)
+
+
+def out(*args):
+    print(json.dumps({"fn": "ShadowInterior", "args": list(args)}))
+
+
+def add(*vs):
+    return tuple(sum(c) for c in zip(*vs))
+
+
+def mul(k, v):
+    return tuple(k * c for c in v)
+
+
+def frame(az, tilt):
+    """lcsx, lcsy, lcsz of a surface with outward normal at azimuth az and tilt (degrees)."""
+    a, t = math.radians(az), math.radians(tilt)
+    n = (math.sin(a) * math.sin(t), math.cos(a) * math.sin(t), math.cos(t))
+    lx = (math.cos(a), -math.sin(a), 0.0)
+    ly = (n[1] * lx[2] - n[2] * lx[1], n[2] * lx[0] - n[0] * lx[2], n[0] * lx[1] - n[1] * lx[0])
+    return lx, ly, n
+
+
+def maybe_grid(v):
+    return tuple(round(c, 2) for c in v) if rng.random() < 0.3 else v
+
+
+def pad(vs):
+    q = list(vs) + [(0.0, 0.0, 0.0)] * (4 - len(vs))
+    return [c for v in q for c in v]
+
+
+def scene():
+    az = rng.choice([0.0, 90.0, 180.0, 270.0, rng.uniform(0, 360)])
+    tilt = rng.choice([90.0, 90.0, 0.0, 30.0, rng.uniform(5, 175)])
+    lx, ly, lz = frame(az, tilt)
+    w = rng.choice([1.0, 2.5, 4.0, rng.uniform(0.3, 8.0)])
+    h = rng.choice([1.0, 2.7, 3.0, rng.uniform(0.3, 6.0)])
+    p = maybe_grid((rng.uniform(-10, 10), rng.uniform(-10, 10), rng.uniform(0, 10)))
+    at = lambda x, y, d=0.0: add(p, mul(x, lx), mul(y, ly), mul(d, lz))  # noqa: E731
+    if rng.random() < 0.15:  # triangular receiving surface
+        recv = [at(0, h), at(0, 0), at(w, 0)]
+    else:
+        recv = [at(0, h), at(0, 0), at(w, 0), at(w, h)]
+    return recv, at, w, h, p, (lx, ly, lz), w * h if len(recv) == 4 else w * h / 2
+
+
+def caster(at, w, h):
+    k = rng.randrange(9)
+    if k == 0:  # overhang along the top edge
+        x0, x1 = rng.uniform(-0.5, 0.3) * w, rng.uniform(0.7, 1.5) * w
+        e, dep = rng.choice([0.0, 0.0, rng.uniform(0, 0.5)]), rng.uniform(0.2, 2.0)
+        cast = [at(x0, h + e, dep), at(x0, h + e, 0), at(x1, h + e, 0), at(x1, h + e, dep)]
+    elif k == 1:  # side fin
+        x = rng.choice([0.0, w, rng.uniform(-0.5, 1.5) * w])
+        dep = rng.uniform(0.2, 2.0)
+        y0, y1 = rng.uniform(-0.5, 0.2) * h, rng.uniform(0.8, 1.5) * h
+        cast = [at(x, y1, 0), at(x, y0, 0), at(x, y0, dep), at(x, y1, dep)]
+    elif k == 2:  # wall in front, parallel
+        d = rng.uniform(0.5, 6.0)
+        x0, y0 = rng.uniform(-1, 0.8) * w, rng.uniform(-1, 0.8) * h
+        cw, ch = rng.uniform(0.2, 1.5) * w, rng.uniform(0.2, 1.5) * h
+        cast = [at(x0, y0 + ch, d), at(x0 + cw, y0 + ch, d), at(x0 + cw, y0, d), at(x0, y0, d)]
+    elif k == 3:  # tilted panel in front
+        d0, d1 = rng.uniform(0.2, 3), rng.uniform(0.2, 3)
+        x0, x1 = rng.uniform(-1, 0.5) * w, rng.uniform(0.5, 2) * w
+        y0, y1 = rng.uniform(-1, 0.5) * h, rng.uniform(0.5, 2) * h
+        cast = [at(x0, y1, d1), at(x0, y0, d0), at(x1, y0, d0), at(x1, y1, d1)]
+    elif k == 4:  # triangle in front
+        cast = [at(rng.uniform(-1, 2) * w, rng.uniform(-1, 2) * h, rng.uniform(0.1, 4)) for _ in range(3)]
+    elif k == 5:  # crossing the receiving plane
+        x0, x1 = rng.uniform(-1, 0.5) * w, rng.uniform(0.5, 2) * w
+        y0, y1 = rng.uniform(-1, 0.5) * h, rng.uniform(0.5, 2) * h
+        ds = [rng.uniform(-2, 2) for _ in range(4)]
+        if rng.random() < 0.3:
+            ds[rng.randrange(4)] = 0.0  # one vertex on the plane
+        cast = [at(x0, y1, ds[0]), at(x0, y0, ds[1]), at(x1, y0, ds[2]), at(x1, y1, ds[3])]
+    elif k == 6:  # wholly behind the plane, or lying in it
+        d = rng.choice([-rng.uniform(0.1, 3), 0.0])
+        cast = [at(0.2 * w, 0.8 * h, d), at(0.2 * w, 0.2 * h, d), at(0.8 * w, 0.2 * h, d), at(0.8 * w, 0.8 * h, d)]
+    elif k == 7:  # attached at the corners: shadow vertices on the receiving ones
+        dep = rng.uniform(0.1, 1.5)
+        cast = [at(0, h, 0), at(w, h, 0), at(w, h, dep), at(0, h, dep)]
+        if rng.random() < 0.5:
+            cast = [at(0, 0, 0), at(0, h, 0), at(0, h, dep), at(0, 0, dep)]
+    else:  # far away: no overlap
+        d = rng.uniform(0.5, 3)
+        cast = [at(3 * w, 3 * h, d), at(3 * w, 2 * h, d), at(4 * w, 2 * h, d), at(4 * w, 3 * h, d)]
+    if rng.random() < 0.5:
+        cast = cast[::-1]
+    return [maybe_grid(v) for v in cast]
+
+
+def sun(frm):
+    lx, ly, lz = frm
+    k = rng.randrange(10)
+    if k == 0:  # in the receiving plane: no projection
+        a = rng.uniform(0, 2 * math.pi)
+        return add(mul(math.cos(a), lx), mul(math.sin(a), ly))
+    if k == 1:  # from behind
+        a, b = rng.uniform(0, 2 * math.pi), rng.uniform(0.3, 1.0)
+        s = add(mul(-b, lz), mul(math.sqrt(1 - b * b) * math.cos(a), lx), mul(math.sqrt(1 - b * b) * math.sin(a), ly))
+        return s
+    if k == 2:  # normal to the surface
+        return lz
+    # in front, at least 15 degrees above the plane (so the projection stays under 4)
+    a, b = rng.uniform(0, 2 * math.pi), rng.uniform(math.sin(math.radians(15)), 1.0)
+    if k == 3:
+        b = rng.uniform(0.01, 0.2)  # low: often past the guard
+    c = math.sqrt(max(0.0, 1 - b * b))
+    return add(mul(b, lz), mul(c * math.cos(a), lx), mul(c * math.sin(a), ly))
+
+
+def window(w, h):
+    """A window or door in the receiving plane, with its net and gross areas."""
+    k = rng.randrange(5)
+    if k == 0:  # fills the receiving surface
+        x0, y0, ww, hh = 0.0, 0.0, w, h
+    elif k == 1:  # door at the bottom edge
+        ww, hh = min(w, rng.uniform(0.8, 1.2)), min(h, rng.uniform(1.8, 2.2))
+        x0, y0 = rng.uniform(0, w - ww), 0.0
+    else:  # window inside
+        ww, hh = w * rng.uniform(0.1, 0.8), h * rng.uniform(0.1, 0.8)
+        x0, y0 = rng.uniform(0, w - ww), rng.uniform(0, h - hh)
+    rnd = lambda v: round(v, 4)  # noqa: E731
+    if rng.random() < 0.15:  # triangular window
+        pts = [(x0, y0 + hh), (x0, y0), (x0 + ww, y0)]
+        a = ww * hh / 2
+    else:
+        pts = [(x0, y0 + hh), (x0, y0), (x0 + ww, y0), (x0 + ww, y0 + hh)]
+        a = ww * hh
+    pts = [(rnd(x), rnd(y)) for x, y in pts]
+    rev = 0.0 if rng.random() < 0.3 else rng.choice([0.02, 0.1, 0.2, rng.uniform(0.02, 0.4), max(ww, hh) * 1.5])
+    rev = min(rev, 2.0)
+    return pts, rev, max(a, 1e-4), a
+
+
+def back(at, w, h):
+    """A back surface of the zone behind the receiving surface (local depth below 0)."""
+    dd = rng.choice([3.0, 5.0, rng.uniform(1.0, 8.0)])
+    k = rng.randrange(7)
+    if k == 0:  # opposite wall
+        vs = [at(w, h, -dd), at(w, 0, -dd), at(0, 0, -dd), at(0, h, -dd)]
+    elif k == 1:  # floor
+        vs = [at(0, 0, 0), at(0, 0, -dd), at(w, 0, -dd), at(w, 0, 0)]
+    elif k == 2:  # ceiling
+        vs = [at(w, h, 0), at(w, h, -dd), at(0, h, -dd), at(0, h, 0)]
+    elif k == 3:  # side walls
+        vs = [at(0, h, 0), at(0, 0, 0), at(0, 0, -dd), at(0, h, -dd)]
+        if rng.random() < 0.5:
+            vs = [at(w, 0, 0), at(w, h, 0), at(w, h, -dd), at(w, 0, -dd)]
+    elif k == 4:  # smaller or offset opposite wall
+        x0, y0 = rng.uniform(-0.5, 0.5) * w, rng.uniform(-0.5, 0.5) * h
+        cw, ch = rng.uniform(0.3, 1.2) * w, rng.uniform(0.3, 1.2) * h
+        vs = [at(x0 + cw, y0 + ch, -dd), at(x0 + cw, y0, -dd), at(x0, y0, -dd), at(x0, y0 + ch, -dd)]
+    elif k == 5:  # triangle (a sloped wall's end)
+        vs = [at(rng.uniform(0, 1) * w, h, -dd), at(0, 0, -dd), at(w, 0, -dd)]
+    else:  # far off to the side
+        vs = [at(5 * w, h, -dd), at(5 * w, 0, -dd), at(4 * w, 0, -dd), at(4 * w, h, -dd)]
+    if rng.random() < 0.25:  # near-duplicate points: off by up to 0.08 mm
+        vs = [add(v, tuple(rng.uniform(-8e-5, 8e-5) for _ in range(3))) for v in vs]
+    if rng.random() < 0.2:
+        vs = vs[::-1]
+    return [maybe_grid(v) for v in vs]
+
+
+def back_window(at, w, h, dd):
+    """A window in the opposite wall at local depth -dd (back surface 6 on surface 5)."""
+    x0, y0 = rng.uniform(0.05, 0.6) * w, rng.uniform(0.05, 0.6) * h
+    cw, ch = rng.uniform(0.1, 0.35) * w, rng.uniform(0.1, 0.35) * h
+    return [maybe_grid(v) for v in [at(x0 + cw, y0 + ch, -dd), at(x0 + cw, y0, -dd), at(x0, y0, -dd), at(x0, y0 + ch, -dd)]]
+
+
+def pad2(vs):
+    q = list(vs) + [(0.0, 0.0)] * (4 - len(vs))
+    return [c for v in q for c in v]
+
+
+def front_sun(frm):
+    """A sun in front of the receiving surface, 20 to 90 degrees above its plane."""
+    lx, ly, lz = frm
+    a, b = rng.uniform(0, 2 * math.pi), rng.uniform(math.sin(math.radians(20)), 1.0)
+    c = math.sqrt(max(0.0, 1 - b * b))
+    return add(mul(b, lz), mul(c * math.cos(a), lx), mul(c * math.sin(a), ly))
+
+
+def gen(n, focused):
+    for _ in range(n):
+        recv, at, w, h, p, frm, area = scene()
+        s = front_sun(frm) if focused else sun(frm)
+        algo = 0 if rng.random() < 0.6 else 1
+        ncast = 1 if focused else rng.choice([1, 2, 2])
+        casts = []
+        for _ in range(2):
+            c = caster(at, w, h)
+            if focused and rng.random() < 0.5:  # far away: the window stays sunlit
+                d = rng.uniform(0.5, 3)
+                c = [at(3 * w, 3 * h, d), at(3 * w, 2 * h, d), at(4 * w, 2 * h, d), at(4 * w, 3 * h, d)]
+            q = rng.choice([-1.0, -1.0, -1.0, -0.3, 0.5]) if rng.random() < 0.9 else 0.00001
+            t = rng.choice([0.0, 0.0, 0.0, 0.5, 1.0, rng.random()])
+            casts += [len(c), *pad(c), q, t]
+        nback = 2 if focused else rng.choice([0, 1, 2, 2, 2, 2])
+        b2base = 5 if rng.random() < 0.25 else 6
+        dd = rng.choice([3.0, 5.0, rng.uniform(1.0, 8.0)])
+        backs = []
+        for i in range(2):
+            if b2base == 5:
+                b = [at(w, h, -dd), at(w, 0, -dd), at(0, 0, -dd), at(0, h, -dd)] if i == 0 else back_window(at, w, h, dd)
+            else:
+                b = back(at, w, h)
+            cz = sum(a * c for a, c in zip(s, frm[2]))
+            pb = -max(cz, 0.05) if focused and rng.random() < 0.8 else rng.choice([-1.0, -0.5, -max(cz, 0.001), -0.00001, -0.000011, 0.3]) if rng.random() < 0.9 else -0.7
+            backs += [len(b), *pad(b), pb]
+        win, rev, warea, wgross = window(w, h)
+        tdiff = 0.0 if not focused and rng.random() < 0.1 else rng.choice([0.4, 0.6, 0.8, rng.uniform(0.05, 0.9)])
+        ebc = 0 if focused else (1 if rng.random() < 0.08 else 0)
+        gfrac = 1.0 if rng.random() < 0.7 else rng.uniform(0.7, 1.0)
+        net = max(0.0, area - wgross)
+        lx, ly, lz = frm
+        whiches = list(range(43)) + rng.sample(range(43, 79), 4) + rng.sample(range(79, 559), 6) + list(range(559, 567))
+        if focused:
+            whiches = list(range(15)) + rng.sample(range(15, 79), 3) + list(range(559, 567))
+        for wch in whiches:
+            out(wch, algo, len(recv), *pad(recv), ncast, *casts, nback, *backs, len(win), *pad2(win), rev, warea, wgross, tdiff, ebc, gfrac, b2base,
+                *p, *lx, *ly, *lz, *s, net)
+
+
+gen(200, False)
+gen(150, True)
