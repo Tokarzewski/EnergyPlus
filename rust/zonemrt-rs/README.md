@@ -32,8 +32,8 @@ enclosure. The inside heat balance runs it on every iteration. It does three thi
 
 Every sum runs in the C++ order. One effect of that order is kept: an enclosure whose weights fall
 back still carries the area-emissivity-temperature sum the zone loop added to it. Not ported: the
-user zone MRT objects (`ComfortViewFactorAngles`-based people MRT splits), which the first call
-reads from the input file, and the `ZoneToResimulate` form.
+user zone MRT objects (which blend people's radiant temperatures into the zone MRT), which the
+first call reads from the input file, and the `ZoneToResimulate` form.
 
 The oracle (`rust/oracles/zonemrt/`) sets up the zone, its spaces and up to six surfaces, then
 calls the real `CalculateZoneMRT`. These return NaN in both (ADR-009):
