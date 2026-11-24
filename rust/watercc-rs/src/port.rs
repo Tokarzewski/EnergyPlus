@@ -18,7 +18,7 @@ use psychrometrics_rs::port::{
 use std::ffi::c_int;
 
 /// `WaterCoils::MinAirMassFlow` (kg/s).
-const MIN_AIR_MASS_FLOW: f64 = 0.001;
+pub const MIN_AIR_MASS_FLOW: f64 = 0.001;
 /// `DataWaterCoils::CounterFlow`.
 const COUNTER_FLOW: c_int = 1;
 
@@ -33,20 +33,20 @@ fn max(a: f64, b: f64) -> f64 {
 }
 
 /// `v` is finite and within `lo` to `hi`.
-fn within(v: f64, lo: f64, hi: f64) -> bool {
+pub fn within(v: f64, lo: f64, hi: f64) -> bool {
     v.is_finite() && v >= lo && v <= hi
 }
 
 /// The coil's inlet state and operating mode, as the routines read them from the coil object.
-struct Coil {
-    hex: c_int,
-    mdot_air: f64,
-    w_in: f64,
-    mdot_water: f64,
-    mdot_water_max: f64,
-    cycling: bool,
-    plr: f64,
-    pb: f64,
+pub struct Coil {
+    pub hex: c_int,
+    pub mdot_air: f64,
+    pub w_in: f64,
+    pub mdot_water: f64,
+    pub mdot_water_max: f64,
+    pub cycling: bool,
+    pub plr: f64,
+    pub pb: f64,
 }
 
 impl Coil {
@@ -139,7 +139,12 @@ fn coil_outlet_stream_condition(
 }
 
 /// `CoilCompletelyDry`: outlet water and air temperatures, outlet humidity ratio and heat rate.
-fn coil_completely_dry(c: &Coil, water_temp_in: f64, air_temp_in: f64, coil_ua: f64) -> [f64; 4] {
+pub fn coil_completely_dry(
+    c: &Coil,
+    water_temp_in: f64,
+    air_temp_in: f64,
+    coil_ua: f64,
+) -> [f64; 4] {
     let (air_mass_flow, water_mass_flow) = c.flows();
     let capacitance_air = air_mass_flow * PsyCpAirFnW(c.w_in);
     let cp = water_cp(water_temp_in);
@@ -196,7 +201,7 @@ fn wet_coil_outlet_condition(
 
 /// `CoilCompletelyWet`: outlet water and air temperatures, outlet humidity ratio, total and
 /// sensible rates, wet fraction and the surface temperature at the air inlet.
-fn coil_completely_wet(
+pub fn coil_completely_wet(
     c: &Coil,
     water_temp_in: f64,
     air_temp_in: f64,
