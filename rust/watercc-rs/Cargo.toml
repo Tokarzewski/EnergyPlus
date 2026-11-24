@@ -15,7 +15,7 @@ shadow = []
 
 [dependencies]
 general-rs = { version = "0.1.0", path = "../general-rs" }
-halfloop-rs = { version = "0.1.0", path = "../halfloop-rs" }
+fluidproperties-rs = { version = "0.1.0", path = "../fluidproperties-rs" }
 psychrometrics-rs = { version = "0.1.0", path = "../psychrometrics-rs" }
 
 [profile.release]

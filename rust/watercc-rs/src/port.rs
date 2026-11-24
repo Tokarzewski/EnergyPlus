@@ -4,17 +4,20 @@
 //! (`CoilCompletelyDry`) when the entering air's dew point is at or below the water temperature,
 //! otherwise a completely wet one (`CoilCompletelyWet`, an enthalpy-based counterflow exchanger
 //! with `WetCoilOutletCondition`), both through `CoilOutletStreamCondition`'s effectiveness-NTU
-//! relations for counter or cross flow. The water specific heat comes from `halfloop-rs`'s cached
-//! lookup, the air properties from `psychrometrics-rs`. Every expression keeps the C++ order, and
+//! relations for counter or cross flow. The water specific heat goes through `GlycolProps`'s
+//! cache, fresh for each call as in a freshly forked process (see [`CpCache`]), the air
+//! properties come from `psychrometrics-rs`. Every expression keeps the C++ order, and
 //! `min` and `max` are ObjexxFCL's. The oracle's guards (see its shim) return NaN here too.
 
 #![forbid(unsafe_code)]
 
+use fluidproperties_rs::port::WaterSpecificHeat_raw;
 use general_rs::port::SafeDivide;
-use halfloop_rs::port::water_cp;
 use psychrometrics_rs::port::{
     PsyCpAirFnW, PsyHFnTdbW, PsyTdbFnHW, PsyTdpFnWPb, PsyTsatFnHPb, PsyWFnTdbH, PsyWFnTdpPb,
 };
+use std::cell::RefCell;
+use std::collections::HashMap;
 use std::ffi::c_int;
 
 /// `WaterCoils::MinAirMassFlow` (kg/s).
@@ -37,6 +40,26 @@ pub fn within(v: f64, lo: f64, hi: f64) -> bool {
     v.is_finite() && v >= lo && v <= hi
 }
 
+/// `GlycolProps::getSpecificHeat` for water (`Num` 1) with its cache (`EP_cache_GlycolSpecificHeat`):
+/// the key is the top 36 bits of `T + 1000`, the slot its low 20 bits, every slot starts with key
+/// 1000, and a slot keeps the specific heat of the first exact temperature that filled it. The
+/// detailed coil's iterations ask for nearby temperatures that share a slot, so this matters there.
+#[derive(Default)]
+pub struct CpCache(RefCell<HashMap<u64, (u64, f64)>>);
+
+impl CpCache {
+    /// The cached specific heat at `t` (J/kg-K).
+    pub fn get(&self, t: f64) -> f64 {
+        let tag = (t + 1000.0 * 1.0).to_bits() >> (64 - 12 - 24);
+        let mut slots = self.0.borrow_mut();
+        let slot = slots.entry(tag & ((1 << 20) - 1)).or_insert((1000, 0.0));
+        if slot.0 != tag {
+            *slot = (tag, WaterSpecificHeat_raw(t));
+        }
+        slot.1
+    }
+}
+
 /// The coil's inlet state and operating mode, as the routines read them from the coil object.
 pub struct Coil {
     pub hex: c_int,
@@ -47,6 +70,8 @@ pub struct Coil {
     pub cycling: bool,
     pub plr: f64,
     pub pb: f64,
+    /// The specific heat cache, empty at the start of each call.
+    pub cp: CpCache,
 }
 
 impl Coil {
@@ -147,7 +172,7 @@ pub fn coil_completely_dry(
 ) -> [f64; 4] {
     let (air_mass_flow, water_mass_flow) = c.flows();
     let capacitance_air = air_mass_flow * PsyCpAirFnW(c.w_in);
-    let cp = water_cp(water_temp_in);
+    let cp = c.cp.get(water_temp_in);
     let capacitance_water = water_mass_flow * cp;
     let (outlet_water_temp, outlet_air_temp) = coil_outlet_stream_condition(
         c.hex,
@@ -223,7 +248,7 @@ pub fn coil_completely_wet(
     let ua_coil_total_enth =
         1.0 / (intermediate_cp_sat * water_side_resist + air_side_resist * PsyCpAirFnW(0.0));
     let capacity_rate_air_wet = air_mass_flow;
-    let cp = water_cp(water_temp_in);
+    let cp = c.cp.get(water_temp_in);
     let capacity_rate_water_wet = water_mass_flow * (cp / intermediate_cp_sat);
     let (enth_air_outlet, enth_sat_air_outlet_water_temp) = coil_outlet_stream_condition(
         c.hex,
@@ -316,6 +341,7 @@ pub fn WaterCoolCoil(
         cycling: cycling == 1,
         plr,
         pb,
+        cp: CpCache::default(),
     };
     let air_mass_flow = if c.cycling && plr > 0.0 {
         mdota / plr

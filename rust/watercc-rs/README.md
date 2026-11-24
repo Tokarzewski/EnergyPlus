@@ -28,8 +28,9 @@ rust-anything gate .     # fmt, clippy, tests, unsafe, API, diff
   condensate temperature;
 - cycling fan flows scaled by the part load ratio, the outlet water and air enthalpies.
 
-The water specific heat comes from `halfloop-rs`'s cached lookup (unit 84), the air properties from
-`psychrometrics-rs`. The detailed analysis (`CoilPartWetPartDry`) is not ported. The oracle
+The water specific heat goes through a copy of `GlycolProps::getSpecificHeat`'s cache (`CpCache`,
+see `wccdetail-rs`'s README), the air properties come from `psychrometrics-rs`. The detailed
+analysis (`CoilPartWetPartDry`) is `wccdetail-rs` (unit 89). The oracle
 (`rust/oracles/watercc/`) calls the real routine on one coil and returns one result at a time; it
 zeroes the coil's cooling rates first, which a coil that does not run leaves as they were. These
 return NaN in both (ADR-009): any input that is not finite or lies outside what EnergyPlus meets

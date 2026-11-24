@@ -13,7 +13,9 @@
 use general_rs::port::SafeDivide;
 use psychrometrics_rs::port::{PsyHFnTdbW, PsyTdpFnWPb};
 use std::ffi::c_int;
-use watercc_rs::port::{Coil, MIN_AIR_MASS_FLOW, coil_completely_dry, coil_completely_wet, within};
+use watercc_rs::port::{
+    Coil, CpCache, MIN_AIR_MASS_FLOW, coil_completely_dry, coil_completely_wet, within,
+};
 
 /// Iteration limit of both loops in `CoilPartWetPartDry`.
 const ITMAX: i32 = 60;
@@ -319,6 +321,7 @@ pub fn WaterCoolDetail(
         cycling: cycling == 1,
         plr,
         pb,
+        cp: CpCache::default(),
     };
     let air_mass_flow = if c.cycling && plr > 0.0 {
         mdota / plr

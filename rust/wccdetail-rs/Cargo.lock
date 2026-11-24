@@ -11,13 +11,6 @@ name = "general-rs"
 version = "0.1.0"
 
 [[package]]
-name = "halfloop-rs"
-version = "0.1.0"
-dependencies = [
- "fluidproperties-rs",
-]
-
-[[package]]
 name = "psychrometrics-rs"
 version = "0.1.0"
 
@@ -25,8 +18,8 @@ version = "0.1.0"
 name = "watercc-rs"
 version = "0.1.0"
 dependencies = [
+ "fluidproperties-rs",
  "general-rs",
- "halfloop-rs",
  "psychrometrics-rs",
 ]
 
